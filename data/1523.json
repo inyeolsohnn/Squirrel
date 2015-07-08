@@ -1,0 +1,12 @@
+{
+  "id": 1523,
+  "url": "www.dofactory.com/topic/1523/patterns-in-action-not-working.aspx",
+  "title": "Patterns in Action - not working",
+  "ques": "Hello,\r\n\r\nI just bought your design pattern framework 4.0. When I try to  run the Patterns in Action project, I get the below error.\r\n\r\n{\u0027The database \u0027C:\\DOFACTORY PATTERNS 4.0 CS\\PATTERNS IN ACTION\\HOST.WCF.ACTIONSERVER\\APP_DATA\\ACTION.MDF\u0027 cannot be opened because it is version 655. This server supports version 612 and earlier. A downgrade path is not supported.rnCould not open new database \u0027C:\\DOFACTORY PATTERNS 4.0 CS\\PATTERNS IN ACTION\\HOST.WCF.ACTIONSERVER\\APP_DATA\\ACTION.MDF\u0027. CREATE DATABASE is aborted.rnAn attempt to attach an auto-named database for file C:\\DoFactory Patterns 4.0 CS\\Patterns In Action\\Host.WCF.ActionServer\\App_Data\\Action.mdf failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.\u0027}\r\n\r\nI appreciate your help.\r\n\r\nThanks,\r\nKumar",
+  "answers": [
+    {
+      "ansID": 1709,
+      "ans": "It\u0027s saying that the version of SQL Server you are running is an older version. I believe 655 is SQL Server 2008, so running SQL Server 2008 Express edition should take care of it."
+    }
+  ]
+}

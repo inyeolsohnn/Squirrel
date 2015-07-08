@@ -1,0 +1,12 @@
+{
+  "id": 1362,
+  "url": "www.dofactory.com/topic/1362/the-underlying-provider-failed-on-open.aspx",
+  "title": "Need some help with The underlying provider failed on Open",
+  "ques": "Can anybody help me on this issue? \r\nI set the ASP.NET Web application as start project and used the default setting for database connection. When trying to browse the product, I get the following error \u0027The underlying provider failed on Open.\u0027 at the highlighted line below: \r\n\r\n\r\npublic List\u003cProduct\u003e GetProductsByCategory(int categoryId, string sortExpression)\r\n {\r\n    using (var context \u003d DataObjectFactory.CreateContext()) \r\n    {\r\n       // Load single Category with all Product child records\r\n       var category \u003d context.CategoryEntities.Include(\u0027Products\u0027)\r\n                      .FirstOrDefault(c \u003d\u003e c.CategoryId \u003d\u003d categoryId);\r\n\r\n       \r\n       // Order by (using dynamic linq) without going back to db\r\n       var products \u003d category.Products.AsQueryable().OrderBy(sortExpression, null); \r\n                 \r\n       // Return list of business objects\r\n       return products.Select(p \u003d\u003e Mapper.Map(p)).ToList();\r\n    }\r\n }\r\n\r\nI am running this project using VS 2010 Professional on Windows Vista.\r\n\r\nThanks.\r\n ",
+  "answers": [
+    {
+      "ansID": 1508,
+      "ans": "Steven:\r\n\r\nHere is a discussion on the same error:  http://stackoverflow.com/questions/2475008/the-underlying-provider-failed-on-open\r\nFrom reading this article I suspect it is related to a MSDTC setting on your machine. \r\n\r\nI hope this gets you going."
+    }
+  ]
+}

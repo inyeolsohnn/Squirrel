@@ -1,0 +1,12 @@
+{
+  "id": 1408,
+  "url": "www.dofactory.com/topic/1408/security.aspx",
+  "title": "Security and Cross Frame Scripting",
+  "ques": "Can somebody explain how I should implement Cross Frame Scripting Security for my web pages to provide more security?\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1571,
+      "ans": "XFS is a vulnerability that affects web application that use frames in their web pages.    Basically frames allow web pages to present the web content in different sections of the browser window. They seem to be very handy in many situations, but the fact that the frame loads any pages it references, this could be easily hacked and the attacker may make your frame point to a URL of his own with may have malicious content...\r\n\r\nRather than repeating what\u0027s already documented in great detail, I would like to point your attention to  OWASP website at\r\n\r\nhttps://www.owasp.org/index.php/Cross_Frame_Scripting\r\nhttp://blog.securestate.com/post/2010/08/12/XFS-101-Cross-Frame-Scripting-Explained.aspx\r\nhttp://www.subhashdasyam.com/2011/04/cross-frame-scripting-advanced-xss.html\r\n\r\nThe general mitigation of XFS vulnerabilities is to validate malicious inputs such as URL parameter in a GET request that can be injected with javascript into a frame and executed on the user\u0027s browser within the context of the main page.\r\n\r\n\r\nIn case your app is using frames do take some precaution against this. One of primary check you can do is to add the following JS at the top of your web page.  The code is an extract and may not work as it is...\r\n\r\nif (top \u003d\u003d self) }\r\n    document.documentElement.style.display \u003d \u0027block\u0027;\r\n}\r\nelse {\r\n  top.location \u003d self.location;\r\n}\r\n\r\nWhen the above scripted is executed(on each page load), the browser will check if the page is framed and set it to become the top frame hereby causing the browser to render the full windows without the frame.\r\n\r\nBut note the best way would be to avoid using frames, but that\u0027s not always possible.\r\nHope this helps."
+    }
+  ]
+}

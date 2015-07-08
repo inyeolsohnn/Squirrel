@@ -1,0 +1,20 @@
+{
+  "id": 1105,
+  "url": "www.dofactory.com/topic/1105/details-about-mvc-design-pattern.aspx",
+  "title": "Details about MVC Design Pattern",
+  "ques": "Could anyone provide me some details on why and when to use for MVC Design Pattern?",
+  "answers": [
+    {
+      "ansID": 1167,
+      "ans": "My take on this is that if you do web development, then you could benefit from using the MVC design pattern. You could either roll your own implementation of it or use Microsoft\u0027s framework Asp.Net MVC. There are also third party frameworks such as FubuMVC (http://fubumvc.com/).\r\n\r\nA benefit you gain is a separation of UI and business layer, which if done properly would make you app easier to maintain and test."
+    },
+    {
+      "ansID": 1172,
+      "ans": "Additionally ASP.NET MVC framework is a great thing to work with.  The following are the features in a nutshell\r\n\r\n\r\nTestable\r\nSEO URL\u0027s (though this is also possible using asp.net as well)\r\nPluggable architecture\r\nNo Viewstate, hence lightweight by design\r\nClean markup (no unwarranted markups)Hope this helps."
+    },
+    {
+      "ansID": 1175,
+      "ans": "You can also watch my videos series at MVC Central.  http://www.mvccentral.net\r\n\r\nI have a 13 episode videos and articles series where I build an MVC 2 application from scratch while you watch.  It gives some best practices and shows me building a full n-Tier application.\r\n\r\nIt\u0027s the Golf Tracker screencast series."
+    }
+  ]
+}

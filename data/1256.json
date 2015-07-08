@@ -1,0 +1,16 @@
+{
+  "id": 1256,
+  "url": "www.dofactory.com/topic/1256/asp-net.aspx",
+  "title": "ASP.NET and programmatic opening different browsers",
+  "ques": "I have a quick question: \r\nWhen clicking on a button in ASP.NET, is it possible to open a different Browser?\r\n\r\nSuppose I have page with two buttons: A and B.\r\n\r\nWhen clicking A -------------------\u003e open page in new Internet Explorer instance.\r\nWhen clicking B -------------------\u003e open page in new FireFox (or any other browser) instance.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1359,
+      "ans": "The OS has a setting for the default web browser on your system. This setting determines\r\nwhich browser will open when you click on a link.\r\n\r\nThat being said, if you want to open Urls in different browsers, you will need to know the\r\npath to the specific browser and open it using Process.Start or similar. Though I wouldn\u0027t\r\nrecommend it if it is for any other use than your own.\r\n\r\nHTH\r\n"
+    },
+    {
+      "ansID": 1360,
+      "ans": "Hi,\r\n\r\nThis is a nice idea to open two different browsers using two different buttons.\r\n\r\nBut each operating system has a setting of default web browser for each user profile. So this type of implementation is not recommended.\r\n\r\n.Net provides System.Diagnostics namespace, which has a Process class. This process class provides a method called Start(). Using this Start() method you can run any process. If you want to implement the same feature in Windows Forms application then it is quite possible. But in case of web applications this will not support. Because if you will try to use System.Diagnostics namespace and code using its classes in web application, the code will be executed at server side not at the client side. so it is not possible to implement the same in web application.\r\n\r\nAlso one option may be to use javascript. But using javascript also it is not possible to identify whether a particular web browser is installed on the client machine or not.\r\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 1352,
+  "url": "www.dofactory.com/topic/1352/strategy.aspx",
+  "title": "Strategy Design Pattern usage in .NET",
+  "ques": "I have a quick question: How is the Stategy Pattern used in .NET?",
+  "answers": [
+    {
+      "ansID": 1486,
+      "ans": "Hi,\r\n\r\nfor example when you implement IComparable interface, you define the strategy for comparing which may differ per implementation, but the contract remains the same. You may replace the implementation without affecting the client. The same could be with ICloneable etc.\r\n\r\nHope this helps,\r\nRobert "
+    },
+    {
+      "ansID": 1487,
+      "ans": "I have a brief blog post here..\r\n\r\nhttp://30minutestotechnirvana.blogspot.com/2007/12/session-1.html\r\n\r\n\r\nIn a nutshell.. (extracted)\r\nApplications of Strategy pattern in .NET Framework\r\n\r\n(1) Array and ArrayList provides capability to sort object. By default they use QuickSort algorithm. The Sort method will use the IComparable implementation for each element to handle the comparisons necessary for sorrting. To change the sortig strategy use the overload of Sort that takes an IComparer as a parameter.\r\n\r\nICompararer.Compare is then used for the comparisons.\r\n\r\nThe new List makes heavy use of the strategy pattern. In addition to the updated Sort method, the find-related methods, BinarySearch and others all take parameters that allow parts of the respective algorithms to vary based on the needs of the caller. The use of Predicatedelegate in the FindAll method lets the caller use any method as a filter for the List so long as it takes the appropriate object type and returns a boolean.\r\n\r\nHope this helps."
+    },
+    {
+      "ansID": 1492,
+      "ans": "The Strategy Pattern has been discussed earlier in this forum (see this thread -\u003e http://dofactory.com/topic/1158/replace-conditional-vb-net-select-case-with-strategy-pattern-how.aspx), which might be of help to you.\r\n\r\nAlso, if you read the comments I made to the above post, you can see an implementation where enums and conditionals are not needed. Do note, that these are some ways to implement the Strategy Pattern in .Net. I have seen quite a few different implementations. But this should get you started.\r\n\r\n\r\nGood Luck!\r\n"
+    }
+  ]
+}

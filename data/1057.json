@@ -1,0 +1,12 @@
+{
+  "id": 1057,
+  "url": "www.dofactory.com/topic/1057/mvc-vs-mvp-windows-form.aspx",
+  "title": "MVC vs MVP in Windows Forms",
+  "ques": "Hello:\r\n\r\nI am working on a Windows Forms .NET application (i.e. Winforms).  Is MVC better or should I go with MVP?\r\n\r\nThanks and regards.",
+  "answers": [
+    {
+      "ansID": 1095,
+      "ans": "Hi,\n\nFirst off, the MVP pattern has been retired (here), instead Martin Fowler has separated it into two new patterns called Supervising Controller and Passive View.\n\nI am no expert in these patterns, I have however used Passive view successfully in many WinForms applications and is currently my preferred UI separation pattern for WinForms. MVC pattern, I think, is best suited for (state-less) web applications (although its possible to use it in WinForms).\n\nOne big benefit of using Passive View (and the reason that I use it) is that it makes your view very  \u0027dumb \u0027 which makes them much easier to test.\n\nTip: If you do decide to use Passive View, I would recommend that you take a look at Event Aggregator to decouple the view and the presenter even more, make your application much easier to extend IMHO.\n\n\nGood Luck!"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1561,
+  "url": "www.dofactory.com/topic/1561/how-to-use-webform-basepage-in-mvc.aspx",
+  "title": "How to use WebForm basepage in MVC?",
+  "ques": "Hi all. In the Design Pattern Framework there is a webform BasePage that inherrits System.Web.UI.Page. \r\nHow would I use BasePage if I convert from WebForms to MVC? \r\n\r\nIn MVC, the controller inherrits from System.Web.MVC.Controller. ",
+  "answers": [
+    {
+      "ansID": 1755,
+      "ans": "Zhang:\r\n\r\nI would add similar functionality in the BaseController, a controller that you derive from System.Web.MVC.Controller.\r\nThen, each of your controllers would derive from BaseController, rather than Controller.\r\n\r\nHope this helps.\r\nDan"
+    }
+  ]
+}

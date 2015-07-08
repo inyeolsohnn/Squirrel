@@ -1,0 +1,12 @@
+{
+  "id": 1185,
+  "url": "www.dofactory.com/topic/1185/better-class-design.aspx",
+  "title": "How to get a better class design",
+  "ques": "Hi\r\n\r\nI have Request classes, say X, Y, Z. These classes will have some common attributes and some unique attributes. \r\nI tried to put the common attributes in an abstract class (AbstractRequest) and subclasses (XRequest, YRequest, ZRequest). \r\n\r\nBut the problem I face is this: while creating instances, I need to create instances of subclasses and not abstract class. \r\nThis is not generic.  Any suggestions as to what I can do? \r\n",
+  "answers": [
+    {
+      "ansID": 1275,
+      "ans": "\r\n       Hi,\r\n\r\n     This is usually what I do, I try to use interfaces a lot since it makes it\r\n     easier for me to switch out any implementation details. So to speak, the\r\n     interface specifies the contract. I hope this is what you\u0027re looking for, if\r\n  not, don\u0027t hesitate to ask again\r\n\r\npublic interface IRequest {  \r\n      string GenericProp1 {get; set;}  \r\n      int GenericProp2 {get;set;}  \r\n\r\n      void GenericMethod();  \r\n    }  \r\n\r\n     Now, If some code is used in most of the Request implementations you\r\n     could create an abstract class that implements this code.\r\n\r\n\r\npublic abstract class BaseRequest : IRequest {  \r\n     // Implement some code specific to all that\r\n     // will use the abstract BaseRequest class.\r\n   }  \r\n\r\n    Next step is to implement the concrete classes.\r\n\r\npublic class RestRequest : BaseRequest { \r\n\r\n  // Implementation goes here\r\n  }  \r\n\r\npublic class WcfRequest : BaseRequest {  \r\n    // Implementation goes here\r\n  }  \r\n\r\n   The final step is to call this code somewhere to use it.\r\n\r\npublic void SomeMethod() {  \r\n  IRequest request \u003d new RestRequest();   \r\n  Validate(request) \r\n} \r\n\r\n\r\npublic void Validate(IRequest request) {  \r\n   // Do some stuff on the request object.  \r\n }  \r\n\r\n  The next step would be to use dependency injection to\r\n  and let the DI framework of your choice inject the class\u0027 dependencies\r\n  instead of using the new keyword to create your objects.\r\n\r\n  Good Luck!\r\n\r\n\r\n "
+    }
+  ]
+}

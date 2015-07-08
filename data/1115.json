@@ -1,0 +1,20 @@
+{
+  "id": 1115,
+  "url": "www.dofactory.com/topic/1115/where-to-place-events-from-service-layer-in-mvp.aspx",
+  "title": "Where to place events from service layer in MVP?",
+  "ques": "I am coding a GUI that communicates via TCP/IP with Automated Guided Vehicles (AGVs).\r\n\r\nThe Model communicates with TCP/IP Service layer.\r\nI was thinking of letting the Presenter subscribe to the TCP/IP events?\r\n\r\nBut is this the best solution?\r\nAfter receiving the events the View should be updated.\r\n\r\nAny suggestions are appreciated.",
+  "answers": [
+    {
+      "ansID": 1178,
+      "ans": "You can probably use a repository pattern/layer to abstract out that service layer calls... and call it within the presenter.\r\n\r\nYou can use Action\u003cT\u003e/Func\u003cT\u003e/Predicate\u003cT\u003e delegates to subscribe to the events and handle it in the presenter.\r\n\r\njust my two cents"
+    },
+    {
+      "ansID": 1180,
+      "ans": "Joshua, thanks for your answer :-)\r\n  I think my problem is that I have 2 Presenters.\r\n  I want both Presenters to subscribe to the TCP/IP events.\r\n  The instance of TCP/IP Service layer is created in the Model.\r\n  Do I have to pass the functions that should be called in the 2 Presenters to the Model?\r\n  Or maybe I should create the TCP/IP Service layer in the base class for all Presenter classes\r\nand then pass it to the Model?"
+    },
+    {
+      "ansID": 1185,
+      "ans": "My solution for the time being:\r\n\r\nThe Model creates an instance of TCP/IP Service and calls the TCP/IP Service layer.\r\n\r\nThe different Presenters subscribes to relevant TCP/IP events and updates the View.\r\n\r\nTo avoid passing of functions (or other problems) I have implemented the TCP/IP Service as a Singleton.\r\n\r\nI anyone knows of good examples/articles on how to handle events from a non Microsoft service layer in MVP,\r\nplease post a link here."
+    }
+  ]
+}

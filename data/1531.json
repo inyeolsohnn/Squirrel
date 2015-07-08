@@ -1,0 +1,12 @@
+{
+  "id": 1531,
+  "url": "www.dofactory.com/topic/1531/n-tier-vs-mvc.aspx",
+  "title": "N-tier vs MVC",
+  "ques": "N-tier architecture usually has each layer separated by the network. I.E. the presentation layer is on some web servers, then that talks to backend app servers over the network for business logic, then that talks to a database server, again over the network, and maybe the app server also calls out to some remote services (say Authorize.net for payment processing).\r\nMVC is a programming design pattern where different portions of code are responsible for representing the Model, View, and controller in some application. These two things are related because, for instance the Model layer may have an internal implementation that calls a database for storing and retrieving data. The controller may reside on the webserver, and remotely call appservers to retrieve data. MVC abstracts away the details of how the architecture of an app is implemented.\r\n\r\nI want to know following \r\nIn you sample code you have no physical separation of layer when you use 3 tire architecture . and on Presentation layer you have implemented mvp or mvc \r\n\r\n\r\nplease explain  What to use when.",
+  "answers": [
+    {
+      "ansID": 1716,
+      "ans": "Just my few cents... Basically MVC/MVP are presentation patterns and they deal more with loose coupling of presentation or UI elements  with presentation logic or control flow.... \r\n\r\nThe following wiki article has brief narration on the above..\r\nhttp://en.wikipedia.org/wiki/Multitier_architecture\r\n\r\nN-tier broadly represents separation of Presentation, Application (presentation or business logic layer or data access component layer etc etc) and Data Layer  +  Some other layers like services, infrastructure etc....\r\n\r\nNOTE:  In MVC though most of the time the view, the controller and the model are in the same physical location, but in enterprise applications this may span across machines and boundaries.\r\n\r\nSo, the question of when to use what is kind of blurred, because you almost always kindof  automagically resort to n-tier by default (as best practices) and then as complexity increases you resort to separate the presentation from the presentation logic by moving to MVC/MVP pattern on the presentation front.  Note the data model and the presentation/view model are two different things (though in most sample applications, they are depicted as one).  \r\n\r\nHope this helps.\r\n\r\n"
+    }
+  ]
+}

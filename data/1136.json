@@ -1,0 +1,16 @@
+{
+  "id": 1136,
+  "url": "www.dofactory.com/topic/1136/importing-a-data.aspx",
+  "title": "Design Pattern for importing data",
+  "ques": "Which Design Pattern I can use to implement the import of data in different formats, such as, XML, CSV, TXT, XLSX etc...",
+  "answers": [
+    {
+      "ansID": 1200,
+      "ans": "First of all, I believe you should ask the other way around: What exactly do I want to achieve? Whether or not there are design patterns that can help you to prevent common problems to arise will be the next question.\r\n\r\nFor example:\r\nAs I understand you have data in different formats available but a common way to work with it in your application (e.g. a DataTable with a given structure). You already know that you don\u0027t have only a txt file with a specific format but also xml, csv and other files. At some point you may also have even more file formats or other source structures.\r\n\r\n\r\nThis may result in a complex subsystem that is responsible for handling different file formats (like reading, parsing, error handling, transforming, etc.). A Facade might help you to  \u0027hide \u0027 that complexity from your caller.\r\n\r\nIn case you work with some sort of dependency injection, a Factory might be handy for instantiating specific classes for handling different file formats.\r\n\r\nThe Builder pattern could help you in creating a system for parsing the data returning them in a way you need it. \r\n\r\nSince you might end up working with  \u0027incompatible \u0027 interface (needed for each format) but need to work with something common (visible to your caller), you can use the Adapter pattern as Microsoft did e.g. with the SqlDataAdapter.However, that all depends on what exactly you want to achieve. You should have a look at solutions of others and try getting the whole picture. Also, this entry at StackOverflow might help. One of the replies actually links back to dofactory. ;-)\r\n\r\nRegards,\r\n-Chris"
+    },
+    {
+      "ansID": 1201,
+      "ans": "This can be done with a combination of various patterns.  First try to classify what varies in the application.  For e.g. the data-source (it could be xml, csv, excel) anything.  Abstract those variation.   Just to cite an e.g. you can use a  \u0027factory \u0027 for controlling object creation and a strategy for separating out the parsing of different file stores(or may be a provider pattern can play a role here).  Other patterns may as well be adopted.\r\n\r\nTo see a live example in action visit http://www.codeproject.com/KB/database/filehelpers.aspx.   Though this article doesn\u0027t mention directly anything about design patterns but the code is very well organized and may be a good learning as well."
+    }
+  ]
+}

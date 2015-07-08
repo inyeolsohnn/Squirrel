@@ -1,0 +1,20 @@
+{
+  "id": 1470,
+  "url": "www.dofactory.com/topic/1470/mvc-3-razor-areas-could-not-call-layout-page.aspx",
+  "title": "MVC 3 + Razor + Areas (Cannot call layout page)",
+  "ques": "Hi Team,\r\n\r\nCan any one had experience with MVC 3+ Razor + Areas?\r\nI do not get the layout page when I access Areas view pages.. Can anyone help me in this?\r\nI am good with routing and I can access view page inside Areas but it is not showing the ayout page (Masterpage)\r\n\r\nArul",
+  "answers": [
+    {
+      "ansID": 1637,
+      "ans": "Arul:\r\n\r\nHere is what you need:  Include the _ViewStart.cshtml file in the Views folder for the Area.\r\nIn fact, if you have a global layout, you should add this file to each Area.\r\n\r\nHope this helps.\r\nDan.\r\n\r\n "
+    },
+    {
+      "ansID": 1639,
+      "ans": "Also, some good readings here...\r\n\r\nhttp://iwantmymvc.com/2011-02-15-mvc-3-areas-and-shared-layouts-part-2"
+    },
+    {
+      "ansID": 1644,
+      "ans": "Do as Dan suggests and also add your own _layout.cshtml file.  If you have different Areas that will display content differently, it\u0027s good to have one _layout.cshtml for each Area.\r\n\r\nAlso, if you are using VS 2010, you should definitely make sure you are using the latest Tools Update for Visual Studio.  This changes the  \u0027Add \u0027 dialogs to include many new features including HTML5 stuff.\r\n\r\nI hope this helps."
+    }
+  ]
+}

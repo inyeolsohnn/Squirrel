@@ -1,0 +1,12 @@
+{
+  "id": 1488,
+  "url": "www.dofactory.com/topic/1488/abstract-factory-vs-factory.aspx",
+  "title": "Abstract factory vs Factory Pattern",
+  "ques": "How does one differentiate Abstract Factory against Factory Method?\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1683,
+      "ans": "Abstract Factory is used to create a set of abstractions. \r\n\r\nYou use the Factory Method to create and hide the creation of one object of a set of classes that implement the same interface.\r\n\r\nIn very simple terms: think about Abstract Factory like a set of several Factory Methods.\r\n\r\nYou use an Abstract Factory for something like this:\r\n\r\nSoftware Abstraction Layer\r\nhttp://msdn.microsoft.com/en-us/library/cc304370.aspx\r\n\r\n"
+    }
+  ]
+}

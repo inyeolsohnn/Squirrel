@@ -1,0 +1,12 @@
+{
+  "id": 1448,
+  "url": "www.dofactory.com/topic/1448/please-name-the-design-pattern.aspx",
+  "title": "Please name the following Design Pattern...",
+  "ques": "Hi All,\r\n\r\nCan someone let me know which Design Pattern are we using?. Our application has Presentation Layer, Business layer and Data layer.  The data is exchanged between these three layers using corresponding objects. We have developed a separate class library which holds only the \u0027Properties\u0027, i.e. DTOs (Data Transfer Objects with just get and set accessors). The business layer and data layer has manager class to perform operation on data.\r\n\r\nSample code below:\r\n\r\nPresentation Layer\r\n\r\nbtnSave_Click(sender, object)\r\n{\r\n   // Class from the class library which has only properties\r\n   UserInfo userInfo \u003d new UserInfo();   \r\n   userInfo.FirstName \u003d txtFirstName.Text;\r\n   userInfo.LastName \u003d txtLastName.Text;\r\n\r\n   // Object of business layer\r\n   UserManager userMngr \u003d new UserManager();\r\n   userMngr.Save(userInfo);\r\n}\r\n\r\nBusiness  Layer\r\n\r\nUserManager class\r\n\r\npublic bool Save(UserInfo userInfo)\r\n{\r\n    // Performs business logic here if any\r\n    // Data access layer object\r\n    UserDataManager dataMngr \u003d new UserDataManager();\r\n    return dataMngr.Save(userInfo);\r\n}\r\n\r\nData Layer\r\n\r\nUserDataManager class\r\n\r\npublic bool Save(UserInfo userInfo)\r\n{\r\n    // Inserts the data to DB\r\n}\r\n\r\nDataObjectsLibrary (the library where UserInfo class exist)\r\n\r\nUserInfo class\r\n\r\npublic class UserInfo\r\n{\r\n    public string FirstName { get;set;}\r\n    public string LastName { get;set;}\r\n}\r\n\r\n\u003d\u003d\u003d\u003d\r\n\r\nI am looking for a pattern name for this.\r\n\r\n\r\nThanks\r\n",
+  "answers": [
+    {
+      "ansID": 1627,
+      "ans": "This is not following a specified pattern, you can say layered architecture. There is a scope of introduction to Abstract Factory / Factory patterns for Managers creations. "
+    }
+  ]
+}

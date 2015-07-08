@@ -1,0 +1,12 @@
+{
+  "id": 1291,
+  "url": "www.dofactory.com/topic/1291/decorator-pattern-system-data-datarow.aspx",
+  "title": "Decorator Pattern \u0026 System.Data.DataRow",
+  "ques": "Hello everyone,\r\n\r\n I kindly request your experienced opinion about decorating System.Data.DataRow object of .NET framework. Is it in some way possible and if so how? (other than using extension methods)\r\n\r\n Thanks in advance.",
+  "answers": [
+    {
+      "ansID": 1416,
+      "ans": "What would you like to do with DataRow?"
+    }
+  ]
+}

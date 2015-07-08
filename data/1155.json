@@ -1,0 +1,16 @@
+{
+  "id": 1155,
+  "url": "www.dofactory.com/topic/1155/sample-vb-net-code-for-a-strategy-pattern-for-algorithms.aspx",
+  "title": "Sample VB.NET code for a Strategy Pattern for algorithms",
+  "ques": "Hi,\r\n\r\nI\u0027m using the Heads Up Patterns book for getting into Design Patterns.  The book uses a Duck to illustrate the Strategy pattern. Could this be the reason why people think Strategy looks like a Factory Pattern? \r\n\r\nAccording to posts here the Strategy Pattern is more for \u0027plugging in\u0027 different algorithms.  Does anyone know where I can get a VB code sample that uses this pattern for different algorithms?  \r\n\r\nThanks,\r\nMike\r\n",
+  "answers": [
+    {
+      "ansID": 1234,
+      "ans": "I have a link to a C# implementation version of the strategy pattern here.\r\nIf you\u0027re uncomfortable reading C# try using a C#-\u003eVB converter.\r\n\r\nOf course, you can take a look at the design pattern framework for VB.Net\r\nwhich has implementations of the Strategy pattern for VB.Net.\r\n"
+    },
+    {
+      "ansID": 1238,
+      "ans": "I recently introduced the strategy pattern in my team as a way of replacing a Select-Case conditional statement so that an existing implementation of a class doesn\u0027t need to be changed when another case needs to be added.\r\n\r\nThis basically works like this:\r\nI have an abstract (strategy-) class declaring an algorithm method that needs to be overridden. From this class, I inherit concrete implementations that use different algorithms. A context class is able to route requests to the respective concrete implementation. This way I can fork from a given condition to the corresponding case-clause (i.e. the concrete algorithm) by using only one call to the context class.\r\n\r\nWhen a new case is introduced I simply add another concrete strategy class and thats basically it.\r\n\r\nEDIT: I posted a question here that was also about that topic. The website I got the first implementation from is this one: http://blogs.microsoft.co.il/blogs/gilf/archive/2009/11/22/applying-strategy-pattern-instead-of-using-switch-statements.aspx"
+    }
+  ]
+}

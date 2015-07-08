@@ -1,0 +1,12 @@
+{
+  "id": 1442,
+  "url": "www.dofactory.com/topic/1442/linq-over-traditional-stored-procedures.aspx",
+  "title": "LINQ over traditional stored procedures",
+  "ques": "Tech experts,\r\n\r\nWhat are advantages of using LINQ over traditional SQL connections and calling stored procedures?\r\nDoes affect it in terms of execution time?\r\n\r\nI have not used them yet but intend to use them.\r\n\r\nAny example to highlight the effectiveness would be appreciated.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1619,
+      "ans": "linq to sql was created to protect the programer from the database. That said, linq to sql is not as fast or as transparent as ADO.  Linq to sql is added on top of ADO."
+    }
+  ]
+}

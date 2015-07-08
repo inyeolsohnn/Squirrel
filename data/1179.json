@@ -1,0 +1,16 @@
+{
+  "id": 1179,
+  "url": "www.dofactory.com/topic/1179/question-of-multiple-if-else-statements-in-code.aspx",
+  "title": "Question on multiple if else statements in code",
+  "ques": "Hi,\r\n\r\nI am working on a maintenance project and I see at lot of places the application logic is written in if..else if..else conditions.\r\n\r\nMany times the if conditions check the value of a variable against a hard-coded string/number. I think there is something wrong with the code and it needs to be improved.\r\n\r\nCan anyone please suggest whether I should change such code with any specific pattern?\r\nAlso, it would be helpful if someone could share an example/link that shows sample conversion code.\r\n\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1266,
+      "ans": "Hi,\r\n\r\nWithout seeing your code, I would recommend you to take a look\r\nat the strategy design pattern. There is a previous post on a similar topic\r\nhere (http://dofactory.com/topic/1158/replace-conditional-vb-net-select-case-with-strategy-pattern-how.aspx).\r\n\r\n\r\nGood Luck!"
+    },
+    {
+      "ansID": 1291,
+      "ans": "You MUST re-factor your code on first place to make it clean and readable (though it may add more LinesOfCodes\r\n\r\nI have seen plethora of similar spaghetti code in PRODuction env. where the coder had left the organization or it was the NEED of hour to publish such code.\r\n\r\nDPattern choice depends how complex is the algorithm inside the if blocks is?\r\n\r\nStrategy is the pattern where you can put Different Algo int saperate subclasses and use them independently (same as If blocks)\r\n\r\nNote that you can NOT configure mix of these Algo - Builder does that\r\n\r\n"
+    }
+  ]
+}

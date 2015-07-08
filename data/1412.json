@@ -1,0 +1,12 @@
+{
+  "id": 1412,
+  "url": "www.dofactory.com/topic/1412/need-a-quick-tutorial-on-mvc-vs-mvp.aspx",
+  "title": "Need a quick tutorial on MVC vs MVP",
+  "ques": "I am not quite up to speed yet, so I need a quick overview of MVC vs MVP. \r\nWe are doing a short WinForms project and need to make a fast decision on which way to go.\r\nDoes anyone have a suggested reference or tutorial which I can see/read in 10 minutes and will be sufficient to make a good decision?",
+  "answers": [
+    {
+      "ansID": 1578,
+      "ans": "These audio / video session might give you some insight, http://polymorphicpodcast.com/shows/mv-patterns/\r\n\r\nPersonally, I\u0027d go for MVP (Passive View or Supervising Controller) when doing WinForms. MVP lends itself very nicely to WinForms, whereas I think MVC works better for a stateless environment such as web.\r\n\r\nGood Luck!\r\n"
+    }
+  ]
+}

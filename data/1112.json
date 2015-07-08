@@ -1,0 +1,16 @@
+{
+  "id": 1112,
+  "url": "www.dofactory.com/topic/1112/accessing-entity-framwork.aspx",
+  "title": "Accessing Entity Framework",
+  "ques": "Hi all, I am doing a project (Win Forms Application) in .NET 4.0. \r\nFor Data Access I am using Entity Framework.\r\n \r\nTo query the objects do I need a wrapper class like Business Layer or can I directly use the entities in the UI?\r\nJust in general, when do I use the Business Lyer. Anyhow, I am a bit confused as my previous experience is with 3-tier architectures and I am feeling that with Entity Framework this is difficult to achieve.",
+  "answers": [
+    {
+      "ansID": 1169,
+      "ans": "Hi,\r\nI always try to use the 3-tier principles.\r\nSome times that is not neccessary but generally speaking this approach is very usefull if someone other programmer wants to work in your project or to follow the principles of project\u0027s scalability.\r\nTry to separate the BL of DL by using Interfaces\r\nthanks"
+    },
+    {
+      "ansID": 1170,
+      "ans": "Hi Imran,\r\n\r\n Perhaps the following articles and projects can help you in how others use EF4 in N-Tier applications.\r\n Disclaimer: I am not a user of EF4, so I can not say if they are good examples, but they should get you going.\r\n\r\nAnti-Patterns To Avoid In N-Tier Applications, Part 1\r\nN-Tier Application Patterns, Part 2\r\nBuilding N-Tier Apps with EF4, Part 3\r\nBuilding N-Tier Apps with EF4\r\nMicrosoft - Domain Oriented N-Layered .NET 4.0 App Sample (Microsoft Spain)\r\nNTier with Entity Framework (EF) 4 Beta 1 ? (VS2010 / .Net 4.0 Beta 1)"
+    }
+  ]
+}

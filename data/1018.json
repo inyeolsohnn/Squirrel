@@ -1,0 +1,12 @@
+{
+  "id": 1018,
+  "url": "www.dofactory.com/topic/1018/dynamic-linq-solution.aspx",
+  "title": "Dynamic LINQ solution?",
+  "ques": "In our app we have a situation where the users can select from numerous criteria and get back a subset of a large number of documents. Also, supported are pagination and sort order.  Criteria may include:  \r\n\r\n\r\nzero or more document types (any, company, personal, group, statement, invoice, etc).\r\nfilter by author last name (wild card) (i.e. LIKE  Smit%)\r\npagination support (page 2 with page size \u003d 20)\r\norder by filedate desc, author name asc.So, in SQL I would implement this something like\r\n\r\n\r\nSELECT * FROM\r\n(  \r\n   SELECT ROW_NUMBER() OVER (ORDER BY FileDate DESC, AuthorName ASC) AS RowNumber, *\r\n     FROM  Document\r\n    WHERE AuthorName LIKE \u0027Smit%\u0027\r\n) AS Results\r\nWHERE RowNumber BETWEEN 20 AND 40\r\nBut how does one build this dynamically in LINQ-to-SQL or LINQ-to-Entities?  The number of options are too numerous to build static LINQ queries for all possible combinations.\r\n\r\nThanks.\r\n ",
+  "answers": [
+    {
+      "ansID": 1023,
+      "ans": "here is a good tutorial by Scott.  Look at the Skip() and Take() methods.\r\n\r\nhttp://weblogs.asp.net/scottgu/archive/2007/06/29/linq-to-sql-part-3-querying-our-database.aspx\r\n\r\nhere is a sample too (its VB so its probably wrong :))\r\nhttp://stackoverflow.com/questions/770909/linq-over-datatable-with-skip-and-take-method"
+    }
+  ]
+}

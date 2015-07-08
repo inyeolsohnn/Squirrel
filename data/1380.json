@@ -1,0 +1,20 @@
+{
+  "id": 1380,
+  "url": "www.dofactory.com/topic/1380/null-object-pattern-real-world-examples.aspx",
+  "title": "Null Object Pattern: real world examples",
+  "ques": "Recently I learned about the Null Object Pattern and got intrigued.  I searched the Internet and there is a fair amount of information available. I think it can be a very beneficial pattern to most applications.  Essentially, it prevents the application from having to check for null values all the time. In fact, LINQ did a good job of almost never returning a null collection, but rather an empty collection, to the caller.\r\n\r\nMy question is does anyone have any real-world experiences or stories where it clearly demonstrates how it was used and benefitted the developers? I guess what I am wondering: is there a best-practice approach to implementing and applying this pattern?\r\n\r\nThanks in advance!",
+  "answers": [
+    {
+      "ansID": 1547,
+      "ans": "I guess there are many examples, but I particularily find it useful when working with the Command Pattern. \r\n\r\nSay you build a Server that takes some input, given a specific input a command is executed. When faulty data is sent to the server I create a Null Object Command instead of null which does nothing when executed. This keeps me from checking for null.\r\n\r\n\r\nJust my 2c :)"
+    },
+    {
+      "ansID": 1549,
+      "ans": "It is of immense use in huge data centric application as well.  For e.g. many financial/banking industries there are lots of calculations that happens in bulk mode wherein you read lots of data and some processing happens on that.  It may be millions in numbers.  This pattern comes in very handy (as I have faced situations like this many time).  \r\n\r\nCreate a null object for the said entity and process everything in bulk.  The null object logs the state and the processing is continued without being interrruped to unwanted null exceptions (note if they happen they are automatically logged :))... \r\n\r\nThough this can be done without using NULL Object pattern, but you can imagine the no. of not null check that you need to make for this....\r\n\r\n"
+    },
+    {
+      "ansID": 1597,
+      "ans": "Hi,\r\nI was struk by the same bug and my search led to this example :\r\n\r\nhttp://sourcemaking.com/refactoring/introduce-null-object#permalink-17\r\n\r\nhope this helps."
+    }
+  ]
+}

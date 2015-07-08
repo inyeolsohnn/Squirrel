@@ -1,0 +1,12 @@
+{
+  "id": 1213,
+  "url": "www.dofactory.com/topic/1213/question-on-decorator-pattern.aspx",
+  "title": "Question on Decorator Pattern",
+  "ques": "I am not clear why we require to have both an Is-a and a Has-a relationship  between Decorator and Component classes. \r\nWe can just have an Is-a relation and class Component class method using Base::Operation().\r\n\r\n\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1320,
+      "ans": "Hi,\r\n\r\nCould you post an example implementation on your thoughts of the Decorator pattern so that\r\nI can see how you\u0027re thinking? Because I have a hard time seing how it can be accomplished\r\nwith a IsA relation only.\r\n\r\n"
+    }
+  ]
+}

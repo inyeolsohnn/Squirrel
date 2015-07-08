@@ -1,0 +1,16 @@
+{
+  "id": 1099,
+  "url": "www.dofactory.com/topic/1099/vs2010-uml-modelling-class-diagrams.aspx",
+  "title": "VS2010 UML Modeling / Class diagrams",
+  "ques": "In the current Design Pattern Framework (3.5) I can see that it comes with Visio UML Diagrams.\r\nWill you take advantage of VS2010 UML Modelling (ClassDiagram) project type to create all the (current \u0026 new) patterns in v4?\r\n\r\nI\u0027m looking forward to the v4 release - will it be sometime this month?\r\n",
+  "answers": [
+    {
+      "ansID": 1154,
+      "ans": "Peter: \r\n\r\nThe UML modeling is only available in VS 2010 Ultimate Edition and that would place it out of reach for most developers.\r\nWe do have class diagrams on all our projects (I assume you knew that, right?).\r\n\r\nAnd, yes, we are releasing 4.0 this month for sure.\r\n\r\nHope this helps.\r\nDan."
+    },
+    {
+      "ansID": 1163,
+      "ans": "Yes I knew about the class diagrams  -but was wondering if you had somethng more specific to VS2010 UML Modeling -no worries!\r\n\r\nGreat to hear that the release will be this month   -could I press you for a more approx date/time? ie... this week / next week  etc?\r\n\r\n\r\nCheers\r\n\r\n"
+    }
+  ]
+}

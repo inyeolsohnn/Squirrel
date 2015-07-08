@@ -1,0 +1,12 @@
+{
+  "id": 1388,
+  "url": "www.dofactory.com/topic/1388/problem-with-derived-class-properties-when-using-a-factory.aspx",
+  "title": "Problem with derived class properties when using a factory",
+  "ques": "I have created a factory to handle XML Responses, properties are defined in the sub classes or the individual XML Nodes, as depending on the original request, the nodes returned in the XML Response will be entirely different.\r\n\r\nThe issue I am having is that I am unable to access the sub class properties as they are not defined in the base class, would rather not define them in the base class as they are specific to the derived class and wondered if there was a way arround it, is there another design pattern I could use that could resolve the issue I am having.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1591,
+      "ans": "Hi Stuart,\r\nFirst of all, I don\u0027t thing that a Factory Method, will help you in the case that all sub-clases are different, factory is only good if all returned instances share the same interface.\r\n\r\nWhat may help you here is to implement the same interface in all subclases. \r\n\r\nFor example create a dictionary of properties in the base class and all derived classes implements a  \u0027public object GetProperty(string name); \u0027 method and also a ReadXml() abstract method, so each XmlMapper knows where to read the properties.\r\nSo your  \u0027Factory \u0027 should instantiate a sub-class that reads the Xml and set its own property\u0027s dictionary.\r\n\r\n\r\n\r\nI hope this helps you a little bit."
+    }
+  ]
+}

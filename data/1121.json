@@ -1,0 +1,12 @@
+{
+  "id": 1121,
+  "url": "www.dofactory.com/topic/1121/pattern-for-events.aspx",
+  "title": "Pattern for Events",
+  "ques": "Which Design Pattern I can implement to enable and disable the menus on MDI upon a successful login. \r\nThe menus should enable/disable depending on the user\u0027s privileges. Thanks.",
+  "answers": [
+    {
+      "ansID": 1203,
+      "ans": "Have a look at the command pattern\r\n\r\nhttp://richnewman.wordpress.com/2007/09/15/the-command-design-pattern-introduction-to-the-cabscsf-part-9/\r\n\r\nhttp://richnewman.wordpress.com/2007/09/16/commands-in-the-cab-introduction-to-cabscsf-part-10/ \r\n\r\n\r\nRegards,\r\nRajesh Pillai"
+    }
+  ]
+}

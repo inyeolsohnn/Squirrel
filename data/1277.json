@@ -1,0 +1,12 @@
+{
+  "id": 1277,
+  "url": "www.dofactory.com/topic/1277/cannot-get-silverlight4-app-in-dpf4-to-work.aspx",
+  "title": "Cannot get Silverlight4 app in DPF4 to work",
+  "ques": "When I run the app, I get the following message\r\n\r\nSystem.ServiceModel.FaultException`1 crossed a native/managed boundary\r\n  Message\u003dThe specified named connection is either not found in the configuration, not intended to be used with the EntityClient provider, or not valid.\r\n  StackTrace:\r\n       at System.ServiceModel.Channels.Remoting.RealProxy.Invoke(Object[] args)\r\n       at proxy_2.EndGetCategories(IAsyncResult )\r\n  InnerException: \r\n\r\nCannot view the shopping page as the Category combobox is not populated.\r\nI am new to Silverlight and want to know how can I fix this error?\r\n\r\nI should mention I have changed the connection string in the web.config to point to my local SQL2005 database.\r\nSilverlight Patterns in Action.Web.csproj\r\n    \u003cadd name\u003d\u0027ActionEntities\u0027\r\n     connectionString\u003d\u0027Data Source\u003dMyLocalSQL2005;Initial Catalog\u003dActionDPF;Integrated Security\u003dTrue;MultipleActiveResultSets\u003dTrue\u0027\r\n    providerName\u003d\u0027System.Data.SqlClient\u0027 /\u003e\r\n\r\nDid I break something?\r\nOr what am I missing to fix this error?",
+  "answers": [
+    {
+      "ansID": 1372,
+      "ans": "Sheir: \r\n\r\nQuick question: You mentioned that you changed the web.config connectionstring. \r\nDid the application run before you made any changes?\r\n\r\nDan."
+    }
+  ]
+}

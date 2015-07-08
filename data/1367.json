@@ -1,0 +1,16 @@
+{
+  "id": 1367,
+  "url": "www.dofactory.com/topic/1367/do-you-have-asp-net-mvc-3-razor-experiences-to-share.aspx",
+  "title": "Do you have ASP.NET MVC 3 Razor experiences to share?",
+  "ques": "I am absolutely new to MVC 3 and trying learn some details. \r\n\r\nI was wondering whether anyone has any real-world experiences to share about the new ASP.NET MVC 3 Razor View Engine. \r\nSpecifically, what is the learning curve when coming from the traditional ASPX View Engine?\r\n\r\nAlso, what about the .cshtm extensions. Does this affect deployment in any way?  Or does the Routing system shield you from this?\r\nFinally, the new Master page replacement, called _layout page. How different is that from Master pages?\r\n",
+  "answers": [
+    {
+      "ansID": 1513,
+      "ans": "\r\n\r\nPresently evaluating for a project.   Some answers to your questions\r\n\r\n 1.  Easy to learn (seem odd at first, but you can quickly get comfortable with it).\r\n 2.  .cshtml has no effect on deployment in any way.\r\n 3.  Routing work as usual\r\n 4.  Layout page is different in the sense that certain new way of marking child sections rather than the usual contentplace holder.\r\n\r\n You may find the following resources helpful./\r\n\r\nhttp://weblogs.asp.net/scottgu/archive/2010/10/22/asp-net-mvc-3-layouts.aspx\r\n\r\nhttp://weblogs.asp.net/scottgu/archive/2010/12/30/asp-net-mvc-3-layouts-and-sections-with-razor.aspx\r\n\r\n\r\n Deployment\r\nhttp://www.hanselman.com/blog/BINDeployingASPNETMVC3WithRazorToAWindowsServerWithoutMVCInstalled.aspx\r\n\r\nRunning ASP.NET MVC on a shared hosting server\r\nhttp://weblogs.asp.net/scottgu/archive/2011/01/18/running-an-asp-net-mvc-3-app-on-a-web-server-that-doesn-t-have-asp-net-mvc-3-installed.aspx\r\n\r\nHere are some code samples\r\nhttp://archive.msdn.microsoft.com/aspnetmvcsamples/Release/ProjectReleases.aspx?ReleaseId\u003d5114\r\n\r\n\r\nHope this helps.. I will share my experience as I move along with this.\r\n"
+    },
+    {
+      "ansID": 1574,
+      "ans": "Some additional tips\r\n\r\nThere are few important tips that may be of help while working with razor.\r\n\r\n1.  By default all outputs are html encoded\r\n2.  @Html.Raw (for outputting string with html tags)  \r\n3. \u003cimg src\u003d \u0027@(model).Path \u0027/\u003e   : here model is the model or domain object and to avoid conflict enclose this in parenthesis.  \r\n     \u0027Path is the propery on the model.  This makes building dynamic attributes a breeze.\r\n4. \u003ctext\u003e hello world \u003c/text\u003e :  Anything put in a text tag is outputted as it is.  i.e. no \u003ctext\u003e markup is rendered.  This is used \r\n     for outputting plain text without any markup surrounding it.\r\n5. _viewstart.cshtml :  Move you common view code here.  Like setting up the layout pages....\r\n6.  @@ :   escape @character.  :  If you need to emil @mysite  then prefix it with an @ to escape the special meaning.  \r\n     eg.. @@mysite.\r\n"
+    }
+  ]
+}

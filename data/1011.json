@@ -1,0 +1,20 @@
+{
+  "id": 1011,
+  "url": "www.dofactory.com/topic/1011/looking-for-suggestions-what-is-the-best-mocking-package-for-net.aspx",
+  "title": "Looking for suggestions: what is the best Mocking package for .NET?",
+  "ques": "I am diving deep into unit testing, mocking, stubbing, IOC, and everything that goes with it.  I am looking for some guidance from those who are using these tools \u0027in the field.\u0027  From what I can tell, in order of popularity, the mocking package options are as follows: \r\n\r\n\r\nRhino.Mocks\r\nMoq\r\nNMock\r\nTypeMock (not free)Also,reading between the lines in other discussion forums, there seems to be a transition going on from Rhino to Moq. Supposedly because it\u0027s more typesafe. Anyone have any particular experiences (good and not so good) they want to share?\r\n\r\nThanks, \r\n\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1208,
+      "ans": "I have used  \u0027Rhino \u0027 and  \u0027Moq \u0027 and both seems to be quite good enough for most situations.  But due to the fluentness of the API\u0027s I tend to move towards  \u0027Moq \u0027  more frequently now.\r\n\r\nTypeMock is great but has a price tag as highlighted.\r\n\r\nRegards,\r\nRajesh Pillai"
+    },
+    {
+      "ansID": 1209,
+      "ans": "I have only used Rhino Mock and Moq, and found Moq to be easier to understand and use. Moq does require .Net 3.5 though, which might be a deal-breaker for some.\r\n\r\nWhat I am aware of is that TypeMock and JustMock are the only mocking frameworks that can mock non-virtual methods, sealed classes and static methods and classes which isn\u0027t supported in most open source/free mocking tools. If anyone know of a free mocking tool that can do this please post a comment about it.\r\n\r\nHere is a list of other mock frameworks not mentioned in the original post:\r\n\r\nJustMock by Telerik (commercial), http://www.telerik.com/products/mocking.aspx\r\nFakeItEasy by Patrik Hagne, http://code.google.com/p/fakeiteasy/\r\nNSubstitute by Troy Hunt, http://nsubstitute.github.com/\r\nMoles by Microsoft, http://research.microsoft.com/en-us/projects/moles/\r\nSimple.NET by Mikael Waltersson, http://simpledotnet.codeplex.com/"
+    },
+    {
+      "ansID": 1229,
+      "ans": "At my company I\u0027m pushing for MOQ as the standard for .NET Mocking frameworks along with custom mocks.\r\n\r\nI\u0027ve used Rhino.\r\n\r\nTypemock is expensive but it is the one to use for legacy older apps that do not utilize interfaces in the application design.\r\n\r\nUp need to understand and use dependency injection and IoC techniques with the majority of open source mock frameworks."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1420,
+  "url": "www.dofactory.com/topic/1420/design-patterns-product-for-framework-2-0.aspx",
+  "title": "Design Pattern Framework product for VS 2005 / .NET 2.0?",
+  "ques": "Hi,\r\n\r\nUnfortunately the company I work for is still using VS 2005 on .NET 2.0...\r\n\r\nDoes the Design Pattern Framework exists for .NET 2.0?  If so, how do I evaluate it or buy it?\r\n\r\nThnx in advance 4 your help,\r\nFrancesco",
+  "answers": [
+    {
+      "ansID": 1586,
+      "ans": "Hello Francesco:\r\n\r\nYour Design Pattern Framework 4.0 purchase includes older versions of the Framework as well.  These include versions for .NET 3.5, .NET 2.0, and .NET 1.1.\r\n\r\nOf course, the more recent versions are \u0027richer\u0027 and have more functionality, simpley because .NET is richer.  But the fundamentals of what Design Patterns are and how they are used has not changed -- in fact, Design Patterns already existed before .NET.\r\n\r\nI hope this helps.\r\nDan."
+    },
+    {
+      "ansID": 1613,
+      "ans": ".net frame work 4 using all fram  work .some times there is error  in vs 2005 \u0026vs 2008"
+    }
+  ]
+}

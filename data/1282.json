@@ -1,0 +1,12 @@
+{
+  "id": 1282,
+  "url": "www.dofactory.com/topic/1282/gof-design-patterns-4-0-pdf-question-2.aspx",
+  "title": "GoF Design Patterns 4.0 pdf question #2",
+  "ques": "This is in regards to Factory Method.\r\n\r\nThe PDF states (page 16)\r\n\r\n\u0027So, when do you know the Factory Method is at work? The rules are: \r\n- the method creates a new object \r\n- the method returns an abstract class or interface \r\n- the abstract class or interface is implemented by several classes \u0027\r\nSo, it seems that for a method that creates a class, for it to be a Factory Method, it should return an abstract class or interface, right?  Seems clear, but I\u0027m kinda wondering the difference between Factory Method and Abstract Factory.  Fortunately this is answered on page 17:\r\n\u0027This is exactly where Abstract Factory and Factory Method differ: Abstract Factory methods are virtual or abstract and return abstract classes or interfaces. Factory Methods are abstract and return class types. \u0027\r\nIt seems this conflicts with the statement that \u0027Factory Methods return abstract classes or interface\u0027 when it this says \u0027Factory Methods are abstract and return class types\u0027.\r\nAnybody have an explanation?\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1387,
+      "ans": "The difference between Abstract Factory and Factory Method has been blurred over the years.  If you look at differences between the original GOF UML diagrams of Abstract Factory and Factory Method you see in Abstract Factory ?a higher level of abstraction? (there are several abstract types involved, hence the name Abstract Factory).  \r\n\r\nTo alleviate any confusion, we should probably remove the sentence:   \u0027This is exactly where Abstract Factory and Factory Method differ: Abstract Factory methods are virtual or abstract and return abstract classes or interfaces. Factory Methods are abstract and return class types.  \u0027\r\n\r\nThe sentence is generally true, but there are most likely edge cases where things are done differently. Also, it would probably be safer to state that methods in Factories (both types) return classes, abstract classes, or interfaces. This would cover all possible factory implementations. \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

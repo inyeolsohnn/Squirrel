@@ -1,0 +1,16 @@
+{
+  "id": 1084,
+  "url": "www.dofactory.com/topic/1084/how-to-implement-mvp-design-pattern-in-windows-application.aspx",
+  "title": "How to implement the MVP design pattern in Windows application",
+  "ques": "Hi All,\r\n\r\nI have to implement the MVP design pattern for my Windows application.\r\nFor that I need some samples to implement it including Layers.  Can anyone suggest how to do this?\r\n\r\nThanks ahead\r\nVenkat",
+  "answers": [
+    {
+      "ansID": 1129,
+      "ans": "Are you a customer? The Design Pattern Framework contains a solution named Patterns in Action. It consists of a full featured implementation of several design patterns within a complete multi-layered application.\r\n\r\nYou will find a working example of how to implement different UI presentations (Winform, WPF, ASP.NET) on top of the same hosting-/business-/service-/data-layers.\r\n\r\nI never saw a better and more complete example than this one.\r\nWorth every dollar I spent on it. ;-)"
+    },
+    {
+      "ansID": 1139,
+      "ans": "Hello Venkat Damarasing,\r\n   First try to understand what is MVP.I am giving some links.Go through that\r\n   http://msdn.microsoft.com/en-us/magazine/cc188690.aspx \r\n http://msdn.microsoft.com/en-us/library/ff647543.aspx\r\n   Sample: Go through this link.it will give fair idea as to how make layers and proper implementations.\r\nhttp://blog.vuscode.com/malovicn/archive/2006/10/10/Model-View-Presenter-_2800_MVP_2900_-pattern.aspx\r\n"
+    }
+  ]
+}

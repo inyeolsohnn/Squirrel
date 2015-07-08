@@ -1,0 +1,12 @@
+{
+  "id": 1055,
+  "url": "www.dofactory.com/topic/1055/deaign-pattern-implement-roles-and-rights.aspx",
+  "title": "Design Pattern - Implementing Roles and Rights",
+  "ques": "Can anyone please suggest which Design Pattern is best to implement user roles and rights?\r\n\r\nI am looking for a generic solution in which I define roles and based on that I should be able to define rights at the menu, functionality and control level at the UI. Thanks. Some samples will be great.",
+  "answers": [
+    {
+      "ansID": 1097,
+      "ans": "Both Lazy IoC container and Interception are patterns which I\u0027m currently using in terms of implementing the Roles \u0026 Rights."
+    }
+  ]
+}

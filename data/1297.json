@@ -1,0 +1,12 @@
+{
+  "id": 1297,
+  "url": "www.dofactory.com/topic/1297/dofactory-architecture-design.aspx",
+  "title": "DoFactory Architecture Design",
+  "ques": "Hi,\r\n\r\nI just have a question on the architecture. I always thought that the service must call the repository. In the solution the have ActionService and a repository. Lets say I want to get all the customers then in my controller I would call the repository\u0027s GetCustomers method. This will then call ActionService\u0027s GetCustomer\u0027s method. And then lastly another GetCustomers method is called in the customer data access object. Is this right?  Is it best practices to do it this way, or is your service implementation something different to my understanding of a service?  How I understand it is as follows.  A service like CustomerService has a Save method.  In this method logic is applied, when everything is a success then the repository\u0027s Save method is called.\r\n\r\nAny comments on the way that they implemented things in the Patterns in Action?",
+  "answers": [
+    {
+      "ansID": 1405,
+      "ans": "Brendan,\r\n\r\nI can\u0027t really answer for the DoFactory guys, but I do know what you are talking about in this case.  And I assume you are referring to the MVC implementation.  This implementation is done this way, as far as I can see, to allow the controllers to be testable.\r\n\r\nSince the application gets a reference to the WCF service, they could have made a reference to the WCF service proxy directly in the controllers, but then you wouldn\u0027t have an easy way of testing them.  \r\n\r\nBy wrapping the WCF service inside local repositories, you can test your controllers without affecting the rest of the application.\r\n\r\nIn my applications, when I use the PIA pattern, I take it a step farther and decorate the local models with DataAnnotations for form validation.\r\n\r\nI\u0027ve built this functionality into my code generator so it builds all this stuff for you.\r\n\r\nI know it seems like a lot of stuff that may be redundant, but the way this application is separated, it kinda needs to be this way, or something close to it in order to provide maximum flexibility and testability.\r\n\r\nAnd if you were to time it, round trip, page requests take only milliseconds.\r\n\r\nThis isn\u0027t the only way to do things, but it is one way.  It\u0027s really up to you to see if it fits your needs.\r\n\r\nI hope this answered your question.\r\n\r\nKing Wilder"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1010,
+  "url": "www.dofactory.com/topic/1010/asp-net-webforms-versus-asp-net-mvc.aspx",
+  "title": "ASP.NET WebForms versus ASP.NET MVC",
+  "ques": "This is not so much a critique on a project but more of a reflection on the ongoing discussions between the above-mentioned ASP.NET platforms.\r\n\r\nAfter reading Scott Gu\u0027s blog on Technical Debates I have to think that Microsoft may have opened yet another Pandora\u0027s box with MVC. \r\n\r\nWe have seen this before:\r\n\r\nWith VB and VB.NET. Microsoft was standing by VB, but clearly VB.NET is the winner.\r\n\r\nWith C# and VB.NET. Again, Microsoft is standing by VB.NET, but percentage-wise C# is the clear winner (yes, I know that there still is a lot of VB.NET work out there).Today, we have a similar situation with ASP.NET WebForms and ASP.NET MVC. Microsoft is strongly supporting WebForms, but from what I can tell, the industry has already decided. Not many new ASP.NET projects (notice new) will go the WebForms route. I also see this in the intense interest in MVC at our local .NET User group. \r\n\r\nPerhaps all this is just healthy competition?  In fact, it is somewhat by design; Microsoft\u0027s product teams are fairly independent and essentially compete with one another. It\u0027s survival of the fittest and sofar MVC appears \u0027more fit\u0027 than WebForms. \r\n\r\nThoughts?",
+  "answers": [
+    {
+      "ansID": 1012,
+      "ans": "I would say both are equally good but catering to two different development models. As you know, ASP.NET MVC was designed to support design-driven, test-driven, contract-first scenarios and it enforces pattern implementation. This might attract non-ASP.NET web developers too towards ASP.NET while making WebForms fans happy. Compared to WebForms, MVC does not enjoy extensive tooling support.\r\n\r\nMy 2c."
+    }
+  ]
+}

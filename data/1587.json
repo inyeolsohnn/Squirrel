@@ -1,0 +1,12 @@
+{
+  "id": 1587,
+  "url": "www.dofactory.com/topic/1587/doubt-in-c-net.aspx",
+  "title": "Help on video file storage in C# ,Net",
+  "ques": "i have created a application in which i added VLC (Video LAN Player) \r\nin the properties section in MRL i added the video address when i executed the video got playing but \r\nwhen i published the application and installed in the other machine the video was not playing \r\nplease help me what sort of mistake am i doing \r\nguide me \r\n\r\nI came to know by someone that we have to store the video files in resources \r\ni have 45 video files when i add those video file through add resouces it take a a bit of time and adds in the resources but when i execute than i\u0027ll be getting an error\r\nplease help me out or else is their any alternative way to add video please let me know i am in a big trouble\r\n\u0027 Error 1 Unexpected error writing metadata to file \u0027C:UsersdellDocumentsVisual Studio 2010ProjectsSSobjx86DebugS.exe\u0027 -- \u0027Not enough storage is available to complete this operation. \u0027 S \u0027",
+  "answers": [
+    {
+      "ansID": 1771,
+      "ans": "Instead of including the video files as resources include them in an installer package. The program you are writing can then refer to the video files by name on the file system wherever the installer extracts files to."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1043,
+  "url": "www.dofactory.com/topic/1043/using-constructor-di-dependency-injection-in-mef-managed-extension-framework.aspx",
+  "title": "How do I use constructor dependency injection in MEF?",
+  "ques": "So, here is a questions about the newly released MEF 4.0 (Managed Extension Framework).\r\nIn MEF you can use the ImportingConstructor attribute to decorate a contructor, like so: \r\n\r\nclass Test\r\n{\r\n   [ImportingConstructor]\r\n   public Test(IMessageSender messageSender) \r\n   {\r\n   }\r\n}\r\nHowever, I am not able to find example code that actually resolves this Import.  \r\n\r\nThere are plenty of composition examples like below:  \r\n\r\n\r\nprivate void Compose()\r\n{\r\n    var catalog \u003d new AssemblyCatalog(System.Reflection.Assembly.GetExecutingAssembly());\r\n    var container \u003d new CompositionContainer(catalog);\r\n    container.ComposeParts(this);\r\n}\r\nIt composes parts of this, meaning the instance has already been already constructed.\r\n\r\n\r\nAlternatively, you may find code like so:  \r\n\r\n\r\n  var catalog \u003d new AssemblyCatalog(System.Reflection.Assembly.GetExecutingAssembly());\r\n  var container \u003d new CompositionContainer(catalog);\r\n  \r\n  Employee employee \u003d new Employee()\r\n  container.ComposeParts(employee);\r\nBut again, the constructor of Employee has already been called before composition takes place.\r\n\r\n\r\n\r\nMy question is this: how do you let MEF invoke the constructor (i.e. create an object) of an Imported constructor?\r\n\r\nI would have expected something like: \r\n\r\ncontainer.CreateObject(\u0027name\u0027 or type)\r\nAny pointers will be greatly appreciated.\r\n ",
+  "answers": [
+    {
+      "ansID": 1123,
+      "ans": "I\u0027m also interested in the answer to this, as I\u0027m having the same issue."
+    }
+  ]
+}

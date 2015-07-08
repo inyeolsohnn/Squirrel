@@ -1,0 +1,12 @@
+{
+  "id": 1302,
+  "url": "www.dofactory.com/topic/1302/the-best-design-pattern-for-my-game.aspx",
+  "title": "The optimal Design Pattern for my Computer Game",
+  "ques": "Hi: \r\n\r\nI am trying to decide which will be the best PHP design patterns for my game. \r\nI would like to know what design patterns are you guys using in unity 3D?\r\n\r\nAlso, which design pattern will be the most appropriate for my game?\r\n\r\nFYI: My game needs is full 3D ,with levels, lots of models, different cameras, and multi player. \r\nImagine warcraft3 for instance.\r\n\r\nFinally, are there any examples of an MVC implementation in games?",
+  "answers": [
+    {
+      "ansID": 1415,
+      "ans": "Patterns are not related with any platform. They are suitable for any platfrom, whether for C# or php.\r\nAlso you ought to get that patterns help sort out a problem. You should not shove patterns whereever it is possible.\r\n\r\nAbout MVC implemetation. \r\nWere you banned in google? :)\r\n\r\nlook here http://blog.wekeroad.com/mvc-storefront/\r\n"
+    }
+  ]
+}

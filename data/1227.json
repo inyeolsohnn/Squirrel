@@ -1,0 +1,20 @@
+{
+  "id": 1227,
+  "url": "www.dofactory.com/topic/1227/presentation-layer-reference.aspx",
+  "title": "Class names in Presentation Layer reference",
+  "ques": "Hi,\r\n\r\nI am exploring Patters in Action 4.0 framework.On Product.aspx.cs page there is reference to Product object.\r\nActionServiceReference.Product product \u003d repository.GetProduct(ProductId); \r\n\r\nI cannot find Product class in Service layer, how does it get referenced in Presentation layer. I can find  Product in Business layer and another one in  ASP.net Presentation layer. \r\n\r\nThanks,\r\nPraveen.\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1332,
+      "ans": "Praveen: \r\n\r\nThis is a nice WCF feature.  You can decorate your classes in the BO with attributes like [DataMember] and [DataContract] that allow you to specify the names of the generated proxy classes on the client.\r\n\r\nHope this helps.\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1333,
+      "ans": "Thanks Dan, So in the above code Product is referring to ProductDto in service layer and not Product in Business Layer.\r\nSnippet\r\n [DataContract(Name \u003d  \u0027Product \u0027, Namespace \u003d  \u0027http://www.yourcompany.com/types/ \u0027)]\r\n    public class ProductDtoAlso as in the example, if Data Access object does not have any methods, do we need separate Dto objects if we move Data Access objects to separate project. I am working on a project where business logic is implemented in service layer implementation, client makes call on Facade and it calls service layer.\r\n\r\nPraveen.\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1335,
+      "ans": "Praveen:\r\n\r\nYes, you are right, the attributes are on the DTOs rather than the BOs.\r\n\r\nAlso, separating your Facade, Service Layer, Business Layer and Data Access Layer into separate projects is very much a matter of your particular requirements and/or preferences. \r\n"
+    }
+  ]
+}

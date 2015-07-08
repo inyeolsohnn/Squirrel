@@ -1,0 +1,24 @@
+{
+  "id": 1188,
+  "url": "www.dofactory.com/topic/1188/pattern-in-action-4-0-first-run-issue.aspx",
+  "title": "Patterns in Action 4.0 data access issue",
+  "ques": "Hi,\r\nI have a database access issue. I tried everything to run the Patterns in Action 4 application, but cannot get it to work. \r\nThe error I get is: \u0027failed to create user instance\u0027.  I have SQL Express 2005. Can someone please help?\r\n\r\nThanks\r\nViv",
+  "answers": [
+    {
+      "ansID": 1282,
+      "ans": "Vivek: \r\n\r\nI am sorry for the trouble.  This is the first time we see this issue reported within the context of Patterns in Action 4.0.  So, I would suggest that you not change anything in web.config in the Pattern in Action application.\r\n\r\nI did some Googling and Binging and found that there does not seem to a single reason / solution to this problem.  The best discussions may be these threads: \r\n\r\nhttp://social.msdn.microsoft.com/Forums/en/sqldatabaseengine/thread/f5eb164d-9774-4864-ae05-cac99740949b\r\nhttp://forums.asp.net/p/1377174/3427619.aspx\r\n\r\nIn no particular order, these threads offer the following suggestions: \r\n\r\n1) Modify the SQL Server (SQLExpress) service to use your local or system account and restart the service.\r\n\r\n2) ensure you are logged in as an Administrator\r\n\r\n3) explore the error log in the following directoryremove the following directory and then restart your machine (username is usually ASPNET)\r\n\r\n  C:Documents and SettingsusernameLocal SettingsApplication DataMicrosoftMicrosoft SQL Server DataSQLEXPRESS\r\n     or on Vista / Windows 7\r\n  C:UsersusernameAppDataLocalMicrosoftMicrosoft SQL Server DataSQLEXPRESS\r\n\r\n4) remove the above mentioned directory entirely and then restart your machine. \r\n    Please note these are suggestions only, we cannot guarantee any outcome (good or bad). \r\n\r\nI hope this helps.\r\n"
+    },
+    {
+      "ansID": 1284,
+      "ans": "Hi Dan,\r\n\r\nThanks for the advice. I tried what you mentioned but it does not seem to be working. Let me give you the environment I am working on.\r\n\r\nStand alone laptop with Windows 7 (ultimate ediition).\r\nSQL server 2008 developer edition\r\nSql serverr 2008 R2 Express edition (removed now)\r\nSql server 2005 Express edition with SP2\r\nVisual studio 2010 ultimate edition\r\n\r\nI made a small change in WCF application app config for localsqlserver to point SQL server 2008 developer edition (where i have aspnetdb). So now atleast the login part is working. But failing at GetCustomers in Model.cs with the error message \u0027The underlying provider failed to open\u0027. There is a image of error attached with this post.\r\n\r\nI tried to attach Action.mdf and aspnetdb.mdf to both the sql server instances and it failed. \r\n\r\nBasically I am trying to point at the databases in SQL Server Developer Edition instead of attaching at runtime. \r\nCan you give me some suggesstions where to make changes in the config files?\r\n\r\nThanks\r\nViv \r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1288,
+      "ans": "Vivek: \r\n\r\nIn the documentation, specifically the Patterns in Action 4.0 pdf on page 15 and up you\u0027ll find the necessary instructions on how to use SQL Server, rather than SQL Express. \r\n\r\nHope this helps."
+    },
+    {
+      "ansID": 1328,
+      "ans": "Hi,\r\n\r\nI got same proplem today but got it fixed pretty fast. I just renamed C:Documents and SettingsxxxxxxLocal SettingsApplication DataMicrosoftMicrosoft SQL Server DataSQLEXPRESS folder and restarted SQL servers service.\r\n\r\nwith regards,\r\nAntti"
+    }
+  ]
+}

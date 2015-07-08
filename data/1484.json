@@ -1,0 +1,12 @@
+{
+  "id": 1484,
+  "url": "www.dofactory.com/topic/1484/business-rules-in-project.aspx",
+  "title": "Business Rules in project",
+  "ques": "I know that the business rules belong in the Business Layer but I need help understanding when and why they are happening in the example. The example seems to set business rules on an object in the Business Layer when mapping data being retrieved from the database. I don\u0027t see the relevance in that and what the purpose is in setting or validating data retrieved from the database. How does that help?\r\n\r\nThanks\r\ndennis",
+  "answers": [
+    {
+      "ansID": 1668,
+      "ans": "Dennis, it seems you are a little confused as to how the Business Rules work in their framework.  It is a little complicated, but it\u0027s not validating data from the database.  It\u0027s validating data when it comes into the service layer from the presentation layer.\r\n\r\nThe way it works is, when a new business object is created, all the rules for that class populate a collection of rules, that then wait to be validated in the service layer.\r\n\r\nWhen the object is passed into an Insert or Update method, for example, the Validate() method is called which iterates over the rules collection and compares the rule with the property value.  If the rule passes, then it returns True, otherwise it returns False.  Then it passes a message back up to the presentation layer.\r\n\r\nIf you look at the WCF service implementation class and go into any of the Set[class name] methods, you\u0027ll see the [object].Validate() method called in an IF statement.  Inside the IF statement there\u0027s a FOREACH statement that iterates over the ValidateErrors collection.  This is where the validation occurs.\r\n\r\nI hope this helps clear this up."
+    }
+  ]
+}

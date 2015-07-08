@@ -1,0 +1,12 @@
+{
+  "id": 1551,
+  "url": "www.dofactory.com/topic/1551/which-patterns-i-use-to-design-my-classes.aspx",
+  "title": "Which Patterns I use to design my classes?",
+  "ques": "\r\nI have scenario based question and I want a required help please tell me how many Patterns I required to solve my problem?\r\nWe are creating an application for shape drawing. We have to support multiple shapes like circle, rectangle, square, polygon etc. These shapes may are related to each other like square is a type of rectangle where rectangle is also kind of polygon. We want to have an option of theme as well in our application. This theme option will allow us to draw shapes with some filled content like marble theme will allow us to create shapes filled with marbles where flower theme will allow us to create shape filled with flowers. By default user can create shapes with borders with no fill. In order to provide convenience to user we have an imaginary shape like Frame. The idea to introduce frame is to hold different shapes so user can move or apply effects in one go.\r\nCreate classes / interfaces for given problem\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1751,
+      "ans": "Does one frame can hold other frame within it?"
+    }
+  ]
+}

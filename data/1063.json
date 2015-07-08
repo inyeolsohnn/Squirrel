@@ -1,0 +1,12 @@
+{
+  "id": 1063,
+  "url": "www.dofactory.com/topic/1063/silverlight-design-patterns.aspx",
+  "title": "Silverlight Design Patterns?",
+  "ques": "For some time now I have been involved in a Silveright project. \r\nWe\u0027re using WCF RIA Services and the MVVM Design Pattern with great success.\r\n\r\nHowever, what we are finding is that building an \u0027Enterprise\u0027 level Silverlight application has a lot of challenges, that is, building an application that is robust, performs well, and can support many concurrent users is not easy. And there is not much information about building these type of business applications.  \r\n\r\nThe Rapid Application Development (RAD) type of demos that Microsoft is showing are very impressive, but they only go sofar. Once you start developing a \u0027real-world\u0027 Silverlight business application you find that, for example, the DataForm just does not cut it anymore. \r\n\r\nMy question is this: Are there additional patterns (in addition to GoF and MVVM) for Silverlight that would help us building robust Enterprise level Silveright business apps?  I would think that there are Silverlight Design Patterns or Best Practices that others have \u0027discovered\u0027. If so, I would be eager to hear about them. Urls or links are also welcome.\r\n\r\nA final note. Tips, such as, how to best manage style, theme, brush, and other resources would also be helpful. As well as best practices for RIA Services Exception handling (another tricky issue). \r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1109,
+      "ans": "I just ran into this article on the challenges of building a corporate website with Silverlight by CompletIT (check it out, completit.com is a killer site!).\r\n\r\nhttp://www.silverlightshow.net/items/Completit.com-the-challenges-behind-building-a-corporate-website-in-Silverlight.aspx\r\n\r\nHope this helps."
+    }
+  ]
+}

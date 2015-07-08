@@ -1,0 +1,12 @@
+{
+  "id": 1604,
+  "url": "www.dofactory.com/topic/1604/pattern-for-product-to-product-variant-association.aspx",
+  "title": "Pattern for Product to Product Variant association",
+  "ques": "Is there a design pattern to solve the product to product variant association? A product varies from another product by only it\u0027s color, size or material only. Every other static properties like name and description are the same.\r\nI looked at the type-object / item-descriptor pattern which does not seem to be a fit. In this case, I\u0027m not creating two types of products but the same type of product but varies in dynamic properties. I don\u0027t know these properties (color, size and material) at compile time. I know what they are at run time only.\r\nAny idea?\r\n",
+  "answers": [
+    {
+      "ansID": 1791,
+      "ans": "I\u0027ve a simple pattern I like to use in cases such as these.  I call it the comparator pattern.  Here\u0027s a simple Console app that can be used to describe a possible solution.\r\n\r\nI hope this helps\r\n\r\n\r\n\r\nclass Program\r\n    {\r\n        static void Main(string[] args)\r\n        {\r\n            var productA \u003d new Product( \u0027Red \u0027,  \u0027Shoes \u0027,  \u002710 \u0027,  \u0027Rubber \u0027);\r\n            var productB \u003d new Product( \u0027Red \u0027,  \u0027Shoes \u0027,  \u002710 \u0027,  \u0027Rubber \u0027);\r\n            var productC \u003d new Product( \u0027Green \u0027,  \u0027Shoes \u0027,  \u00278 \u0027,  \u0027Plastic \u0027);\r\n\r\n            if (productA.IsEqualTo(productB)){Console.WriteLine( \u0027Product A and Product B are the same \u0027);}\r\n            if (!productB.IsEqualTo(productC)){Console.WriteLine( \u0027Product B and Product C are NOT the same \u0027); }\r\n\r\n            Console.ReadLine();\r\n        }\r\n\r\n        \r\n    }\r\n\r\n    public class Product\r\n    {\r\n        private readonly string color, name, size, material;\r\n\r\n        public Product(string color, string name, string size, string material)\r\n        {\r\n            this.color \u003d color;\r\n            this.name \u003d name;\r\n            this.size \u003d size;\r\n            this.material \u003d material;\r\n        }\r\n\r\n        public bool IsEqualTo(Product product)\r\n        {       \r\n            return (product.color \u003d\u003d color \u0026\u0026 product.name \u003d\u003d name) \u0026\u0026 product.material \u003d\u003d material;\r\n        }\r\n    }\r\n\r\n "
+    }
+  ]
+}

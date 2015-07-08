@@ -1,0 +1,12 @@
+{
+  "id": 1498,
+  "url": "www.dofactory.com/topic/1498/vs-locks-up-on-the-in-action-solution.aspx",
+  "title": "VS locks up on the \u0027In Action\u0027 solution",
+  "ques": "It\u0027s important to specify at the top that this behavior is exclusive to the Patterns In Action 4.0 version. I\u0027ve never seen anything the like in other MVC projects.\r\n\r\nI\u0027m seeing frequent and intermittent lockups of VS10 (msdn/pro version fully patched) when accessing the Properties page of any of the web apps (mvc3, action and imageserver). These lockups never occur on class-based projects. I\u0027m also locking up (intermittently and far less frequent) when debugging - working against dev server or IISExpress.\r\n\r\nNo error messages are being logged - the solution compiles fine. But  But VS might spend 10 minutes in a \u0027Not Responding\u0027 state (display dims to that \u0027faded\u0027 effect) and then be fine, or it might never recover (within the bounds of my patience anyway). \r\n\r\nIs it possible that ReSharper or VisualSVN might be interfering? Any other reports of the like?\r\n\r\nthx\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1676,
+      "ans": "Hello Stephen:\r\n\r\nSofar you are the only user reporting this behavior. The MVC solution was not developed with the tools you are mentioning (Resharper, etc), so none of these 3rd party files exist in the solution folder. \r\n\r\nI assume you are using Resharper and Visual SVN?  Resharper in particular does a lot of background processing and this could possibly explain the long waits?  \r\n\r\nIn a few instances I have noticed something similar which seems to be related to the keyboard shortcut bindings.  However, the delays are not as severe as you reported.  In my case, the bindings are subsequently messed up and the only way out is to restart VS.\r\n\r\nPerhaps anyone else on this forum can shine a light on Stephen\u0027s issue?"
+    }
+  ]
+}

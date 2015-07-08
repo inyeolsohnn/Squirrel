@@ -1,0 +1,20 @@
+{
+  "id": 1494,
+  "url": "www.dofactory.com/topic/1494/error.aspx",
+  "title": "Changed to basicHttpBinding and now I have an Error",
+  "ques": "I created a web service and put it out on a server. It is just a basic service that does a call to a database to get a list of document properties. The problem is that this is going to be a web service that can be used in multiple projects but when I reference it and do the call it gives the error: \u0027the caller was not authenticated by the service.\u0027. Any idea? I know it probably has to do with the web.config in the service layer but I\u0027m not sure what. I changed it to \u0027basicHttpBinding\u0027 but when I do that it can\u0027t see the service and throws an error.\r\n\r\nThanks\r\ndennis",
+  "answers": [
+    {
+      "ansID": 1671,
+      "ans": "If you want to use wshttpbinding, u need to add windows credentials as below.\r\n\r\nsvc.ClientCredentials.Windows.ClientCredential.UserName \u003d  \u0027abc \u0027;\r\nsvc.ClientCredentials.Windows.ClientCredential.Password \u003d  \u0027xxx \u0027;\r\n"
+    },
+    {
+      "ansID": 1736,
+      "ans": "\r\nMaybe you just need to calm down and take it easy. It\u0027s socommon that these devices do not support work. Or you may download a freebarcode scanner by yourself and have fun instead of worring about that.  \u0027http://www.keepautomation.com/ \u0027KEEPAUTOMATIONfree online bar Code ReaderJust and it is really convenient anduseful. You may have a try someday and enjoy the life to the fullest."
+    },
+    {
+      "ansID": 1737,
+      "ans": "Take a look at the security settings under the binding section of the web.config. Also check that IIS is using anonymous access.\r\n\r\nIf connecting to a database you will need to make sure that the database can accept connections from the webserver. This can be done by creating user credentials and then either stating the username and password as part of the connection method or by impersonation.\r\n\r\nHope it helps\r\n\r\n\u003cbindings\u003e\r\n    \u003cbasicHttpBinding\u003e\r\n        \u003cbinding name\u003d \u0027MyBasicHttpBinding \u0027\u003e\r\n            \u003csecurity mode\u003d \u0027None \u0027\u003e\r\n                \u003ctransport clientCredentialType\u003d \u0027None \u0027 /\u003e\r\n            \u003c/security\u003e\r\n        \u003c/binding\u003e\r\n    \u003c/basicHttpBinding\u003e\r\n\u003c/bindings\u003e\r\n\r\n "
+    }
+  ]
+}

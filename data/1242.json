@@ -1,0 +1,12 @@
+{
+  "id": 1242,
+  "url": "www.dofactory.com/topic/1242/mvp-with-winforms-app-using-errorprovider.aspx",
+  "title": "MVP with Winforms App using ErrorProvider",
+  "ques": "Hi\r\n\r\nI have been looking through the Patterns in Action solution especially in terms of the MVP pattern as I would like to refactor an existing application to use MVP as a lot of logic is tied up in the code behind the Forms.  One issue I can\u0027t seem to find a clean solution to is how to wire up a Presenter with a windows forms ErrorProvider control.\r\n\r\nOne possible solution I have read about is to have a SetError method defined in the View and implemented by the Form which takes the control name and error message as arguments and sets the error for the specified control e.g.\r\n\r\nForm code behind:\r\n\r\npublic void SetError(string controlName, string errorMessage)\r\n{\r\n    Control c \u003d Controls[controlName];\r\n    errorProvider.SetError(c, errorMessage);\r\n}\r\n\r\nHowever, from what I can see, this would require the Presenter to know about controls on the Form (at least control names) as the Presenter would call for example:\r\n\r\n_view.SetError(\u0027txtName\u0027, \u0027Please enter name.\u0027);\r\n\r\nIs this a suitable implementation or are there any other ways to have the presenter validate and set error messages on form controls?\r\n\r\nAny help is greatly appreciated.\r\n\r\nMatt",
+  "answers": [
+    {
+      "ansID": 1347,
+      "ans": "Matt\r\n\r\nAlthough I have no experience in MVP, I can offer a possible suggestion.\r\n\r\nThe way that we achieve this within out framework is to encapsulate the rules within the concrete class and have a collection of \u0027BrokenRules\u0027 available to the client. For example, if you are constructing the class and it requires a date to be set, the \u0027Validate\u0027 method with the class can be called and this will add the rule to the collection. You can then check this collection or alternatively have a property of \u0027IsValid\u0027 which is set after the Validate method has been called. Although it does not tie into a specific control, you will have access to the rules that are broken and can display these within a generic control capable of displaying them.\r\n\r\nThis requires the use of a factory to build the object and have the associated code built in.\r\n\r\nIf this is something that may work for you, let me know and I can stick up some code.\r\n\r\nChris"
+    }
+  ]
+}

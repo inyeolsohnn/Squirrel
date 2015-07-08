@@ -1,0 +1,12 @@
+{
+  "id": 1085,
+  "url": "www.dofactory.com/topic/1085/general-did-anyone-ever-switch-a-ui-from-something-to-something-else-for-real.aspx",
+  "title": "Did anyone ever switch a UI from something to something else?",
+  "ques": "Hello,\r\n\r\nWhen reading about MVC, MVP, MVVM,... there are mostly two big reasons for using them: \r\n\r\nTestabilty\r\nPortabilityFunny thing is: Most companies I was working in projects of, didn\u0027t know how to unit test. Telling them, that it\u0027s easy to unit test an MV based app didn\u0027t even result in a strange look. Well.. except for those companies in which I heard variations of the following: \u0027Unit. Testing. Yeah yeah,... aha... right. Great thing... However, we don\u0027t do that.\u0027\r\n\r\nSecond point: Portability. Did ANYONE of you EVER have to switch an applications UI from let\u0027s say winform to wpf? Or from wpf to ASP.NET? Or from Silverlight to Console... ?\r\n\r\nThe thing is, looking at the Patterns in Action sample, I noticed that there is one HELL of an effort to get a list of customers displayed on screen which could (...) be reduced to a couple of lines when abandoning the MV patterns. If properly written, it wouldn\u0027t be *that* complicated to port the result... at least there wouldn\u0027t be such an overhead as with MV. And nobody can tell me that there is no such overhead... or even that there isn\u0027t anything of it except for the Presentation Layer to be ported.\r\n\r\nI would love to see some real world examples of companies who successfully worked with any MV pattern, used their advantages and really had less effort than if they used a more classical approach.\r\n\r\nAside from that, I love your sample and the implementation of the patterns, since they are a great compilation of invaluable knowledge. Thanks guys!!\r\n\r\nP.S.: When is 4.0 to be released?\r\n\r\nChris.",
+  "answers": [
+    {
+      "ansID": 1131,
+      "ans": "I swapped an ASP.NET application UI with an ASP.NET MVC UI.  It was pretty easy to implement, you just have to know intracacies with that particular UI.\r\n\r\nhttp://www.kingwilder.com/Blog/tabid/55/EntryId/32/Design-Patterns-In-Action-Code-generator-screencast.aspx\r\n\r\nI don\u0027t write WinForms or WPF applications.  I have never had a need.\r\n\r\nThanks,\r\n\r\nKing Wilder"
+    }
+  ]
+}

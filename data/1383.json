@@ -1,0 +1,12 @@
+{
+  "id": 1383,
+  "url": "www.dofactory.com/topic/1383/libraries-to-access-facebook-and-twitter.aspx",
+  "title": "ASP.NET MVC access to Facebook and Twitter",
+  "ques": "When building an ASP.NET MVC app that interfaces with Facebook and Twitter, what are the best and most popular libraries out there making it easy for us .NET developers?\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1551,
+      "ans": "\r\nFor Facebook, the Facebook C# SDK seems pretty active and stable: http://facebooksdk.codeplex.com/\r\nRegarding Twitter, take a look at TweetSharp http://tweetsharp.codeplex.com/\r\n\r\nWhen it comes to Twitter I\u0027ve heard it is very simple to use their APIs directly, might be an option for you as well.\r\n\r\n\r\n\r\nGood Luck!\r\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 1189,
+  "url": "www.dofactory.com/topic/1189/factory-method.aspx",
+  "title": "Question on Factory Method",
+  "ques": "Hi all, \r\n\r\nI work on bus terminal project that website users can reserve and purchase bus tickets on. I have 2 levels of users: admin and other users. Admin and other users classes are empty and don\u0027t have any attribute. Their attributes are common and stored in their parent class (members super class). Child classes are different only in their methods (due to access permissions). \r\n\r\nThis hierarchy is stored in one table in SQL Server which consists of these fields: Memberid, Email (or Username), Password and Usertype. I don\u0027t have Usertype attribute in my parent class in class diagram. This field is just in the table on the database.\r\n\r\nMy first question is: How can I use Factory Method for detecting user type?\r\nMy second question is: Is it good that I create a class for permissions?\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1286,
+      "ans": "HI Yekta,\r\nI am not sure whether I got your question correctly, but here my comments based on my understanding:\r\n1. You can define the virtual function in parent class as GetUserType() and implement the same in the derived class\r\nwhich returns their own type.\r\n2. Generally for the permission, Enum is preferred datatype to use. Because it is value-type whereas class will be reference type which ask for more processing. \r\nBut at the end of the day it all depends on the requirements of your application.\r\n- Saurabh\r\n"
+    },
+    {
+      "ansID": 1287,
+      "ans": "Hi Yekta:\r\n\r\nI don\u0027t see the need for you to use Factory Pattern. You can have a basic user class with all the needed parameters and methods. Any way to authenticate the user you need to pass the username and password to the database, along with this action you can get back the user class filled with the details and permissions which would tell you the user type. These are my thoughts and it is left to you to decide the best options available\r\n\r\nThanks and regards \r\nShashi\r\n"
+    },
+    {
+      "ansID": 1316,
+      "ans": "Hi Yekta,\r\n\r\nQ1: How can I use Factory Method for detecting user type?\r\n\r\nA1: For this scnerio I feel Factory Method not required.\r\n\r\nQ2: Is it good that I create a class for permissions?\r\n\r\nA2: U can have permission class, which will have Admin and Gust currently. In future if new role come you can add very well in this class its self. \r\n\r\nThanks,\r\n\r\nSakthi."
+    }
+  ]
+}

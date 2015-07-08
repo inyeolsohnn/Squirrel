@@ -1,0 +1,16 @@
+{
+  "id": 1459,
+  "url": "www.dofactory.com/topic/1459/parameter-or-property.aspx",
+  "title": "Passing information: parameter vs property.",
+  "ques": "Hi,\r\n\r\nWhich method is best for passing information?\r\nI have created 3-layered architecture \r\n\r\nGUI - MODEL(BL) - DAL\r\n\r\nhere is what I have coded\r\n\r\nBL OBJECT\r\n\r\nCategory\r\n{\r\n  public string CategoryName {get;set;}\r\n\r\n Category()\r\n {\r\n  //do nothing\r\n }\r\n\r\n Category(string categoryName)\r\n {\r\n  CategoryName \u003d categoryName;\r\n }\r\n\r\n DeleteCategory()\r\n {\r\n }\r\n}\r\n\r\nDAL\r\n\r\nCategoryDao\r\n{\r\n DeleteCategory(string CategoryName)\r\n {\r\n          SqlConnection SqlConn \u003d new ....\r\n          SqlCommand sqlCmd \u003d new ....\r\n          cmd.paramater.AddWithValue(\u0027@categoryName\u0027,CategoryName);\r\n\r\n           try\r\n         {\r\n                bla..\r\n        }\r\n        Catch....\r\n }\r\n}\r\n\r\n\r\nUI Layer\r\n\r\nsome.aspx.cs\r\n\r\nbtnDeleteCategory_Click(Sender s, Eventargs arg)\r\n{\r\n\r\n  //My QUESTION -\u003e IS THIS A GOOD APPROACH\r\n  Category c \u003d new Category(txtCategoryName.Text)\r\n  c.DeleteCategory();\r\n\r\n  //OR\r\n\r\n  //SHOULD IT BE DONE THIS WAY\r\n Category c \u003d new Category()\r\n c.DeteleCategory(categoryName);   -\u003e Consider that DeleteCategory takes one string argument.\r\n  \r\n}\r\n\r\n\r\nRegards and THANKS in advance",
+  "answers": [
+    {
+      "ansID": 1630,
+      "ans": "Hi your BL will have a logic to perform operations, so better to use parameterized methods. \r\nIf you are creating custom entities then properties will do the things. \r\nI hope second approch is fine."
+    },
+    {
+      "ansID": 1632,
+      "ans": "Thank you very much for responding.One more thing I would like to ask Suppose I do something Like this.\r\n//Fly Weight Object\r\npublic class categoryDTO\r\n{\r\n public string CategoryName {get;set;}\r\n public int CategoryId {get;set;}\r\n}\r\n\r\n//BL\r\n//Category \u003c\u003e---DTO and \u003c\u003e---DAO (Aggregation)\r\npublic class Category\r\n{\r\n  public CategoryDTO categoryDto {get;set;}\r\n  public CategoryDAO categoryDao {get;set;}\r\n  //Following -\u003e Dependency Inversion\r\n  public Category(CategoryDTO cdto, CategoryDAO cdao)\r\n  {\r\n   this.categoryDto \u003d cdto;\r\n   this.categoryDao \u003d cdao;\r\n  }\r\n  pubilc int DeleteCategory(string categoryName)\r\n  {\r\n categoryDao.DelteCategory(categoryName)\r\n  }\r\n}\r\n\r\n//DAO\r\npublic class CategoryDao\r\n{\r\n pubilc int DeleteCategory(string categoryName)\r\n {\r\n //connect\r\n //ExecuteQuery\r\n //Close\r\n //return back\r\n } \r\n}\r\n\r\n//PL\r\npublic button_click(sender Object, EventArgs e)\r\n{\r\n Category c \u003d new category(new categoryDTO(), new categoryDAO());\r\n c.DeleteCategory( \u0027CategoryOne \u0027);\r\n}\r\nWill it be good. because I am practicing has a relationship (Aggregation) and Dependency Inversion.\r\nREGARDS AND THANKS IN ADVANCE"
+    }
+  ]
+}

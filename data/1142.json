@@ -1,0 +1,12 @@
+{
+  "id": 1142,
+  "url": "www.dofactory.com/topic/1142/query-for-net-versions-supported-in-design-pattern-framework.aspx",
+  "title": "Query for .NET versions supported in Design Pattern Framework",
+  "ques": "Hii,\r\n\r\nI want to purchase your design pattern framework.\r\nDoes it support all .net versions including samples of 1.1, 2.0. 3.0, 3.5 and 4.0 frameworks ?\r\n \r\nIn addition do we get the performance base measurement of individual pattern usage ?\r\n\r\n\r\nThanks,\r\n\r\nAmit",
+  "answers": [
+    {
+      "ansID": 1212,
+      "ans": "Amit: \r\n\r\nYes, in addition to the current version for .NET 4.0, older versions of the Design Pattern Framework are included with your purchase. They are for .NET 1.1, .2.0, and 3.5.\r\n\r\nOf course, older version do not include features added later to .NET.   So, among other things, 2.0 have generics added, 3.5 includes LINQ, WPF, WCF, and .NET 4.0 added support for Silverlight, Entity Framework, ASP.NET MVC and more.  The latest version is our most comprehensive package. \r\nThe underlying principles of the actual Design Patterns have not changed between different versions.  They have been around for 10-15 years and have been tweeked and adjusted, but fundamentally they have remained the same. \r\n\r\nI am not sure how one would measure performance based measurements for patterns.  They would be highly subjective and unreliable.  So, these are not included. \r\n\r\nHope this helps.\r\n"
+    }
+  ]
+}

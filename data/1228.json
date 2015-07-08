@@ -1,0 +1,20 @@
+{
+  "id": 1228,
+  "url": "www.dofactory.com/topic/1228/regarding-singleton-design-pattern.aspx",
+  "title": "Regarding Singleton Design Pattern",
+  "ques": "Hi,\r\n\r\nI have a question regarding Singleton Design pattern.\r\n\r\nWhen I went through some tutorials, it was mentioned that Singleton insures that only a single instance of a class is returned.\r\n\r\nBut is it per user basis or application wide?",
+  "answers": [
+    {
+      "ansID": 1329,
+      "ans": "Hi,\r\n\r\nIt depends on the situation and environment. For eg. MS Word which is a desktop application, creates a singleton object per user ie each user logged on to windows user account can open one instance of MS Word.\r\n\r\nWhile in a web application, if an object is implemented as an Application Level object and singleton, then only one instance of that object will be created until the application lives. \r\n\r\nWhile, if your application is an online store and allows each seller to have a customized store, and the implementation of the store is a singleton object, to avoid a seller creating multiple stores, then the singleton instance will be created for each user.\r\n\r\nI hope it helps."
+    },
+    {
+      "ansID": 1330,
+      "ans": "To add to this, by nature Singleton returns single instance and is meant to provide a global point of access to resources.  This being its main intent there may be variations of this wherein you can have single instance per application, per user, per role or other criteria.  But I am not sure whether that will be called Singleton or any other pattern already exists which solves this problem.\r\n\r\nBut yeah any pattern can be adopted to the applications need, as long as the core intent remains the same otherwise you create a new pattern and if enough support exists, may be, that can form part of the design patterns catalog :)\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1605,
+      "ans": "Speaking strictly from a language standpoint, by default, the Singleton instance is unique to each application process if you are using it within a typical desktop or console application. This is because the instance that is created is marked with as  \u0027static \u0027. There are threading techniques that can be used to make multiple instances that are unique to their originating thread (as may be done in a web server context), but typically Singleton is used to ensure that all callers get the same instance."
+    }
+  ]
+}

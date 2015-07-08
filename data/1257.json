@@ -1,0 +1,16 @@
+{
+  "id": 1257,
+  "url": "www.dofactory.com/topic/1257/windows-azure-design-patterns.aspx",
+  "title": "Windows Azure Design Patterns",
+  "ques": "My team is starting early next year on a large Windows Azure project for which I will be the Architect. As an architect, I have found the Design Pattern Framework 4.0 to be extremely helpful, but unfortunately it does not (yet) include Azure patterns and practices.\r\n\r\nMy questions is this: does anyone know where/how to obtain patterns and best practices for Azure?  I am particularly interested in Communication and Storage patterns -- also, I would like to see real world experiences and examples.  \r\n\r\nI know this is a lot to ask, but I thought I try :-)\r\n\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1370,
+      "ans": "Hey Walt: \r\n\r\nJust a heads up, that Azure patterns and practices is something we\u0027re looking at for the next release of the Design Pattern Framework.  It\u0027s very early at this point so I cannot give an ETA or anything right now.\r\n\r\nAll the best with your Azure project.\r\nLet us know how it goes!\r\n\r\nDan."
+    },
+    {
+      "ansID": 1393,
+      "ans": "Walt, \r\n\r\nI just discovered this site: http://azuredesignpatterns.com/\r\nAccording to its url it is totally dedicated to Azure Design Patterns...\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

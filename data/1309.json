@@ -1,0 +1,12 @@
+{
+  "id": 1309,
+  "url": "www.dofactory.com/topic/1309/what-design-pattern-to-use-for-collections-of-parsers.aspx",
+  "title": "What Design Pattern to use for collections of parsers",
+  "ques": "I have string and I need to pass it through different parsers and eventually get the processed string.\r\nLets say, I have \r\n\r\nstring s \u003d \u0027\u003cinput type\u003d\u0027text\u0027 /\u003e some text \u003cspan\u003ehello\u003c/span\u003e some text \u003cselect\u003e\u003c/select\u003e\u0027;Now, 1st parser will handle all \u0027input\u0027 elements, 2nd parser will handle all \u0027span\u0027 elements, and etc. \r\nEach parser will do some work with the string and eventually the processed string will be returned.\r\n\r\nCould anyone offer advise as to which Design Pattern I should use and/or how to do this in an \u0027elagant\u0027 way?\r\n\r\nThank you ",
+  "answers": [
+    {
+      "ansID": 1447,
+      "ans": "This seems like a use for the chain of responsibility.  Pass it to the first parser, and it will parse the parts it can and pass the rest to the second parser, and so forth."
+    }
+  ]
+}

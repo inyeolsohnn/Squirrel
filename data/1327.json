@@ -1,0 +1,20 @@
+{
+  "id": 1327,
+  "url": "www.dofactory.com/topic/1327/which-pattern-to-use.aspx",
+  "title": "Which patterns to use for a Test Automation Framework?",
+  "ques": "I am writing a Test Automation Framework that involves automating testing a Winforms and WPF based application having 200 screens. The Automation Framework should do the control clicks and screen actions just as a tester would do to test a case by manually clicking the controls on the screens.\r\n\r\nThe Framework can change only when one of the following happens:\r\n1. New screens and functionalities are added.\r\n2. Existing screens are modified (UI).\r\n3. Existing screen functionalities are modified. For example, changing a ListView to a GridView to show data on a button click.\r\n4. Changes in business rules.\r\n\r\nI am new to patterns and am learning. Based on these requirements, can someone please tell me what Patterns may prove most useful (if at all) in writing this framework?\r\n\r\nThanks.\r\n",
+  "answers": [
+    {
+      "ansID": 1451,
+      "ans": "Hi there\r\n\r\nI know that the NUnit test framework uses the Composite Pattern. \r\n\r\nGood luck with the framework :-)\r\n\r\nHans-Petter Eitvet"
+    },
+    {
+      "ansID": 1482,
+      "ans": "Hi,\r\n\r\nmaybe a bit off topic but why do you want to write your own TA framework? There are tools which handle this for you, for example VS 2010 has its tests which can be then, after compiling, ran by MSTest command line utility. Or there are others, like QTP, Quality Center and so on.\r\n\r\nDeveloping your own framework would be reasonable when you have your custom APIs for UI / SDK automation, as in my case. We developed our own tool, because the product has it\u0027s own UI API. This tool can handle multiple formats and is extensible via plugins (e.g. MEF would do the job here). \r\n\r\nYou also have to think about how to parametrize tests, how to log and store results, how to play scripts back etc.\r\n\r\nRobert\r\n\r\n"
+    },
+    {
+      "ansID": 1494,
+      "ans": "I would recommend you to try an use an existing framework (if possible) instead. Take a look at project White. Even if it doesn\u0027t meet all of your requirements you might find it useful to check out its source code.\r\n \r\nThe project is located here: http://code.google.com/p/white-project/\r\n\r\nSome of its features include...\r\n * Automates Win32, WinForm, WPF and SWT applications\r\n * Hides the complexity of window messages and Microsoft UIAutomation library under object based API * Consistent API for all kinds of application\r\n * Use any .NET language "
+    }
+  ]
+}

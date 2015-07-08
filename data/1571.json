@@ -1,0 +1,16 @@
+{
+  "id": 1571,
+  "url": "www.dofactory.com/topic/1571/ioc.aspx",
+  "title": "Inversion of Control using Ninject?",
+  "ques": "In the Design Pattern Framework I see they did a lot of work done on Inversion of Control with all the Interfaces and such. \r\nCould this use something like Ninject?  If so, could anyone provide an example where and how?\r\n\r\nThanks\r\nDennis",
+  "answers": [
+    {
+      "ansID": 1763,
+      "ans": "A simple googling leads to these searches and much more..\r\nhttp://stefanoricciardi.com/2011/01/21/ninject-mini-tutorial-part-1/   \r\nhttp://blog.bobcravens.com/2010/03/ninject-getting-started-resources-basic-binding/ \r\n\r\nAre you looking out for something specific which is not found here?"
+    },
+    {
+      "ansID": 1788,
+      "ans": "I also show a demonstration of how to use Ninject with the Patterns In Action Framework for an MVC 3 application.\r\n\r\nhttp://www.codegencentral.net/s/54\r\n\r\nI hope it helps.\r\n\r\nKing Wilder"
+    }
+  ]
+}

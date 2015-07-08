@@ -1,0 +1,16 @@
+{
+  "id": 1133,
+  "url": "www.dofactory.com/topic/1133/factory-method-pattern-differs-from-one-on-wikipedia.aspx",
+  "title": "Factory Method Pattern differs from the one on Wikipedia",
+  "ques": "The Factory Pattern method mentioned here clearly differs with the one mentioned on wikipedia(http://en.wikipedia.org/wiki/Factory_method_pattern). e.g. the one on Wikipedia doesn\u0027t mention about abstract product at all and the concrete factory class implements a static method \u0026 does not require the concrete factory class to be initialized at all. I\u0027ve seen this kind of implementation in a lot of places e.g. Enterprise Library DatabaseFactory class. The difference looks more than a variation, it\u0027s a totally different kind of implementation.\r\n\r\nAlthough, I am more inclined to go that I wanted to know if someone can point out anything I might have missed to prove otherwise.",
+  "answers": [
+    {
+      "ansID": 1195,
+      "ans": "Interesting variations. I don?t take a rigid stance on exactly what the formal structure of a factory pattern should be so I?m probably the wrong person to answer this question. Variations exist in all the patterns that I?ve used and each variation exists to solve specific needs. So, if you?re question is purely to receive an acknowledgement that there are variations between these two patterns, then yes you are correct.\r\n"
+    },
+    {
+      "ansID": 1230,
+      "ans": "Remember that when discussion paterns you need to keep in mind these are ABSTRACT ideas.\r\n\r\nWhen a group of people talk about a building for example they all have differenet visions in their head of a building but can still talk about the build though there vision of the actuall implementation is different and varies.\r\n\r\nIt allows for the high level discussion.\r\n\r\nThere is no hard and fast implementation when talking patterns.\r\n\r\nRemember it\u0027s how to talk about something and work to a implementation.\r\n\r\nLike building a house your spouse and you will have differnet ideas of the finished idea until it is done.\r\n\r\n:-)  (I\u0027ve been there)  \r\n\r\nEnjoy"
+    }
+  ]
+}

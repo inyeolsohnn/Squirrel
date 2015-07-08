@@ -1,0 +1,12 @@
+{
+  "id": 1330,
+  "url": "www.dofactory.com/topic/1330/i-get-flyweight-but-why-bother-with-an-interface-concrete-class-organization.aspx",
+  "title": "I get Flyweight, but why bother with an interface/concrete class organization?",
+  "ques": "What I don\u0027t understand is why you would want to make (for example) 26 specific subclasses of Character when you could just pass the information that identifies each type of character to a constructor for the Character class.  You already have a large switch statement that creates the proper subclass of Character depending on the input; it would be just as easy to have it call the Character constructor with the proper set of values instead.\r\n\r\nFrom what I can tell, the rest of the flyweight architecture - storing objects and reusing them - would happen exactly the same way.\r\n\r\nSo what am I missing? ",
+  "answers": [
+    {
+      "ansID": 1497,
+      "ans": "I guess the example in the site is just to demonstrate the use of flyweight pattern wherein we have large no. of small flyweight objects. In this case \u0027A\u0027, \u0027B\u0027, \u0027C\u0027 etc....\r\nBut yeah, this may not be the most appropriate example.\r\n\r\nThe real example of flyweight in .NET can be found in the string class.  See the Intern(str) method of the string.   \r\n\r\nhttp://msdn.microsoft.com/en-us/library/system.string.intern.aspx\r\n\r\nThe Intern() method uses the intern pool to search for a string equal to the value of str.  If such a string exists, its reference in the intern pool is returned.  If the string does not exist, a reference to str is added to the intern pool, then that reference is returned.\r\n\r\nSo for eg. you have this snippet..\r\n\r\nstring s1 \u003d  \u0027dummy \u0027;\r\nstring s2 \u003d  \u0027dummy \u0027;\r\n\r\nConsole.WriteLine (ReferenceEquals(s1, s2));   // returns true as it points to the same reference\r\n\r\nUsing intern this can be done like this...\r\n\r\nstring s1 \u003d  \u0027dummy \u0027;\r\nstring s2 \u003d Console.ReadLine();\r\nstring s3 \u003d  string.Intern(Console.ReadLine());\r\n\r\n\r\nConsole.WriteLine (ReferenceEquals(s1, s2));   // returns false\r\nConsole.WriteLine (ReferenceEquals(s1, s3));   // returns true\r\n\r\nString.Intern(..) is the FlyWeight Factory object.....\r\n\r\nHope this helps...\r\n\r\n"
+    }
+  ]
+}

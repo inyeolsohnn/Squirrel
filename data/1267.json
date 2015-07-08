@@ -1,0 +1,12 @@
+{
+  "id": 1267,
+  "url": "www.dofactory.com/topic/1267/protecting-the-proxy-of-a-webservice.aspx",
+  "title": "Protecting the proxy of a webService",
+  "ques": "hiya,\r\n\r\nWe\u0027re using a 3rd party webService, I don\u0027t want the webService proxy set anywhere other than in the constructor.\r\nI was thinking of creating a proxy class that simplycontains all the required properties...which will be set in theconstructor...\r\n\r\nI\u0027ve been reading up on sealed modifiers and singletons..I waswondering if the proxy is a candiadate for this approach?\r\n\r\nAny advice appreciated.\r\n\r\nta,\r\n\r\nyogi",
+  "answers": [
+    {
+      "ansID": 1376,
+      "ans": "Yogi: \r\n\r\nActually sealed modifiers, singletons, and constructors that initialize a series of private variables are all concepts that solve different problems.  \r\n\r\nIf you don\u0027t want others to access private variables then your constructor idea seems fine. If you don\u0027t want any other class to derive from your class, then the sealed modifier is fine. If you want just one instance of your class then the Singleton pattern works great.\r\n\r\nSo, the answer to your question really depends on what the problem is you\u0027re trying to solve. \r\n\r\nHope this helps.\r\n\r\n"
+    }
+  ]
+}

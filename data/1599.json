@@ -1,0 +1,12 @@
+{
+  "id": 1599,
+  "url": "www.dofactory.com/topic/1599/entity-framework-mapping.aspx",
+  "title": "Entity Framework Mapping",
+  "ques": "How do you map with the entity framework when there is more than 1 table? In the example they only map to 1 table. But what happens when you have to pull data from 2 or more tables and need to map the data? For example they are just passing a CategoryEntity which is just a table on in the .dmx file and mapping it to their business object class. what if you have multiple tables what do you pass?\r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1789,
+      "ans": "Dennis,\r\n\r\nI\u0027m not sure I understand your question, but in the .edmx file, you can add as many database tables, which turn into Entity Framework entities, as you want.  Then you can reference them all.\r\n\r\nIf you are talking about related tables (entities) to a table, the Entity Framework makes those relationships automatically.  When you reference an entity set and it has a relationship with other entities, there will be access to those relationships off of that entity.\r\n\r\nDoes that answer your question?\r\n\r\nThanks,\r\n\r\nKing Wilder"
+    }
+  ]
+}

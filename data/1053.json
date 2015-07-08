@@ -1,0 +1,16 @@
+{
+  "id": 1053,
+  "url": "www.dofactory.com/topic/1053/request-channel-time-out.aspx",
+  "title": "Request channel time out",
+  "ques": "Hi all,\r\n\r\nI\u0027m stepping through code in Patterns in Action and if I pause too long (or am interrupted) I get the following time-out message:\r\n\r\nSystem.TimeoutException was unhandled by user code. Message\u003d\u0027The request channel timed out while waiting for a reply after 00:00:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.\u0027\r\n\r\nIf I attempt to run the code again without first stopping \u0026 restarting the solution, the ServiceChannel is in a Faulted state and cannot be used.\r\n\r\nI\u0027ve looked through the PDF but don\u0027t see where I can adjust the time-out.  I adjusted the receiveTimeout of the wsHttpBinding section in the Hosting Layer\u0027s ActionServer\u0027s web.config, but that didn\u0027t change things. Any ideas on adjusting this so I can pause while stepping through code?\r\n\r\nThanks,\r\nKelley ",
+  "answers": [
+    {
+      "ansID": 1086,
+      "ans": "1. Open the file  \u0027..DoFactoryDesign Pattern Framework 3.5 CSPatterns In ActionASPNETWebApplicationWeb.config \u0027\r\n2. In lines 165, you would see the below entry by default.\r\n\r\n\r\n\u003cbinding name\u003d \u0027WSHttpBinding_IActionService \u0027 receiveTimeout\u003d \u002700:30:00 \u0027\u003e\r\n3. Change it to \r\n\u003cbinding name\u003d \u0027WSHttpBinding_IActionService \u0027 receiveTimeout\u003d \u002700:30:00 \u0027 sendTimeout\u003d \u002700:30:00 \u0027\u003e\r\n4. Cleanup your project, rebuild and try it. It would save you upto 30 minutes.\r\n5. If you want more time, increase the  sendTimeout\u003d \u002700:30:00 \u0027"
+    },
+    {
+      "ansID": 1087,
+      "ans": "Thanks Sreenivas - it works great now.  Your help is much appreciated."
+    }
+  ]
+}

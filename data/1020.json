@@ -1,0 +1,12 @@
+{
+  "id": 1020,
+  "url": "www.dofactory.com/topic/1020/generic-dictionary-with-multiple-keys.aspx",
+  "title": "Generic Dictionary with multiple keys",
+  "ques": "I am building a caching system that holds among others a list of Users. \r\n\r\nSometimes we access the Users by userId (the primary key).\r\nSometimes we access the Users by name (a string)\r\n\r\nPerformance is critical, therefore we currently use two generic dictionaries: \r\nOne is Dictionary\u003cint?, User\u003e, the other is Dictionary\u003cstring, User\u003e\r\n\r\nThe issue I am trying to solve is the double maintenance of the User objects. \r\nSo, if a User changes, we have to remember to update two dictionaries.\r\n\r\nIs there another way to have a \u0027duplicate key\u0027 Dictionary without duplicating the values (i.e. Users)?\r\n\r\nI found some articles about Tuples\u003c\u003e (also called ClassKeys) but this will not work as it requires all key values when accessing the dictionary.  I only have one at a time (userId or Name).\r\n\r\nOf course, we could use a simple LINQ statement against the User list (i.e. .Where( u \u003d\u003e u.Name \u003d\u003d name)), but the list is very large and performance will not be optimal (or is there a way to build an in-memory index?).\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1027,
+      "ans": "Hi Hans,\r\n\r\nYou can create 2 dictionaries to solve your issue like this.\r\n\r\nThe First one is \u003cUserID, UserObject\u003e, same as yours.\r\nThe Second one is \u003cUserName, UserID\u003e, which will save your client\u0027s user id and user name. \r\n\r\nSo in your code you can find UserID by UserName, then find its user object by UserID.\r\n\r\nIn this case you avoid having to update user object twice when it is changed. But the cost is you have to find UserID first if UserName is given.\r\n\r\nI hope this helps.\r\n"
+    }
+  ]
+}

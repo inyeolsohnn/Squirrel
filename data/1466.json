@@ -1,0 +1,16 @@
+{
+  "id": 1466,
+  "url": "www.dofactory.com/topic/1466/passing-html-attributes-into-editorfor-in-mvc-3.aspx",
+  "title": "Passing HTML Attributes into EditorFor in MVC 3",
+  "ques": "I want to pass a @class \u003d  attribute into one of my EditorFor() calls.  Something like this:\r\n\r\n\r\n\r\n\u003c%\u003d Html.EditorFor(model \u003d\u003e model.Name, new { @class \u003d \u0027myclass\u0027 }) %\u003e\r\nI cannot find an EditorFor() method signature that supports this. \r\n\r\nThis is a one-off so I don\u0027t want to dig deep and get into templates, etc.\r\nHow do I do this?",
+  "answers": [
+    {
+      "ansID": 1640,
+      "ans": "There is no overload for EditorFor that takes this kind of argument...\r\n\r\nAlternate solution at\r\n\r\nhttp://aspadvice.com/blogs/kiran/archive/2009/11/29/Adding-html-attributes-support-for-Templates-_2D00_-ASP.Net-MVC-2.0-Beta_2D00_1.aspx\r\n\r\nAlso check this alternative....\r\nhttp://stackoverflow.com/questions/1625327/editorfor-and-html-properties\r\n\r\nHope this helps!"
+    },
+    {
+      "ansID": 1643,
+      "ans": "Is there any reason you can\u0027t use TextBoxFor()?  Or any of the other specific HTML Helpers?  They have overloads for HTML attributes."
+    }
+  ]
+}

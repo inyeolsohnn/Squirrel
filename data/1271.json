@@ -1,0 +1,16 @@
+{
+  "id": 1271,
+  "url": "www.dofactory.com/topic/1271/how-to-get-a-class-property-description-using-reflection.aspx",
+  "title": "How to get a Class property description using Reflection?",
+  "ques": "For example, below is a class property. \r\nI want to get the description words in a summary. How do I do this?\r\n\r\n/// \u003csummary\u003e\r\n/// Passenger Type, the length is limited to 3 chars\r\n/// \u003c/summary\u003e\r\npublic string PassengerType\r\n{\r\n     set { passengertype \u003d value; }\r\n     get { return passengertype; }\r\n}\r\n\r\nThanks!",
+  "answers": [
+    {
+      "ansID": 1367,
+      "ans": "Hi,\r\n\r\nAFAIK there is no way, using reflection, to get hold of the Xml summary comments. That kind of information is not stored at all. What tools like NDoc and similar do, is that they let Visual Studio generate the comments in a separate xml file and the parse that file to extract the comments.\r\n\r\nHTH,\r\nRobert\r\n"
+    },
+    {
+      "ansID": 1399,
+      "ans": "If you want to use reflection to retieve the description of a class, you can use DescriptionAttribute to decorate your class/property\r\nsomething like,\r\n\r\n\r\n\r\n\r\n\r\n[Description( \u0027Passenger Type, the length is limited to 3 chars \u0027)]\r\npublic string PassengerType\r\n{\r\n     set { passengertype \u003d value; }\r\n     get { return passengertype; }\r\n}\r\n\r\n "
+    }
+  ]
+}

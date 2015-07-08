@@ -1,0 +1,20 @@
+{
+  "id": 1232,
+  "url": "www.dofactory.com/topic/1232/i-ve-a-question.aspx",
+  "title": "How to implement CRUD operations for complex objects?",
+  "ques": "Hi!\r\n\r\nMy name is Fernando L?pez Guevara, I\u0027m from Argentina.\r\nSorry for my English. It\u0027s not so good \u003d)\r\n\r\nI was reading the code of the Design Pattern Framework 4 and noticed that it shows how to implement CRUD operations for a single entity like Customer.  I was wondering how to write CRUD operations with complex objects, for example Order with several OrderDetails; This should include the Unit of Work pattern. Correct?\r\n\r\nI hope you understand my question\u0027\r\n\r\nThanks and cheers.\r\n",
+  "answers": [
+    {
+      "ansID": 1362,
+      "ans": "Fernando,\r\n\r\nThe answer really depends on your data infrastructure.\r\n\r\nIf you are using the Entity Framework 4, it was built-in ways of updating relational data when the parent data is updated.  If you are using straight ADO.NET, then you simply have to write functions to collect the related OrderDetails for the Order and loop through each detail and update for that Order.\r\n\r\nAnd yes, you can use the Unit of Work pattern.  But it mostly depends on how your data layer is built.  Is it already using an ORM like EF4 or Linq-To-Sql, etc., or is it completely hand coded with ADO.NET?  Those are the determining factors.\r\n\r\nI hope that helps."
+    },
+    {
+      "ansID": 1425,
+      "ans": "Use LINQ Managed Entity.At first you might scratch your head once this phase pass by it will be very easy to manage"
+    },
+    {
+      "ansID": 1430,
+      "ans": "You can use NHibernate for crud operation :)"
+    }
+  ]
+}

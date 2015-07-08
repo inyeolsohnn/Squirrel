@@ -1,0 +1,12 @@
+{
+  "id": 1423,
+  "url": "www.dofactory.com/topic/1423/factory-method-pattern.aspx",
+  "title": "Are these \u0027Good Design Principles\u0027 of the Factory Method pattern?",
+  "ques": "Hello,\r\n\r\nI am new to Design Patterns.  Looking at the example code in the Design Pattern Framework, my understanding of the Factory Method pattern is that it uses the following \u0027good design principles\u0027:\r\n\r\n  1) Favor composition over inheritance - private List\u003cPage\u003e _pages \u003d new List\u003cPage\u003e();\r\n  2) Programming to an interface - Document[] documents \u003d new Document[2];\r\n  3) Encapsulating changes - public abstract void CreatePages();\r\n  4) Between 2 classes we have week relationship, i.e. loose coupling\r\n  5) Using open/close principle - cannot change existing classes but we can add more variants, i.e. extensions\r\n\r\nAre my conclusions correct? \r\nAre there additional good Design Principles in the Factory Method?\r\n\r\nThanks!\r\n\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1599,
+      "ans": "This may be too late but, yes all your undestandings are correct. However, #1 varies on case by case basis."
+    }
+  ]
+}

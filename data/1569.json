@@ -1,0 +1,12 @@
+{
+  "id": 1569,
+  "url": "www.dofactory.com/topic/1569/what-is-the-difference-between-abstract-factory-pattern-and-builder-pattern.aspx",
+  "title": "What is the difference between Abstract Factory Pattern And Builder Pattern",
+  "ques": " \r\n H?, \r\n\r\n   I think that you discussed this quesiton before. But I couldnot find is there topic like this question on here\r\n\r\n      I wrote a car factory with abstract factory pattern. I have 2  factory  ( MercedesFactory,HondaFactory) and i have 4 concrete class (MercedesFamilyCar,MercedesSportCar,HondaFamilyCar,HondaSportCar ) .I have a abstract classess  Family and Sport which includes\r\n below methods.     \r\n        public abstract void Speed();\r\n        public abstract void Wheel();\r\n        public abstract void Door();\r\n        public abstract void Price();\r\n        public abstract void Display();\r\n\r\nSo my question is i can do this with builder pattern. Assume that its name is CarBuilder instead of CarFactory. What is the main difference between  Builder and Abstract Factory Pattern.\r\n\r\n Thanks.\r\n\r\n Best Regards.\r\n",
+  "answers": [
+    {
+      "ansID": 1757,
+      "ans": "Hi,\r\nThe main difference between Abstract and Builder pattern is Abstract will return the instance directly while in Builder there will be one Director class which will instruct Builder class to build the different parts/properties of your object and finally retrieve the object. \r\n\r\nAlso, Abstract does not keep the track of it\u0027s created object while Builder will have reference to the created object.\r\n\r\nRegards,\r\nAnkit Parikh"
+    }
+  ]
+}

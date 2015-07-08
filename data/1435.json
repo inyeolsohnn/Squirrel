@@ -1,0 +1,20 @@
+{
+  "id": 1435,
+  "url": "www.dofactory.com/topic/1435/screen-scraping.aspx",
+  "title": "Design Patterns for Web App Screen Scraping?",
+  "ques": "Hi All,\r\n\r\nI am developing a Windows Form application to screen scrape a complex web application that has Ajax in its pages.\r\n\r\nIn fact, the web app has multiple pages and I need to navigate \u0026 perform click operation many times to get the appropriate page data. \r\nI am thinking about a Design Pattern to implement this. Can anyone guide as to which Pattern or Patterns would be suitable for this?\r\n\r\nThanks,\r\nNeetha ",
+  "answers": [
+    {
+      "ansID": 1612,
+      "ans": "Neetha:\r\n\r\nRegex is your HTML screen scraping friend.  \r\nNo specific Patterns come to mind.\r\n\r\nGood luck!"
+    },
+    {
+      "ansID": 1689,
+      "ans": "Building complex objects and exposing as API - Builder pattern is the best ... Please share the details of the expected features...c an try to put in a workable solution.. \r\n\r\n\r\n- Tarriq Ferrose Khan"
+    },
+    {
+      "ansID": 1690,
+      "ans": "Hi Neetha,\r\n\r\nWhat about using visitor pattern ? from what i understand about the context is that you have collection of pages that needs to be visited to collect data so my suggestion is to use visitor pattern where you visit each page to collect the required data.\r\n\r\nThanks \u0026 Regards\r\nPubudu Thilakarathna"
+    }
+  ]
+}

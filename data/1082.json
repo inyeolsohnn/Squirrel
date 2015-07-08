@@ -1,0 +1,12 @@
+{
+  "id": 1082,
+  "url": "www.dofactory.com/topic/1082/need-help-to-understand-messagebase.aspx",
+  "title": "Need help to understand MessageBase",
+  "ques": "Hi All,\r\n\r\nCan anybody explain MessageBase folder in Action project.Especially RequestBase \u0026 ResponseBase How these are useful and implemented.\r\n\r\nThanx in advance\r\n\r\nRegards,\r\n\r\nShahid",
+  "answers": [
+    {
+      "ansID": 1132,
+      "ans": "Actually every item is well explained inline within the code. \r\n\r\nBoth RequestBase and ResponseBase are only base classes that real messages derive from. A message is an item that is sent between the server and the client (the client requests and the server responds, e.g.) by using a webservice (in this case). To standardize the format in which the messages are sent back and forth, every message must derive from respective base class.\r\n\r\nThe concrete implementation of a specific message then contains the properties that reflect its own actual meaning. \r\n\r\nHope that helps.\r\n\r\n- Chris"
+    }
+  ]
+}

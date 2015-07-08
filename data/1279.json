@@ -1,0 +1,24 @@
+{
+  "id": 1279,
+  "url": "www.dofactory.com/topic/1279/wpf-mvvm-code-behind-code.aspx",
+  "title": "Should there be code-behind code with WPF MVVM?",
+  "ques": "Hi,\r\n\r\nI just bought your excellent Design Pattern Framework 4. I am now architecturing a WPF MVVM system. According to some articles from Microsoft code behind is not supposed to have any code, so we can even delete the code behind and program can run just fine. \r\n\r\nBut when I explore your WPF project I found some code in the code behind file. I am trying to follow good practice. Is there someone that can clarify this?\r\n\r\nThanks for your help\r\nH\r\n",
+  "answers": [
+    {
+      "ansID": 1379,
+      "ans": "MVVM is a architectural design pattern, that basically describes how to separate UI from logic. It does so by promoting that you put logic in your VM. It does not say anywhere, that I\u0027m aware of, that you shouldn\u0027t use a code-behind file nor does it say that you should never put code in it.\r\n\r\nI use MVVM but still have a code-behind file. For instance, it is an ideal place to put UI specific code, which could be somewhat difficult to do in the VM.\r\n\r\nSome use the code-behind file to set the DataContext when doing data-binding (I use Xaml \u0026 Behaviors with Unity for this though).\r\nYou could probably pull of a code-behind free application. But the question is, is it worth the extra effort?\r\n\r\nJust my 2 cents\r\n\r\n"
+    },
+    {
+      "ansID": 1382,
+      "ans": "Hello Hay: \r\n\r\nWherever you go as a .NET developer, there are always those with extreme viewpoints. Indeed, you could write your WPF MVVM applications without any code-behind. However, if that is such a good thing why is it then that Microsoft still offers the option for code-behind?  Apparently, someone is still using code-behind (in fact, all .NET developers that we know). \r\n\r\nI remember, about 7-8 years ago code-behind was marketed as the greatest thing: it would separate concerns and remove the code from the HTML in your ASP (note ASP, not ASP.NET).\r\n\r\nAnyhow, we think that totally removing code-behind is an extreme position. It is like telling someone not to eat salt. True, you can live without salt, but would that be any fun or easy to do?  My suggestion is to take everything you read with a grain of salt (no pun intended) and do what works best for you.\r\n\r\nWe at DoFactory, use litlle salt, but we are not salt-less; in other words, we embrace MVVM and in doing so we like to keep our code-behind files light-weight.\r\n\r\nAnyhow, I hope this clarifies our viewpoint. \r\n"
+    },
+    {
+      "ansID": 1395,
+      "ans": "If the code behind is the best thing ever ( I agree it is ) why Microsoft invented the new way to binding, trigger ...etc. from xaml markup. That is because there is somebody will need it. Also less code is less bugs and less code to maintain. \r\nplus if you use code behind you will miss xaml deploy only to deploy a WPF App which is require to have only xaml file to deploy the WPF app thru the browser.\r\n\r\nThat is my salt as well J\r\n\r\nThanks\r\n\r\nHay\r\n"
+    },
+    {
+      "ansID": 1396,
+      "ans": "Hey Hay,\r\n\r\nJust a short follow-up. What MVVM also gives you is that it will be easier to test. Testing\r\nbusiness logic in code-behind is a PITA. However separating the logic with MVVM pattern\r\nwill make it easier for you to test your business logic. Another benefit is that it will also\r\nmake it easier (hopefully ;-) ) to swap out your UI (Views) in the future if that is needed.\r\n\r\nBut, some UI specific code is better of being added in the code-behind. And you seldom\r\nadd tests for UI specific behavior.\r\n\r\n"
+    }
+  ]
+}

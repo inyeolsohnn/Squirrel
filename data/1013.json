@@ -1,0 +1,12 @@
+{
+  "id": 1013,
+  "url": "www.dofactory.com/topic/1013/asp-net-mvc-client-custom-validation.aspx",
+  "title": "ASP.NET MVC client custom validation",
+  "ques": "Something I have not seen is a (client side) validator that hits the database to check the name is unique.\r\nA common scenario is where a user is registering and the username must be unique in the user table. \r\n\r\nAnyone know of any good examples for ASP.NET MVC 1 or 2?",
+  "answers": [
+    {
+      "ansID": 1207,
+      "ans": "Here\u0027s something similar you may be interested in \r\nhttp://devermind.com/aspnet-mvc/asp-net-mvc-tip-4-client-side-form-validation-made-easy-part-2/\r\n\r\nRegards,\r\nRajesh Pillai"
+    }
+  ]
+}

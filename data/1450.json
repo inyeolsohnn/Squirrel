@@ -1,0 +1,12 @@
+{
+  "id": 1450,
+  "url": "www.dofactory.com/topic/1450/re-log-project.aspx",
+  "title": "RE: Log project",
+  "ques": "How do I set up different logging severity levels for different log types?  For instance, I can set the log severity to Info, but that covers all log types, do I just need to add a log severity for each type of log?  That way I can set the logseverity for email and the log severity for file and the log severity for console.  And yes they need to be different, since when the log event happens if it is an error it should not only log into the log file but also send an email, but if it is info then it should only write to the log file and not send an email.  \r\n\r\nOr is there something I am missing?",
+  "answers": [
+    {
+      "ansID": 1675,
+      "ans": "Hi \r\n[The question needs to be more clear, but somehow am able to get what you are looking for.]\r\n\r\nMy assumption: \r\n\r\nWhen you get an error, you would pass your error object to an logging class, which will decide at runtime- \r\nif it is an error (?) or just an info (?) and log that into appropriate source (like file, DB etc)\r\n\r\nIf yes, I would recommend to go for a Chain Of Responsibility pattern.\r\nSteps I could think of : \u0027\r\n1) Build the chain of Loggers (File, email, DB etc.,)\r\n2) Pass the error (or Info) obejct to First in the chain , say File Logger, this Class will decide if it need to log, if yes, will log and then send your  \u0027Error object \u0027 to next in the chain - say  \u0027Email Logger (sender) \u0027\r\n3) Email Logger Class will check if it eligible to be sent , if yes will send email and will pass it to next in the chain, say DB.\r\n4) DB Logger will check and lets us assume its not a eligible one and will end the chain signallig the completion.\r\nPlease refer to my blog where I have talked more about this pattern (of course with  a Builder Pattern variation)\r\nhttp://techietarriq.blogspot.com/2011_02_01_archive.html\r\nHope this helps.\r\nThanks,\r\nTarriq Ferrose Khan"
+    }
+  ]
+}

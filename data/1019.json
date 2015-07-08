@@ -1,0 +1,12 @@
+{
+  "id": 1019,
+  "url": "www.dofactory.com/topic/1019/is-there-any-way-to-approve-or-register-new-design-pattern.aspx",
+  "title": "Is there any way to approve or register new design pattern ?",
+  "ques": "Last time, in my job I implemented one idea on user interface. And, I am thinking that is a good way to achieve such kind of goal. So I am trying to convert that idea into design pattern and I think this is not implemented yet. But, I am wondering, how to approve or register my design pattern. Is there any procedure to go through to register or approve a new design pattern ?",
+  "answers": [
+    {
+      "ansID": 1108,
+      "ans": "Hi Rukesh: \r\n\r\nTo my knowledge there is no committee that officially approves or disapproves Design Patterns. Patterns and Best Practices evolve over time and as more and more developers pick it up and use them, they become more widely known. \r\n\r\nHowever, every now and then an authority comes along (say, GoF, Fowler, Martin) who starts cataloging and publishing these patterns and giving them a name (very important!). It is only then, that the patterns become official, or at least officially accepted. \r\n\r\nThere are exceptions though. The MVVM pattern, for example, has evolved from Microsoft\u0027s dungeons and is widely recognized, but it has yet to be cataloged anywhere.  I think this is one of the reasons why MVVM 1) has the awkward name, and 2) has inconsistent names for ViewModel -- you may see it called Model, ViewModel, or Presentation Model, all meaning the same thing.\r\n\r\nTo get back to your question: if you think you \u0027discovered\u0027 a fantastic new pattern, I suggest you spread the word, blog about it, publish it, and convince your peer .NET developers that this is the greatest thing since sliced bread (as we say in the US).  Perhaps the entire developer community will pick it up and/or Fowler starts discussing it and you\u0027re the new pattern hero!\r\n\r\nHope this helps."
+    }
+  ]
+}

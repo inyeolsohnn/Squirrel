@@ -1,0 +1,16 @@
+{
+  "id": 1238,
+  "url": "www.dofactory.com/topic/1238/aspnetdb-has-wrong-version-vb.aspx",
+  "title": "AspnetDB has wrong version for VB?",
+  "ques": "Hi,\r\n\r\nUsing VS2010 I get this error/exception when trying to login in Patterns 4 in action:\r\nSystem.Data.SqlClient.SqlException was unhandled by user code\r\n  Class\u003d20\r\n  ErrorCode\u003d-2146232060\r\n  LineNumber\u003d65536\r\n  Message\u003dThe database \u0027C:USERSPREBENDOCUMENTSDOFACTORY PATTERNS 4.0 VBPATTERNS IN ACTIONHOST.WCF.ACTIONSERVERAPP_DATAASPNETDB.MDF\u0027 cannot be opened because it is version 655. This server supports version 612 and earlier. A downgrade path is not supported.\r\nCould not open new database \u0027C:USERSPREBENDOCUMENTSDOFACTORY PATTERNS 4.0 VBPATTERNS IN ACTIONHOST.WCF.ACTIONSERVERAPP_DATAASPNETDB.MDF\u0027. CREATE DATABASE is aborted.\r\nAn attempt to attach an auto-named database for file C:UsersPrebenDocumentsDoFactory Patterns 4.0 VBPatterns In ActionHost.WCF.ActionServerApp_Dataaspnetdb.mdf failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.\r\n \r\nIs it your code or my machine (vindows vista 32 bit)?\r\n\r\nRegards Preben",
+  "answers": [
+    {
+      "ansID": 1342,
+      "ans": "Preben:\r\n\r\nYou are the first user to report this particular error, so I am pretty confident it is a configuration issue on your machine. I suspect it is related to having both SQL Express 2005 and SQL Express 2008 installed. \r\n\r\nI did some Googling and Binging around and these are some similar threads that may include a solution for you: \r\n\r\nhttp://social.msdn.microsoft.com/forums/en-US/sqlexpress/thread/43dea830-21ed-42fe-a89c-129c753cf120/\r\nand \r\nhttp://conceptdev.blogspot.com/2009/04/mdf-cannot-be-opened-because-it-is.html\r\n\r\nI hope this points you in the right direction."
+    },
+    {
+      "ansID": 1343,
+      "ans": "Hi Dan\r\n\r\nWell, the suggested links didn\u0027t change much, so:\r\n\r\nI created a database in my SQLServer with your script aspnetdb.sql\r\ndetached it from the SQLserver\r\ncopied the .mdf and .ldf  to the app_data folder after renaming the other aspnetdb-files\r\nand I got further in the investigation of the patterns\r\n\r\nRegards Preben"
+    }
+  ]
+}

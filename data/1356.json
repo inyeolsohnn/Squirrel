@@ -1,0 +1,12 @@
+{
+  "id": 1356,
+  "url": "www.dofactory.com/topic/1356/refactoring-to-design-patterns.aspx",
+  "title": "Refactoring to Design Patterns",
+  "ques": "Hi,  I find it easier to understand the Design Patterns by writing code initially which doesn\u0027t follow any pattern or object oriented principles and refactoring it step by step to convert it into one of the predefined patterns and understanding the reasoning behind doing so. \r\n\r\nThe \u0027Head First Design Patterns\u0027 book tries to follow this path, but I find it too repetitive. Some examples are given so much attention that I get distracted from the actual subject.\r\n\r\nThere is also a classic \u0027Refactoring to Patterns\u0027 book, but no examples in C#. \r\n\r\nI like the Dofactory examples, but if they have a book that explains each of them in detail (especially through Refactoring approach) that would be really helpful. \r\n\r\nSo my question is: if anyone is aware of any other book that tries to teach Design Patterns this way, please let me know. \r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1500,
+      "ans": "There\u0027s an old WROX book on pattern which follows this approach.  This is in VB.NET, but it shouldn\u0027t matter.  Not sure whether a c# copy is available or not.  It can be procured from \r\n\r\nhttp://www.amazon.co.uk/Professional-Design-Patterns-VB-NET-Applications/dp/1861006985\r\n\r\nI had read this couple of years back and found it very useful as it deals with some real stuff and is definitely a good read after Head first patterns."
+    }
+  ]
+}

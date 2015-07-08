@@ -1,0 +1,20 @@
+{
+  "id": 1127,
+  "url": "www.dofactory.com/topic/1127/in-silverlight-how-to-cast-a-list-to-an-observablecollection.aspx",
+  "title": "How to cast a List\u003cT\u003e to an ObservableCollection\u003cT\u003e in Silverlight",
+  "ques": "I am in Silverlight, and have a generic list: List\u003cT\u003e.\r\nNow I wish to cast it to a generic observable collections: ObservableCollection\u003cT\u003e.\r\n\r\nI understand I can iterate over the list and add each individual item to the Observable collection.\r\nHowever, it seems to me there has to be a built-in way of doing this. \r\n\r\nDoes anyone know?",
+  "answers": [
+    {
+      "ansID": 1194,
+      "ans": "Have you tried using the constructor from the ObservableCollection\u003cT\u003e? There?s a constructor that accepts a List\u003cT\u003e.\r\n\r\nI?m not sure if you?re aware of this, but you can use .Net Reflector (a freeware app) to disassemble the framework in order to see what?s available inside the class. I?ll post some code that I pulled from the 4.0 framework below including the constructor. As you can see there?s a method in the ObservableCollection\u003cT\u003e called CopyFrom which populates an items collection in the ObservableCollection\u003cT\u003e base class. Unfortunately the class signatures are different so they\u0027re not exactly interchangeable...\r\n\r\n\r\n\r\n\r\npublic class ObservableCollection\u003cT\u003e : Collection\u003cT\u003e, INotifyCollectionChanged, INotifyPropertyChanged   \r\n\r\npublic ObservableCollection(List\u003cT\u003e list) : base((list !\u003d null) ? new List\u003cT\u003e(list.Count) : list)   \r\n{   \r\n    this._monitor \u003d new SimpleMonitor\u003cT\u003e();   \r\n    this.CopyFrom(list);   \r\n}   \r\n\r\npublic class List\u003cT\u003e : IList\u003cT\u003e, ICollection\u003cT\u003e, IEnumerable\u003cT\u003e, IList, ICollection, IEnumerable   \r\n\r\n\r\npublic class Collection\u003cT\u003e : IList\u003cT\u003e, ICollection\u003cT\u003e, IEnumerable\u003cT\u003e, IList, ICollection, IEnumerable   \r\n\r\n "
+    },
+    {
+      "ansID": 1247,
+      "ans": "I am not developing in Silverlight, but I believe that there is no ctor in silverlight that accepts a List\u003cT\u003e. What you can do to make things easier and reusable is implementing an extension method. \r\n\r\nHead over here and here to get an idea.\r\n\r\n-Chris."
+    },
+    {
+      "ansID": 1313,
+      "ans": "Hi Jacob,\r\n\r\nI am also working in a silverlight application and had issues while converting List\u003cT\u003e to ObservableCollection.\r\n\r\nI found solution to this by way of Extension method. The code is as follows:\r\n\r\n\r\npublic static class ObservableExtensions\r\n    {\r\n        public static ObservableCollection\u003cT\u003e ToObservableCollection\u003cT\u003e(this List\u003cT\u003e items)\r\n        {\r\n            ObservableCollection\u003cT\u003e collection \u003d new ObservableCollection\u003cT\u003e();\r\n\r\n            foreach (var item in items)\r\n            {\r\n                collection.Add(item);\r\n            }\r\n\r\n            return collection;\r\n        }\r\n    }\r\n\r\nOnce the above code is added, you can just call List\u003cT\u003e.ToObservableCollection() which will convert your List\u003cT\u003e to observable collection. \r\n\r\nI hope this helps.\r\n"
+    }
+  ]
+}

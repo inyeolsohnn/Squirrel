@@ -1,0 +1,20 @@
+{
+  "id": 1167,
+  "url": "www.dofactory.com/topic/1167/chain-of-responsibility-vs-observer-pattern.aspx",
+  "title": "Chain of Responsibility vs Observer pattern",
+  "ques": "What is the difference between the Chain of Responsibility pattern and Observer pattern?\r\nAnd what cases would you use what?",
+  "answers": [
+    {
+      "ansID": 1248,
+      "ans": "Hi,\r\n\r\nThis is my take on this. Both Chain of Responsibility and Observer address how you can decouple the senders and the receivers, but does so slightly different.\r\n\r\nObserver is about defining a one-to-many dependency between objects. Meaning that when one object changes state, all its subscribers are notified and updated automatically.\r\n\r\nChain of Responsibility uses a kind of pipeline where each object gets its chance to handle a request. The base class keeps track of which handler to send the request to (one at a time), and if the request needs to be  \u0027passed on \u0027, then the handler  \u0027calls back \u0027 to the base class, which delegates to the next handler in the pipeline.\r\n\r\nChain of Responsibility pattern is not recommended to be used when each request is only handled by one handler, or, when the client object knows which service object should handle the request.\r\n\r\n"
+    },
+    {
+      "ansID": 1249,
+      "ans": "I will try to give my best understanding. Views from others are welcome.\r\nScenario 1: Observer Pattern\r\nLet us assume you work in a team of 5 people and all of you report to a director of IT. Your director holds a team meeting every monday morning at 10 AM. Your director has a assistant who take care of his administrative tasks. On one monday morning, your director does not come to the meeting. You guys then go to the assistant and ask her to inform you guys when the director arrives, so that you guys can reassemble for the meeting. In 5 minutes, you get some emergency call from your house and you inform the assistant and leave for the day.\r\nThere are few important items to be noted here.\r\na. team member including you - observers\r\nb. assistant - subject\r\nc. director\u0027s arrival - event\r\nAs per the above scenario, there is a sequence of activities to be understood.\r\nTeam members (observers) ask (register or attach) the assistant (subject) to inform if the director arrives (event). So the assistant (subject) carefully maintains a list of all team members who have asked (registered) her to inform about the director\u0027s arrival (event). Also when you (observer) tell her that you are leaving for the day, she (subject) removes you (observer) from the list. When the director arrives (event), the assistant (subject) sends an email (notifies) to all the team members (observers) in the list.\r\n\r\nScenario 2: Chain of Responsibility\r\nLet us assume you spend some money for offical purpose. Then you submit your bill in a reimbursement system in your office. The workflow is as below.\r\na. project leader - can approve if the amount is less than $100\r\nb. project manager - can approve if the amount is less than $200\r\nc. vice president - should approve if the amount is greater than $200\r\nSo the chain of responsibility looks as below.\r\nproject leader --\u003e project manager --\u003e vice president\r\nSo in terms of the approval process, project leader is first level. Project manager is successor or next level for project leader. Vice president is successor or next level for project manager. So your claim will flow in the respective chain of responsibility and get processed."
+    },
+    {
+      "ansID": 1250,
+      "ans": "Thanks alot for your answers. It is now alot clearer."
+    }
+  ]
+}

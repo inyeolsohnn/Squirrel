@@ -1,0 +1,16 @@
+{
+  "id": 1437,
+  "url": "www.dofactory.com/topic/1437/service-layer.aspx",
+  "title": "What is the purpose of a Service Layer?",
+  "ques": "Hello,\r\n\r\nI have a question. Does the encapsulation of functionality in services (ActionService and ImageService in your Patterns In Action examples) only make sense in case of different presentation consumers (WinForm, ASP.NET) which use the same functionality or are there also advantages in scalability or any other aspects?\r\n\r\nThanks,\r\nUwe",
+  "answers": [
+    {
+      "ansID": 1615,
+      "ans": "Uwe:\r\n\r\nIn the Design Pattern Framework we demonstrate that when you have a well-designed service layer, multiple presentation technologies (ASP.NET, Winforms, WPF, Web Services, etc) can consume that same layer. If you think about it, it is actually an amazing feat. Having a well-designed service layer gives you tremendoes flexibility in terms of expanding the app to newer or different presentation technologies and future changes.\r\n\r\nIn the real-world, you will not find too many cases where both Web apps and Windows apps use the same service layer. However, what you will see is Web apps and Web services both consuming the exact same service layer. Having a great API is important and critical to who has access to the underlying data layers.\r\n\r\nI am not sure scalability is a direct beneficiary of a Service Layer, but security certainly is as well as transaction management, error handling, data validation, etc.  All in all, whether you need to scale or not, we strongly recommend building 3 tier apps including a well-designed service layer; it is a well-established best practice in the development community.\r\n\r\nHope this helps.\r\n\r\n"
+    },
+    {
+      "ansID": 1616,
+      "ans": "Many thanks for this answer. That was exactly my feeling about the service layer. In your sample you only used two services (ActionService and ImageService), I guess to keep the sample as simple as possible. What\u0027s your recommendation concerning how to structure the services?"
+    }
+  ]
+}

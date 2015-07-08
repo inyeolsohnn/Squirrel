@@ -1,0 +1,16 @@
+{
+  "id": 1164,
+  "url": "www.dofactory.com/topic/1164/actionserviceclient-in-mvc-project.aspx",
+  "title": "ActionServiceClient in MVC project",
+  "ques": "Where does ActionServiceClient come from in the MVC project?  \r\n\r\nIn the RepositoryBase class there is a getter/setter but the WCF service does not have anything with that name.  When I mouse over the text is says \u0027ASPNETMVCApplication.ActionServiceReference.ActionServiceClient\u0027  ActionServiceReference being the WCF service obviously.\r\n\r\nWhen I mimic the code with my WCF service I don\u0027t have the property State, so the code below fails.\r\nCode snippet follows: \r\n\r\n\r\nif (client.State \u003d\u003d CommunicationState.Faulted)What am I missing? \r\nThanks.\r\n\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1253,
+      "ans": "William: \r\n\r\nThe ActionServiceClient is automatically generated when adding the Service References.\r\nThe Client derives from System.ServiceModel.ClientBase which is a .NET class and has the State property. \r\n\r\nSo, I am really not sure why you don\u0027t see State.\r\nCould it have been a temporaray Intellisense problem?"
+    },
+    {
+      "ansID": 1255,
+      "ans": "Dan, you are right. Somehow I added it as a Web Reference instead of a Service Reference.\r\n\r\n\u003d(  Doh!"
+    }
+  ]
+}

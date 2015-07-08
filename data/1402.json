@@ -1,0 +1,12 @@
+{
+  "id": 1402,
+  "url": "www.dofactory.com/topic/1402/excel-sheet-issue.aspx",
+  "title": "Excel export and special character handling",
+  "ques": "Hi,\r\n\r\nWhen I export data from our Oracle database to an Excel spreadsheet, the special characters will display differently.\r\n\r\nSuppose the text is: \u0027Handlungsfeld hinzuf?ge\u0027 \r\nIt display as: \u0027Handlungsfeld hinzuf??gen\u0027 \r\n\r\nI tried Server.HtmlEncode, Server.HtmlDecode, but to no avail.\r\n\r\nCan someone please provide an answer?\r\n\r\nThanks,\r\nSabbi",
+  "answers": [
+    {
+      "ansID": 1590,
+      "ans": "Hi Sudhakar, \r\n\r\nAre you sure you set the right Code Page (character set) for encoding in the Page/Web.config?\r\n\r\nI use encoding \u003d \u00271252 \u0027 instead of UTF-8, as I need to show some data coded for German and Latinamerican language.\r\n\r\nRemember to use always the same encoding, as an special character (outside de 255 normal characters), may be represented differently with a different encoding.\r\n\r\nBest regards,\r\n\r\nPS: See more info on Code Page in: http://msdn.microsoft.com/en-us/library/dd317756(v\u003dvs.85).aspx"
+    }
+  ]
+}

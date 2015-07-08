@@ -1,0 +1,16 @@
+{
+  "id": 1287,
+  "url": "www.dofactory.com/topic/1287/is-there-any-ideas-to-create-a-multiple-key-dictionary.aspx",
+  "title": "How do I create a multiple-key dictionary?",
+  "ques": "Hi: \r\n\r\nI have a need for a multiple-key dictionary. For example:  \r\n\r\nDictionary\u003cKey1, Key2, Key3, Value\u003e\r\n\r\nwhere Key1, Key2, and Key3 have different type.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1394,
+      "ans": "Zhang: \r\n\r\nWhat if you create a unique hash for the 3 concatenated keys? \r\nThen use this as the unique key in a regular Dictionary.\r\n\r\nSo, something like: \r\n\r\nDictionary\u003cstring, object\u003e dictionary \u003d new Dictionary\u003cstring, object\u003e();\r\n\r\nand then:\r\n\r\ndictionary.Add( Hash(key1, key2, key3), myObject);\r\n\r\nwhere Hash is a simple method that concatenates the 3 keys (the arguments) and returns a hash.\r\n\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1397,
+      "ans": "You can also use Tuple, to achieve this...\r\n\r\nHTH!\r\n\r\n\r\n\r\nnamespace MultiKeyDictionary.Console {\r\n    using System.Collections.Generic;\r\n    using System;\r\n\r\n    internal class Program {\r\n        private static void Main(string[] args) {\r\n            var dictionary \u003d new Dictionary\u003cTuple\u003cstring,string\u003e, string\u003e();\r\n\r\n            var key \u003d new Tuple\u003cstring, string\u003e( \u0027multiple \u0027,  \u0027keys \u0027);\r\n            var value \u003d  \u0027Open Sesame! \u0027;\r\n\r\n            dictionary.Add(key, value);\r\n            Console.WriteLine(dictionary[key]);\r\n        }\r\n    }\r\n\r\n    public struct Tuple \u003cT1, T2\u003e {\r\n        public readonly T1 Item1;\r\n        public readonly T2 Item2;\r\n\r\n        public Tuple(T1 item1, T2 item2) {\r\n            Item1 \u003d item1;\r\n            Item2 \u003d item2;\r\n        }\r\n    }\r\n}\r\n\r\n "
+    }
+  ]
+}

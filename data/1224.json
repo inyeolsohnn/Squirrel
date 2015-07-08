@@ -1,0 +1,12 @@
+{
+  "id": 1224,
+  "url": "www.dofactory.com/topic/1224/design-pattern-trends.aspx",
+  "title": "Latest Design Pattern trends with WPF \u0026 Silverlight",
+  "ques": "Hello,\r\n\r\nI would be interested to know what the latest trend is in terms of Design Pattern usage within WPF \u0026 Silverlight projects (beside MVVM \u0026 Prism) ?   Also, what other patterns are often used (and most common) from the Design Pattern Framework?\r\n\r\nThanks for your thoughts in advance.\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1337,
+      "ans": "Though MVVM is the most attention seeker pattern used in Silverlight \u0026 WPF, there are other patterns like Composite Application Library, Dependency Injection etc."
+    }
+  ]
+}

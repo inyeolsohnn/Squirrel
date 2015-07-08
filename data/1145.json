@@ -1,0 +1,12 @@
+{
+  "id": 1145,
+  "url": "www.dofactory.com/topic/1145/diff-between-strategy-pattern-and-template-method.aspx",
+  "title": "Difference between Strategy and Template Method",
+  "ques": "Could some please clarify with the real-world example the difference between Strategy Pattern and Template Method Pattern. Thanks in advance.",
+  "answers": [
+    {
+      "ansID": 1222,
+      "ans": "This article gives a concise information about patterns used in .net framework (including strategy and template).\r\n\r\nhttp://msdn.microsoft.com/en-us/magazine/cc188707.aspx\r\n\r\nRegards."
+    }
+  ]
+}

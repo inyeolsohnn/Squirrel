@@ -1,0 +1,16 @@
+{
+  "id": 1283,
+  "url": "www.dofactory.com/topic/1283/abstract-factory-net-ianimalworld-interface.aspx",
+  "title": "Abstract Factory .Net IAnimalWorld interface",
+  "ques": "My question is in regards to the IAnimalWorld interface in DoFactory.GangOfFour.Abstract.NETOptimized which is part of the Design Pattern Framework 4.  \r\n\r\nIs this abstraction a part of the Abstract Factory Pattern?\r\n\r\nAt first it was confusing me because it did not seem to fit anywhere into the Abstract Pattern.  It\u0027s only real use is from within MainApp, but even there the Clients are created as var, which are independent generic types, so IAnimalWorld is not used, unless I guess you were to put the two Clients (america, africa) into a IAnimalWorld collection of some sort.\r\n\r\nIs there another specific use for this interface that I am missing?  I understand its value, I just don\u0027t understand where in Abstract Factory it fits.\r\n\r\nThanks.\r\n",
+  "answers": [
+    {
+      "ansID": 1384,
+      "ans": "AnimalWorld and IAnimalWorld are implementations of the ?Client? in the original GOF description.  So, the IAnimalWorld interface is our implementation of a client. There is no requirement that this must be an interface according to the Abstract Factory definition. \r\n\r\nHope this helps.\r\n"
+    },
+    {
+      "ansID": 1388,
+      "ans": "Hi Dan,\r\nyes, thank you for the answers. Just looking to clarify my understanding. I appreciate your help.\r\n\r\n-mike"
+    }
+  ]
+}

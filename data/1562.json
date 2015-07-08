@@ -1,0 +1,12 @@
+{
+  "id": 1562,
+  "url": "www.dofactory.com/topic/1562/what-is-the-difference-between-builder-pattern-and-composite-pattern.aspx",
+  "title": "What is the difference between Builder Pattern And Composite Pattern",
+  "ques": "We all know that Builder Pattern is one of the creational patterns and Composite Pattern is one of the structural patterns .\r\nMy question is, can I create a menu like a Command menu or menutoolbar with two of these Patterns? \r\nWhat are their critical differences?  Or, which is better to create a menu toolbar?\r\n\r\nBest Regards.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1753,
+      "ans": "Hi,\r\n\r\nYou should use Composite Pattern as your menu items will be dynamic. \r\nComposite creates Parent - Child relations between your objects while Builder is used to create group of objects of predefined types.\r\n\r\nSo i would suggest you to use Composite to create your menu items.\r\n\r\nRegards,\r\nAnkit Parikh"
+    }
+  ]
+}

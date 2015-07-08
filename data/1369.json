@@ -1,0 +1,12 @@
+{
+  "id": 1369,
+  "url": "www.dofactory.com/topic/1369/usage-of-the-c-var-keyword-is-there-a-best-practice.aspx",
+  "title": "Usage of the C# var keyword. Is there a Best Practice?",
+  "ques": "The C# var keyword was introduced in C# version 3.0.  According to Eric Lippert from the Microsoft C# team it was included for 2 primary reasons:\r\n\r\n  1) To limit redundant code, such as: \r\n\r\n\r\nDictionary\u003cstring, List\u003cint, bool\u003e\u003e myDictionary \u003d new Dictionary\u003cstring, List\u003cint,bool\u003e\u003e();\r\nand write is as \r\n\r\n\r\nvar myDictionary \u003d new Dictionary\u003cstring, List\u003cint,bool\u003e\u003e();\r\n\r\n  2) To support anonymous types, which were necessary to implement LINQ, such as:\r\n\r\n\r\nvar car \u003d new { Make \u003d \u0027Toyota\u0027, Model \u003d \u0027Camry\u0027 };\r\n--\r\n\r\nNow, much of the code you see floating around on the Internet coming from experts use vars just about anywhere where it can be used. However, I have developed a personal preference, i.e. best practice if you will, that goes like this: \r\n\r\n\r\nValue types, such as, int, bool, float, and string (as an exception) are explicity declared.\r\nReference types are declared with var.Is there anything such as a \u0027C# var usage\u0027 Best Practice rule out there?\r\n\r\n\r\n\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1518,
+      "ans": "Some good points Henry.  You may be interested in this discussion as well.  And yes, anonymous types, that\u0027s pretty useful for jquery/json scenarios...\r\n\r\nhttp://stackoverflow.com/questions/1205329/c-var-keyword-usage\r\n\r\n"
+    }
+  ]
+}

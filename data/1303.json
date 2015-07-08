@@ -1,0 +1,12 @@
+{
+  "id": 1303,
+  "url": "www.dofactory.com/topic/1303/sorting.aspx",
+  "title": "Sorting in Design Pattern Framework 4.0",
+  "ques": "Hi am using V4 and have a question on sorting.\r\n\r\nLets say we have an entity of Employer which has LastName but my class Employer has it as Surname, The Framework works using the Mapper classes and converts Employer.LastName to Employer.Surname for CRUD, However as the sorting is handled by string values the UI would pass to service SortExpression \u0027Surname ASC\u0027,  This will fail as sorting with the dynamicLinq class parses the string to find the value Surname but the entity cannot by sorted as it expects LastName.\r\n\r\nAm I missing something or is it an issue that needs refactoring?\r\n\r\nRegards Owain",
+  "answers": [
+    {
+      "ansID": 1417,
+      "ans": "What ORM do you use?\r\nI didn\u0027t get what in column name in database and what in entity?\r\nAnyway, I don\u0027t see an issue. Get data from database and sort by entity column name by Linq or what you have there.\r\n"
+    }
+  ]
+}

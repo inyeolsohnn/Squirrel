@@ -1,0 +1,16 @@
+{
+  "id": 1396,
+  "url": "www.dofactory.com/topic/1396/private-interface-inheritance.aspx",
+  "title": "Private Interface Inheritance",
+  "ques": "I had a chance to see the following private interface inheritance code. Is this a common practice? Where is this being used? Thanks.\r\n\r\n\r\ninterface IAnimal \r\n{ \r\n   Eat() \r\n} \r\n\r\nclass Dog : IAnimal \r\n{ \r\n   void IAnimal.Eat() \r\n   {...} \r\n} \r\n\r\nDog dog \u003d new Dog() \r\ndog.Eat() // error\r\n\r\nIAnimal dog \u003d new Dog() \r\ndog.Eat() // no error\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1564,
+      "ans": "What you are doing in the Dog class is explicit interface implementation, when implementing an interface this way it can not be accessed through a class instance, only through an instance of the interface. Example:\r\n\r\n\r\nvar someDog \u003d (IAnimal) dog;\r\nsomeDog.Eat(); // no error\r\n\r\nYou would for instance use explicit interface implementation to support multiple interfaces, but I myself have never found a need to use it yet. Read more about explicit interface implementation on MSDN here (and also an example where it might be useful): http://msdn.microsoft.com/en-us/library/aa288461(v\u003dvs.71).aspx\r\n\r\nThis link might also be useful for further reading: http://stackoverflow.com/questions/143405/c-interfaces-implicit-and-explicit-implementation\r\n\r\n\r\nHope that helps."
+    },
+    {
+      "ansID": 1580,
+      "ans": "While implementing factory pattern...you need runtime polymorphism.\r\n\r\n Two classes implementing same interface having different implementation, deciding object to initialize at runtime         \r\n\r\n    Interface iShape\r\n        Sub DrawShape()\r\n    End Interface\r\n    Public Class Circle\r\n        Implements iShape\r\n\r\n        Public Sub DrawShape() Implements iShape.DrawShape\r\n            Debug.WriteLine( \u0027this is drawing circle \u0027)\r\n        End Sub\r\n    End Class\r\n\r\n    Public Class Square\r\n        Implements iShape\r\n\r\n        Public Sub DrawShape() Implements iShape.DrawShape\r\n            Debug.WriteLine( \u0027this is drawing square \u0027)\r\n        End Sub\r\n    End Class\r\n\r\n\r\nSomewhere in your application, \r\n\r\nSub main()\r\n Dim s As iShape\r\ns \u003d New Circle\r\ns.DrawShape()\r\n\r\ns \u003d New Square\r\ns.DrawShape()\r\nEnd Sub\r\n\r\n\r\n Hope this helps.....\r\n Saurin\r\n\r\n"
+    }
+  ]
+}

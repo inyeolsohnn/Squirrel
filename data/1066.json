@@ -1,0 +1,12 @@
+{
+  "id": 1066,
+  "url": "www.dofactory.com/topic/1066/pattern-framework-help-needed-urgent-plzzz.aspx",
+  "title": "Design Patterns help needed: MVC, MVP, MVVM (urgent)",
+  "ques": "Hello,\r\nI have been reading about Design Patterns and its different application models. \r\nSofar, I have come accross the following models:\r\n\r\nMVC    \r\nMVP\r\nMVVM\r\nFrom what I understand: \r\n\r\nMVC is a good model when developing web applications (ASP.NET)\r\nMVP is a good model when developing windows applications (Winform)\r\nMVVM is good model when developing WPF applications (Silverlight  \u0026 WPF)\r\nAm I right?  If so, I would like to see some examples (urgently please) of all three in .NET.\r\nI found many examples on the web, but I am looking for \u0027authenticated \u0027 examples, because on the Internet many are incorrect. It would be excellent if DoFactory would put out some published examples so they can be discussed. ",
+  "answers": [
+    {
+      "ansID": 1114,
+      "ans": "Hi Ali: \r\n\r\nI don\u0027t know if you\u0027re a current user of our Design Pattern Framework package, but these are exactly the kind of questions we answer. The framework includes example projects using MVC, MVP, as well as MVVM (WPF).   It may very will be the fastest and most effective way to get answers to your questions.\r\n\r\nI would also like to mention that it is important to get the MV architecture right from the beginning. Once you\u0027re on a wrong path, it is difficult and time-consuming to correct this.\r\n\r\nBTW: In our next release, Design Pattern Framework 4.0, we will also include ASP.NET MVC 2 and Silverlight MVVM. It\u0027s included in your subscription if you were to purchase today.\r\n\r\nHope this helps.\r\nDan."
+    }
+  ]
+}

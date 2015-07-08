@@ -1,0 +1,16 @@
+{
+  "id": 1464,
+  "url": "www.dofactory.com/topic/1464/comet-pattern.aspx",
+  "title": "Comet Design Pattern or \u0027Ajax Push\u0027",
+  "ques": "Hi,\r\n \r\nI am looking for an example on the Comet Pattern. \r\nThis is also known as Ajax Push or Reverse Ajax. \r\nIt allows client pages to open long-running HTTP Queries to a website.\r\n\r\nThanks you so much.",
+  "answers": [
+    {
+      "ansID": 1635,
+      "ans": "check this\r\n\r\n"
+    },
+    {
+      "ansID": 1636,
+      "ans": "check this\r\n\r\nhttp://www.aidaweb.si/comet.html"
+    }
+  ]
+}

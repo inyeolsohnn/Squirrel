@@ -1,0 +1,20 @@
+{
+  "id": 1515,
+  "url": "www.dofactory.com/topic/1515/c-program-working-in-debug-mode-but-not-in-live-publish.aspx",
+  "title": "C# Program working in Debug mode but not in Live Publish",
+  "ques": "Hello i have created a program in c# that sends out a message via email. the program works fine on my localhost server when i debug it but when i push it up to our live server it does nothing. any idea on what i could be doing wrong?",
+  "answers": [
+    {
+      "ansID": 1708,
+      "ans": "Hi what dll are you using to send the emails?\r\n\r\nIf you have access rights to send the emails on the LIve server and still you are not able to send, then please try registering the Email dll to GAC.\r\n\r\nThanks\r\nTarriq"
+    },
+    {
+      "ansID": 1714,
+      "ans": "@Oscar : check the proper smtp setting for your live server. \r\n\r\nServer Name\r\nPort Id\r\nEmail Id\r\nPassword\r\nSecure setting\r\n\r\nif your required code then i will put here.\r\n\r\nPlease Contact any time\r\n\r\nThank you"
+    },
+    {
+      "ansID": 1740,
+      "ans": "Firewall? Security credentials? Config?\r\n\r\nIs the server on active directory pointing to exchange or some other mail provider? what does your logs say?"
+    }
+  ]
+}

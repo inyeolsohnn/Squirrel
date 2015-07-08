@@ -1,0 +1,16 @@
+{
+  "id": 1269,
+  "url": "www.dofactory.com/topic/1269/calling-wcf-using-jquery.aspx",
+  "title": "Calling WCF using JQuery",
+  "ques": "Hi all!\r\n\r\nWe\u0027re developing an ASP.NET 4 application using the MVP pattern. \r\nOn many pages we call WCF services which return data for ASP.NET controls like DropDownList and so on.\r\nWe have put WCF in a separate project (which is hosted in IIS)\r\n\r\nMy question is this: How to build communication between jQuery and WCF so that we can databind the data returned from WCF?\r\nThanks in advance for detailed answer! ",
+  "answers": [
+    {
+      "ansID": 1369,
+      "ans": "Hi\r\n Since JQuery is used with web application, and when you call the WCF service from your presenter, you need to have overloaded method to support your web application, actually we had a similar situation where we get the data from the presenter as string(xml) , which in turn we parse at the jquery level and assign to the respective controls.\r\n\r\nOther option may be to use update panel and use the regular server side code to assign to the respective control.\r\n\r\n\r\nRegards\r\n\r\n\r\nSandip"
+    },
+    {
+      "ansID": 1377,
+      "ans": "So your idea was that I have to have 1 WCF overloaded method one of which works with ASP.NET and another with WinForms?"
+    }
+  ]
+}

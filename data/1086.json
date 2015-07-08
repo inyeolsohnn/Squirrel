@@ -1,0 +1,12 @@
+{
+  "id": 1086,
+  "url": "www.dofactory.com/topic/1086/when-will-version-4-be-available.aspx",
+  "title": "When will version 4 for Design Pattern Framework be available?",
+  "ques": "Hi,\r\n\r\nI am still waiting on version 4, may I know roughly when it will be available?  I thought it was supposed to be available april but its almost july soon.\r\n\r\nPlease advice...\r\nEagerly awaiting the release :)",
+  "answers": [
+    {
+      "ansID": 1133,
+      "ans": "Joshua: \r\n\r\nWe are really in the final stages, but we want to be sure that everything is rock solid.  This includes: code (design and architecture), comments, documentation, references, installation program, our website, etc. etc.  It may not seem like much, but getting a new release out using 3 additional platforms (MVC, Silverlight, Entity Framework) and more, is a pretty major effort. \r\n\r\nEveryone reading this is a developer, so I am sure you understand. :-) \r\n\r\nThe best I can say is a \u0027small number\u0027 of weeks. \r\n\r\nHope this helps.\r\n\r\n"
+    }
+  ]
+}

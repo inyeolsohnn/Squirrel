@@ -1,0 +1,20 @@
+{
+  "id": 1368,
+  "url": "www.dofactory.com/topic/1368/why-c-abstract-classes-without-abstract-members.aspx",
+  "title": "Why? C# abstract classes without abstract members",
+  "ques": "I am familiar with abstract classes, interfaces, and the like. \r\n\r\nWhat is not clear to me is why anyone would create a C# abstract class that does not have abstract members?\r\n(the C# compiler allows this).\r\n\r\nExample: \r\n\r\n\r\npublic abstract class House\r\n{\r\n    public void OpenDoor()\r\n    [\r\n        Console.WriteLine(\u0027Door opens\u0027);\r\n    }\r\n}\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1514,
+      "ans": "public abstract class House\r\n{\r\n    public void OpenDoor()\r\n    {\r\n        Console.WriteLine( \u0027Door opens \u0027);\r\n    }\r\n}\r\n\r\nIt will not show complie time error. you can use this class as base class of other class"
+    },
+    {
+      "ansID": 1515,
+      "ans": "One of the primary benefit of this is to provide default implementation.  This can be useful in couple of scenarios.  Also, have a look at the Template Method pattern for a simple application of this.\r\n\r\nhttp://www.dofactory.com/Patterns/PatternTemplate.aspx"
+    },
+    {
+      "ansID": 1516,
+      "ans": "In some scenario, you might want to provide a default implementation for your class or if you don\u0027t want your derived classes will define their own implementation, then the member will not be declared as abstract. "
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1512,
+  "url": "www.dofactory.com/topic/1512/how-to-avoid-if-else-condition-is-there-any-pattern-to-use.aspx",
+  "title": "How to avoid if else condition is there any pattern to use ?",
+  "ques": "How to avoid if else condition is there any pattern to use ? ",
+  "answers": [
+    {
+      "ansID": 1704,
+      "ans": "yes, the pattern for avoiding  if else condition is the famous strategy pattern :-)"
+    }
+  ]
+}

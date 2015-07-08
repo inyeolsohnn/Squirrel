@@ -1,0 +1,28 @@
+{
+  "id": 1123,
+  "url": "www.dofactory.com/topic/1123/unitofwork-in-patterinaction-version-4-0.aspx",
+  "title": "UnitOfWork in Patterns in Action version 4.0",
+  "ques": "I\u0027m not seeing UnitOfWork pattern in PatternsInAction project (version 4.0). \r\nHave I missed something or this is not part of version 4?\r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1181,
+      "ans": "The DataContext class in LINQ to SQL and the ObjectContext class in the Entity Framework are both examples of a Unit of Work. \r\nBut in our Design Pattern Framework we have not explicitly described is as the Unit of Work Pattern. The transaction model has been kept simple and all transactions are handled implicitly (Auto Commit).\r\n\r\nThe Unit Of Work pattern is particularly relevant with systems where you update multiple tables (or rows) in a single Unit of Work, that is, they all fail or all succeed. This is a common situation, but, again, it is not mentioned or referenced in Patterns in Action. However, if there is interest we can add it to our next upgrade. Any thoughts?"
+    },
+    {
+      "ansID": 1182,
+      "ans": "I would personally prefer explicit UnitOfWork because there are lot many chances that we update multiple tables in one call. So, we would need commit and rollback (in case of error)."
+    },
+    {
+      "ansID": 1418,
+      "ans": "I too would like to see an implementation of the UnitOfWork pattern."
+    },
+    {
+      "ansID": 1420,
+      "ans": "I too like to see an explicit UnitOfWork Pattern."
+    },
+    {
+      "ansID": 1697,
+      "ans": "I\u0027d like to see this built into your framework in an upcoming release.  I think this would be helpful as there is so much buzz regarding using this approach.\r\n\r\nThanks,\r\n\r\nChris"
+    }
+  ]
+}

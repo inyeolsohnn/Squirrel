@@ -1,0 +1,20 @@
+{
+  "id": 1555,
+  "url": "www.dofactory.com/topic/1555/what-pattern-s-to-use-for-this-system.aspx",
+  "title": "What pattern(s) to use for this system ?",
+  "ques": "Hello,\r\n\r\nI had another look at Design Pattern Framework 3.0 which I own, but without really finding what I need.\r\n\r\nRectangle is a \u0027higher-level\u0027 type than Drawable, a user shouldn\u0027t need to call its SetData(), it does it for you.\r\nThat brings the question whether Rectangle should \u0027have a\u0027 Drawable against being one but,\r\nI want the user to be able to create its own Drawable objects and it\u0027ll be less work for derived types.\r\n\r\nAny ideas ?\r\n\r\nThank you.\r\n\r\npublic abstract class Drawable\r\n{\r\n        private VertexBuffer _buffer;\r\n\r\n        public abstract void Render();\r\n\r\n        public void SetData()\r\n        {\r\n                // Upload data to buffer\r\n        }\r\n}\r\n\r\npublic class Rectangle : Drawable\r\n{\r\n        public Rectangle()\r\n        {\r\n                // Sending an array of 4 colored vertices\r\n                var array \u003d ...\r\n                base.SetData(array);\r\n        }\r\n\r\n        public int X;\r\n        public int Y;\r\n        public int Width:\r\n        public Height;\r\n\r\n        public override void Render()\r\n        {\r\n                // Render the object with OpenGL\r\n        }\r\n}\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1735,
+      "ans": "I have found a free online barcode generator to make my own barcodesfor products and it is really convenient and useful. KEEPAUTOMATION Free OnlineCode Reader I just want to share it with you, everybody, maybe you can try itsomeday you may have a try someday."
+    },
+    {
+      "ansID": 1750,
+      "ans": "I didn\u0027t fully understand your question. But if your question whether Rectangle should  \u0027have a \u0027 Drawable then the answer will be yes. Drawable is low level and abstract. Like Shape which is low level abstraction of rectangle, triangle and others Drawable is also low level abstraction. \r\nYes, user can create is own Drawable object\r\n        Drawable rectangle \u003d new Rectangle(); // Probably there is constructor params\r\n\r\nSetData has no parameter in base but you are calling it with parameter from Rectangle. Seriously???\r\nPlease let me know the details what is confusing you and what do you want so that I can better help you.\r\n\r\n-Pradip"
+    },
+    {
+      "ansID": 1752,
+      "ans": "I fixed it, thank you."
+    }
+  ]
+}

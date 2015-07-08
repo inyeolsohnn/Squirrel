@@ -1,0 +1,12 @@
+{
+  "id": 1118,
+  "url": "www.dofactory.com/topic/1118/how-the-successor-will-be-removed-one-by-one-in-chain-of-responsibility-pattern.aspx",
+  "title": "How are successors removed in Chain Of Responsibility Pattern?",
+  "ques": "How are successors removed, one by one, in the Chain Of Responsibility Pattern?\r\nIt gets addeds like the code below: \r\n\r\nlarry.SetSuccessor(sam);\r\nsam.SetSuccessor(tammy);\r\n\r\n\r\nNo one ever explains how these objects are removed from the successor collection.\r\nCould anyone clarify how this is done?",
+  "answers": [
+    {
+      "ansID": 1187,
+      "ans": "Hi,\r\nsorry but I think I didn\u0027t get your question,\r\nwhay do you mean by  \u0027how these objects are removed from the successor collection \u0027\r\n1. why you want to remove those oobjects?\r\n2.you do not have to remove them, you can set them to another successor.\r\n\r\nif my answer don\u0027t appropriate to your question, explain  more clearly your question.\r\nThanks\r\n"
+    }
+  ]
+}

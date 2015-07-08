@@ -1,0 +1,44 @@
+{
+  "id": 1568,
+  "url": "www.dofactory.com/topic/1568/singleton-pattern-use.aspx",
+  "title": "When and where to use the Singleton Pattern?",
+  "ques": "Hi\r\n\r\nThough I\u0027ve a fair idea of the Singleton design pattern, still I\u0027m at a fix in what scenarios it can be used in a web application.\r\nCan somebody provide some real world web example please.\r\n\r\nThanks\r\nIrshad",
+  "answers": [
+    {
+      "ansID": 1759,
+      "ans": "Hi,\r\n\r\nYou can use it in remoting when you want to create a shareable service...."
+    },
+    {
+      "ansID": 1760,
+      "ans": "The singleton pattern can be used for anything that you don\u0027t want to repeat. If the object in question is not expected to change, it is a good candidate for the singleton pattern. The singleton pattern is preferred over a static implementation in most cases. Static implementations can cause dependency headaches. Can you provide more specifics as to what exactly you\u0027re looking to do?"
+    },
+    {
+      "ansID": 1761,
+      "ans": "Hi\r\n\r\nHope you can understand a bit here\r\n\r\nhttp://www.allapplabs.com/java_design_patterns/factory_pattern.htm\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1762,
+      "ans": "Hi\r\n\r\nhope you can understand here :)\r\n\r\nhttp://www.allapplabs.com/java_design_patterns/singleton_pattern.htm \r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1766,
+      "ans": "As you were asking about a real world example, here we go.\r\n\r\nA few days ago, I had to implement holding a list of loaded assemblies and its references during program-execution. As this is a bigger project, we\u0027re talking about 150 dll-files to look at. In that case, I just didn\u0027t want to load the same data again and again whenever I need to get one of these assemblies. Therefore, I used a singleton-class, which creates this certain list on its first call and holds that values until the application gets closed."
+    },
+    {
+      "ansID": 1774,
+      "ans": "Logger Instance"
+    },
+    {
+      "ansID": 1775,
+      "ans": "In c# a static class cannot implement an interface. When a single instance class needs to implement an interface for a business contracts or IoC purposes, this is where I use the Singleton pattern without a static class."
+    },
+    {
+      "ansID": 1776,
+      "ans": "Hi, We used the singleton pattern in our utility layers which consist of Loggging, Caching, Service host repositories, Load Balancer... If the question is on how we arrived to the design. There was a performance lag on the utility layer eg, Logging, on diagnosing we observed that there are several instance getting created which are not required in my case. So we adopted Singleton pattern. Hope this helps"
+    },
+    {
+      "ansID": 1781,
+      "ans": "Hi \r\n\r\n  We can make use of singleton in following scenarios.\r\n\r\n 1. When the class is stateless eg: Validator classes instead of using static methods for validation because we cant mock static methods so testing becomes difficult. instead if we have singleton we can mock the instance itself.\r\n 2. When  we need only one state of class at any given point of time. In this case we have to take care of synchronization.\r\n\r\n Thanks\r\n ChandraShekar"
+    }
+  ]
+}

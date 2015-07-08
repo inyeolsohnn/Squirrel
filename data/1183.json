@@ -1,0 +1,12 @@
+{
+  "id": 1183,
+  "url": "www.dofactory.com/topic/1183/patterns-in-action-vs-microsoft-enterprise-library.aspx",
+  "title": "Patterns in Action vs. Microsoft Enterprise Library",
+  "ques": "Hi, \r\n\r\nI\u0027m new to Patterns in Action and I also have limited exposure to the Microsoft Enterprise Library. Can anyone offer insights in the relative benefits and drawbacks of the the Logging and Validation methods in each?\r\n\r\nDo they differ in philosophy? Ease of use? Depth? Etc. Etc.\r\n\r\nThanks for your ideas.\r\n\r\nIra Dobrow",
+  "answers": [
+    {
+      "ansID": 1280,
+      "ans": "Ira: \r\n\r\nThis is a great question. \r\n\r\nThe Design Pattern Framework is an educational tool that highlights the areas in which your code can succussfully benefit from design patterns.  In many cases we had to find a balance between comprehensiveness and simplicity and we decided that the learning experience would be best when things are kept simple. Therefore, most implementations are very lightweight by design.\r\n\r\nNext the Enterprise Library. First off, I am not an expert on the Enterprise Library, but this set of tools is rather different from the Design Pattern Framework. If offers an enormous amount of functionality throught their Application Blocks. It is large, comprehensive, and some would argue too bloated (here is a sample discussion: http://discuss.joelonsoftware.com/default.asp?dotnet.12.656280.19 ).  It will require a fair amount of study, but overall it seems very useful and powerful. \r\n\r\nSo, at the end, the answer is: it depends. If you like to keep your code lightweight and know exactly what goes on, you probably want to write things yourself (borrowing some code left and right, like from the Design Pattern Framework), otherwise you can get a headstart with the Enterprise Library, but you must follow their approach and philosophy. Personally, I am more in the lightweight KISS (http://en.wikipedia.org/wiki/KISS_principle) and YAGNI (http://en.wikipedia.org/wiki/YAGNI) schools of thinking. \r\n\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

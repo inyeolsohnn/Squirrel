@@ -1,0 +1,12 @@
+{
+  "id": 1407,
+  "url": "www.dofactory.com/topic/1407/asp-net-mvc-3-changes.aspx",
+  "title": "ASP.NET MVC 3 - changes",
+  "ques": "Hello,\r\n\r\nAt the moment I don\u0027t have knowledge about MVC 3 with its new Razor View Engine, but I am enthusiastic about applying the Patterns in your \u0027Patterns in Action\u0027 application to it. \r\n\r\nUnfortunately, MVC 2 is used in your Patterns in Action application. If I\u0027d like to use MVC 3 would the design of the ASP.NET MVC application be very different than your implementation?  If yes, will you update your product?",
+  "answers": [
+    {
+      "ansID": 1570,
+      "ans": "The list of changes from MVC 2 and MVC 3 is rather extensive. We\u0027re excited about working with it too. Here is the complete list.\r\n? Extensible Scaffolding with MvcScaffold integration \r\n? HTML 5 enabled project templates \r\n? The Razor View Engine \r\n? Support for Multiple View Engines \r\n? Controller Improvements \r\n? JavaScript and Ajax \r\n? Model Validation Improvements \r\n? Dependency Injection Improvements \r\n? NuGet Integration\r\n? Partial-Page Output Caching\r\n? Granular Control over Request Validation\r\n? Extensible  \u0027New Project \u0027 Dialog Box\r\n? Template Scaffolding Improvements\r\n? New Overloads for  \u0027Html.LabelFor \u0027 and  \u0027Html.LabelForModel \u0027\r\n? Sessionless Controller Support\r\n? New  \u0027AdditionalMetadataAttribute \u0027 Class\r\n? AccountController improvements\r\n? New Intranet Project Template\r\n\r\nThese features will indeed change the way you write your code, The most affected seems to be the View part as represented by the new Razor View Engine.  The Scaffolding support is really nice.  From a pattern perspective the Dependency Injection Improvements may change some of the code, but probably not that much. \r\nLooking at the overall.NET Web architecture the MVC 3 upgrade is primarily a change in the View (and Controller to some extent). Anything else, such as the Model, DTO\u0027s, Service Layer, Data Layer, etc are all unaffected. \r\nWe are working on updating the Design Pattern Framework with MVC 3 and the new Entity Framework 4.1. However, there is no official release date as of yet.\r\nHope this helps.\r\nDan"
+    }
+  ]
+}

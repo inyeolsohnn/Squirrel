@@ -1,0 +1,12 @@
+{
+  "id": 1468,
+  "url": "www.dofactory.com/topic/1468/oracle-dal.aspx",
+  "title": "Has anyone created the Oracle DAL for the Design Pattern Framework?",
+  "ques": "Has anyone been able to get the Oracle DAL completed / working?  \r\nI\u0027ve tried for days to get Oracle.DataAccess.Client setup to use the pattern for the DAL and sofar have not been successful.\r\n\r\nThanks --\r\n-- Greg D.",
+  "answers": [
+    {
+      "ansID": 1645,
+      "ans": "I\u0027m assuming that you\u0027re trying to use the SQL example as-is but with Oracle\u0027s ODP.NET client.  If so, I have a possible solution (hack) for you that should work.  Unfortunately, I haven\u0027t spent a ton of time trying to understand why.\r\n\r\nFrom what I noticed, the  \u0027GetFactory \u0027 (the one from Systen.Data.Common.DbProviderFactories) method has two overloads... one that takes a string and one that takes a DataRow.  I\u0027ve seen problems where the string version throws an error (something like  \u0027registered provider not loaded \u0027 or  \u0027provider failed to load \u0027 ... make sure it\u0027s installed).  The DataRow version does NOT appear to have this problem.\r\n\r\nSo, the hack is basically to use the  \u0027GetFactoryClasses \u0027 method to return a DataTable (a bunch of DataRow objects).  Next, find the row where the provder name matches the one you want.  Finally, pass the actual DataRow into the GetFactory() method.\r\n\r\nAgain, I haven\u0027t spent a ton of time looking at this.  I just know that the DataRow version works.  Maybe it has something to do with the complete info being passed in (public token, version, etc.).\r\n\r\nGood luck!  \u003d)\r\n\r\nThanx,\r\nFred\r\n\r\n\r\nDataTable factories \u003d DbProviderFactories.GetFactoryClasses();\r\nforeach (DataRow row in factories.Rows)\r\n{\r\n  if (row[2].ToString().Equals(_dataProviderName, StringComparison.OrdinalIgnoreCase))\r\n  {\r\n    _factory \u003d DbProviderFactories.GetFactory(row);\r\n    break;\r\n  }\r\n  Debug.WriteLine(row[2].ToString());\r\n}\r\n\r\n "
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1097,
+  "url": "www.dofactory.com/topic/1097/what-are-the-benefits-and-dangers-of-ioc-inversion-of-control.aspx",
+  "title": "What are the benefits and dangers of IoC (Inversion of Control)?",
+  "ques": "What I find is that the Inversion of Control pattern (also called DI - Depenency Injection) is hard to grasp.\r\n\r\nI can see the mechanics, but what problems does it try to solve?\r\nIoC has is a lot of coding overhead, but I am not clear about the exact benefits.\r\n\r\nA follow up question. Do you take IoC to Production or is it only for Testing?\r\nI am asking because there is the risk of deploying incorrect xml configuration files.  \r\nDoes anyone ever talk abou this risk?",
+  "answers": [
+    {
+      "ansID": 1151,
+      "ans": "What problems does it try to solve?\r\n\r\nDecoupling components and layers in the system\r\nAlleviates a component from being responsible for managing it\u0027s dependencies\r\nSwap dependency implementations in different environments.\r\nAllows a component be tested through mocking of dependencies.\r\nProvides a mechanism for sharing resources throughout an application.Benefits\r\n\r\nMakes it easier to test your code. Without it, the code you are testing is hard to isolate as it will be highly coupled to the rest of the system.\r\nUseful when developing modular systems. You can replace components without requiring recompilation.\r\n Do you take IoC to Production or is it only for Testing?\r\n I certainly use it on production as well as for testing. Note that there are DI frameworks that doesn\u0027t use Xml (Ninject be one of them).\r\n\r\n\r\n Source: http://stackoverflow.com/questions/3058/what-is-inversion-of-control"
+    }
+  ]
+}

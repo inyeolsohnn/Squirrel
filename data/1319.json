@@ -1,0 +1,20 @@
+{
+  "id": 1319,
+  "url": "www.dofactory.com/topic/1319/iphone-app.aspx",
+  "title": "Iphone App development tools",
+  "ques": "Hallo All:\r\n\r\nPlease help with what tools I need to create an Iphone application that retrieves real-time sales data from my restaurant database.  \r\nI am an entry level C# developer..\r\nThanks so much.\r\nSam \r\n",
+  "answers": [
+    {
+      "ansID": 1436,
+      "ans": "Hi Sam, First off I\u0027m assuming you are talking about a native iOS application. \r\n\r\nIn order to create an iOS application you will need the following: \r\n\r\n\r\nApple developer account. (Paid if you actually want to put your app onto your own device). \r\nA Mac, with OS X snow leopard. \r\nXCode IDE, which you get with your apple developer account. \r\nThe iOS SDK, which again you get with your developer account. \r\nsome iOS device, capable of hosting the OS version you wish to develop for \r\nApple uses the MVC design pattern quite heavily in their sdk, as you will see when developing your app, but beware though that you are in for a very steep learning curve (In my experience), especially if you have been developing for .NET for any length of time. Fortunately there is a ton of free resources, a lot supplied by Apple itself. Check the developer center for the guidelines documents, and iTunes for development videos, and online iPhone university course. A good starter book is Head First iPhone development, although it is most likely behind on the sdk versions\r\n\r\nGood luck on your endeavor.\r\n\r\nChris."
+    },
+    {
+      "ansID": 1441,
+      "ans": "Outside of the IPhone specific resources. Your data provider (i.e. the service that sends the data) should be gadget agnostic - It shouldn\u0027t matter what device you use to get the data. Your data provider can be in whatever language you feel comfortable. Look at OData as a impartial means to transfer data between your back end and the consuming device.\r\n\r\nhttp://www.hanselman.com/blog/CreatingAnODataAPIForStackOverflowIncludingXMLAndJSONIn30Minutes.aspx\r\n\r\nhttp://www.odata.org/developers"
+    },
+    {
+      "ansID": 1453,
+      "ans": "Hi Sam\r\n\r\nIf you plan to create a standalone application for the iPhone/iPad/iPod Touch there is at least two ways to do this\r\n1) Learn Objective C, get a Mac and the developer tools\r\n2) Check out mono touch by Novell (http://monotouch.net/) - I have not tested this myself, but from what I see and read this look promising for a C# developer.\r\n\r\nOn the other hand...\r\nThink about all the mobile platforms... Android, iPhone, Windows 7, Nokia.\r\n\r\nWhy not create a good looking browser application targeted for mobile units? That way you only need one code base.\r\n\r\nGood luck\r\n\r\nHans-Petter"
+    }
+  ]
+}

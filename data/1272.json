@@ -1,0 +1,16 @@
+{
+  "id": 1272,
+  "url": "www.dofactory.com/topic/1272/generic-repository-base-interface.aspx",
+  "title": "Generic Repository-based interface",
+  "ques": "Hi there, I have a question:\r\nWhy is the generic Repository-based interface in the MVC Application project and why not in Data Layer project? \r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1410,
+      "ans": "I am not sure which context you are referring to, but as a general practice the  \u0027Generic Repository \u0027 interface should not be in the MVC application project.  It should be in a separate class library for ease of reuse and from maintenance point of view."
+    },
+    {
+      "ansID": 1412,
+      "ans": "Yassin,\r\n\r\nIf you are talking about the Patterns In Action 4.0 MVC application, then it\u0027s there to provide a base implementation to the UI repositories.  The DoFactory guys can correct me if I\u0027m wrong about this, but what this does in this particular pattern is provide a layer of abstraction in the UI for, what I see as three immediate reasons:\r\n\r\n\r\nWCF abstraction - the repository base abstracts away the actual implementation of the WCF proxy, so this way you aren\u0027t accessing it directly in the controllers.  The next reason explains why.\r\nTestability - by referencing repository interfaces instead of the WCF proxy client, you can now test your controllers, which in MVC is huge and necessary.\r\nDRY - Don\u0027t repeat yourself.  This class also provide access to a commonly used Correlate method that validates that your request and response matches.  You can also place other reusable methods here that help you process your code.By designing the framework this way, they\u0027ve given you access to WCF services and kept the controllers testable.  This is a  \u0027Win win \u0027.\r\n\r\nI hope that answers your question.\r\n\r\nKing Wilder"
+    }
+  ]
+}

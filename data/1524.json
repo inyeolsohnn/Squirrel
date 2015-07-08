@@ -1,0 +1,12 @@
+{
+  "id": 1524,
+  "url": "www.dofactory.com/topic/1524/best-design-pattern-to-generate-pdf-letters.aspx",
+  "title": "Best design pattern to generate PDF letters",
+  "ques": "Hi,\r\n\r\nI have to create a windows service/wcf to generate pdf letters.\r\nRight now I have 12 types of letters, further it can be more. So there should be a generic solution to generat letters. \r\nwhich design pattern should i use?\r\n\r\nThanks \r\nVineeta",
+  "answers": [
+    {
+      "ansID": 1712,
+      "ans": "Hi, \r\n\r\nFactory could be used , please take a look at my answer to the question  \u0027What pattern to use? \u0027 on the same forum.\r\n\r\nInstead of Telephony you will have each PDF format.\r\n\r\nHope this helps.\r\n\r\nThanks,\r\nTarriq Ferrose Khan"
+    }
+  ]
+}

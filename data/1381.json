@@ -1,0 +1,12 @@
+{
+  "id": 1381,
+  "url": "www.dofactory.com/topic/1381/do-you-feel-guilty-when-using-a-c-switch-statement.aspx",
+  "title": "Do you feel guilty when using a C# switch statement?",
+  "ques": "Now that I am familiar with Design Patterns I am beginning to feel guilty whenever I use the C# switch statement.  It is almost like switches are a \u0027code smell\u0027 and that a better solution is possible -- typically that would be a State or Factory Design Pattern. \r\n\r\nAm I the only one having this guilt feeling or is it just me?\r\nAlso, am I justified to see the C# switch as a code-smell or is there still a place for this construct?",
+  "answers": [
+    {
+      "ansID": 1548,
+      "ans": "I believe it\u0027s good thing that if you use/see a switch statement, consider if there are better alternatives using Strategy, State, or Factory. As I believe that using those patterns will make your code more robust and easier to maintain and change.\r\n\r\nHowever, not all situations require patterns. As with switch statements, sometimes it would be easier to use the switch statements instead of implementing a full-blown pattern. I guess it depends on the situation and more specifically if you anticipate that the switch statement would be changed in the future (added conditionals, etc). Bare in mind that most often, when you use patterns, your code will become more complex and you should consider if it is worth it.\r\n\r\nIt is always a trade off :)\r\nGood Luck"
+    }
+  ]
+}

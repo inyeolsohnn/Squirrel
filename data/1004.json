@@ -1,0 +1,24 @@
+{
+  "id": 1004,
+  "url": "www.dofactory.com/topic/1004/mvc-versus-mvp-for-a-winforms-app.aspx",
+  "title": "MVC versus MVP for a WinForms app",
+  "ques": "I am starting up a relatively small project using WinForms. I have been reading up on patterns and MVC versus MVP.  I see that MVC is widely used and very popular in Web development (hence the new ASP.NET MVC platform). However, for a WinForms app, I believe there are advantages to using MVP. Can someone confirm this and explain why?  Thanks.",
+  "answers": [
+    {
+      "ansID": 1010,
+      "ans": "I am struggling with this a bit myself. From what I\u0027ve read (not tried it yet) the impetus behind MVP was to  \u0027smarten up \u0027 the view. I believe in a pure MVC patten, we wouldn\u0027t want to take advantage of things on the client side like Data Binding or any type of data entry validation. With MVP, you get to use more of the richness provided by the platform. \r\n\r\nI\u0027d love to hear how you end up tackling this issue. I did find one website (don\u0027t have the link handy) that talked about using MVC / MVP in a WinForms world. "
+    },
+    {
+      "ansID": 1011,
+      "ans": "Both in MVC and MVP the presentation layer consists of view objects, and        application logic consists of controllerpresenter objects. For each view object a corresponding controllerpresenter        exists and vice versa. And although MVC and MVP are based on a common 3-tier principle:        views process only presentation needs and controllerspresenters handle application logic, these        patterns have two major differences:     \r\n\r\nIn MVC controllers receive and process user input, but in MVP views receive user            input and then merely delegate processing to the corresponding presenters. That            is why MVP pattern better fits modern UI environments (Windows/Web forms) where            view classes themselves handle user gestures.\r\nIn MVC controllers affect their views by changing the intermediate presentation            model, which the views are subscribed to (by observer pattern). This makes views            pure observers without direct access to them. MVP on the other hand violates this             \u0027pure observer \u0027 rule by providing a direct link from a presenter to its view. This            makes MVP more handy as compared to MVC."
+    },
+    {
+      "ansID": 1028,
+      "ans": "Nirajan Singh has given a pretty decent reply, so rather than adding anything I will just present my viewpoint.\r\n\r\n For WinForm app MVP is a better choice, especially considering testability.\r\n\r\n Well as far as intelligent view is concerned, I will partially agree, as it\u0027s an open debate that where to put most of the logic. And considering testability, I think heavy use of the Presenter would be a better choice, but again, that\u0027s my opinion. \r\n\r\n "
+    },
+    {
+      "ansID": 1041,
+      "ans": "It is hard to say which ones are better, but from the separation of concerns principle it is preffered MVC over of MVP. It is important how you think your architecture and especially what your application does."
+    }
+  ]
+}

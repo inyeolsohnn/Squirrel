@@ -1,0 +1,12 @@
+{
+  "id": 1135,
+  "url": "www.dofactory.com/topic/1135/sigleton-pattern-in-entity-framework.aspx",
+  "title": "Singleton Pattern in Entity Framework",
+  "ques": "Hi, \r\n\r\nDoes anyone know if there is a place where I can use the Singleton Pattern in the Entity Framework?",
+  "answers": [
+    {
+      "ansID": 1196,
+      "ans": "With all due respect, I think the question has it all reversed. Instead of asking: I have a nail, how do I get it into the wall, you are asking: I have a hammer, what I can beat with it?\r\n\r\nSo, my question is: do you have a particular problem with the Entity Framework that needs a solution?\r\n\r\nMy 2 cents.\r\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 1310,
+  "url": "www.dofactory.com/topic/1310/why-do-we-need-to-use-interfaces.aspx",
+  "title": "Why do we need to use interfaces?",
+  "ques": "Hi,\r\n\r\nI am new to Design Patterns and just wanted to know what the main advantages are of using Interfaces.\r\n\r\nThanks\r\nSatya",
+  "answers": [
+    {
+      "ansID": 1427,
+      "ans": "One reason I use interfaces is because it increases the flexibility of the code. Let\u0027s say we got a method that takes an object of class type Account as parameter, such as:\r\n\r\npublic void DoSomething(Account account) {\r\n  // Do awesome stuff here.\r\n}\r\n\r\nThe problem with this, is that the method parameter is fixed towards an implementation of an account. This is fine if you would never need any other type of account. Take this example, which instead uses an account interface as parameter.\r\n\r\npublic void DoSomething(IAccount account) {\r\n  // Do awesome stuff here.\r\n}\r\nThis solution is not fixed towards an implementation, which means that I can pass it a SuperSavingsAccount or a ExclusiveAccount (both implementing the IAccount interface) and get different behavior for each implemented account.\r\nAs always though, don\u0027t over-engineer your code if YAGNI :o)\r\n\r\nHope that helps.\r\n"
+    },
+    {
+      "ansID": 1429,
+      "ans": "Interfaces are an incredibly important part of .Net. As Robert Blixt has said they provide incredible flexibility through polymorphism.\r\n\r\nThere are many examples where you are required to implement a particular interface in order to be able to take advantage of certain approaches. \r\n\r\nTake for example the using Statement the object supplied to the using statement must implement the IDisposable interface. See http://msdn.microsoft.com/en-us/library/yh598w02(v\u003dvs.80).aspx \r\n\r\n\r\n \r\nAnother example would be in WPF, if you have implemented the MVVM design pattern and you want to attach to a command you will need to implement the ICommand interface. See http://msdn.microsoft.com/en-us/library/ms752308.aspx\r\n\r\n\r\n \r\nTake WCF, you basically couldn?t use it without the use of interfaces.\r\n\r\n\r\n \r\nThe long and the short of it is they are your friend and you should be completely comfortable with them. \r\n\r\nGood luck\r\nRicky\r\n"
+    },
+    {
+      "ansID": 1618,
+      "ans": "In single inheritance languages like C# and Java a class can only inherit implementation from a single base class, but it can inherit features from multiple interfaces e.g. IScalable, ISerializable, etc... \r\n\r\nThis is essential what enables us to write code that can iterate through collections of objects that are NOT of same type (class inheritance), but that share the same specification (interface inheritance). \r\n\r\nThe best pattern I can think of to illustrate above point, is the Observer pattern (http://www.dofactory.com/Patterns/PatternObserver.aspx). The Subject can notify any object that is an Observer (interface implementors) without needing the Observers to share any implementation. \r\n\r\nThat is design power for you."
+    }
+  ]
+}

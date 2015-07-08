@@ -1,0 +1,12 @@
+{
+  "id": 1479,
+  "url": "www.dofactory.com/topic/1479/by-what-design-pattern-would-you-recommend-to-start.aspx",
+  "title": "With which Design Pattern would you recommend I start?",
+  "ques": "Hi:\r\n\r\nI am from M?xico, sorry for my English. \r\n\r\nI am a student in Computer Systems and I don\u0027t know where to start with Design Patterns.\r\nMy professor taught some of Singleton and Factory Patterns, but I don\u0027t know where to continue. \r\nHow would you recommend I continue my Design Pattern study?\r\n\r\nThanks so much.\r\n",
+  "answers": [
+    {
+      "ansID": 1653,
+      "ans": "I guess I started with the following (may not be in order though) and it  was accidental but was definitely helpful and am sticking to these common patterns in my everyday application development....\r\n\r\n- Singleton (one instance -\u003e global point of access)\r\n- Factory Method (Use generic factory if you are working with .net to create configurable types)\r\n- Strategy (if you need to vary your algorithms at runtime  e.g. sorting-\u003equicksort-\u003eor-\u003emergesort-\u003eor some other sorting logic)\r\n- Decorator (attach additional responsibility to an object)\r\n- Facade (Provide higher level of abstraction)\r\n- Command (for eg. for menu actions and toolbar actions)\r\n- Template Method (for what it says... for templated methods that has predefined set of execution cycle like the asp.net page life cycle for eg.)\r\n- And then pick up the ones you understand or could related to in your real work or project work environment.\r\n\r\nHope this helps!.\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

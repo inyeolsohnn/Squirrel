@@ -1,0 +1,12 @@
+{
+  "id": 1454,
+  "url": "www.dofactory.com/topic/1454/presenter-confusion.aspx",
+  "title": "Question about the Presenter class in the Design Pattern Framework",
+  "ques": "This may be more of a C# question and not a Design Pattern question, but could someone please explain the following line from the WinForms Presenter class?\r\n\r\npublic class Presenter\u003cT\u003e where T : IView\r\n\r\nIs this the same as an abstract class where the Presenter takes on the type of IView that is passed to it?  If so, what is the difference between using the above statement and an abstract class?\r\n\r\nThank you,\r\nG. Deward\r\n",
+  "answers": [
+    {
+      "ansID": 1631,
+      "ans": "This is all about Generics (http://msdn.microsoft.com/en-us/library/ms379564(v\u003dvs.80).aspx), And generics allows you to define type-safe data structures, without committing to actual data types.\r\n\r\npublic class Presenter\u003cT\u003e\r\n\r\nIn the above example, T could be any type. But in your example, generic constraints are used. This means that where T is used, it must be derived from an IView interface. This means that you are enforcing anyone what uses the presenter to supply a view that derives from an IView interface.\r\n\r\nI do think that when you specify a generic constraint like this that Visual Studio will provide you with intellisense as well.\r\n\r\nThis is not the same as abstract class, instead it is a means of adding type-safety with generics and also to add some constraints as to what base type the developer can use for the generic type T.\r\n\r\nHope that made sense.\r\nGood Luck!\r\n\r\n "
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 1415,
+  "url": "www.dofactory.com/topic/1415/am-i-left-out-when-not-using-asp-net-mvc.aspx",
+  "title": "Am I left out when not using ASP.NET MVC?",
+  "ques": "I have my own small consulting company and also own and manage a few websites in ASP and ASP.NET WebForms.  .NET has been good to me and my business and I am able to pretty quickly update and enhance my websites.  I have developed some personal coding standards and also have a handy library of .NET tools that is effective and I use over and over.  In fact it has numerous Design Patterns as mentioned in your Design Pattern Framework. Great tool!\r\n\r\nSo, life is good. However, the more I read about ASP.NET MVC (version 3 now) I and wondering whether I should migrate/re-write my websites with MVC.  I have no practical experience with MVC but I do understand how it works and I can see that it would work quite well.  The problem that I have is that I have my own set of skills, tools, and techniques, all centered around ASP and ASP.NET Webforms. I am very fast and effective with these technologies, but sometimes I wonder, perhaps I am too reluctant to accept change and I will become outdated by using yesterday\u0027s technology?  Will I be left out by not learning the latest techniques and will my skills be useless in the coming years?\r\n\r\nJust as a reference. I used to be on top of the PowerBuilder stack about 10 years ago. I was really good at it: certified and everything. And look now. I still have it listed on my resume, but it is a totally useless and irrelevant skill.\r\n",
+  "answers": [
+    {
+      "ansID": 1587,
+      "ans": "ASP.NET Webforms is good if we use it properly and is a great technology.  But yes, people and businesses are inclined to move towards MVC  and related flavors including rails, cakephp and much more over the coming years.  So, this is the best time to jump in.  Also learning MVC will help you related to these technologies as well.\r\n\r\nBut that doesn\u0027t mean you have to totally abandon asp.net webforms.  The good thing is you already have websites built with asp.net webforms.\r\n\r\nTake one of your favorite project and start moving towards MVC.  In this way you will be able to understand the changes and could make a progressive move towards MVC.\r\n\r\nThen if you like it, then you will automatically stick to it rather get additcted to it :), otherwise webforms will always be there.\r\n\r\nWebforms will not fade out in the coming years (at least for the next 5 to 10 years), as one of the Microsoft core product  \u0027SharePoint \u0027 is totally dependent on it.  And there will be other similar products as well.\r\n\r\nWish you best luck in your learnings."
+    },
+    {
+      "ansID": 1608,
+      "ans": "There is a Channel 9 pesentation which is aimed at helping you decide which route to take.\r\n\r\nTake a look (its a bit long, goes on for about an hour you can skip to about 19 min in and go from there).\r\nhttp://channel9.msdn.com/Events/MIX/MIX09/T23F"
+    },
+    {
+      "ansID": 1652,
+      "ans": "If you want to use JQuery and CSS based design then MVC is great.\r\n\r\nSeperation of conerns can be achieved by using MVP with web forms."
+    },
+    {
+      "ansID": 1680,
+      "ans": "You need to ask yourself about the context of your question:\r\n\r\n1. Is this about the business? Then it all depends on the ROI of moving all the code to ASP.NET MVC. What do you gain for the initial high cost? Easier future maintenance? Easier to find people with MVC skills, etc.\r\n\r\n2. Is it about your own skills? In this case then yes, you should move to MVC sooner or later. Actually this answer is contained in your own question.\r\n\r\n"
+    },
+    {
+      "ansID": 1700,
+      "ans": "Gregory, MVC is a different animal than WebForms.  WebForms helps promote speed in building your applications, but you need to have a certain understanding of the page life cycle to properly build your WebForms application.  For me, the page life cycle was one of the main points that moved me to MVC.\r\n\r\nFor complex application the page life cycle made me go cross-eyed.  MVC doesn\u0027t have any of that problem, but you should have a good understanding of how HTTP works in order to really use MVC comfortably.  \r\n\r\nMVC does promote unit testing better than WebForms, except if you use tools from Telerik, but for me MVC is cleaner in it\u0027s HTML and I like doing a lot of jQuery for a nice user experience.  I find it\u0027s easier to do this with MVC than WebForms because of the way ASP.NET creates ID\u0027s.\r\n\r\nThere are many benefits in MVC.  You\u0027ve probably noticed that ASP.NET has incorporated a way of modifying the URL to be more SEO friendly, like MVC Urls.  So even ASP.NET is allowing WebForms to  \u0027act \u0027 like MVC, without actually being MVC.\r\n\r\nAfter you get a basic understanding of MVC, I think you\u0027ll love it.  I won\u0027t build another WebForms project unless my client has a tantrum and forces me to make it.  :^)"
+    }
+  ]
+}

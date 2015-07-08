@@ -1,0 +1,20 @@
+{
+  "id": 1109,
+  "url": "www.dofactory.com/topic/1109/best-book-for-design-patterns-in-net.aspx",
+  "title": "Best book for Design Patterns in .NET?",
+  "ques": "Can anyone suggest to me a good book in which I can refer to Design Patterns in .NET?",
+  "answers": [
+    {
+      "ansID": 1166,
+      "ans": "There are multiple books on design patterns, it basically depends on what you\u0027re looking for.\r\n Head First\u0027s book below is one that I found was an easy read and a great introduction to the patterns as well\r\n as Design Patterns Explained. Design Patterns (GOF) book is one of the first, and most well-received \r\n books on Design Patterns.\r\n\r\n\r\nDesign Patterns: Elements of Reusable Object-Oriented Software\r\nhttp://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref\u003dsr_1_1?ie\u003dUTF8\u0026s\u003dbooks\u0026qid\u003d1279037493\u0026sr\u003d1-1\r\n\r\n Design Patterns Explained: A New Perspective on Object-Oriented Design (2nd Edition)\r\nhttp://www.amazon.com/Design-Patterns-Explained-Perspective-Object-Oriented/dp/0321247140/ref\u003dsr_1_3?ie\u003dUTF8\u0026s\u003dbooks\u0026qid\u003d1279037249\u0026sr\u003d1-3\r\n\r\nHead First Design Patterns\r\nhttp://www.amazon.com/First-Design-Patterns-Elisabeth-Freeman/dp/0596007124/ref\u003dsr_1_1?s\u003dbooks\u0026ie\u003dUTF8\u0026qid\u003d1279037156\u0026sr\u003d1-1\r\n"
+    },
+    {
+      "ansID": 1173,
+      "ans": "Also, try C# 3.0 Design Patterns to understand about various patterns used by the .net framework.\r\n\r\nhttp://www.amazon.com/3-0-Design-Patterns-Judith-Bishop/dp/059652773X\r\n\r\n\r\nRegards,\r\nRajesh Pillai"
+    },
+    {
+      "ansID": 1177,
+      "ans": "I have learned about design patterns etc. from this book:Flexible, Reliable Software: Using Patterns and Agile Development. The book was an eye opener for me. Highly recommended.\r\n I have read the Gang of Four book years before but found it a bit confusing."
+    }
+  ]
+}

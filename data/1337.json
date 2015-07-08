@@ -1,0 +1,12 @@
+{
+  "id": 1337,
+  "url": "www.dofactory.com/topic/1337/wfc-in-a-virtual-private-network-vpn.aspx",
+  "title": "WCF in a Virtual Private Network (VPN)",
+  "ques": "I have to deploy an application using the as base some of the components of the Dofactory 4.0, but I see that all is used as local....\r\nCan someone tell me how to change the WCF setting to use Binary and TCP, to make this work across a network?\r\n\r\nThanks,.",
+  "answers": [
+    {
+      "ansID": 1465,
+      "ans": "Oscar,\r\n\r\nIt\u0027s not easy to tell you how to configure it for a VPN in this response, but you would generally develop the application and WCF service locally using a localhost:[port] service.  And then when you want to deploy it you would change the  \u0027localhost \u0027 to an IP or domain name.\r\n\r\nIn fact, it is more involved than that, but that\u0027s the general idea.  You would really have to read the documentation (from various sources on the web) on the best method for your purpose.\r\n\r\nI hope this helps.\r\n\r\nKing Wilder"
+    }
+  ]
+}

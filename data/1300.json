@@ -1,0 +1,20 @@
+{
+  "id": 1300,
+  "url": "www.dofactory.com/topic/1300/the-function-of-the-data-access-objects.aspx",
+  "title": "What is the role of DAOs (Data Access Objects)?",
+  "ques": "Hi,\r\n\r\nI have a question on data access.  Why are DAOs (Data Access Objects) used to run queries against the database?  I thought that this was the job of the Repository?\r\n\r\nI am going through the Design Pattern Framework\u0027s MVC application.  The controller calls the Repository and the Repository calls the Service.  Then in the service a Data Access Objects are called to retrieve data  Why is it done this way?\r\n\r\nAm I missing something?  Why is there a Repository Pattern?\r\n\r\nAny comments would be appreciated.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1413,
+      "ans": "Rather than The Controller \u003d\u003e Repository \u003d\u003e Service  the following is more flexible approach\r\n\r\nController \u003d\u003e Service \u003d\u003e Repository \u003d\u003e Data Access Engine\r\n\r\nBecause, the service should be the entry point into your app and this will help you in case where request is coming from different clients like web, portable device, smartclient etc....to manage all the logic at one place rather than splitting between repository and services.\r\n\r\nA good writeup on repository pattern can be found here  http://blogs.hibernatingrhinos.com/nhibernate/archive/2008/10/08/the-repository-pattern.aspx\r\n\r\nHope this helps.\r\n"
+    },
+    {
+      "ansID": 1424,
+      "ans": "To make   design Loosely Coupled!"
+    },
+    {
+      "ansID": 1431,
+      "ans": "I would suggest you to read http://www.primaryobjects.com/CMS/Article108.aspx for understanding Respositry pattern."
+    }
+  ]
+}

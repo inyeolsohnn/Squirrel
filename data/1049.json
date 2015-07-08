@@ -1,0 +1,12 @@
+{
+  "id": 1049,
+  "url": "www.dofactory.com/topic/1049/good-silverlight-mvvm-example-with-code.aspx",
+  "title": "Good Silverlight MVVM example with code",
+  "ques": "My team has explored the MVVM Silverlight design pattern and we decided to use it wherever possible in our new project.  I have seen numerous discussions on this pattern but what I am missing is a solid end-to-end MVVM code example, ideally in a couple different scenarios (perhaps a CRUD scenario and a Shopping Cart example).\r\n\r\nI have heard that the Design Pattern Framework 4.0 will have such an example, but the 4.0 version is not released yet.  Does anyone have any good pointers or references that would help us out?",
+  "answers": [
+    {
+      "ansID": 1082,
+      "ans": "I was just looking into this myself. \r\nHere is a link from the Open Light Group which may help:\r\n\r\nSilverlight View Model Style: An (Overly) Simplified Explanation\r\n\r\nGood luck with your new project."
+    }
+  ]
+}

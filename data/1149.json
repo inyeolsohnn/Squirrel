@@ -1,0 +1,12 @@
+{
+  "id": 1149,
+  "url": "www.dofactory.com/topic/1149/can-t-get-it-to-run.aspx",
+  "title": "Attaching SQL Server in Design Pattern Framework",
+  "ques": "I attached both the ASPNETDB.mdf and Action.mdf to my local SQLServer instance and modified the Web.config for Host.WCF.ActionServer and App.Config for DataObjectsApp.Config but I get this error when I click on Products link:\r\n\r\n+  $exception {\u0027The underlying provider failed on Open.\u0027} System.Exception {System.Data.EntityException}\r\n\r\nIs there anywhere else I need to change the connection string?\r\n\r\nThanks.\r\nSunit",
+  "answers": [
+    {
+      "ansID": 1217,
+      "ans": "Hi Sunit: \r\n\r\nThe problem is your connectionstring to the ASPNETDB.sql.   Membership uses an implicit connectionstring (to ASPNETDB.SQL under App-Data). So, by moving this database to SQL Server you also need to adjust this under the Membership section in web.config. \r\n\r\nI suggest that you not directly attach the local SQL Express databases to SQL Server, but instead do it in the following 2 steps (that is, one database at a time). \r\n\r\nSTEP 1) Migrating the Action database.\r\n\r\n1) Create a brand new database on SQL Server, called Action.\r\n2) Run Action.sql script to create the tables and the data (this file is under Solution ItemsSql ServerAction.sql)\r\n3) Adjust the entries in web.config (according to the documentation. Note: the connectionstrings are already in place)\r\n\r\nThen run.\r\n\r\nAt this point you are still using the local ASPNETDB.sql membership database.\r\n\r\nSTEP 2)  You can also migrate the ASPNETDB database like so: \r\n\r\n1) Create a brand new database on SQL Server, called ASPNETDB\r\n2) Run Aspnetdb.slq script which creates the membership schema and user entries.\r\n3) Adjust the Membership section in web.config (here is an example of how to do this: http://www.studiocoast.com.au/knowledgebase/article-6-aspnet-using-sql-server-instead-of-aspnetdbmdf.aspx\r\n\r\nThen run.\r\n\r\nHopefully, this gets you going."
+    }
+  ]
+}

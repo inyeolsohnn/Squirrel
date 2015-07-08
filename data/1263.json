@@ -1,0 +1,12 @@
+{
+  "id": 1263,
+  "url": "www.dofactory.com/topic/1263/composite-pattern-and-bridge-pattern.aspx",
+  "title": "Composite Pattern and Bridge Pattern",
+  "ques": "Composite Pattern is one of the most useful design patterns, but it can cause many design problems. \r\nApparently, the Bridge Pattern can solve one of the problems caused by Composite. \r\n\r\nDoes anyone know: What is it? How it was solved?\r\n\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1375,
+      "ans": "Yang: \r\n\r\nDid you ever find an answer to your question? \r\n\r\nI would be curious to know what exactly the many design problems are with the Composite pattern.\r\nAs you mentioned, Composite is useful and widely used, and I am not sure what kind of problem you are referring to.\r\n\r\nThanks, \r\nDan."
+    }
+  ]
+}

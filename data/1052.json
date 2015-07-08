@@ -1,0 +1,12 @@
+{
+  "id": 1052,
+  "url": "www.dofactory.com/topic/1052/dynamic-service-registration-on-broker.aspx",
+  "title": "Dynamic service registration on broker",
+  "ques": "\r\nNot sure if this is the correct forum to post this on but perhaps you have some patterns to help? I\u0027m looking for an approach for a C# solution that dynamically exposing interfaces for a distributed service via a broker.\r\nClient \u003e Broker (or ESB) \u003e Service\r\nWhen a service starts up it automatically registers it\u0027s interface and endpoint with the broker.  All requests from clients go through the broker to make use of service functionality.\r\nAny suggestions gratefully received,\r\nSteve\r\n ",
+  "answers": [
+    {
+      "ansID": 1085,
+      "ans": "If I understand your requirement correctly, you may want to have a look at MEF  - Microsoft\u0027s new Managed Extensibilty Framework.\r\nIt has a flexible add-on model using Import and Export attributes. \r\n\r\nAccording to Microsoft: Using MEF, .NET applications can make the shift from being statically compiled to dynamically composed. If you are building extensible applications, extensible frameworks and application extensions, then MEF is for you\r\n\r\nHere is a link to codeplex: Managed Extensibility Framework\r\nAnd here is an article on MEF by it Project Manager: Building Composable Apps in .NET 4 with the Managed Extensibility Framework\r\n\r\nI hope this is helpful."
+    }
+  ]
+}

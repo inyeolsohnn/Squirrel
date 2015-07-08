@@ -1,0 +1,12 @@
+{
+  "id": 1580,
+  "url": "www.dofactory.com/topic/1580/decorator-example-from-design-pattern-framework.aspx",
+  "title": "Decorator example from Design Pattern Framework",
+  "ques": "I hope that I don\u0027t get moved to the \u0027hair-splitters\u0027 section for that question, but as we\u0027re talking here about very basic principles, I just wanted to get everything right :)\r\n\r\nIn the Design Pattern Framework, there\u0027s an example in the solution DoFactory.HeadFirst.Decorator.Starrbuzz. That example contains a base-class, which is called Beverage.\r\n\r\nMy question is now, why don\u0027t we declare this base-class as abstract, as we\u0027re never going to have instance of a sole Beverage, but only drinks like e.g. Espresso, DarkRoast, ...?public class Beverage\r\n{\r\n   public virtual string Description { get; protected set; }\r\n   public virtual double Cost { get; protected set; }\r\n}\r\n\r\npublic class DarkRoast : Beverage\r\n{\r\n   public DarkRoast()\r\n   {\r\n      Description \u003d \u0027Dark Roast Coffee\u0027;\r\n      Cost \u003d 0.99;\r\n   }\r\n}\r\n ",
+  "answers": [
+    {
+      "ansID": 1767,
+      "ans": "\r\n\r\n\r\nI have not seen the full source of the\r\nBeverage class, but an abstract class provides a base framework (optionally\r\nwith partial implementation) that other classes can share via inheritance. In the\r\nabove case, Beverage case can be abstract too since it is not instantiated and\r\nprovides base properties for beverages.\r\nHope this helps?"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 1285,
+  "url": "www.dofactory.com/topic/1285/what-is-the-best-design-pattern-book-you-ve-read.aspx",
+  "title": "What is the best Design Pattern book you\u0027ve read?",
+  "ques": "In addition to the obligatory Design Pattern Framework 4 (great product), what is the best Design Pattern book you\u0027ve read?\r\nI am particularly interested in other developer\u0027s opinions on the GoF book because I found it a \u0027difficult read\u0027. \r\nIs it just me or do others have similar experiences?\r\n\r\nThanks\r\nIan",
+  "answers": [
+    {
+      "ansID": 1389,
+      "ans": "I read the GoF book years ago.  Yes, it is a difficult read.\r\n\r\nI have not read the Heads First book, the one referenced in the DoFactory Framework, but I would recommend it simply because others have recommended it, and you have C# code to walk through as you read.  There is however, plenty of stuff on the web that talks about design patters, but I ended up here because DoFactory gave me code to go along with the \u0027talk\u0027.\r\n\r\nI would also recommend Code Complete.\r\n\r\n-Mike"
+    },
+    {
+      "ansID": 1390,
+      "ans": "GoF is definitely difficult to get at the first attempt. Head First makes understanding patterns very easy."
+    },
+    {
+      "ansID": 1411,
+      "ans": "C# 3.0 Design Patterns is a nice and light read.  It also has applications of patterns in the .NET framework and some real examples as well.\r\n\r\nGOF is a good book and at first read it may seem difficult but once you come back to it after reading the above or Head First, you will be able to make most of the GOF book..."
+    }
+  ]
+}

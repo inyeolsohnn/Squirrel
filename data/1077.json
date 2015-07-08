@@ -1,0 +1,36 @@
+{
+  "id": 1077,
+  "url": "www.dofactory.com/topic/1077/when-to-use-linq-to-sql-versus-entity-framework.aspx",
+  "title": "When to use LINQ-to-SQL versus Entity Framework?",
+  "ques": "My question is this: when should I decide to use LINQ to SQL over Entity Framework?  I my view, LINQ to SQL is far more \u0027agile\u0027 and flexible than Entity Framework. \r\n\r\nI know that Microsoft is totally committed to Entity Framework, but using EF does not come natural to me. I am very experienced with SQL and the whole LINQ to Entities or eSQL API feels awkward: for example, the Attach concept, the Include concept, etc).",
+  "answers": [
+    {
+      "ansID": 1124,
+      "ans": "The primary difference between the two frameworks is how they handle your models.  That should be clear enough.  ;^)  Just kidding, partly.  \r\n\r\nThe basic rule of thumb for which framework to use is how to plan on editing your data in your presentation layer.  \r\n\r\n\r\nLinq-To-Sql - use this framework if you plan on editing a one-to-one relationship of your data in your presentation layer.  Meaning you don\u0027t plan on combining data from more than one table in any one view or page.\r\nEntity Framework - use this framework if you plan on combining data from more than one table in your view or page.To make this clearer, the above terms are specific to data that will be manipulated in your view or page, not just displayed.  This is important to understand.\r\n\r\nWith the Entity Framework you are able to  \u0027merge \u0027 tabled data together to present to the presentation layer in an editable form, and then when that form is submitted, EF will know how to update ALL the data from the various tables.\r\n\r\nThere are probably more accurate reasons to choose EF over L2S, but this would probably be the easiest one to understand.  L2S does not have the capability to merge data for view presentation.\r\n\r\nI hope this answers your question.\r\n\r\nKing Wilder"
+    },
+    {
+      "ansID": 1125,
+      "ans": "I have not used any of them, but just wanted you to give a heads up if you start using Linq2Sql. It seems as the future for Linq2Sql is very uncertain, and Microsoft might make it obsolete in favor for EF. Something for you to consider when deciding upon which technology to use.\n\n\nReference:\n\nUpdate on LINQ to SQL and LINQ to Entities Roadmap\nhttp://blogs.msdn.com/b/adonet/archive/2008/10/29/update-on-linq-to-sql-and-linq-to-entities-roadmap.aspx\n\nMicrosoft kills Linq to SQL\nhttp://ayende.com/Blog/archive/2008/10/31/microsoft-kills-linq-to-sql.aspx"
+    },
+    {
+      "ansID": 1126,
+      "ans": "I wouldn\u0027t quite go that far.  The links above are outdated.  Microsoft has made some updates to Linq2SQL in .NET 4.0\r\n\r\nhttp://damieng.com/blog/2009/06/01/linq-to-sql-changes-in-net-40\r\n\r\nhttp://blog.linqexchange.com/index.php/linq-to-sql-changes-in-net-4-0/"
+    },
+    {
+      "ansID": 1128,
+      "ans": "On BASTA! Spring 2010, a presenter said the following:\r\n\r\n \u0027Don\u0027t choose Linq2Sql if you are starting a new project, the team that developed it, doesn\u0027t exist anymore. Choose EF 4.0. This is the way to go. Linq2Sql was merely one possible way which we decided to not follow anymore. \u0027"
+    },
+    {
+      "ansID": 1148,
+      "ans": "Personallly I would use EF.  EF is a true OR/M where Linq 2 Sql is mostly a SQL obfuscator. With EF you can save/load and manage your objects where with Linq2Sql you still need to know the sql and data structure but you are pretending you don\u0027t."
+    },
+    {
+      "ansID": 1150,
+      "ans": "Don\u0027t forget that there exist solutions outside of Microsoft as well (which has its pros and cons).\r\nSome popular ORMs out there...\r\n\r\nNHibernate, http://nhforge.org/\r\nSubsonic, http://subsonicproject.com/\r\nLightSpeed, http://www.mindscape.co.nz/products/lightspeed/\r\nLLBLGEN, http://www.llblgen.com/defaultgeneric.aspx\r\n\r\nSome of the above are commercial others OSS. NHibernate is a popular and mature ORM with origins from Java\u0027s Hibernate. There is a comparison between EF4 and NHibernate here. Note that the comparison might be a bit biased, since Oren is a contributor to NHibernate. Nevertheless it is a good read.\r\n\r\nGood Luck!\r\n"
+    },
+    {
+      "ansID": 1155,
+      "ans": "Here\u0027s the latest comment I have found from Microsoft regarding Linq2Sql and EF...\r\nhttp://msdn.microsoft.com/en-us/data/bb525059.aspx\r\n\r\n"
+    }
+  ]
+}

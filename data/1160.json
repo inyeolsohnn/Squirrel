@@ -1,0 +1,16 @@
+{
+  "id": 1160,
+  "url": "www.dofactory.com/topic/1160/database-structure-vis-a-vis-oop-ood-and-design-patterns.aspx",
+  "title": "Database Structure vis-a-vis OOP/OOD and Design Patterns",
+  "ques": "Hi,\r\n\r\nIs there a way to design a SQL database so that it\u0027s very amenable to OOP/OOD and design patterns? For example, say your app is to have an employee class that is to inherit a person class.  Is it best or at least recommended for the back-end database to have a person table and an employee table with a foreign key to the person table.  Basically, I\u0027m asking if there\u0027s a best way to design a SQL database in order to make it as easy as possible to write OOP apps based on it?\r\n\r\nThanks,\r\n\r\nMike",
+  "answers": [
+    {
+      "ansID": 1236,
+      "ans": "I think what you are looking for is an ORM product. Check this example: http://en.wikipedia.org/wiki/NHibernate"
+    },
+    {
+      "ansID": 1246,
+      "ans": "Hey there!\r\n\r\nGood question! It shows that there is a way, a developer thinks about databases that miiiight be different from the way, a database administrator thinks about it. \r\n\r\nFor example: You think in an object oriented way whilst a database administrator thinks in a structured, more relational way of storing data in an efficient manner. This is why he will always try to create schemas that reflects fully normalized table structures, foreign key constraints and that sorta stuff. \r\n\r\nHowever,... this will result in people like you to think about what the hell might be the best way to transform the data in a way that allows you to work with it in your environment, i.e. an object oriented - and more over - type safe way. This is where Object Relational Mappers come into play. \r\n\r\nNo matter what they are called, NHibernate, EF, Linq2Sql,... nah...to hell with it: Maybe even Strongly Typed Datasets: They all do the same: Allow you to work object oriented with data.\r\n\r\nIf you don\u0027t want that, the answer is simple: Don\u0027t use a relational database. There are plenty of other fish in the sea... just have a look around and check object oriented databased.\r\n\r\nRegards,\r\n-Chris."
+    }
+  ]
+}

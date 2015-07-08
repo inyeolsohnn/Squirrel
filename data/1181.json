@@ -1,0 +1,16 @@
+{
+  "id": 1181,
+  "url": "www.dofactory.com/topic/1181/installation-issue.aspx",
+  "title": "Installation Issue",
+  "ques": "Hi,\r\n\r\nI am unable to install from msi (Design Pattern Framework 4.0 CS.msi). \r\nIt is showing: could not access network location \\sw620_fagarwalsDoFactory Patterns 4.0. CS.\r\nI tried with setup.exe too.\r\n\r\nCould you please help me to install.\r\n\r\nRegards,\r\nSuresh",
+  "answers": [
+    {
+      "ansID": 1270,
+      "ans": "Suresh: \r\n\r\nI am sorry for the trouble. We\u0027ve had a few other users with the same issue. It has been discussed in this thread: \r\nhttp://www.dofactory.com/topic/1134/how-do-you-change-the-default-installation-folder-for-the-c-version-of-dp.aspx.  \r\n\r\nTo the best of our knowledge, the error is caused by a registry mis-configuration on your box. \r\nEven Microsoft\u0027s own products (like Office) cannot be installed when this occurs. \r\n\r\nMicrosoft offers a \u0027FixIt\u0027 utility that you may want to try. \r\nYou\u0027ll find it here. http://support.microsoft.com/kb/886549\r\n\r\nHope this helps.\r\n"
+    },
+    {
+      "ansID": 1271,
+      "ans": "Suresh: \r\n\r\nI am sorry for the trouble. We\u0027ve had a few other users with the same issue. It has been discussed in this thread: \r\nhttp://www.dofactory.com/topic/1134/how-do-you-change-the-default-installation-folder-for-the-c-version-of-dp.aspx.  \r\n\r\nTo the best of our knowledge, the error is caused by a registry mis-configuration on your box. \r\nEven Microsoft\u0027s own products (like Office) cannot be installed when this occurs. \r\n\r\nMicrosoft offers a \u0027FixIt\u0027 utility that you may want to try. \r\nYou\u0027ll find it here. http://support.microsoft.com/kb/886549\r\n\r\nHope this helps."
+    }
+  ]
+}

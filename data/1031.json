@@ -1,0 +1,16 @@
+{
+  "id": 1031,
+  "url": "www.dofactory.com/topic/1031/why-dofactory-is-not-talking-about-repository-pattern-anywhere.aspx",
+  "title": "Why does DoFactory not reference the Repository pattern on their site?",
+  "ques": "I searched for the Repository pattern on the DoFactory website, but could not find a reference to this pattern. I wonder why something like this is not mentioned on this great website?\r\n\r\nAm I missing something?",
+  "answers": [
+    {
+      "ansID": 1039,
+      "ans": "Hey Amr: \r\n\r\nThe DoFactory website documents the Gang of Four Design Patterns. There are 23 of these patterns and they have been around for quite a while (15 years or so).  Over the last decade many more Design Pattern have been \u0027discovered\u0027 and documented.  One of which is the Repository Pattern. \r\n\r\nThe Repository Pattern is typically used to provide a standard CRUD (Create Read Update, Delete) interface to the Service Layer. It will have methods like: \r\n\r\nGetList\u003cCustomer\u003e\r\nGet\u003cCustomer\u003e\r\nInsert\u003cCustomer\u003e\r\nUpdate\u003cCustomer\u003e\r\n\r\netc. \r\n\r\nBTW: the Design Pattern Framework does not include the Repository Pattern either. They use a different model, i.e. a high-level Request / Response model that can be exposed as a webservice. \r\n\r\nAnyhow, I hope this answers your question.\r\n\r\nDan.\r\n"
+    },
+    {
+      "ansID": 1040,
+      "ans": "Yes, thanks for your answer."
+    }
+  ]
+}

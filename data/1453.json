@@ -1,0 +1,16 @@
+{
+  "id": 1453,
+  "url": "www.dofactory.com/topic/1453/asp-net-mvc.aspx",
+  "title": "General question about ASP.NET MVC 3",
+  "ques": "I still need a better understanding on the high level structure of ASP.NET MVC.  By the way: I am using MVC 3.\r\nIs there such a thing as an ASP.NET MVC 3 diagram, flowchart, and/or sequence diagram?\r\n\r\nAny help appreciated!",
+  "answers": [
+    {
+      "ansID": 1634,
+      "ans": "Venkatesh:\r\n\r\nYou may want to know that the first MVC 3 book was just published a few days ago. \r\nIt\u0027s titled: Pro ASP.NET MVC 3 Framework, by Steven Sanderson and Adam Freeman.\r\n\r\nYou can find it on Amazon here.  I just ordered and received it a few days ago and it is a great read!"
+    },
+    {
+      "ansID": 1642,
+      "ans": "To answer your first part of the question, if you are new to MVC then there are many different resources that can teach you about MVC.  I have a 13 episode video series where I build a GolfTracker application in MVC 2 from scratch right in front of you.  It might help give you insight on how MVC works.  http://www.mvccentral.net/Video\r\n\r\nTo answer your second question, I don\u0027t know.  Are you talking about displaying a diagram, flowchart and/or sequence diagram as a view in MVC, or do you want to see details on the inner workings of MVC displayed this way?  If that\u0027s what you are asking, then yes I\u0027ve seen many resources that have these types of charts.  Google is a good place to start.\r\n\r\nIf you want to display these types of charts as a View, then off hand I don\u0027t know if any open source code exists, but there might be some somewhere.\r\n\r\nI hope this helps."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1529,
+  "url": "www.dofactory.com/topic/1529/design-pattern-for-controller-in-asp-net-mvc3.aspx",
+  "title": "Design pattern for Controller in ASP.NET MVC3",
+  "ques": "I have WCF Services exposed by dynamics CRM 2011,  and a ASP.NET MVC3 portal to consume these services.\r\n\r\nI have to make call to WCF services from controller and I don\u0027t want to make call to WCF services directly from controller. I can think of following patterns\r\n\r\n\r\nService Facade\r\nCommand Factory\r\nDI and IoC at controller level\r\n\r\nWhat is the best practice in terms of patterns for this scenario. \r\n\r\nThanks\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1726,
+      "ans": "DI and IOC will complement the wcf services (whether you use Service Facade or not). But even DI/IOC is not always required. Evaluate your scenarios and choose the best fit approach\r\n\r\nBut since you mentioned your WCF services just provide an abstraction layer for your CRM 2011, having the layer of indirection of DI/IOC is a good idea and will make your design a bit flexible."
+    }
+  ]
+}

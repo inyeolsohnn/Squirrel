@@ -1,0 +1,56 @@
+{
+  "id": 1177,
+  "url": "www.dofactory.com/topic/1177/career-c-versus-vb-net.aspx",
+  "title": "Career path: C# versus VB.NET",
+  "ques": "Hello, \r\n\r\nI am coming from an assembly / C background and I am ready to move into building databased business applications in .NET.   \r\nMy plan is to go as far as possible and become an .NET architect who is familiar with OO and Patterns.  Since I am totally new to .NET, my question is what is the better language to start: VB.NET or C#.  And what are the reasons? \r\n\r\nLook forward to your answers. \r\nAnd, thanks in advance. ",
+  "answers": [
+    {
+      "ansID": 1269,
+      "ans": "I would say go for C#, now this is probably due to my background as a Java developer and later on C# developer. I have only lately been doing VB.Net development (maintaining legacy code). And one tends to recommend what one is most used to.\r\n\r\nBut since I started developing in VB I found it to be more cumbersome to use than C#. A benefit of using C# is that I have found most OSS and blogs are using C# which makes it easier to find examples. You will also get the benefit of understanding Java.\r\n"
+    },
+    {
+      "ansID": 1292,
+      "ans": "Hi,\r\n\r\nC# and VB.NET both use the same set of Framework Base Class Libraries though their syntax are way different.\r\n\r\nC# follows C, C++ syntax where as VB.NET is more like writing English language like statement.\r\n\r\nIn my opinion C# is more popular as compared to VB.NET but it would be up to you to decide which one to choose."
+    },
+    {
+      "ansID": 1300,
+      "ans": "I\u0027m a VB.NET developer and if I were starting fresh I would choose C# only because there seems that more resources (web, magazines, etc) are written for C# first."
+    },
+    {
+      "ansID": 1305,
+      "ans": "Also you need to take in consideration that C# is standarized so you find products from other companies more likely to be focused on C#, specially you can find C# implementations to write apps for Linux and iPhone (go-mono.com)\r\n\r\nYou may someday ask to write something for silverlight and pretty much everybody is using C# on silverlight"
+    },
+    {
+      "ansID": 1309,
+      "ans": "For an architect, language is a tool to achieve the end.\r\nUse C# or VB.Net, but use the way no one has used ever before."
+    },
+    {
+      "ansID": 1310,
+      "ans": "The number of C# jobs as opposed to VB.NET jobs are 20 - 1.\r\n\r\nAfter learning either I find w/ a month or so you can become just as productive. There are also translators so just becuase there are C# examples you can easly convert them.\r\n\r\nThere are obvious pros/cons to both. I find VB easier to read and good for new programmers, however if you come from C or Java, C# is the way to go."
+    },
+    {
+      "ansID": 1311,
+      "ans": "If you are planning to become an Architect, you should learn and be able to use both. As someone has already stated, its a tool.\r\nI dont mean that you will not have a favorite, because you will. But you should be able to switch from one to the other without issue."
+    },
+    {
+      "ansID": 1426,
+      "ans": "I would suggest go with C#.As it is an cleaner and OOAD Lang.If you ever want to switch you can do it with easy."
+    },
+    {
+      "ansID": 1452,
+      "ans": "Hi Henry\r\n\r\nI would choose C#\r\n\r\n* There are more examples out there\r\n* Most third party vendors uses C# as their main language\r\n* More jobs\r\n* Clean and easy syntax\r\n* Easier to read than VB.Net (I think)\r\n* The syntax is very similar to Java, C++ and various other\r\n\r\nBefore I started with C# 5 years ago I was a Visual Basic 6 developer and the transition from VB6 to C# was actually easier than VB.Net.\r\n\r\nAs an architect I don\u0027t think you need to know both languages equally well. Specialize in one, and know a few thing about the other. It\u0027s far more important to know the .Net framework and the various technologies it offers (WF, WCF, WPF, MEF, EF, LINQ) and how and where to use it.\r\n\r\nGood luck\r\n\r\nHans-Petter"
+    },
+    {
+      "ansID": 1459,
+      "ans": "I started dynamic web development initially with classic asp in which there was not much choice to begin with. vbScript was the way to go back in those days. So it was natural for me to pick VB.NET when it came to ASP.NET. I used it for a couple of years and since I was still developing for web, at some point it became apparent that I needed to do increasing amount of client side coding with JavaScript. There was one project in which we needed to use it a lot. So I became more familiar with the c-based syntax. Regardless of my years of experience with vb-syntax, I found it hard to revert back to it. So I naturally just switched to C#. I never regretted the change. C# still feels like a better choice with more possibilities. Besides, if you need experienced peer support with complex or advanced problems or with new technologies, you may expect to get it from the C# community. As for career opportunities, I believe you\u0027re better off with C#. There are more job openings, admittedly also more competition. Last but not least, with C# you wouldn\u0027 t be locking yourself into a corner. As a lot of other languages share most of the syntax."
+    },
+    {
+      "ansID": 1461,
+      "ans": "Choose C#, because it is more demanding and pure Object Oriented."
+    },
+    {
+      "ansID": 1520,
+      "ans": "I\u0027m primarily a C# developer however i don\u0027t believe C# is more OOP than VB.net, both languages has it\u0027s pros and cons, if your background is C/C++/Java  then it\u0027s more logical to go with C#. \r\n\r\nat the end of the day it all goes down to where you are more comfortable working with, both languages supports pretty much all the OOP features you\u0027d need, can do the same design patterns, supported by the same framework.\r\n\r\nConcentrate on one but also be open with the other as to when an opportunity arises that you may need to switch languages for a job then you could easily switch between the 2.\r\n\r\neven with the samples on the web more focused on C#, there are tons of online and offline converters to switch it around.\r\n\r\nyou could check out comparisons between c# and VB.net but on the top of my head\r\n\r\nC# can have Partial Interfaces and VB.Net can\u0027t, \r\nStatic classes is also not available in VB.Net (although I believe Modules in VB are already sealed static classes so this becomes pretty much the same already).\r\n\r\n\r\n"
+    }
+  ]
+}

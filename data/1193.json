@@ -1,0 +1,12 @@
+{
+  "id": 1193,
+  "url": "www.dofactory.com/topic/1193/localization-for-required-attribute.aspx",
+  "title": "Localization for [Required(...)] attribute",
+  "ques": "The CustomerModel class has ErrorMessages for Required and StringLength attributes that are hardcoded english strings.  \r\n\r\n\r\n/// \u003csummary\u003e     \r\n/// Customer Model class.     \r\n/// Properties have data annotations used for Validation and Display.     \r\n/// \u003c/summary\u003e     \r\npublic class CustomerModel\r\n{\r\n    /// \u003csummary\u003e         \r\n    /// The Customer Identifier.         \r\n    /// \u003c/summary\u003e         \r\n    [DisplayName(\u0027Id\u0027)]\r\n    public int CustomerId { get; set; }\r\n\r\n        \r\n\r\n\r\n    /// \u003csummary\u003e\r\n    /// Customer Company name.\r\n    /// \u003c/summary\u003e         \r\n    [DisplayName(\u0027Company Name\u0027)]\r\n    [Required(ErrorMessage \u003d \u0027Company Name is required.\u0027)]\r\n    [StringLength(30, ErrorMessage \u003d \u0027Company Name can be at most 30 characters\u0027)]\r\n    public string CompanyName { get; set; }\r\n}\r\n What about error messages in other languages?",
+  "answers": [
+    {
+      "ansID": 1297,
+      "ans": "Localization is a fairly large topic, but essentially it is supported throughout .NET.  As such, the Design Pattern Framework supports localization. \r\n\r\nTo get the errormessage to display in a different language you need something like this: \r\n\r\n\r\n[Required(ErrorMessageResourceType \u003d typeof(Resources.Errors), \r\n          ErrorMessageResourceName \u003d  \u0027CompanyName_Required \u0027)]\r\nRemember that in ASP.NET you also need to set the current culture on the Thread, like so:.\r\n\r\n\r\nThread.CurrentThread.CurrentUICulture \u003d new System.Globalization.CultureInfo( \u0027fr \u0027);\r\nHere is a link to a discussion on these issues (but you can easily find many more references on localization).\r\n\r\nhttp://forums.asp.net/p/1433699/3264915.aspx\r\n \r\nI hope this gets you going.\r\n\r\n "
+    }
+  ]
+}

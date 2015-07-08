@@ -1,0 +1,16 @@
+{
+  "id": 1266,
+  "url": "www.dofactory.com/topic/1266/self-tracking-entities-example-with-entity-framework-4-0.aspx",
+  "title": "Self Tracking Entities example with Entity Framework 4.0",
+  "ques": "Hi there,\r\n\r\nAre there any plans to provide examples on how to use Self Tracking Entities with the DoFactory design patterns?\r\nI am very interested in seeing and implemenation of the Client Change Tracking approach.\r\n\r\nThanks a lot.",
+  "answers": [
+    {
+      "ansID": 1385,
+      "ans": "Yassin:\r\n\r\nSelf Tracking Entities are interesting as they have no dependencies of the Entity Framework and the client can be ignorant of the persistance model. \r\n\r\nWhile this is true, there is no free ride and to get all the benefits you most likely end up writing DTOs (or use AutoMapper), just like we do in the DoFactory patterns.  The details are very well explained in this article:\r\n\r\nhttp://www.dotnetconsult.co.uk/weblog2/PermaLink,guid,b9c1ff65-8823-4a5e-ae07-7531c258a5ac.aspx\r\n\r\nWe will continue to look into Self Tracking Entities but at this point we have no plans to include these in our next release of Design Pattern Framework. \r\n\r\nI hope this answers your question.\r\n\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1398,
+      "ans": "Hi Dan,\r\n\r\nThanks for your response. Look at the following post by Tony Seed\u0027s and let me know what you think? It looks like using Tony\u0027s approach you need less code the client and would work well on a big size project.\r\n\r\nhttp://blog.tonysneed.com/2010/04/21/webinar-n-tier-entity-framework-with-dtos/\r\n\r\n\r\nThanks\r\n\r\n\r\n\r\n "
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1095,
+  "url": "www.dofactory.com/topic/1095/anti-patterns.aspx",
+  "title": "Anti Patterns?",
+  "ques": "I began studying Design Patterns and then I ran into Anti-Patterns. \r\nThe way I understand it is that it is something you should not be doing. \r\n\r\nBut, how do Anti-Patterns differ from bad coding practices?\r\nFor example, spagetti code is that an Anti-Pattern?",
+  "answers": [
+    {
+      "ansID": 1145,
+      "ans": "Anti-patterns tend to be more bad practices and emergent behaviors then patterns.  There usually isn\u0027t a defined way to do something badly, people take the time to figure it out themselves :)\r\nAn example I recently saw has to do with multiple programmers and ambiguous design.  Data was being pulled in from a legacy system and the developer had created a  \u0027Client Clean \u0027 table and a  \u0027Client \u0027 table.  The data would come in to the  \u0027Client Clean \u0027 table and would be cleaned and moved over to the  \u0027Client \u0027 table. The website then would read from the  \u0027Client \u0027 table. At this point you may notice that there are 2 client tables where 2 different programs access them which is not exactly an Anti-pattern but it does mean anyone working on the systems will need to know what each table is and what accesses it.  Later that year a new programmer came in and created some more pages for the clients, at that point a new behavior emerged; people started getting random client names.\r\n\r\nSome other of my favorites are:\r\n1) calling a webservice from a stored proc\r\n2) YAML files for business logic\r\n3)  managing program flow with exception handles\r\n4) using super methods that have been overridden\r\n5) optimizing before the core functionality is complete\r\n6) automagic frameworks\r\nbut basically if you look up antipatterns like here you will notice they are things you shouldn\u0027t do , not patterns really."
+    }
+  ]
+}

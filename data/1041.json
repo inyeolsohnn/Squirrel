@@ -1,0 +1,12 @@
+{
+  "id": 1041,
+  "url": "www.dofactory.com/topic/1041/design-pattern-framework-product-improvement-suggestion.aspx",
+  "title": "Design Pattern Framework - Product improvement suggestion",
+  "ques": "Hi,\r\n\r\nDesign Pattern Framework is unique in its own way and is very helpful to me. I has been a critical element for my success.\r\n\r\nIn order to better serve the community, I suggest including video tutorials explaining the patterns individually and also explaining the bits and pieces of the solutions provided in the framework for a nominal price.\r\n\r\nThis would help us in many ways. In case someone does not find lot of time to read the complete pdf that comes with the product, they can watch the videos on the go and learn a lot.\r\n\r\nThis would improve the reach of the product in the community.\r\n\r\nSreenivas",
+  "answers": [
+    {
+      "ansID": 1056,
+      "ans": "Sreenivas: \r\n\r\nFirst of all, it is always very rewarding for us at DoFactory to see that the Design Pattern Framework has been critical to your success as .a NET developer / architect. \r\n\r\nAs far as your suggestion for including video tutorials, I think you bring up a good point.  The Design Pattern Framework is an extensive package and stepping through all code solutions with associated diagrams and documentation requires time. Indeed, adding \u0027short and highly focused\u0027 video clips explaining the essence of each individual pattern will certainly enhance the learning experience for the user. \r\n\r\nWe are currently hard at work to get the next release of the Design Pattern Framework (Version 4.0) out.  Please be assured that we will take your suggestion (and those from others), and we will do our level best to make future releases as valuable to the community as possible. \r\n\r\nThanks."
+    }
+  ]
+}

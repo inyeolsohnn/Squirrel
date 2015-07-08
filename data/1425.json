@@ -1,0 +1,16 @@
+{
+  "id": 1425,
+  "url": "www.dofactory.com/topic/1425/how-can-i-generate-xml-element-or-attribute-in-custom-collection.aspx",
+  "title": "How can I generate xml elements or attributes from a custom collection?",
+  "ques": " Hi:\r\n\r\nI have a custom collection and items have two properties. \r\nI want to serialize one property to an xmlelement and another property to an xmlattribute. How can I do this? \r\n\r\nThanks.\r\nBest Regards.",
+  "answers": [
+    {
+      "ansID": 1596,
+      "ans": "To accomplish your goal add attributes to the properties in your collection. When the XML Serializer writes the XML it will create the requested node type. \r\n\r\nHere\u0027s a sample in C#\r\n\r\nusing System.Xml.Serialization;\r\n\r\nnamespace SampleApp\r\n{\r\n    [XmlRoot( \u0027MyCollection \u0027)]\r\n    class CustomCollection\r\n    {\r\n        [XmlElement( \u0027myElement \u0027)]\r\n        public string MyElementProperty { get; set; }\r\n\r\n        [XmlAttribute( \u0027myAttribute \u0027)]\r\n        public string MyAttributeProperty { get; set; }\r\n    }\r\n}\r\nHope it helps,\r\n\r\nSteve\r\n\r\n "
+    },
+    {
+      "ansID": 1607,
+      "ans": "Give the [Serializable] attribute to appropriate property such a way you can serialize it by selective members.\r\n\r\nusing System.Xml.Serialization;\r\nnamespace SampleApp\r\n{\r\n    [Serializable][XmlRoot( \u0027MyCollection \u0027)]\r\n    class CustomCollection\r\n    {\r\n        [XmlElement( \u0027myElement \u0027)]\r\n        public string MyElementProperty { get; set; }\r\n        [XmlAttribute( \u0027myAttribute \u0027)]\r\n        public string MyAttributeProperty { get; set; }\r\n    }\r\n}\r\n\r\n\r\nThanks\r\nRajesh"
+    }
+  ]
+}

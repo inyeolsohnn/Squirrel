@@ -1,0 +1,24 @@
+{
+  "id": 1152,
+  "url": "www.dofactory.com/topic/1152/how-and-where-to-begin.aspx",
+  "title": "How and Where to Begin?",
+  "ques": "Hello,\r\n\r\nI am very new to Design Patterns, I have just begun to learn how important it is to get a successful design architecture.\r\nI am facing little problem in starting up with the technology, I don\u0027t know how and where to begin. Should I take up a\r\nsmall Web Development Project and start practicing design pattern on it? Please suggest. \r\n\r\nMaybe I am dumb to ask this here but I hope to get some response.\r\n\r\nRegards.\r\n\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1221,
+      "ans": "My suggestion would be just take a design pattern and create a program that uses it.  Experiment.  Search the web as well.  There are a lot of design patterns and examples out there.  For me, I just took and example and programmed it.  then played around with it till I got the feel of what it was trying to do.  When you can see what it can do, try and find a project you have already worked and look at where it might fit in and then rework your project with the design pattern.hope this helps you. --- "
+    },
+    {
+      "ansID": 1225,
+      "ans": "I would suggest looking through the .NET Framework for objects with names of the base patterns in them to give you an Idea of tools in the framework that ou are using now and how they relate to the base GOF patterns listed on this site and others.\r\n\r\nThis will give the feeling of what a implementatino looks like versius a concept."
+    },
+    {
+      "ansID": 1231,
+      "ans": "I\u0027ll also add a shameless plug for  \u0027HeadFirst Design Patterns \u0027.  If you don\u0027t have any experience at all with Patterns, this would be a very good way to start."
+    },
+    {
+      "ansID": 1237,
+      "ans": "Definitely, Head First Design Patterns!  Get it!!\r\n\r\nAnd while you\u0027re at it, Head First Object-Oriented Analysis and Design!"
+    }
+  ]
+}

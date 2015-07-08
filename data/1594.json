@@ -1,0 +1,20 @@
+{
+  "id": 1594,
+  "url": "www.dofactory.com/topic/1594/recommendation-of-orm-for-large-applications.aspx",
+  "title": "Recommendation of ORM for large applications",
+  "ques": "Is object relationship mapping (ORM) ex. entity framework recommended for large application base spanning across 150 projects or so. With more than 500 tables and respective mappings?\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1777,
+      "ans": "Your choice depends on what your requirements are. The top 3 ORMs for large projects (in my experience) are:\r\n\r\n\r\nEntity Framework - http://msdn.microsoft.com/en-us/library/aa697427%28v\u003dvs.80%29.aspx\r\nNHibernate - http://http://nhforge.org\r\nCSLA - http://www.lhotka.net/cslanet/These three above are very large and have a lot of bells and whistles. Picking one of these will depend on the level of experience of the developers. These are much slower that hand-coding with datareaders, and the lighter ORMs out there.\r\n\r\nHere is a list of some very light and fast ORMs. I only recommend these, if the developers are very good with SQL.\r\n\r\n\r\nDapper - http://code.google.com/p/dapper-dot-net/\r\nORMLite - https://github.com/ServiceStack/ServiceStack.OrmLite\r\nPetaPoco - http://www.toptensoftware.com/petapoco/\r\nMassive - https://github.com/robconery/massive\r\nSimple.Data - https://github.com/markrendle/Simple.DataThese are extremely fast, but lack a lot of the bells and whistles associated with the heavier ORMs.\r\n"
+    },
+    {
+      "ansID": 1778,
+      "ans": "Great response from Hector, but I would also recommend you to evaluate LLBLGen, http://llblgen.com\r\n"
+    },
+    {
+      "ansID": 1780,
+      "ans": "Great answers.. Just my two cents...\r\n\r\nWe are recently migrating our core banking solutions to asp.net mvc and EF4.1+.  So far good.  The application has \r\nabout 450 tables, with complex logics for various banking operations..\r\n\r\nThe EF is coming good for us, in terms of performance as well.  We are yet to face any issues.... But we are still in the POC\u0027s stage and hopefully within in couple of months we will be fully moving to EF, if we don\u0027t hit any major roadblock.\r\n"
+    }
+  ]
+}

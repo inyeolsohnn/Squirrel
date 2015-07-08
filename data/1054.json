@@ -1,0 +1,20 @@
+{
+  "id": 1054,
+  "url": "www.dofactory.com/topic/1054/singleton-design-pattern.aspx",
+  "title": "Singleton Design Pattern",
+  "ques": "Hello,\r\n\r\nI have a question about the Singleton design pattern.\r\n\r\nIs Singleton pattern about maintaining one instance of a class or is it about maintaining one state of a class. What I can think of is this: if it\u0027s about creating one instance of a class then static classes are not a way of implementing Singleton design pattern. But if it\u0027s about maintaining one state of a class then there is nothing like monostate pattern.\r\n\r\nPlease advice.\r\nRegards.",
+  "answers": [
+    {
+      "ansID": 1091,
+      "ans": "Singleton Pattern is a creational pattern and is all about making sure we have only one instance (maximum) of a class at any given point in time.\r\n\r\nIt just needs a private constructor so that none of the external instances can directly create an instance of the singleton class under consideration. This Singleton class needs to expose one public method eg: GetInstance, which intenally calls the private constuctor only if there is no preexisting instance of the class. Lock statements can be used in the implementation to avoid any hassles of multi-threaded access to the Singleton.\r\n"
+    },
+    {
+      "ansID": 1094,
+      "ans": "Some differences between Singletons and Static classes are...\n\n* Singletons can implement interfaces\n\n* You cannot pass a static class as a parameter to a method, this can be done with a Singleton\n\n* A Singleton is a normal class that is instantiated just once, a static class is never instantiated\n\n\nUPDATE\nAs a side note, I usually tend not to use either of these. Instead I use my DI container (Ninject, StructureMap, ...) to supply me with a singleton of the required type when needed."
+    },
+    {
+      "ansID": 1104,
+      "ans": "\r\nGo through this link, you will have better understanding of singleton pattern\r\n\r\nhttp://en.wikipedia.org/wiki/Singleton_pattern#C.23"
+    }
+  ]
+}

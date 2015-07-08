@@ -1,0 +1,16 @@
+{
+  "id": 1218,
+  "url": "www.dofactory.com/topic/1218/how-to-design-the-system.aspx",
+  "title": "Question about system design",
+  "ques": "Hello:\r\n\r\nI have to write a Windows C# desktop application. I have gathered all the requirement from the user . \r\nNow I wish to design the system with pure Object-Oriented features keeping flexibility in mind \r\n\r\nWhere and how do I start?\r\n\r\n\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1322,
+      "ans": "Ali: \r\n\r\nSince you seem to be relatively new to programming, I would suggest to start out small by building little \u0027mini\u0027 modules.  An example would be a Customer maintenance module and learn to model the Customer and its characteristics. Then next, learn to write simple Add,  Edit, and Delete customer pages.  Once you get the hang of this, you will be able to write larger more complex modules.  There is a lot to learn if you\u0027re new to this (UI design, OO modeling, data modeling, etc)..\r\n\r\nThere are numerous good books on OO design (see Amazon for this), so I would also study one of those. \r\n\r\nBest of luck.\r\n"
+    },
+    {
+      "ansID": 1365,
+      "ans": "\r\nHello Ali:\r\n\r\nMaybe you have to review Object Oriented Analysis and Design, using UML as modeling language. I recommend you http://www.amazon.com/Applying-UML-Patterns-Introduction-Object-Oriented/dp/0131489062/ref\u003dsr_1_1?ie\u003dUTF8\u0026qid\u003d1290084935\u0026sr\u003d8-1. Next, you have to delve into the specification of C# language to make the most of it\u0027s features in Object Oriented Programming.\r\n\r\nThat\u0027s for now.\r\nRegards."
+    }
+  ]
+}

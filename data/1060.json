@@ -1,0 +1,20 @@
+{
+  "id": 1060,
+  "url": "www.dofactory.com/topic/1060/difference-in-decorator-vs-visitor.aspx",
+  "title": "Difference between Decorator and Visitor",
+  "ques": "What is the difference between Decorator and Visitor pattern? \r\nI find that the purpose of both pattern is similar to an extent.",
+  "answers": [
+    {
+      "ansID": 1098,
+      "ans": "What difference i can see is ,\r\nVisitor pattern is aware of types of visitors which can visit, and decorator is not aware of new behaviours which will be added in future.\r\nI know that this is not very technical way of explaining and i may be even wrong.\r\nEverybody is invited with their views.\r\nregards,"
+    },
+    {
+      "ansID": 1110,
+      "ans": "Decorator:\r\n\r\nAllows you to add functionality to various methods by supporting wrapper classes, without having to modify or edit your existing class.\r\nIt uses a wrapper to customize or decorate the functionality of original class, without making any code change to the original class.\r\n\r\n\r\nVisitor:\r\n\r\nIf you have a complex tree of objects (sturcture of classes using inheritance) and if you want to add an operation to each of these objects, you need not necessariliy add an operation to each of these classes. Instead you can send a visitor to this sturcture of classes and collect the necessary data from all objects. Then you can invoke the necessary operation on the visitor class. Visitor is always paired up with traverser object to move through all the objects in the tree of objects.\r\n\r\n\r\nKey differences:\r\n\r\nThe key difference I see here are as below.\r\n\r\n1. Visitor has a tree of objects to be worked upon. Whereas decorator may have just a single object to customize.\r\n2. Visitor requires a traverser for successful implementation.\r\n"
+    },
+    {
+      "ansID": 1162,
+      "ans": "As i saw that Decorator pattern  is a structural pattern that help us to add new function to an object in the run time , note that in the run time not design time . But Visitor pattern is Behavioral pattern that seperate the data structure from the operation (functionality ) that work on it , this mean we can add different operation on the same data structure  . i hope this is help SaebNajim "
+    }
+  ]
+}

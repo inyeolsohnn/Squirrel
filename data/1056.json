@@ -1,0 +1,20 @@
+{
+  "id": 1056,
+  "url": "www.dofactory.com/topic/1056/mvc-example.aspx",
+  "title": "MVC Example",
+  "ques": "Hello,\r\n\r\nI am new to C# , I have heard about MVC pattern. \r\nCan some please share with me an MVC C# code sample (basic). \r\n\r\nI would very much appreciate it. \r\nThanks",
+  "answers": [
+    {
+      "ansID": 1092,
+      "ans": "Find some samples in the below links.\r\n\r\nhttp://www.codeproject.com/KB/cs/model_view_controller.aspx\r\nhttp://www.primaryobjects.com/CMS/Article82.aspx"
+    },
+    {
+      "ansID": 1093,
+      "ans": "Here\u0027s some more alternatives from StackOverflow:\n\nLooking for a MVC Sample for WinForms\nhttp://stackoverflow.com/questions/2406/looking-for-a-mvc-sample-for-winforms\n\nWhere can I get some information on starting C# programming with MVC / ASP.NET?\nhttp://stackoverflow.com/questions/212423/where-can-i-get-some-information-on-starting-c-programming-with-mvc-asp-net\n\nHow to learn MVC ? *not* in a web setting\nhttp://stackoverflow.com/questions/879840/how-to-learn-mvc-not-in-a-web-setting\n\n\n\nIf you intend to use C# with WinForms I would recommend that you also take\na look at Passive View design pattern (very similar to MVC)\n\nGood Luck!"
+    },
+    {
+      "ansID": 1101,
+      "ans": "Watch my Golf Tracker Video Series at MVC Central. I build a complete n-Tier ASP.NET MVC application from the ground up. \r\n\r\nYou can also download the entire code from the Kits section.\r\n\r\nhttp://www.mvccentral.net"
+    }
+  ]
+}

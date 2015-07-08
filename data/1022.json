@@ -1,0 +1,24 @@
+{
+  "id": 1022,
+  "url": "www.dofactory.com/topic/1022/lazy-loading.aspx",
+  "title": "Lazy Loading in Windows Forms",
+  "ques": "Hi,\r\n\r\nI have a question: can we use the Lazy Loading pattern in Windows application? \r\nAppreciate if someone would explain this with some examples.\r\n\r\nThanks\r\nJebby Philip",
+  "answers": [
+    {
+      "ansID": 1031,
+      "ans": "Yes, you can. Lazy loading is nothing but deferring the loading of constiuent objects (referenced objects) of a class until it is required/accessed. May be this would help: http://www.lhotka.net/Article.aspx?id\u003d48548dc3-3b64-4bb3-bc84-9476b8f77600"
+    },
+    {
+      "ansID": 1033,
+      "ans": "Lazy loading is just a fancy name given to the process of intializing a class when it\u0027s actually needed. You might already be doing it. \r\nFor example suppose you are maintaining a collection of orders on the form and it\u0027s a class level variable, which you will fill thought out the life time of the form.\r\n\r\nSince you know that you are going to use this collection you may say while declaring at form level\r\n\r\nprivate List\u003corders\u003e myOrders \u003d new List\u003corders\u003e();\r\n\r\nor you may choose to lazy load it\r\n\r\nprivate List\u003corders\u003e myOrders;\r\n\r\n\r\nand then in you form when you add the first item you do this\r\n\r\nif ( myOrders \u003d\u003d null)\r\n     myOrders \u003d new List\u003corders\u003e();\r\n\r\nmyOrders.add (firstOrder);"
+    },
+    {
+      "ansID": 1036,
+      "ans": "Thanks Shiva, Juan, Syed"
+    },
+    {
+      "ansID": 1064,
+      "ans": "Another example is when you need to access a parent object in your object graph. For example, if you have an Invoice and you want to know the Customer of this Invoice, it will be more easy to say :\r\n\r\n\r\nInvoice.Customer.Name\r\nso, in this case you should prepare you Invoice class to load the Customer Object in the getter property like :\r\n\r\n\r\nprivate Customer _customer;\r\n\r\n  \r\npublic Customer Customer\r\n{\r\n   get\r\n   {\r\n       if (_customer \u003d\u003d null) \r\n       {\r\n          _customer \u003d GetCustomerById( Id );\r\n       }\r\n       return _customer;\r\n   }\r\n}\r\nI hope this helps\r\n "
+    }
+  ]
+}

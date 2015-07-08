@@ -1,0 +1,12 @@
+{
+  "id": 1505,
+  "url": "www.dofactory.com/topic/1505/difference-between-proxy-and-observer.aspx",
+  "title": "Difference between Proxy Pattern and Observer Pattern",
+  "ques": "What\u0027s the difference between the Proxy Pattern and the Observer Pattern?  Does the Observer provide more flexibility to handle events when compared to the Proxy?\r\n\r\nThanks for your help",
+  "answers": [
+    {
+      "ansID": 1696,
+      "ans": "The Observer Pattern is used by a publisher object to notify subscriber objects with information. The publisher object does not know the subscribing objects - except that the conform to a certain subscriber interface. This is a very flexible pattern for distributing events, since those that wants to listen on certain object has the power to do so without changing the code of the publishing object.\r\n\r\nThe Proxy Pattern is used for wrapping a kind of special object with 1 or more other objects. Either because you don\u0027t always have the wrapped object or because it needs to be managed in a certain way that can be simplified via the proxy object(s). This is kind of a way to exchange the API of an existing class with a proxy class. We are not just talking events here, but whatever kind of functionality to define via the proxy object instead of the real object.\r\n\r\nI hope above makes sense for you as well :)\r\n\r\nKind Regards,\r\n\r\nKeld ?lykke"
+    }
+  ]
+}

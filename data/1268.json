@@ -1,0 +1,12 @@
+{
+  "id": 1268,
+  "url": "www.dofactory.com/topic/1268/can-anyone-help-on-those-two-issues.aspx",
+  "title": "Can anyone help on those two issues.",
+  "ques": "I have a problem on my Windows Forms Model, Can not see all the fields declare in the Company class and the bin folder are empty on all my presentation layer projects. my question is: there is anyway I can found or create the dll and fields of Company class.\r\n\r\nError 1 \u0027WindowsFormsModel.ActionServiceReference.Company\u0027 does not contain a definition for \u0027CompanyId\u0027 and no extension method \u0027CompanyId\u0027 accepting a first argument of type \u0027WindowsFormsModel.ActionServiceReference.Company\u0027 could be found (are you missing a using directive or an assembly reference?) C:UsersAarhusDocumentsVisual Studio 2010ProjectsActionSolutionWindowsFormsModelDataTransferObjectMapperMapper.cs 39 37 Windows Forms Model\r\n\r\n\r\nError 15 Metadata file \u0027C:UsersAarhusDocumentsVisual Studio 2010ProjectsActionSolutionWindowsFormsModelbinDebugWindowsFormsModel.dll\u0027 could not be found Windows Forms Application",
+  "answers": [
+    {
+      "ansID": 1374,
+      "ans": "Lucide: \r\n\r\nYou did not mention whether you made any changes to the original Design Pattern Framework 4 code base.\r\nI presume you did.  If so, what exactly were the changes?\r\n\r\nThanks,\r\nDan"
+    }
+  ]
+}

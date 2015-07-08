@@ -1,0 +1,20 @@
+{
+  "id": 1432,
+  "url": "www.dofactory.com/topic/1432/tool-or-template-to-automate-updaing-the-business-objects-and-dto-and-related.aspx",
+  "title": "Tool for automatically updating Business Objects, DTOs, and related classes?",
+  "ques": "Every time I add a new column to the application\u0027s database, I have to do manual work in updating the business class, DTO and all the related methods.  I was wondering if anyone created a tool or template which automates this process?",
+  "answers": [
+    {
+      "ansID": 1610,
+      "ans": "Abdelhadi:\r\n\r\nThis is an interesting question.  We have written our own code generator (using CodeSmith).  Whenever a table changes we run the generator (against the given table) and update the Business Object, Data Access Code, DTO, Test Code, and Service Layer.\r\n\r\nI should mention that getting the whole code generation in place requires a fair amount of planning, preparation, and experience, but once in place it is like magic: data model changes are no sweat  and all your code is updated automatically.\r\n\r\nAs an alternative you could also look into T4 code generation which is built-in into Visual Studio.\r\nBest of luck."
+    },
+    {
+      "ansID": 1685,
+      "ans": "http://entitiestodtos.codeplex.com/ this should work."
+    },
+    {
+      "ansID": 1701,
+      "ans": "Yes, I\u0027ve built a code generator that is based on the Patterns In Action.  Send me your email address and I\u0027ll send you the my code generator I call Condor.  It\u0027s a MyGeneration Software template, so that\u0027s all you have to install.  It\u0027s free software found at mygenerationsoftware.com.\r\n\r\nI also have videos on how to use it."
+    }
+  ]
+}

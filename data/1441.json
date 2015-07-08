@@ -1,0 +1,20 @@
+{
+  "id": 1441,
+  "url": "www.dofactory.com/topic/1441/wich-design-pattern-i-need-for-this.aspx",
+  "title": "Which Design Pattern do I need for this?",
+  "ques": "Hi, \r\n\r\nI am building a WinForm application. \r\n\r\nI have a Main Form that contains many many other Forms with the same functionality except the name and the database connection. \r\nI don\u0027t know how many forms we\u0027ll need to need to create, as they are created dynamiclly by the user. (Add method from the Main Form). \r\n\r\nI suspect there is a Design Pattern for this... Does anyone have a suggestion? \r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1622,
+      "ans": "Use composite pattern\r\nur form can contain ist of forms as its object"
+    },
+    {
+      "ansID": 1625,
+      "ans": "Composite Application Block best suits for this."
+    },
+    {
+      "ansID": 1626,
+      "ans": "Composite Pattern is the ideal pattern....Your parent form can have list of other forms.."
+    }
+  ]
+}

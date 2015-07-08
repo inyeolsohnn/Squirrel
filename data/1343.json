@@ -1,0 +1,12 @@
+{
+  "id": 1343,
+  "url": "www.dofactory.com/topic/1343/aspects-to-be-covered-in-a-design.aspx",
+  "title": "Aspects to be covered in a Design",
+  "ques": "I have been trying to understand what are the different aspects that need to be covered as part of a design for an application. \r\n\r\nI have gone through various templates on the internet and find it different from one another.\r\n \r\nCould you please shed some light on this question on what are the various aspects that need to actually be covered on a design for an application",
+  "answers": [
+    {
+      "ansID": 1476,
+      "ans": "Some important points to consider in the design document (check what is applicable to your scenario).\r\n\r\n- Performance  (baseline numbers)\r\n- Reliability\r\n- Availability  (the SLA\u0027s)\r\n- Security  (what, how much, including authorization)\r\n- Portability  (if applicable)\r\n- Functionality  (how does the design address the functional aspects)\r\n- Extensibility  (how extensible the design is and why)\r\n- Interoperability  (is this required?)\r\n- Usability (UX experience)\r\n- Maintainability (how maintainable is this?  does the support team has enough data to troubleshoot and maintain the app)\r\n- Efficiency \r\n- Reusability\r\n- Ease of Deployment\r\n- Configuration Management\r\n- Administration\r\n- Scalability  (how much?)\r\n- Performance/Monitoring  (logs, health monitoring etc)\r\n- Development Productivity (the turnaround time to develop a feature etc).\r\n\r\nThese are just some high level bullet points.  The specifics may vary based on the nature of the application you are designing but most of the things from this list will be applicable.\r\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1217,
+  "url": "www.dofactory.com/topic/1217/metadata-programming-to-add-entities-and-fields-dynamically.aspx",
+  "title": "Metadata programming to add Entities and Fields dynamically",
+  "ques": "Hi,\r\n\r\nI would like to use the metadata programming so that it is fast to add fields and entities dynamically to the application using C#.\r\nCan anybody guide me in that?\r\n\r\nThe admin user should be able to add fields, define entities and it should automatically reflect in the database and the UI without recompilation. This principle is followed in most of the ERPs.   Is there any design pattern for the same?\r\n",
+  "answers": [
+    {
+      "ansID": 1323,
+      "ans": "Satyajit: \r\n\r\nThis is an area of great interest to me personally. I also was once on a SaaS project where we had to support dynamic fields and entities. In my experience, the database is most tricky part in this (particularly when you try to keep the SQL simple).  There are several ways to solve this and this post is really too short to give you a proper answer.  Here is one pointer: I have found that the Data Model Resource Book - Volumn 3  is a good starting point for these things from a data model perspective.  As far as your code, you could use ADO.NET DataTable objects which are very flexible.  Likewise, the UI can detect the columns present in the DataTable and render the correct fields in HTML.\r\n\r\nSalesForce is a great example of doing this. The admin simply adds custom fields and objects (this is how they call it) and everything magically works, including reporting.  Very impressive.  My understanding is that they use Oracle which supports this concept of dynamic objects.  In SQL Server or any other database there are different ways to support this.  Again I can refer to the above mentioned book. \r\n\r\nThere is not such thing as a particular \u0027Design Pattern\u0027 to solve this problem. The problem area is too large for this and will involve numerous patterns and practices.\r\n\r\nHope this helps.\r\n"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1286,
+  "url": "www.dofactory.com/topic/1286/practical-use-of-the-dynamic-c-keyword-in-any-of-the-design-patterns.aspx",
+  "title": "Practical use of the dynamic C# keyword in Design Patterns",
+  "ques": "The dynamic keyword is a recent addition to the C# language.  I have a gut feel that one or more of the GOF and/or MVC/MVP/MVVM patterns could benefit from its use. \r\n\r\nHas anyone found a great use of dynamic in any of their own Design Pattern implementations?\r\n(I am looking for this nice little \u0027gem\u0027 :-) )\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1391,
+      "ans": "Not for a pattern but here\u0027s a usage for the dynamic keyword http://kozmic.pl/2010/12/15/c-dynamic-and-generics-dispatch/\r\n\r\n"
+    },
+    {
+      "ansID": 1409,
+      "ans": "I haven\u0027t used it yet, but came across this implementation of  \u0027VISITOR \u0027 design pattern using  \u0027dynamic \u0027 in c#.  In fact, this is one of the cool language features that may have many applications which may not have been explored yet because of the static nature of c#.  But dynamic will change that.  Once caveat would be dynamic has a cost and its proper usage should always be evaluated.\r\n\r\nhttp://code.logos.com/blog/2010/03/the_visitor_pattern_and_dynamic_in_c_4.html\r\n\r\nHope you find this useful."
+    }
+  ]
+}

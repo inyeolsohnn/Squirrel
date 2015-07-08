@@ -1,0 +1,12 @@
+{
+  "id": 1496,
+  "url": "www.dofactory.com/topic/1496/actionserviceclient.aspx",
+  "title": "ActionServiceClient...",
+  "ques": "I created a web service and published it to a server. Not I want to call the method in the service. How do I instatiate a ActionServiceClient? When I put the URL in a browser it says:\r\nTo test this service, you will need to create a client and use it to call the service. You can do this using the svcutil.exe tool from the command line with the following syntax\r\n\r\nsvcutil.exe http://myserviceloaction.svc?wsdl \r\n\r\nAnd in my code I want or need to instatiate a client like: \r\nActionServiceClient client \u003d new ActionServiceClient();\r\n\r\nIn the example they included a method:\r\n\r\n{\r\n code here...\r\n}\r\n\r\nI don\u0027t want the method plus the method doesn\u0027t work because the code isn\u0027t seeing ActionServiceClient.\r\n\r\nAny ideas??\r\n\r\nThanksprotected ActionServiceClient Client",
+  "answers": [
+    {
+      "ansID": 1702,
+      "ans": "Dennis, you\u0027re not really instantiating the ActionServiceClient in as much as it is being generated automatically when you create a service reference to the service.  So I think that is the step you are missing.\r\n\r\nThere are fairly complex ways to manually modify the web.config to contain all the necessary configuration to communicate with the service, but Visual Studio does this for you.\r\n\r\nJust right click on your References folder in your web application, then select the Service Reference then select your service.  If you built your WCF service correctly it will appear in the dialog and you can select it.  When you click OK, VS generates all the code to communicate to the service.\r\n\r\nThen you can make a reference to the proxy client.\r\n\r\nYou should analyze the Patterns In Action application a little more closely for more information on how this is done.\r\n\r\nI hope this helps."
+    }
+  ]
+}

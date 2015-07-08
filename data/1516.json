@@ -1,0 +1,20 @@
+{
+  "id": 1516,
+  "url": "www.dofactory.com/topic/1516/dto-fields-vs-properties.aspx",
+  "title": "Dto fields vs. properties",
+  "ques": "Noticed that in the Service layer message classes you use fields but in DTOs you use properties. Any reason why?",
+  "answers": [
+    {
+      "ansID": 1741,
+      "ans": "DTO\u0027s use properties because DTO\u0027s need serialize and de-serialize. Fields are not able to. Therefore your DTO needs to be marked as serializable."
+    },
+    {
+      "ansID": 1742,
+      "ans": "The messages are serializable too but all of them have fields. Correct if I\u0027m wrong."
+    },
+    {
+      "ansID": 1744,
+      "ans": "Yes, a very valid point. After some reflection I can now see that fields and properties are able to be serialized. I guess the only other reason to use properties is because properties are bindable and fields (variables) are not. Added to that if you use reflection to reference these things then I think the behaviour is slightly different.\r\n\r\nI always thought that fields were not serializable.... I now know they are so that is good!"
+    }
+  ]
+}

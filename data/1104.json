@@ -1,0 +1,16 @@
+{
+  "id": 1104,
+  "url": "www.dofactory.com/topic/1104/pattern-for-editing-images.aspx",
+  "title": "Pattern for Editing Images",
+  "ques": "Hi\r\n\r\nDoes anyone know of a pattern to help editing images and maintain the state of each change made on that image?\r\nAny suggestions appreciated.\r\n\r\nThanks, \r\nMauro",
+  "answers": [
+    {
+      "ansID": 1160,
+      "ans": "That\u0027s an easy one: use the Command Pattern. This will allow you to push and pop a multi-level set of commands onto a stack.\r\n\r\nSee here for more information on Undo, Redo, Command: http://en.wikipedia.org/wiki/Undo\r\n\r\nHope this helps."
+    },
+    {
+      "ansID": 1161,
+      "ans": "thanks for your suggestion"
+    }
+  ]
+}

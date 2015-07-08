@@ -1,0 +1,16 @@
+{
+  "id": 1210,
+  "url": "www.dofactory.com/topic/1210/facade-missing-in-4-0-why.aspx",
+  "title": "Facade missing in 4.0 - why?",
+  "ques": "Hi, \r\n\r\nThe comments in Desing Pattern Framework 4.0 refers to CustomerFacade in multiple places but Facade is not present in the solution. It was present in the 2.0 version and later removed from 3.5 \u0026 4.0. \r\n\r\nIn my opinion, Facade is a good Design Pattern as it was hiding the logic for business object \u0026 data access layer from the service layer. In the current version, the service layer directly interacts with the DAL through various DAO implementations. \r\n\r\nPlease suggest the reason for not using Facade layer and whether it is advisable to directly access DAO bypassing the business layer?",
+  "answers": [
+    {
+      "ansID": 1324,
+      "ans": "Actually the Facade is very much present in Design Pattern Framework.   The Service class, which represents the Service Layer is the main Facade in the application. It really is a great example of the Facade Pattern in action. \r\n\r\nAs you said, the Facade is an important pattern."
+    },
+    {
+      "ansID": 1327,
+      "ans": "Hi Dan\r\nThanks for your answer. It seems the service layer is now the facade to the application. That sounds good - however I have another question. Is it good to access the DAL directly from the service layer or through the business layer? In .NET 2.0 PIA the service layer acted just as a very passive layer by just sending the request to business layer (through business facades) whereas in 4.0 PIA it is directly calling the DAL.\r\n\r\nWhat is the preferred approach - accessing DAL directly through Service layer or through Business layer?\r\n\r\nRegards\r\nSanjay \r\n "
+    }
+  ]
+}

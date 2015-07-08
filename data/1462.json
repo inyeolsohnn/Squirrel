@@ -1,0 +1,12 @@
+{
+  "id": 1462,
+  "url": "www.dofactory.com/topic/1462/mvp-pattern-for-an-mdi-application.aspx",
+  "title": "MVP pattern for an MDI application",
+  "ques": "My current application that I maintain is a tabbed MDI-based application that analyzes and graphs data stored in a database. My question is whether or not the MVP is suitable for this type of application. From what I read on MVP, this seems to be the locical choice. The layout for my UI is similar to the one used in the WinForms sample application, except I have comboboxes to query and filter data instead the treeview control. Also, where there are gridview controls I use charts and listview, which are essentially related views.\r\n\r\nOne question I have what types of patterns to use to handle displaying different toolbars based in the current chart. Also, since I already use an ORM and have no use for WCF Hosting and Services, can I bypass those or do I need my own simplified service layer to get data back and forth to the UI?\r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1651,
+      "ans": "MVP is what I\u0027d use. Generally I do:\r\n\r\nASP.Net MVC \u003d MVC\r\n\r\nASP.Net \u0026 WinForms \u003d MVP\r\n\r\nSilverlight \u0026 WPF \u003d MVVM\r\n\r\nFor the toolbars, not too sure but seems like you could use a mediator for communicating changes and then possibly and abstract factory for swapping toolbars.\r\n\r\nWith the ORM, if you aren\u0027t going to need to scale to a client server or n-Tier then you can get ride of the service related layers and have your Presentation, BL and DAL all run on one machine. I\u0027d encourage you to put an interface ontop of your BL so that if you need to add a service layer in the future it would be easier to do."
+    }
+  ]
+}

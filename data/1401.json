@@ -1,0 +1,20 @@
+{
+  "id": 1401,
+  "url": "www.dofactory.com/topic/1401/entity-framework-business-objects-different-from-tables.aspx",
+  "title": "Entity Framework: Business Objects different from Tables?",
+  "ques": "Hi: \r\n\r\nI am beginning to dabble into Entity Framework, but ran into a road-block right away.\r\n\r\nMy Entities (we prefer the term Business Objects) are generated from the data model, so they are mirror images of the tables in the database. However, we have a standard set of columns that we add to each table, such as, DateCreated, CreatedBy, DateModified, ModifiedBy, and some others that we do not want included in our Business Objects. \r\n\r\nIs it possible to have them removed or do we have to live with this?\r\n",
+  "answers": [
+    {
+      "ansID": 1566,
+      "ans": "Yes you can remove it from the entity model.  Just ensure these things have default values assigned so, that inserts won\u0027t conflict.  You can mark the specific property as private using the properties pane in the EDMX designer.  "
+    },
+    {
+      "ansID": 1584,
+      "ans": "Really, you usually don\u0027t want your Entities to mirror tables... unless what you\u0027re working on is very simple...\r\n\r\nAlso, I personally wouldn\u0027t encourage calling Entities Business Objects.\r\nThe Entities should be part of (or most of) the Data Access layer.\r\n\r\nThen you can have DTO (POCO) classes to pass between layers.\r\nMy personal take on this is that Entities should be concerned with data, and Business Objects should be concerned about application logic... but I\u0027m sure people will disagree."
+    },
+    {
+      "ansID": 1585,
+      "ans": "How are these audit columns utilised, are they populated by update/insert triggers, and if so, from where is the user context being obtained?  If your app will in any way be responsible for updating these columns, then you will want them in your entities.  If they are set by triggers, you can set the StoreGeneratedPattern property in the model to Computed, this will retrieve the generated value for you on saves (note here there is a well known EF bug with the designer not saving storegeneratedpattern values in the SSDL).\r\nIf you don\u0027t need to set or retrieve values for these columns at all from your app, then as stated above, delete them from the model, but again ensure you have default values."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1186,
+  "url": "www.dofactory.com/topic/1186/delegate-c-or-observer-pattern.aspx",
+  "title": "Delegate (C#) versus Observer Pattern?",
+  "ques": "I have a question: Is the delegate in C# equivalent to the Observer Pattern?  If not, what is the difference?\r\n\r\nThanks in advance. ",
+  "answers": [
+    {
+      "ansID": 1283,
+      "ans": "In a way delegates and events can be used to implement observer pattern.  You\u0027ll find some useful discussions here\r\n\r\nhttp://stackoverflow.com/questions/32034/in-c-isnt-the-observer-pattern-already-implemented-using-events\r\n\r\n  and here\r\n\r\nhttp://www.c-sharpcorner.com/UploadFile/fbulovic/ObserverNETEventFB12052005041517AM/ObserverNETEventFB.aspx\r\n\r\nThanks."
+    },
+    {
+      "ansID": 1285,
+      "ans": "In C# Langaugage, Microsoft has provided the facility of multi-cast delegate to implement the Observer Pattern.  As Rajesh has mentioned there are sites which provides the implementation of same. \r\n\r\nAt the same time there is something you need to be aware off when using the multi-cast delegate. If the user has assigned, say two delegates and then assigns a null value, it will be treated as un-assigned and both previously assigned delegates will not execute.\r\n\r\n- Saurabh"
+    }
+  ]
+}

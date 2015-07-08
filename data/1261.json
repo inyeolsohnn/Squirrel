@@ -1,0 +1,12 @@
+{
+  "id": 1261,
+  "url": "www.dofactory.com/topic/1261/implementation-of-third-party-application-integration.aspx",
+  "title": "Implementation of third party application integration",
+  "ques": "Hi guys,\r\n\r\nFirstly I would like to say that Design Patterns Framework is one great tool!!! - It has taken me a little while to adapt to the principles and methodology - slight shift in design paradigm from old to new.\r\n\r\nI have a general question - I have started working on an application and have been strictly following the design guidelines. Time has come for me to integrate my application with some external services - to be more precise Freshbooks and their API (online invoicing/timetracking/billing software). \r\n\r\nI was wondering, regardless of the fact that I am integrating with Freshbooks - where would be the BEST place to place these types of module(s). I thought it would be more benificial for me to ask here, before I lose time on attempting to do it myself.\r\n\r\nWould it be under the \u0027Framework\u0027 folder, or would it be in one of the Layers - keeping in mind that initial processing would need to be possibly initiated from the Presentation Layer (durr).\r\n\r\nThank you so much and keep up the good work.\r\n\r\nRegards,",
+  "answers": [
+    {
+      "ansID": 1481,
+      "ans": "Hi,\r\n\r\ndepends how the 3rd party API is designed. If you are not comfortable with it, you can wrap the API in your own objects. Anyway I would place them in separate module / assembly.\r\n\r\nIt is also good aproach to \u0027learn\u0027 the API by doing tests which use the API - you will have it documented by tests and once the API changes, tests will show it.\r\n\r\nHope this helps,\r\nRobert"
+    }
+  ]
+}

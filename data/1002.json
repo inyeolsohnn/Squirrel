@@ -1,0 +1,24 @@
+{
+  "id": 1002,
+  "url": "www.dofactory.com/topic/1002/difference-between-tier-and-layer.aspx",
+  "title": "Difference between Multi-Tier and Multi-Layer?",
+  "ques": "Can anyone explain what the difference is between a Multi-Tier and Multi-Layer architecture?\r\nMy understanding is that one is logical the other is physical.",
+  "answers": [
+    {
+      "ansID": 1001,
+      "ans": "Your understanding is correct. Now let us elaborate multi tier could be in different application domain means it crosses process boundry. Crossing process boundry does require serialization. My understanding for multi tier stays in same application domain, it can be physical divided in seperate assembly and not crossing process boundry. Multi tier serialization is required while multi layer it is not required.\r\n\r\nHope it will help you.\r\nEnjoy"
+    },
+    {
+      "ansID": 1061,
+      "ans": "Layer is the logical separation of functionality into assemblies, for example, Data Layer, Presentation Layer, Business Layer etc. All the assemblies may also be deployed in the same physical machine.\r\n\r\nTier is all about the physical deployment."
+    },
+    {
+      "ansID": 1067,
+      "ans": "There are many debates on this. In my point of view;\r\nWith in one assembly we can have GUI layer, Business Logic layer, sitting in one machine. At the same time we can have three different assemblies and referenced directly in GUI layer, sitting in one machine. Also we can have all three components sitting in three systems, different assemblies and different boundaries but the same .net code. So I would say that all the above three conditions can be, may be, referred as multi layer.\r\nWhen it comes to case like we have client developed in ASP.NET, business logic implemented in WCF or Web services of ASP.NET/Java or any other and Data is sitting in AS400/ORACLE/SQL Server I would say it multi tier technology where each tier can be implemented in its own technology"
+    },
+    {
+      "ansID": 1102,
+      "ans": "Go through this link.This will help you to understand the difference.\r\n\r\n  In short ,\r\n\r\n  Multi-Layer-Logical layer\r\n\r\n  Multi-Tier: Physical layer\r\n\r\nhttp://msdn.microsoft.com/en-us/library/ff646997.aspx\r\n\u0026\r\nhttp://blogs.msdn.com/jmeier/archive/2008/09/06/layers-and-tiers.aspx\r\n\r\n\r\n  Hope it may helped  you!!"
+    }
+  ]
+}

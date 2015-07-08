@@ -1,0 +1,24 @@
+{
+  "id": 1554,
+  "url": "www.dofactory.com/topic/1554/requestbase-clienttag.aspx",
+  "title": "RequestBase.ClientTag",
+  "ques": "What would be proper documentation to RequestBase.ClientTag? Currently, it seems to be copy-pasted from AccessToken.\r\n\r\nIn what scenarios can you recommend to use it? What options could be used if WCF is available via non-secured http?\r\n        \r\n\r\n/// \u003csummary\u003e      \r\n/// Each web service request carries a security token as an extra level of security.\r\n/// Tokens are issued when users are coming online. They can expire if necessary.\r\n/// Google.com and Amazon.com uses this in their API.\r\n/// \u003c/summary\u003e\r\n[\r\nDataMember]\r\n        \r\n\r\npublic string ClientTag;\r\n\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1739,
+      "ans": "Hi,\r\nProbably if using a non-secure WCF service you could implement some sort of API key like how google does with its maps. This could then be used to manage access etc? Does that help?"
+    },
+    {
+      "ansID": 1743,
+      "ans": "Not much. Do you have a link for such implementation details?\r\n\r\nAnyway, I\u0027d like to hear the purpose of ClientTag from the framework authors. Note that ClientTag is never mentioned in Patterns In Action 4.0.pdf."
+    },
+    {
+      "ansID": 1745,
+      "ans": "Here is an interesting link that may help more. As for the ClientTag I can not really help as I do not have the framework documetation.\r\n\r\nanyway hope this helps.\r\n\r\nhttp://blogs.msdn.com/b/rjacobs/archive/2010/06/14/how-to-do-api-key-verification-for-rest-services-in-net-4.aspx"
+    },
+    {
+      "ansID": 1746,
+      "ans": "Interesting, thanks. Sounds like APIKey is a pre-defined parameter known to both server and client and used to validate the request on the server-side. Most likely ClientTag serves as APIKey. However, this approach does not seem to be secure as APIKey / ClientTag could be intercepted very easily (but anyway it\u0027s better than nothing). So that\u0027s why I asked about ClientTag purpose and scenarios to use it.\r\n\r\n"
+    }
+  ]
+}

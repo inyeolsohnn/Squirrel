@@ -1,0 +1,12 @@
+{
+  "id": 1465,
+  "url": "www.dofactory.com/topic/1465/mvc-3-strongly-types-view-in-which-viewmodel-is-a-list.aspx",
+  "title": "MVC 3 strongly typed View in which ViewModel is a list",
+  "ques": "I am using MVC 3 Razor and have a ViewModel that itself is a list of objects, say List\u003cPhoto\u003e.\r\nHow do I declare this at the top of the view?  I.e. what does PhotosModel look like?\r\n\r\n\r\n@model Site.Areas.Account.Models.PhotosModel\r\n\r\nBy the way, I know I can nest the list within a ViewModel, but it is the only property, so I would rather not do that.\r\n\r\nIs this possibly the solution?\r\n\r\n\r\n\r\npublic class PhotosModel : List\u003cPhotos\u003e\r\n{\r\n}\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1641,
+      "ans": "You should handle this differently.  Having a view model is a best practice, but you should instead make a property that is of type List\u003cPhoto\u003e.  If you also have a property for a single Photo object, then you can use this view model for both lists, and details.  And your page declaration can remain as you have shown.\r\n\r\n\r\n\r\n\r\npublic class PhotosModel  \r\n{  \r\n   public List\u003cPhoto\u003e PhotoList { get; set; }  \r\n   public Photo Photo { get; set; }  \r\n}  \r\n\r\n I hope this helps."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1385,
+  "url": "www.dofactory.com/topic/1385/identifying-the-right-design-pattern.aspx",
+  "title": "Identifying the right design pattern",
+  "ques": "Hi \r\n\r\nI am new to design patterns. I am trying to determine which ones would best apply to my projects. I use a mix of VB and C#. \r\n\r\nThe particular project I am working on right now is game-based. \r\n\r\nThere are a number of different entities in the game. People, vehicles, other physical objects, plus terrain. A player may have control of many game people at a time and this different people move around and do things. In many cases, things are done to the game people. \r\n\r\nOf course the people, vehicles, terrain, etc can be classed as objects and be associated with each other. Not  and \u0027is a\u0027 or \u0027is part of\u0027 relationship but a \u0027has a\u0027 relationship. \r\n\r\nMore importantly, the things that the people can do and that can be done to them affect the people. These actions can change their state, their capabilities, their existence. \r\n\r\nThere are many, many different and varied possibilities, perhaps more so in terms of things being done to the game people (whether they wish it or not) than the game people acting themselves. \r\n\r\nI would think that each of these actions by or actions on a game person would be a separate class. \r\n\r\nWhat design pattern best fits this need?\r\n\r\nAs I reviewed them, this struck me as a Behavioural Pattern, probably Command. Am I on the right track?\r\n\r\nPS. I have found this website to provide the clearest description of design patterns that I have seen yet so I am quite interested in the tool. I do my coding with a buddy. Just the two of us. I guess the cheapest option for us would be two single-user licenses?\r\n\r\nThanks \r\n\r\nDoug",
+  "answers": [
+    {
+      "ansID": 1552,
+      "ans": "Hi Doug:\r\n\r\nThis seems like a fairly complex application you\u0027re building. I would think you could certainly benefit from the following patterns: Singleton, Factory, Adapter, State, Iterator (i.e. LINQ), and possibly Facade, MVC (or MVP, MVVM), and Command. Depending on how you persist the data and/or communicate over the wire there would be several other beneficial patterns: Repository, Proxy, Bridge, DAO, etc.  Then for testing you may want to look into an IOC container using the Dependency Injection pattern.\r\n\r\nI think that with your knowledge of the game, combined with the patterns on our website as well as the Design Pattern Framework 4. 0 will make it clear which of the patterns would benefit your project the most.\r\n\r\n--\r\n\r\nAnd yes, for 2 developers the most cost-effective option would be two 1-user licenses of the Design Pattern Framework 4.0.  \r\nHope this helps.\r\n\r\nDan."
+    },
+    {
+      "ansID": 1553,
+      "ans": "If it is a turn based game, the P\u0026P will suffice. If time is a factor you need to look into the concept of a game loop."
+    }
+  ]
+}

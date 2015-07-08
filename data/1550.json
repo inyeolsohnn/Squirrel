@@ -1,0 +1,20 @@
+{
+  "id": 1550,
+  "url": "www.dofactory.com/topic/1550/solution-and-newer-versions-of-sql-server.aspx",
+  "title": "Solution and newer versions of SQL Server??",
+  "ques": "I am unable to get the solution to successfully access any of the databases.\r\n\r\nWhen attempting to connect to the database the following error occurs:\r\n\r\nThe database \u0027C:USERSXXXXXXDOCUMENTSDOFACTORY PATTERNS 4.0 CSPATTERNS IN ACTIONHOST.WCF.ACTIONSERVERAPP_DATAACTION.MDF\u0027 cannot be opened because it is version 655. This server supports version 611 and earlier. A downgrade path is not supported.\r\nCould not open new database \u0027C:USERSXXXXXXDOCUMENTSDOFACTORY PATTERNS 4.0 CSPATTERNS IN ACTIONHOST.WCF.ACTIONSERVERAPP_DATAACTION.MDF\u0027. CREATE DATABASE is aborted.\r\nAn attempt to attach an auto-named database for file C:UsersXXXXXXDocumentsDoFactory Patterns 4.0 CSPatterns In ActionHost.WCF.ActionServerApp_DataAction.mdf failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.\r\n\r\nCan anyone provide guidance on this error.  It looks like there is a database version mismatch.\r\nI have both SQL Server 2005 and 2008 installed on my PC.\r\n\r\nPlease help.\r\nAdam\r\n",
+  "answers": [
+    {
+      "ansID": 1725,
+      "ans": "Hello Joseph:\r\n\r\nThe answer lies in this part of the error message: cannot be opened because it is version 655. This server supports version 611 and earlier. A downgrade path is not supported.\r\n\r\nYou are running an older version of SQL Server than the database itself. \r\nUpgrade to the most recent version / SP of SQL Server and that should take care of this error.\r\n\r\nHope this helps.\r\nDan."
+    },
+    {
+      "ansID": 1747,
+      "ans": "I have the same issues today Jan 11, and I finally made the Web Forms App worked. What I did were to use IIS Express and another instance of 2008 R2 SQL Express. I changed the SQLEXPRESS name in the config to this server instance. I added a connection string for the aspnetdb with the sql server instance, and replaced the LocalSqlServer name in the config file. Refer to p18 of the Action doc. "
+    },
+    {
+      "ansID": 1749,
+      "ans": "God Look"
+    }
+  ]
+}

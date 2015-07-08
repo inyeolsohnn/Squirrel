@@ -1,0 +1,12 @@
+{
+  "id": 1249,
+  "url": "www.dofactory.com/topic/1249/mvvm-and-windows-phone-7-apps.aspx",
+  "title": "MVVM and Windows Phone 7 apps",
+  "ques": "I am new to Windows Phone 7 development and have a quick question.\r\nDoes the MVVM design pattern apply to the Windows Phone 7 platform?",
+  "answers": [
+    {
+      "ansID": 1351,
+      "ans": "It sure does.\r\n\r\nYou can use a MVVM framework such as MVVM Light that has support for WP7\r\nhttp://www.galasoft.ch/mvvm/getstarted/\r\n\r\nYou may roll your own as well, here\u0027s some links to get you started...\r\nhttp://babaandthepigman.wordpress.com/2010/05/04/windows-phone-7-mvvm-and-tdd-part-1-introduction/\r\nhttp://babaandthepigman.wordpress.com/2010/05/04/windows-phone-7-mvvm-and-tdd-part-2-%E2%80%93-the-first-test/\r\nhttp://babaandthepigman.wordpress.com/2010/05/04/windows-phone-7-mvvm-and-tdd-part-3-%E2%80%93-logincommand/\r\nhttp://babaandthepigman.wordpress.com/2010/05/05/windows-phone-7-mvvm-and-tdd-part-4-%E2%80%93-loading%E2%80%A6/\r\nhttp://babaandthepigman.wordpress.com/2010/05/06/windows-phone-7-mvvm-and-tdd-part-5-%E2%80%93-creating-the-basic-ui/\r\nhttp://babaandthepigman.wordpress.com/2010/05/06/windows-phone-7-mvvm-and-tdd-part-6-%E2%80%93-loading-screen/\r\nhttp://babaandthepigman.wordpress.com/2010/05/09/windows-phone-7-mvvm-and-tdd-part-7-%E2%80%93-visualstatemanager-transitions/\r\n\r\nhttp://www.slideshare.net/marktucker/windows-phone-7-silverlight-mvvm-app-the-testdriven-4124792\r\n\r\nGood Luck!"
+    }
+  ]
+}

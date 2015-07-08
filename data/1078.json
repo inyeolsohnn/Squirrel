@@ -1,0 +1,20 @@
+{
+  "id": 1078,
+  "url": "www.dofactory.com/topic/1078/mid-level-to-senior-level.aspx",
+  "title": "Career Advancement: moving from Mid Level to Senior Level",
+  "ques": "Several years ago I was diagnosed with cancer and taught my self C# to keep my mind off of the chemo and radiation. I have come a long way however, I feel that I am kinda stuck in the Mid Level area in the dot net arena. I have been developing for several years in both C# and VB.net, however when I apply for a senior level job and they test me and I get to a second interview and then have a difficult question or two then loose the job. \r\n\r\nI am getting jobs that are letting me do some great programming but nothing that is like doing Design Patterns. I am now developing a new application for my brother for free to learn how to develop a 3 tier application like the Patterns in Action reference application in the Design Pattern Framework. Does any one have any other suggestions to me moving to the Senior Level or is it just time and effort?\r\n\r\nThanks \u0026 Regards\r\nAllan F. Gagnon ",
+  "answers": [
+    {
+      "ansID": 1122,
+      "ans": "By your post, it looks like your issue might be answering interview questions, not really technology itself. Scott Hanselman has a really good blog post of stuff that you should be able to answer.\r\n\r\nWhat Great .NET Developers Ought To Know (More .NET Interview Questions)\r\n\r\nThere are several blog posts across the web that try to answer these questions. I believe that your journey in seeking the answers to this questions will help you learn about these topics, and keep what interviewers want in mind.\r\n\r\nThe second half of this questions, is that you need to practice answering these questions. I bought myself an inexpensive whiteboard, that I use to practice some of the questions. This has helped in getting me to calm down, and sound more confident.\r\n\r\nThere is no substitute for knowing your stuff, but I think you are close to getting your first senior position.\r\n\r\nYou might also try your hand at helping with .NET open source projects. I have created several on CodePlex, and those are a good source of evidence to future employers. I just got a job (about a month ago), exactly because the interviewer and his team were able to download and examine code from the largest of my projects.\r\n\r\n- Hector"
+    },
+    {
+      "ansID": 1149,
+      "ans": "The main questions that tend to come up in C# Architect interviews relate to:\r\n1) Event Life Cycles\r\n2) Basic Design Patterns, usually with a focus on data management.\r\n3) Inheritance, polymorphism and encapsulation\r\n4) Interfaces, virtual methods and overrides.\r\n5) Delegates and threads. If its asp.net they usually don\u0027t ask many questions about threading.\r\n6) Data access and storage.\r\n7) Code Management and Build Processes.\r\n8) Methodologies.  Try to stay neutral on these as they are like religion.\r\n9) OR/Ms. Again, try to stay neutral on these.\r\nThere are other areas depending on the type of project they are working on as well, e.g. WPF, Silverlight, MVC.\r\n\r\n"
+    },
+    {
+      "ansID": 1164,
+      "ans": "Here is an interesting post on the subject of what the difference between junior, mid-level, and senior developer:\r\nhttp://elegantcode.com/2010/07/10/defining-development-experience/"
+    }
+  ]
+}

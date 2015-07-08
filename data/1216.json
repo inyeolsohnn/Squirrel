@@ -1,0 +1,20 @@
+{
+  "id": 1216,
+  "url": "www.dofactory.com/topic/1216/dofactory-gof-memento-pattern-flawed.aspx",
+  "title": "dofactory GOF memento pattern flawed",
+  "ques": "The dofactory implementation of the GOF memento pattern breaks encapsulation. The contents of the memento can be viewed by the caretaker. No reply to an email sent to dofactory.",
+  "answers": [
+    {
+      "ansID": 1318,
+      "ans": "Tom: \r\n\r\nYes, I remember your email.  There was no reply because from your email we gathered that you seem to extract great pleasure in pointing out other developer\u0027s \u0027flaws\u0027 and failure to perform proper unit testing.  Unless you want an open discussion in which we can all learn and grow, I suggest that you implement the most perfect memento pattern in your own work and leave it at that."
+    },
+    {
+      "ansID": 1352,
+      "ans": "The definition of the memento pattern, from your own Design Pattern Framework document (page 67), starts with  \u0027Without violating encapsulation \u0027. This is not a minor issue but the major reason for the existance of the memento patter. The failure of your implementation to meet this requirement followed by your very rude and unprofessional response raises serious concerns about dofactory."
+    },
+    {
+      "ansID": 1400,
+      "ans": "Can\u0027t this be done using private setter and passing memento object in caretaker constructor?\r\nThanks"
+    }
+  ]
+}

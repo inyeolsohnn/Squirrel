@@ -1,0 +1,12 @@
+{
+  "id": 1335,
+  "url": "www.dofactory.com/topic/1335/design-pattern-framework-and-ddd.aspx",
+  "title": "Design Pattern Framework and DDD",
+  "ques": "Hi guys, \r\n\r\nI\u0027ve seen a lot of people talking about the Domain-Driven Design, I wanna known if the pattern framework use any DDD concepts?\r\n\r\nThanks a lot!",
+  "answers": [
+    {
+      "ansID": 1470,
+      "ans": "Gregory:\r\n\r\nDDD is actually a great way to designing business models that are complex. They frequently require collaboration between technical and domain experts.  \r\n\r\nIn the Design Pattern Framework we tried to strike a balance between keeping it easy-to-understand, yet valuable and useful for eductional purposes. So our data model and business model are kept fairly simple. If not, we would overwhelm the user and they would get lost in teh complexity of the code, the model, the app, etc.\r\n\r\nSo, the short answer is that DDD is not explicitly part of the Design Pattern Framework. We certainly suggest you read up on basic DDD concepts as they are useful in building complex business models and application designs."
+    }
+  ]
+}

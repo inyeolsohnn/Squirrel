@@ -1,0 +1,12 @@
+{
+  "id": 1101,
+  "url": "www.dofactory.com/topic/1101/viewstate-in-session.aspx",
+  "title": "ViewState in Session",
+  "ques": "I was looking at the \u0027Patterns in Action\u0027. Had one question. I have configured SessionState as \u0027Out of Process\u0027 in SQL Server. If I configure ViewState to use \u0027Session\u0027, then would that information get persisted to SQL Server as well since I have configured to persist Session information to SQL Server? Or do I have to write the code to persist to database separately.",
+  "answers": [
+    {
+      "ansID": 1159,
+      "ans": "This is how to persist the viewState to the database (not the session).  \r\n\r\nIf you want to put the viewstate in the session you will need to make a sessions table or run the .net utility to do it for you. Here is a good article on that http://articles.techrepublic.com.com/5100-10878_11-5766717.html\r\n\r\nYou will need to create a database table. I think there is a utility that will do it for you but I would roll my own.\r\n\r\nCreate Table ViewState (\r\n Id int IDENTITY(1,1) NOT NULL, \r\n Value Text NOT NULL, \r\n Expires NOT NULL)\r\n\r\nThe id is an identity so you know you have a unique number acrossed all of your servers in the garden\r\nThe id is an int instead of a guid because the size of the guids will shread you pages with the huge numbers of inserts and deletes\r\nThe Expires is added so expired viewstates can be purged.\r\n\r\nNext you will need to create a base page that all of your pages inherit.\r\n\r\nThen add the method that saves the viewstate to the basepage:\r\n\r\nprotected override void SavePageStateToPersistenceMedium(Object viewState)\r\n{\r\n        DateTime expires \u003d DateTime.Now.AddMinutes(Session.Timeout);\r\n        string key \u003d [ save a serialized version of view state and the expires date to database here and return the id ]\r\n        ClientScript.RegisterHiddenField( \u0027_VIEWSTATE_KEY \u0027, key);\r\n}\r\n\r\nThen add the method that retreives it:\r\n\r\nprotected override object LoadPageStateFromPersistenceMedium()\r\n{\r\n        int? key \u003d (int?)Request.Form[ \u0027_VIEWSTATE_KEY \u0027];\r\n        if (key !\u003d null) return [ load the viewstate out of database based on the key and deserialized it and then delete it]\r\n        return null;\r\n}"
+    }
+  ]
+}

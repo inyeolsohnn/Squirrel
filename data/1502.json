@@ -1,0 +1,12 @@
+{
+  "id": 1502,
+  "url": "www.dofactory.com/topic/1502/help-to-decide-appropriate-pattern-to-be-implement.aspx",
+  "title": "Help to decide appropriate pattern to be implement.",
+  "ques": "\r\nWhat is the best solution to resolve the following problem?\r\n\r\nProblem: I would like to implement generic business logic (method) which can be invoked by any methods irrespective input type.\r\nScenario: \r\n        For example: \r\n                Generic method:\r\n                                public \u003ccomplexType\u003e GenericMethod(\u003cComplexType\u003e)\r\n                                {\r\n                                                ... business logic implementation\r\n                                                ... return \u003ccomplexType\u003e\r\n                                }\r\n                Client Method 1:\r\n                                public \u003ccomplexType\u003e Client1(\u003ccomplexType1\u003e)\r\n                                {\r\n                                                ... call GenericMethod\u003ccomplexType1\u003e)\r\n                                }\r\n                Client Method 2:\r\n                                public \u003ccomplexType\u003e Client1(\u003ccomplexType2\u003e)\r\n                                {\r\n                                                ... call GenericMethod\u003ccomplexType2\u003e)\r\n                                }\r\n\r\nQuestion: If you have noticed, In above scenario \u0027Client Method1\u0027 and \u0027ClientMethod2\u0027 is passing different input type and method is expecting same return type.\r\n\r\nIs there any pattern or mechanism which will decide type and based on that it will invoke appropriate method.",
+  "answers": [
+    {
+      "ansID": 1691,
+      "ans": "Hi Nirav\r\n\r\nI would suggest Strategy pattern where you can use different strategy methods based on the context.\r\n\r\nThanks \u0026 Regards\r\nPubudu Thilakarathna"
+    }
+  ]
+}

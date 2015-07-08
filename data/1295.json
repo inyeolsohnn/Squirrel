@@ -1,0 +1,12 @@
+{
+  "id": 1295,
+  "url": "www.dofactory.com/topic/1295/actionservice-validrequest-method.aspx",
+  "title": "Question on DPF ActionService ValidRequest method",
+  "ques": "I\u0027m going through the ActionService WCF service, specifically the ValidRequest method and saw that the section that validates the ClientTag was commented with:\r\n\r\n\r\n// Validate Client Tag. \r\n// Hardcoded here. In production this should query a \u0027client\u0027 table in a database.\r\nif ((Validate.ClientTag \u0026 validate) \u003d\u003d Validate.ClientTag)\r\n{\r\n  if (request.ClientTag !\u003d \u0027ABC123\u0027)\r\n  {\r\n    response.Acknowledge \u003d AcknowledgeType.Failure;\r\n    response.Message \u003d \u0027Unknown Client Tag\u0027;\r\n    return false;\r\n  }\r\n}\r\nCould you expand on how that might be implemented?  I\u0027m trying to work this into a project of mine and wanted to see how a production application would employ this.\r\n\r\nDoug\r\n ",
+  "answers": [
+    {
+      "ansID": 1404,
+      "ans": "Hi Doug,\r\n\r\nHappy New Year!\r\n\r\nThe  \u0027ABC123 \u0027 value in this case can be in a Settings table in the database as a value for a setting called  \u0027ClientTag \u0027.  The Settings table might be just a table with two columns (and a rowversion column), called  \u0027Name \u0027 and  \u0027Value \u0027.  This can be a table with general collection of settings that can be collected in name/value pairs.\r\n\r\nSo in this table you can have something like the following:\r\n\r\nName \u003d  \u0027SiteName \u0027, Value \u003d  \u0027My Cool Website \u0027\r\nName \u003d  \u0027ClientTag \u0027, Value \u003d  \u0027HJ6Ev6qNMtL?XnHXmGRl1VE@ \u0027\r\netc\r\nThen you can simply replace the  \u0027ABC123 \u0027 string with a call to your service or repository that retrieves this value.\r\n\r\nI hope this answers your question.\r\n\r\nKing Wilder\r\n\r\nif ((Validate.ClientTag \u0026 validate) \u003d\u003d Validate.ClientTag)\r\n{\r\n  var setting \u003d settingsDao.GetAll()\r\n     .Where(s \u003d\u003e s.Name \u003d\u003d  \u0027ClientTag \u0027).SingleOrDefault();\r\n     \r\n  if (request.ClientTag !\u003d setting.Value)\r\n  {\r\n    response.Acknowledge \u003d AcknowledgeType.Failure;\r\n    response.Message \u003d  \u0027Unknown Client Tag \u0027;\r\n    return false;\r\n  }\r\n}\r\n\r\n "
+    }
+  ]
+}

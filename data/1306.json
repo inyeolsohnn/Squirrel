@@ -1,0 +1,16 @@
+{
+  "id": 1306,
+  "url": "www.dofactory.com/topic/1306/design-patterns-for-wcf.aspx",
+  "title": "Design Patterns for SOA-based WCF application",
+  "ques": "Hi,\r\n\r\nI would like to know what Design Patterns I need to be aware off when building an SOA-based application using WCF. \r\n\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1428,
+      "ans": "Hi,\r\n        There is no limitation in theoretically but when comes to Practical in one site they mention that better to define maximum of 12 operations in Contract. "
+    },
+    {
+      "ansID": 1456,
+      "ans": "There are many but the core basics that comes to my mind is \r\n- Request/Response (message based patterns)\r\n- Service Locator\r\n- Service Composability (based on composition)\r\n- Brokered Authentication\r\n- Proxy (generated as well as manual)\r\n\r\nHope this helps.\r\n"
+    }
+  ]
+}

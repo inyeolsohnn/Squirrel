@@ -1,0 +1,20 @@
+{
+  "id": 1235,
+  "url": "www.dofactory.com/topic/1235/linq-to-oracle-provider.aspx",
+  "title": "LINQ to Oracle Provider",
+  "ques": "Please let me know LINQ to Oracle Provider is available in (3.5 or 4.0). \r\nIf yes how to configure with an example please?\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1340,
+      "ans": "I know of only this one at CodePlex, http://linqtooracle.codeplex.com/\r\nI\u0027d recommend to take a look at the docs at how it works.\r\n\r\nGood Luck!\r\n"
+    },
+    {
+      "ansID": 1341,
+      "ans": "Thanks Robert.\r\n\r\nAgain a basic question: When it is advisable to use LINQ in code?\r\n"
+    },
+    {
+      "ansID": 1344,
+      "ans": "With LINQ I assume that you mean Linq2Sql or Linq2Oracle? I am not using these myself and would probably use something like NHibernate, EF4, or LLBLGEN instead. Though the learning curve is probably a bit tougher than with L2S or L2O.\r\n\r\nEven though I do not use L2S or L2O I do use Linq heavily when it comes to collections and Xml.\r\n"
+    }
+  ]
+}

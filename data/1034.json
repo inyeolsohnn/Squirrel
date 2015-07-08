@@ -1,0 +1,16 @@
+{
+  "id": 1034,
+  "url": "www.dofactory.com/topic/1034/next-release-of-design-pattern-framework-4-0-for-vs-2010.aspx",
+  "title": "Next release of Design Pattern Framework - 4.0 for VS 2010",
+  "ques": "Hi,\r\nWhen can we expect the next release of the pattern framework? I would like to see the following things in the package:\r\n\r\nSilverlight UI\r\nASP.NET MVC\r\nRepository Pattern\r\nDependency Injection\r\nEntity Framework\r\nAzure (would be great to see it in action)\r\nIntegration with Social networking APIsRegards\r\nSanjay Singh\r\n",
+  "answers": [
+    {
+      "ansID": 1043,
+      "ans": "Thanks Sanjay for your question and requested features.\r\n\r\nWe don\u0027t have an ETA at this time, but we\u0027re working hard on the VS 2010 / .NET 4.0 release.\r\nI can confirm that the first 4 items are going to be included in this next release.\r\n\r\nWe\u0027d like to get the VS 2010/.NET 4.0 release out as soon as possible. \r\nTherefore, there is good chance that Azure will be included in a follow-up point release.\r\n\r\nAs far as Social networking API\u0027s, can I ask you what you\u0027re exactly looking for?\r\n\r\nAgain thanks for your feedback.\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1044,
+      "ans": "Hi Dan \r\n\r\nThanks for quick response. In today\u0027s environment there are application that need to integrate with different sites such as netflix, facebook, twitter, etc to provide better user experience and create new scenarios. MS has come up with OData protocol which is becoming standard across many sites. I would like to see what patterns need to be followed to build such app which can show the power of integration with multiple sites. \r\n\r\nAnother item I wanted to add into the list was \u0027Windows Phone 7\u0027 UI. \r\n\r\nLooking forward for the next release. \r\n\r\nRegards \r\nSanjay Singh"
+    }
+  ]
+}

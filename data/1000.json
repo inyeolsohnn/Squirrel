@@ -1,0 +1,12 @@
+{
+  "id": 1000,
+  "url": "www.dofactory.com/topic/1000/singleton-pattern-and-db-connection.aspx",
+  "title": "Singleton pattern and DB Connection",
+  "ques": "Is it best to use the Singleton Design Pattern for database connections in web development? If not what is the best way to do it?",
+  "answers": [
+    {
+      "ansID": 1015,
+      "ans": "No it is not best pratice .."
+    }
+  ]
+}

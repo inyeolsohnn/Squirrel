@@ -1,0 +1,12 @@
+{
+  "id": 1209,
+  "url": "www.dofactory.com/topic/1209/breaking-patterns-in-action-into-3-physical-tiers.aspx",
+  "title": "Separating Patterns in Action into 3 Physical Tiers",
+  "ques": "So - being new to WCF and the Patterns in Action architecture - I want to deploy my WPF solution on three physical tiers.\r\nThe first tier is a Windows PC and the Presentation Layer will be hosted there. The second tier is our application server and the Hosting Layer, Service Layer, Business Layer and Data Layer will all be resident there.The third tier is our SQL Server that contains our data.\r\n\r\nAn incentive for this split is that a web project will soon follow and want to use the same services.\r\nDoes this seem reasonable? Am I misunderstanding something basic that would make this a poor solution?  ",
+  "answers": [
+    {
+      "ansID": 1315,
+      "ans": "Btw what does WPF hosting on first physical tier mean? If you are trying to host WPF as browser application, then it can be hosted on the same IIS box as the service layer. I assume you meant WPF application installed on the client machine.\r\n\r\nYou are correct about hosting services on 2nd machine - the service layer should be the only entry point for any external request (either from a WPF, ASP.NET web or a mobile device). Also in future one can easily scale the application or provide multi-tenant feature through re-directing services (through routing feature in 4.0) to services running on different machines.\r\n\r\n"
+    }
+  ]
+}

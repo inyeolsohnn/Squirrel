@@ -1,0 +1,12 @@
+{
+  "id": 1226,
+  "url": "www.dofactory.com/topic/1226/about-mvc-and-gof-patterns.aspx",
+  "title": "Is MVC one of the GoF (Gang-of-Four) patterns?",
+  "ques": "I was wondering whether MVC is one of the GoF patterns. \r\nI see familiar patterns like Bridge patterns which seem similar to MVC. \r\nSo, is MVC a type of Bridge pattern or is it a standalone pattern with no relation to GoF?\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1326,
+      "ans": "Hi,\r\n\r\nWell, no MVC is not one of the GoF patterns. They are not at the same level. MVC is what is called an architectural pattern while GoF patterns are design patterns.\r\n\r\nHowever, when implementing MVC you can take advantage of existing patterns. Take the Head First Design Patterns book they build MVC using Strategy, Composite, and Observer pattern. And I\u0027m sure that there exists other implementations of the MVC pattern using other design patterns. I have also seen MVC being done using the Command pattern.\r\n\r\nNeedless to say, even though MVC is not a GoF pattern, it is still a very useful one. GoF patterns are only a few of all existing patterns out there."
+    }
+  ]
+}

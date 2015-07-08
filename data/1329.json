@@ -1,0 +1,20 @@
+{
+  "id": 1329,
+  "url": "www.dofactory.com/topic/1329/chain-of-responsibility-pattern.aspx",
+  "title": "Chain of responsibility pattern",
+  "ques": "Hi\r\n\r\nCould anyone please explain the real-world scenarios in which Chain-of-Responsibility is actually used?\r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1454,
+      "ans": "The intent behind Chain Of Responsibility is to avoid coupling the sender of the request to the receiver, giving more than one object the opportunity to handle the request.  This process of delegation appears quite naturally in the real world where there is one interface for the customer to go through. \r\n\r\nsender -\u003e Receiver 1 -\u003e Receiver 2 -\u003e Receiver n\r\n(msg)\r\n\r\nSome of the characteristics of CoR pattern.  The sender is aware of only one receiver.  Each receiver is only aware of the next receiver.  The sender does not know who received the message.  Receivers process the message or send it down in the chain.  The first receiver to handle the message terminates the chain and the order of the receiver list matters.\r\n\r\nOne example could be a bank, where an application that you send in to the bank branch may be handled by one particular department.   The document may travel through various chains (dept) until it is processed by any receiver in the chain or the end of chain is reached.\r\n\r\nOne more example is of a document approval process (1 level).  The document passes through various approver until it is approved by any one in the chain or the last chain element is reached.\r\n\r\nAlso, you can think about implementing an exception logging strategy (if you have specific need).  The receiver of the exception object based on success to handle the exception may pass on to next element in the chain.\r\n\r\nAnd there could be more similar scenarios as well.\r\n\r\nHope this helps.\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1457,
+      "ans": "Hi,\r\nRequest you to refer my blog (just started a few months ago) \r\nhttp://techietarriq.blogspot.com/2011/02/design-patterns-behavioral-chain-of.html\r\n\r\nHope this helps.\r\n\r\nThanks\r\nTarriq Ferrose Khan"
+    },
+    {
+      "ansID": 1544,
+      "ans": "A very nice example of practical CoR pattern usage are the client and server channel sinks in .NET Remoting. The client message is sent to be processed by the first receiver (sink) which then pushes the message further to the next one and so on. Each sink manipulates the message, for example it can apply binary formatting to the message or encrypt it before sending further. The last sink sends the message to the server where its own channel sinks handle it (ie deserialization, decryption etc). Hope this was helpful.\r\n\r\nCheers,\r\nDaniel"
+    }
+  ]
+}

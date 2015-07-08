@@ -1,0 +1,12 @@
+{
+  "id": 1157,
+  "url": "www.dofactory.com/topic/1157/most-influential-books-on-oo-refactoring-design-patterns-architecture.aspx",
+  "title": "Most influential books on OO, Refactoring, Design Patterns, Architecture?",
+  "ques": "For those \u0027who have been there\u0027 (i.e. professional architects), what in your opinion are the most important books on these topics:\r\n\r\n\r\nOO (Object Oriented Programming)\r\nRefactoring\r\nDesign Patterns\r\nArchitecture (specifically Pattern Architecture)Thanks.",
+  "answers": [
+    {
+      "ansID": 1243,
+      "ans": "OOP\r\n\r\nAlmost any book on .NET that gets beyond simple BS can take you through OOP principles. I would say OOAD is more what you are looking for. Here is my short list of more generalist books from an architecture standpoint:\r\n\r\n\r\n\r\nThe Object-Oriented Thought Process ? Paradigm shifting\r\n\r\n\r\nApplying UML and Patterns ? Even if you are not using UML, there is a lot of power in this book\r\n\r\n\r\nAlmost anything by Peter Coad (Object-Oriented Analysis, Object-Oriented Design, Object Models: Strategies, Patterns and Applications)\r\nRefactoring\r\n\r\n\r\n\r\nRefactoring: Improving the Design of Existing Code ? THE book from Martin Fowler (remember baby steps)\r\n\r\n\r\nRefactoring to Patterns ? Very useful to make sure you use patterns instead of having them use you\r\n\r\n\r\nRefactoring Databases: Evolutionary Database Design ? This one will force a paradigm shift\r\n\r\nDesign Patterns\r\n\r\n\r\n\r\nDesign Patterns: Elements of Reusable Object-Oriented Software ? the GoF book\r\n\r\n\r\nHead First Design Patterns ? Easier for beginners\r\n\r\n\r\nPattern Hatching: Design Patterns Applied\r\nArchitecture\r\n\r\n\r\n\r\nPatterns of Enterprise Application Architecture ? Another Martin Fowler classic\r\n\r\n\r\nSimple Architectures for Complex Enterprises ? Easy read, very valuable\r\nOthers\r\n\r\n\r\n\r\nWorking Effectively with Legacy Code ? Brown field and Agile, a must read\r\n\r\n\r\nClean Code: A Handbook of Agile Software Craftsmanship ? I would also rank the McConnell series in this area (The Software Project Survival Guide, Rapid Development and Code Complete)\r\n\r\n\r\nDesigning Interfaces: Patterns for Effective Interaction Design ? I also love ?Don?t Make Me Think? but it is a bit more designer centric\r\n\r\nPeace and Grace,\r\nGreg\r\n\r\nTwitter: @gbworld\r\nBlog: http://gregorybeamer.spaces.live.com\r\n\r\n\r\n "
+    }
+  ]
+}

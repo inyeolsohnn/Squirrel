@@ -1,0 +1,40 @@
+{
+  "id": 1113,
+  "url": "www.dofactory.com/topic/1113/video.aspx",
+  "title": "Design Pattern Training Videos",
+  "ques": "Have you guys though about doing a video series on design patterns?\r\nI\u0027ve come across one website that does them, but they refer to Java!\r\nIt would make alot of sense if you guys did consider producing them as you focus primarily on .NET\r\n",
+  "answers": [
+    {
+      "ansID": 1171,
+      "ans": "Thanks for the suggestion.\r\nWe will indeed be looking into this. "
+    },
+    {
+      "ansID": 1274,
+      "ans": "Hello has there been any further development towards doing a video series ?"
+    },
+    {
+      "ansID": 1279,
+      "ans": "Peter: the idea for pattern videos is beginning to reach the top of our todo list.  \r\nStay tuned. "
+    },
+    {
+      "ansID": 1422,
+      "ans": "Hello,  I eventually found some really good video tutorials on design patterns by Pluralsight  -I found that yours and thier content complemented each other very well  -it might be an idea to contact them so as to share resources etc."
+    },
+    {
+      "ansID": 1483,
+      "ans": "I am pleased to announce that DoFactory is starting the production of a video series on .NET Design Patterns and Pattern Architectures.\r\n\r\nIf you are interested, please let us know what you\u0027d like to see the most and we\u0027ll adjust the priorities of our production if the votes are there.\r\n\r\nThanks."
+    },
+    {
+      "ansID": 1498,
+      "ans": "It would be great if you include CAB (Composite UI Application Block) in your video series and try to create a CAB application using WPF. You can implement Adapter, Strategy, Command and Dependency Injection in a CAB app."
+    },
+    {
+      "ansID": 1527,
+      "ans": "Plural-SIght is who I\u0027m using right now for a better understanding of the 20 plus design patters and principles.  It\u0027s worth a gander."
+    },
+    {
+      "ansID": 1715,
+      "ans": "Hello \r\n          I would like to see \r\n\r\n\r\nMVC  \u003d asp.net\r\nMVP  \u003d Windows\r\nMVVC  \u003d WPF/silverlight\r\n\r\nindividual application step by step . With WCF service layer and with out WCF service layer"
+    }
+  ]
+}

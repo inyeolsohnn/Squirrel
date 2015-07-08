@@ -1,0 +1,12 @@
+{
+  "id": 1572,
+  "url": "www.dofactory.com/topic/1572/call-different-count-methods-on-builder-pattern.aspx",
+  "title": "Call Different Count Methods on Builder Pattern",
+  "ques": "Hi ,\r\n In  dofactory pattern examples which name is builder pattern like below, i want to call methods like that.\r\n\r\n   For example :\r\n       MotorCycleBuilder  i want to call     vehicleBuilder.BuildFrame();  vehicleBuilder.BuildEngine(); \r\n       CarBuilder i want to call            vehicleBuilder.BuildFrame(); vehicleBuilder.BuildEngine();   vehicleBuilder.BuildWheels();\r\n         \r\n       ScooterBuilder i want to call      vehicleBuilder.BuildFrame(); vehicleBuilder.BuildEngine();  vehicleBuilder.BuildWheels(); vehicleBuilder.BuildDoors();   like these methods.\r\n\r\n      Shortly i want to call different combinations  of these methods  on Builder Directors .How can i do or is there a pattern?\r\n   \r\n\r\n   class Shop\r\n  {\r\n    // Builder uses a complex series of steps\r\n    public void Construct(VehicleBuilder vehicleBuilder)\r\n    {\r\n      vehicleBuilder.BuildFrame();\r\n      vehicleBuilder.BuildEngine();\r\n      vehicleBuilder.BuildWheels();\r\n      vehicleBuilder.BuildDoors();\r\n    }\r\n  }\r\n\r\nthanks.\r\n\r\nBest Regards.\r\n",
+  "answers": [
+    {
+      "ansID": 1758,
+      "ans": ":(  sorry for the silly question ,i found there has been TemplateMethodPattern , dont care it"
+    }
+  ]
+}

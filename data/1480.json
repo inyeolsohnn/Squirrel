@@ -1,0 +1,12 @@
+{
+  "id": 1480,
+  "url": "www.dofactory.com/topic/1480/view-models-and-accessing-data-in-the-presentation-tier.aspx",
+  "title": "View models and accessing data in the presentation tier",
+  "ques": "I see that in the pattern\u0027s in action source you are using a Provider to sit over your data access as you are using the Provider Model to hot swap DALs based on config settings. \r\n\r\nMy current project we are using an SOA and all data coming into the presentation comes from services. We have 15 different services that we consume and we have put two layers of abstraction over the WCF proxies.\r\n\r\n1) Service Proxy - this class is responsible for calling into services and allows us to mock services that aren\u0027t available.\r\n2) Data Mapper - this class is responsible for mapping DTOs coming out of Service Proxy to View Models for consumption by the UI.\r\n\r\nI\u0027m working on a new stream on the same project and I wanted to revisit this a bit and improve the naming. Data Mapper doesn\u0027t feel right because it\u0027s not accessing a DB and the Fowler pattern is about DB access. Is there a better name for this? Provider doesn\u0027t seem right as it\u0027s too general and we aren\u0027t using the provider model (aka strategy and abstract factory).\r\n\r\nThanks,\r\n\r\nRyan",
+  "answers": [
+    {
+      "ansID": 1687,
+      "ans": "Hi ,\r\n\r\nFrom what I understand is the DTO objects returned by your service proxies is turned into an View Model object that will be understandable by the UI?\r\n\r\nIf yes,  \u0027Adapter \u0027 could be the right word as you are trying to adapt the DTO to be understandable by View Model.\r\n\r\nIn that case it could be DTOtoViewModelAdapter or DTOViewAdapter something like that...\r\n\r\nPlease correct me if am wrong..\r\n\r\nThanks \r\n-Tarriq Ferrose Khan"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 1276,
+  "url": "www.dofactory.com/topic/1276/patterns-in-action-4-dataobjectfactory.aspx",
+  "title": "Patterns In Action 4 - DataObjectFactory",
+  "ques": "Hi,\r\n\r\nIn the DataObjectFactory class there is the CreateContext static method that is used to create the context for the ActionEntities.  If I\u0027m using multiple models in my project and want to create those contexts similarly, how would I update the DataObjectFactory to work in this fashion?  What\u0027s the best way to go about achieving this?\r\n\r\nI could create separate CreateContext methods for each set of entities, but it doesn\u0027t seem right (CreateActionContext(), CreateAccountContext(), etc...). \r\n\r\nAny suggestions?  Thanks.\r\n\r\nDoug\r\n",
+  "answers": [
+    {
+      "ansID": 1373,
+      "ans": "Doug: \r\n\r\nWhat do you mean with mulitple models?\r\nMultiple databases, classes, or modules (groups of classes)?\r\n\r\nDan.\r\n"
+    },
+    {
+      "ansID": 1380,
+      "ans": "Hi Dan,\r\nI replied to your question above.  Hopefully that clears up what I\u0027m trying to do.  If not, let me know.\r\n\r\nDoug\r\n"
+    },
+    {
+      "ansID": 1386,
+      "ans": "Doug:\r\n\r\nThe DataObjectFactory caches the connectionstring so that the context can be created quickly.\r\n\r\nSo, the DataObjectFactory represents a database connection, which would suggest that if your EF Models reside in the same database your above suggestions is appropriate (i.e. CreateActionContext, CreateAccountContext, etc).  However, if your EF Models reside in different databases, then you will want to create additional DataObjectFactory classes, one for each database connection. \r\n\r\nHope this helps."
+    }
+  ]
+}

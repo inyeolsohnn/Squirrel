@@ -1,0 +1,12 @@
+{
+  "id": 1575,
+  "url": "www.dofactory.com/topic/1575/mvp-another-word-for-polymorphism.aspx",
+  "title": "MVP: just another word for Polymorphism?",
+  "ques": "I\u0027m a newby to MVP. Would I be wrong in saying that MVP is just another word for polymorphism? \r\n\r\nAs a 63 year old who started programming in 1965 on mainframes, then minis, then 4004/8008 etc etc I have gottten used to each successive generation renaming objects to their own buzzwords(bit like dogs having to piss on lamp posts?). \r\n\r\nTo give you an example I have seen things that used to be called \u0027indicators\u0027 then called \u0027switches\u0027, \u0027booleans\u0027, \u0027flags\u0027 etc - you get the picture - when all the time they\u0027re the same object. I am wondering therefore if this is just another case where somebody has decided to make a science out of something that wasn\u0027t necessary in order to put their generational stamp on?\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1764,
+      "ans": "Just my thoughts on this....\r\nI understand what you are thinking, atleast I guess.  Yes nowadays most of the technology seems to be buzzword around something very basic.  But sometimes this buzzword is required for having a common understanding across teams and different stakeholders.  If you consider any aspect of OOP with respect to reuse, then most of them may be achieved using some kind of polymorphic behaviour.\r\n\r\nThe thing to understand and remember is that MVP is an architectural pattern (another buzzword here), which definitely has its own role to play, much more than the simple term of polymorphism.  Its an amalgamation of various other buzzwords, which when bundled together may help you create better applications which is resilent (another buzzword here) to future changes.\r\n\r\nYes you can definitely create applications without using MVC, MVP, but then if its an enterprise applications where various teams are working together, it will be very difficult to communicate design and ideas across consistently though not impossible (but how many people would like to do this) without using a common vocabulary. \r\n\r\nA new member joining the team may find a hell lot difficult to browse through the code if there is not a common vocabulary.\r\n\r\nSo, definitely some times, some buzzwords are necessary, if applied in right context.\r\n\r\n"
+    }
+  ]
+}

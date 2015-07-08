@@ -1,0 +1,12 @@
+{
+  "id": 1067,
+  "url": "www.dofactory.com/topic/1067/pattern-framework-need-to-understand-help.aspx",
+  "title": "Pattern Framework - Need to understand - Help",
+  "ques": "Hi \r\n\r\nI need some advice.  I am aware of Design Patterns (In theory).  \r\n\r\nTo learn the practical implementation of Patterns, I had purchased the \u0027Pattern Framework\u0027 from this site.  Honestly, it is an amazing product that is very well laid out with examples.  The problem is that I am not sure of how to study the patterns in this product or where I need to start so that I will be able to understand the underlying concepts used.  \r\n\r\nAny further guidance will be appreciated. \r\nWilliam ",
+  "answers": [
+    {
+      "ansID": 1115,
+      "ans": "I believe any experienced .NET developer and .NET architect should be able to relate to this question. At some point in our career we found ourselves in the same situation, wondering where to start and how to move forward \r\n\r\nIt is through hard work, learning from the masters, reading articles, magazines, blogs, that you slowly but surely develop confidence in building scalable, robust .NET applications. And at the end, it will feel \u0027natural\u0027 and you just know what it takes to design and architect large business applications according to commonly used patterns and best practices. \r\n\r\nMy suggestion to learning to apply patterns and practices in your own work is to do in baby steps. For example: \r\n\r\n  1)  Build the simplest possible app (Web, Windows, WPF, etc), using 1-table database and 1-page screen.\r\n  2)  Add logging, possibly using the Singleton and Observer pattern (study the Design Pattern Framework).\r\n  3)  Refactor data access and begin to use DAO and Factory patterns (study the Design Pattern Framework). \r\n  4)  Implement a clean Service Layer using the Facade pattern (study the Desing Pattern Framework).\r\n  5)  Move business objects from the database to the UI and back using the Active Record pattern (study the Desing Pattern Framework)..\r\n  6)  Etc. etc.\r\n\r\nThe key here is starting small and building out the application while refining the architecture by separating it into 3- or n-tiers.\r\nYes, it will take time, but at the end you will know what works and what not.\r\n\r\nAnyhow, I hope this reply is useful to other .NET developers as well.\r\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1598,
+  "url": "www.dofactory.com/topic/1598/sorting-with-stored-procedures.aspx",
+  "title": "Sorting with stored procedures",
+  "ques": "In the example for sql server they use inline statements and pass in the sortexpression and add it in the statement. If you are using stored procedures how do you use the passed in sortexpression for sorting the grid? the sortexpression being passed in may look like \u0027weight asc\u0027 as you may know.\r\n\r\nI do see you can add an .Orderby at the end of the return on the Db.Readlist but I\u0027m not sure how that works.\r\n\r\nThanks\r\nDennis\r\n\r\n\r\npublic List\u003cAudit\u003e GetAudits(int id, string type, string code, string sortExpression)\r\n        {\r\n            string proc \u003d @\u0027usr_StoredProc\u0027;\r\n            object[] parms \u003d {\u0027@type\u0027, type, \u0027@id\u0027, id, \u0027@code\u0027, code};\r\n                       \r\n            return Db.ReadList(proc, Make, parms);\r\n        }\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1785,
+      "ans": "Hi Dennis,\r\n\r\nI\u0027m not totally sure on this one, as I don\u0027t have more details about the Db-object, but I assume it\u0027s just a DataContext. In that case queries like e.g. ReadList() return an IEnumerable\u003cT\u003e. That means a OrderBy-statement after ReadList(proc, Make, parms) would just adjust your actual query string for a db-query (when it is actually done).\r\n\r\nAn example for a OrderBy is include in the sample-sourcecode below.\r\n\r\nRegards\r\nFlorian\r\n\r\n\r\n\r\n\r\npublic class Contact\r\n{\r\n   int Id \u003d 0;\r\n   string Name \u003d string.Empty;\r\n}\r\n\r\nvar result \u003d Db.ReadList(proc, Make, parms)\r\n               .Cast\u003cContact\u003e()\r\n               .OrderBy(x \u003d\u003e x.Name)           // add order statements to query\r\n               .ToList();                      // execute actual query\r\n\r\n "
+    }
+  ]
+}

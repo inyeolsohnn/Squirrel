@@ -1,0 +1,12 @@
+{
+  "id": 1124,
+  "url": "www.dofactory.com/topic/1124/passing-meta-tags-with-asp-net-mvc.aspx",
+  "title": "Passing Meta Tags (title, keywords, description) with ASP.NET MVC",
+  "ques": "Hello, I am working with ASP.NET MVC and now I need to set some meta tag parameters on the pages. Meta tags are the Title, Keywords, and Description on the page.  \r\n\r\nThe issue is that I have a Masterpage and a Content page. When setting the Title on the Content page nothing shows up.\r\nAnyone know how does should work?",
+  "answers": [
+    {
+      "ansID": 1184,
+      "ans": "You might want to check out this tutorial at http://www.mvccentral.net/.  Look at the GolfCentral series.  Essentially the author created a ViewData Factory to set the metatag data."
+    }
+  ]
+}

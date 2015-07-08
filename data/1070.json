@@ -1,0 +1,20 @@
+{
+  "id": 1070,
+  "url": "www.dofactory.com/topic/1070/will-design-patterns-4-0-contain-enterprise-library-5-and-unity-2-0.aspx",
+  "title": "Will Design Patterns 4.0 contain Enterprise Library 5 and Unity 2.0",
+  "ques": "Will the Design Pattern Framework 4.0 contain Enterprise Library 5 and Unity 2.0 for IoC and Logging purposes?\r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1113,
+      "ans": "Gary: \r\n\r\nEnterprise Library and Unity will not be included. The Design Pattern Framework demonstrates design patterns in an environment that will be relevant to most developers. With open source becoming more prevalent it is tricky because one team may have standardized one set of tools whereas other developers are not allowed to bring in external, non-approved, libraries. \r\n\r\nHope this helps."
+    },
+    {
+      "ansID": 1117,
+      "ans": "Thanks for your answer. Will you use MEF as an IoC (e.g in case of UnitOfWork)?"
+    },
+    {
+      "ansID": 1118,
+      "ans": "To find out how to use Unity 2.0 in an ASP.NET or ASP.NET MVC application you can download my sample application.\r\n\r\nhttp://www.mvccentral.net/Kit/Details/2/ASP.NET_MVC_with_Unity\r\n\r\nI hope this helps,\r\n\r\nKing Wilder"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1371,
+  "url": "www.dofactory.com/topic/1371/what-is-the-best-app-storage-place-for-multiple-net-platforms.aspx",
+  "title": "Is there a \u0027common\u0027 app storage place for multiple .NET platforms?",
+  "ques": "So here is a question. \r\n\r\nSay, you\u0027re designing an app that ultimately runs on ASP.NET MVC, Winforms, WPF, Silverlight, and Windows Phone.  You need to store application settings, such as connection strings, app configuration settings, user preferences (ideally encrypted), in all these platforms and wish to avoid duplicate code.\r\n\r\nIs there such a thing as a \u0027Universal\u0027 or common place to store application settings?  I think I know most of the options: registry, xml file, Application.Settings, etc, but what ties the different .NET platforms together?\r\n",
+  "answers": [
+    {
+      "ansID": 1530,
+      "ans": "As far as I know there is no such \u0027universal storage\u0027. As you pointed out there are several options which you can wrap into storage providers or settings providers and have at least settings logic on one place. Or you can consider having all the data in the cloud :)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1436,
+  "url": "www.dofactory.com/topic/1436/validateipaddress-cs-error.aspx",
+  "title": "ValidateIPAddress.cs - constructor correct?",
+  "ques": "Hi, \r\n\r\nCan someone please confirm whether the second constructor in the following codefile (ValidateIPAddress.cs, from Patterns in action 4.0) is correct?\r\n\r\n//ValidateIPAddress.cs:\r\n\r\n\r\nusing System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing System.Text;\r\n\r\nnamespace BusinessObjects.BusinessRules\r\n{\r\n    /// \u003csummary\u003e    \r\n    /// IP Address validation rule.    \r\n    /// \u003c/summary\u003e    \r\n    public class ValidateIPAddress : ValidateRegex\r\n    {\r\n        // Match IP Address\r\n        public ValidateIPAddress(string propertyName) :\r\n            base(propertyName, @\u0027^([0-2]?[0-5]?[0-5].){3}[0-2]?[0-5]?[0-5]$\u0027)\r\n        {\r\n            ErrorMessage \u003d propertyName + \u0027 is not a valid IP Address\u0027;\r\n        }\r\n\r\n        public ValidateIPAddress(string propertyName, string errorMessage) :\r\n            this(propertyName)\r\n        {\r\n            ErrorMessage \u003d errorMessage;\r\n        }\r\n    }\r\n}\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1614,
+      "ans": "Hello Ole Johnny:\r\n\r\nThe second (overloaded) constructor seems fine to me.\r\nIs there any particular reason why you think it is not correct or obsolete?"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1122,
+  "url": "www.dofactory.com/topic/1122/pattern-to-implement-the-enabling-and-disabling-the-menu.aspx",
+  "title": "Pattern to enable and disable menus",
+  "ques": "Which pattern can I use to implement the enabling and disabling the menus of MDI in windows application?\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1183,
+      "ans": "Hi Imran: \r\n\r\nWith enabling and disabling menus the Command Pattern comes to mind.\r\n\r\nHowever, if you are familiar with Design Patterns and none of these seem immediately relevant, I would suggest you start coding (the best you can), and then (while coding) see if you run into scenarios where a pattern seems applicable.\r\n\r\nMy 2 cents."
+    }
+  ]
+}

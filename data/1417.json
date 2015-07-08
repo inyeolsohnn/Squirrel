@@ -1,0 +1,12 @@
+{
+  "id": 1417,
+  "url": "www.dofactory.com/topic/1417/which-pattern-must-i-use-to-create-an-xml-request.aspx",
+  "title": "Which pattern should I use to create an XML Request?",
+  "ques": "Hi, \r\n\r\nI have a question for the community. \r\nI need to generate the following XML (see below) to issue a request. \r\nWhich pattern should I use to create this Xml request, without using Composite Pattern?\r\n\r\n \u003cCustomer\u003e\r\n      \u003cPerson\u003e\r\n           \u003cAge1/\u003e\r\n           \u003cAge2/\u003e          \r\n      \u003c/Person\u003e\r\n       \u003cAddress\u003e\r\n            \u003cLocation/\u003e\r\n            \u003cCity/\u003e\r\n            \u003cCountry/\u003e\r\n      \u003c/Address\u003e \r\n \u003c/Customer\u003e\r\n\r\n\r\nI know I could create a Customer class containing a Person and an Address class and then serialize it to XML. \r\nHowever, how can I create this XML using a pattern?  And which pattern should I use?\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1588,
+      "ans": "Iterator can be applicable here.\r\n\r\n--\r\nKaushal\r\nhttp://kaushalp.blogspot,com"
+    }
+  ]
+}

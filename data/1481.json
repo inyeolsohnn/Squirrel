@@ -1,0 +1,16 @@
+{
+  "id": 1481,
+  "url": "www.dofactory.com/topic/1481/design-pattern-framework-5-0.aspx",
+  "title": "Design Pattern Framework 5.0?",
+  "ques": "Hi,\r\nDoes anyone know when the next version of the Design Pattern Framework 5.0 might be coming out?  \r\nI am looking forward to it.\r\n\r\nDoug\r\n",
+  "answers": [
+    {
+      "ansID": 1654,
+      "ans": "Hi,\r\n\r\nThat\u0027s an interesting question ;) for which I also like to know the answer. \r\nAlso, are update versions cheaper from version 4.0 to version 5.0? (I know my subscription is a year long).\r\n\r\nty\r\nJustin"
+    },
+    {
+      "ansID": 1655,
+      "ans": "The Design Pattern Framework versioning is (mostly) in sync with .NET.  For example, Design Pattern Framework 4.0 supports .NET 4.0, etc.\r\n\r\nOnce Microsoft releases VS 2012 / .NET 5.0 will we follow soon with Design Pattern Framework 5.0.  \r\nMicrosoft has been rather mum about the next release. Hopefully they will demonstrate what is coming in the next BUILD conference in September.\r\n"
+    }
+  ]
+}

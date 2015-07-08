@@ -1,0 +1,12 @@
+{
+  "id": 1511,
+  "url": "www.dofactory.com/topic/1511/how-to-unit-test-the-data-objects-layer.aspx",
+  "title": "How to Unit test the Data Objects layer",
+  "ques": "I\u0027m looking for some guidance for a best practice on writing the unit test for the Data Objects layer and specifically the Ado.Net implementation.\r\n\r\nI\u0027m seen many examples using the repository pattern where you can fake the repository, but since the doFactory framework is not using Repository in the Data Layer, I\u0027m not sure how to mock the actual calls to the database.\r\n\r\nThanks for any guidance you can provide.\r\n\r\nChris",
+  "answers": [
+    {
+      "ansID": 1718,
+      "ans": "I guess in dofactory framework they use  \u0027Abstract Factory \u0027 pattern for Data Layer, and in that case you can easily mock the interface or abstract class for unit testing of your DB.\r\n\r\n"
+    }
+  ]
+}

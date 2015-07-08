@@ -1,0 +1,12 @@
+{
+  "id": 1601,
+  "url": "www.dofactory.com/topic/1601/connection-strings.aspx",
+  "title": "Connection Strings",
+  "ques": "I\u0027m a little confused on how the connection strings are used in the application. They have the connection string setting in the Hosting Layer (WCF.ActionServer) and in the App.Config in the Data Layer. How and why is that and which one is being used. To me it looks like the one in the App.Config is being used and if that\u0027s the case why is it also in the web.config in the Hosting layer. Here is what the code looks like in the Db.cs Hosting Layer.\r\n\r\nprivate static readonly string dataProvider \u003d ConfigurationManager.AppSettings.Get(\u0027DataProvider\u0027);\r\n        private static readonly DbProviderFactory factory \u003d DbProviderFactories.GetFactory(dataProvider);\r\n\r\n        private static readonly string connectionStringName \u003d ConfigurationManager.AppSettings.Get(\u0027ConnectionStringName\u0027);\r\n        private static readonly string connectionString \u003d ConfigurationManager.ConnectionStrings[connectionStringName].ConnectionString;\r\n\r\nThanks\r\nDennis",
+  "answers": [
+    {
+      "ansID": 1790,
+      "ans": "Dennis,\r\n\r\nThat\u0027s an easy one to get confused about, but also and easy one to answer.\r\n\r\nWhen the Entity Framework designer is created and you make a connection to your database in order to add tables to the designer, it saves the connection string to the App.Config file in your data objects project.  It is only used by the EF designer for you to manage the connection with your database.\r\n\r\nThe connection string in the Hosting layer IS the one that is used for data access by the application.  \r\n\r\nAs you have shown in the code you present, the DataObjectFactory class in the DataObjects project looks for an appSettings.config file with a setting called  \u0027ConnectionStringName \u0027.  It\u0027s this name that will point to one of the available connectionstrings in the  \u0027connectionStrings \u0027 section of that web.config file.\r\n\r\nSo the bottom line is that the connection string from the web.config file in the WCF hosting layer is the one that is used.\r\n\r\nI hope this answers your question.\r\n\r\nKing Wilder"
+    }
+  ]
+}

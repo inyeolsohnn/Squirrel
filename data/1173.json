@@ -1,0 +1,32 @@
+{
+  "id": 1173,
+  "url": "www.dofactory.com/topic/1173/difference-singleton-and-static.aspx",
+  "title": "Difference between Singleton and a static class",
+  "ques": "Hello All,\r\n\r\nActually, I read a lot about the Singleton Pattern and static classes, but never quite understood the difference.\r\n\r\nPlease help.\r\nAnshuman Saini",
+  "answers": [
+    {
+      "ansID": 1260,
+      "ans": "Take a look at this previous thread...http://dofactory.com/topic/1001/singleton-as-a-static-class.aspx"
+    },
+    {
+      "ansID": 1264,
+      "ans": "Singleton \u003d Single means single object across the application life cycle \u0026 the scope of singleton is at application level.\r\nStatic\u003d  Static an not have any object pointer \u0026 the scope of static is at App Domain level.\r\n\r\nI hope this will make your doubt clear.\r\n\r\n--\r\nKaushal\r\nhttp://kaushalp.blogspot.com"
+    },
+    {
+      "ansID": 1281,
+      "ans": "Hello.. In addition to responses already provides here are my two cents why would you use a Singleton in favor of static class.\r\n\r\nAs you know both by now Singleton and Static classes both provide a central point of access  i.e. there\u0027s only one instance and one way to access it.\r\n\r\nThe benefit of Singleton class is it is much more flexible that static classes.  Static classes once defined could not accomodate any future design changes as by design static classes are rigid and cannot be extended. \r\n\r\nSingleton on the other hand provides flexibility and also provides sort of a mechanism to control object creation based on various requirements.  They can be extended as well if need arises.  In other words you are not always tied to a particular implementation.  With Singleton you have the flexibility to make changes as when situation demands.. \r\n\r\n\r\nHope this add some more clarity to the thoughts about its usage.\r\n\r\n"
+    },
+    {
+      "ansID": 1556,
+      "ans": "Singleton class maintains state. It is thread safe. It gives flexibility to change the logic inside class methods while preserving interfaces by subclassing and returning the subclass object.\r\n\r\npublic SomeClass {\r\n\r\npublic static int doSomething(int a, int b) {\r\nreturn a + b;\r\n}\r\n}\r\n\r\npublic class AnotherClass {\r\nprivate AnotherClass instance \u003d new AnotherClass();\r\n\r\nprivate AnotherClass() { // private constructor so no one else can instantiate objects }\r\n\r\npublic static AnotherClass GetInstance() {\r\nreturn instance; // classic singleton\r\n}\r\n\r\npublic int doSomething(int a, int b) {\r\nreturn a + b;\r\n}\r\n}\r\n\r\nThere is no functional difference between the following:\r\nint x \u003d SomeClass.doSomething(1,2);\r\nint y \u003d AnotherClass.GetInstance().doSomething(1,2);\r\n\r\nPersonally, I feel the second construct (what you call  \u0027singleton \u0027) is more flexible because it hides object management and subclassing from the application layer. For example, I can make the following changes rather easily:\r\n\r\n// Converts from singleton to factory\r\npublic static AnotherClass GetInstance() {\r\nreturn new AnotherClass(); // factory method, returns a new object instance each time\r\n}\r\n\r\n// Change the implementation altogether\r\npublic static AnotherClass GetInstance() {\r\nreturn new AnotherClassSubclass(); // abstract factory method, returns a new implementation altogether\r\n}\r\n\r\npublic class AnotherClassSubclass extends AnotherClass {\r\npublic int doSomething(int a, int b) {\r\nreturn a * b;\r\n}\r\n}\r\n\r\nBoth are very significant changes but we can effect them WITHOUT changing the code.\r\nint y \u003d AnotherClass.GetInstance().doSomething(1,2); // this line of code still works whether you use singletons, factory methods, or abstract factory methods\r\n\r\nIf you wanted to accomplish the same thing using static methods, you would definitely have to change the code\r\nSomeClass s \u003d new SomeClass(); // explicitly declare a new instance\r\nint x \u003d s.doSomething(1,2);\r\n\r\nor\r\nint x \u003d SomeClass.doSomethingDifferent(1,2); // add another static method to multiply instead of add\r\n\r\nor \r\nint x \u003d SomeOtherClass.doSomething(1,2); // add another class altogether if you want keep the same method signature and multiply instead of add\r\n"
+    },
+    {
+      "ansID": 1602,
+      "ans": "It is nice question. these are some differences:\r\n1. Singlton class can implement interfaces. \r\n2. We can pass singlton object as parameter."
+    },
+    {
+      "ansID": 1604,
+      "ans": "Hey,\r\nThe difference between the Singleton and Static is Singleton Class can have value when Class object instantiated between server and client, such a way if three client want to have a shared data between them Singleton can be used. Static are always just shared and have no instance but multiple references.\r\nThank you,\r\nRajesh"
+    }
+  ]
+}

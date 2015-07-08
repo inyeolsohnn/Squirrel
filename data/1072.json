@@ -1,0 +1,28 @@
+{
+  "id": 1072,
+  "url": "www.dofactory.com/topic/1072/mvp-explaination-needed.aspx",
+  "title": "Explanation of MVP please",
+  "ques": "Hello,\r\n\r\nCould someone explain what the MVP Model is, possibly with an example in .NET? \r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1119,
+      "ans": "Hi, \r\n\r\nFor more information visit this link: http://www.codeproject.com/KB/architecture/ModelViewPresenter.aspx\r\n\r\n[]\u0027s Iter Lubnon, Brazil."
+    },
+    {
+      "ansID": 1140,
+      "ans": "Hello,\r\nFirst try to understand what is MVP.I am giving some links.Go through that\r\nhttp://msdn.microsoft.com/en-us/magazine/cc188690.aspx \r\nhttp://msdn.microsoft.com/en-us/library/ff647543.aspx\r\nSample: Go through this link.it will give fair idea as to how make layers and proper implementations.\r\nhttp://blog.vuscode.com/malovicn/archive/2006/10/10/Model-View-Presenter-_2800_MVP_2900_-pattern.aspx"
+    },
+    {
+      "ansID": 1174,
+      "ans": "Here\u0027s a small blog post about MPP that I have written.. (may not be that great, but will of use to someone).\r\n\r\n\r\nMVP Pattern In Action\r\n\r\nMVP in Action (Unit Test)\r\nHope this helps.\r\n\r\nRegards,\r\nRajesh Pillai"
+    },
+    {
+      "ansID": 1176,
+      "ans": "To cut the explanation short, this is my understanding so far...\r\nMVP \u003d Model - View - Presenter\r\n\r\nThe basic idea behind it is to separate concerns between the layers.  Clean separation enables better testability and easier maintainability and to separate responsibilities of each layer so that it can be readily replaced by another technology(eg. replacing winforms view with html view etc...)\r\n\r\nModel - Being the data - class to hold data (domain object)\r\nView - The UI - be it winforms / xaml / html (web forms) etc...\r\nPresenter - Acts like a controller of the view, where business logic resides.\r\n\r\nI think there are two main versions of MVP, active and passive, one having the model exposed to the view, and the other having the model exposed only via the presenter.\r\n\r\nStill a newbie, but thats my understanding so far...\r\n\r\nCheers"
+    },
+    {
+      "ansID": 1179,
+      "ans": "I have been working on some sample WPF projects using MVP. You can take a look at it here:\r\nhttp://github.com/devghost/skeletor\r\n\r\nCurrently there are two projects using the Passive View flavor of MVP. One uses an Event Aggregator\r\nto pass events from the view to the controller and the other uses simple CLR events.\r\n\r\nI am currently working on a third sample project that will utilize MVVM, but I haven\u0027t come very far with it yet.\r\n\r\nKeep in mind that this is my interpretation of the Passive View design pattern. I have seen many other\r\nvariants of it.\r\n"
+    }
+  ]
+}

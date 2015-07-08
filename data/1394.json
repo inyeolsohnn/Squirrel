@@ -1,0 +1,16 @@
+{
+  "id": 1394,
+  "url": "www.dofactory.com/topic/1394/asp-net-mvc-3.aspx",
+  "title": "Use ASP.NET MVC 3 or MVC 2",
+  "ques": "Hello,\r\n\r\nIn your Design Pattern Framework you use ASP.NET MVC 2. I\u0027ll start a new web project in 2 months. \r\nDo you think it would be better to use MVC 3 rather than MVC 2?  Currently I have no knowledge about MVC 3.",
+  "answers": [
+    {
+      "ansID": 1560,
+      "ans": "Hello Uwe:\r\n\r\nI would use MVC 3. \r\n\r\nThe reason for this is that the fundamentals of Design Patterns do not change with the introduction of more modern platforms.\r\nThe changes from MVC 2 to MVC 3 are fairly significant (particularly the Razor View Engine), but it does not fundamentally change the pattern oriented approach to building an ASP.NET MVC solution.\r\n\r\nHope you enjoy working with MVC 3.  \r\nWe think it is a great platform.\r\n\r\nDan."
+    },
+    {
+      "ansID": 1561,
+      "ans": "You mean there would be no great changes in your  \u0027patterns in action \u0027 application design by using mvc 3 instead of mvc 2 ?"
+    }
+  ]
+}

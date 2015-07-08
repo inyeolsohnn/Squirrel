@@ -1,0 +1,16 @@
+{
+  "id": 1064,
+  "url": "www.dofactory.com/topic/1064/difference-between-strategy-and-state-patterns.aspx",
+  "title": "Difference between Strategy and State",
+  "ques": "Looking at the GoF patterns I find the similarities between State and Stategy pattern rather striking.\r\nBoth swap out polymorphic classes to modify behavior. Anyone else found the same?\r\n\r\nWhat are the exact differences?",
+  "answers": [
+    {
+      "ansID": 1111,
+      "ans": "Hello Hans,\r\n\r\nThere are many discussions on the difference in State and Strategy Pattern because both share the same class diagram.\r\nHowever, one big difference is the following:\r\n\r\nStrategy Pattern is used when the whole algorithm is changed to another algorithm and the client is responsible for that, whereas, in State Pattern, the class itself manages the strategy based on the state.\r\n\r\nHere are some good discussions on this topic:\r\n\r\nhttp://www.c-sharpcorner.com/UploadFile/rmcochran/strategy_state01172007114905AM/strategy_state.aspx\r\n\r\nand\r\n\r\nhttp://c2.com/cgi/wiki?StrategyPattern \r\n\r\n- Saurabh Saxena\r\n"
+    },
+    {
+      "ansID": 1112,
+      "ans": "There is a similar relationship between the Strategy/State pattern pairs and the Factory Method/Abstract Factory pattern pairs.\r\n\r\nStrategy is used in one place where objects can change; just like the Factory Method is used for creating one type of product. \r\nState pattern holds series of objects that are changed; just like Abstract Factory is used for creating series of products."
+    }
+  ]
+}

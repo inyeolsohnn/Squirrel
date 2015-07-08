@@ -1,0 +1,12 @@
+{
+  "id": 1197,
+  "url": "www.dofactory.com/topic/1197/multi-tenant-application-with-asp-net-mvc-2.aspx",
+  "title": "Multi-tenant application with ASP.NET MVC 2",
+  "ques": "We need to write a multi-tenant web application in ASP.NET MVC 2, meaning that we have a single code base running on one (or more) Web Servers and a single database (on a single Database Server). The app supports about 35-40 different tenants / customers.  Some level or customization is required for each tenant, including look and feel, some basic functionality, and probably some custom database objects / columns and custom reporting. \r\n\r\nI have been searching the Internet for examples on multi-tenant ASP.NET MVC applications and was surprised to find very little information. I located some discussions but does anyone have real-world experience in this area -- ideally with an application in production?  \r\n\r\nI\u0027d really like to hear how it was implemented, how it performs, and the level of customization that is offerered to each tenant.\r\nThanks in advance.",
+  "answers": [
+    {
+      "ansID": 1306,
+      "ans": "Until you get a good answer do refer this and related post....\r\n\r\nhttp://bartreyserhove.blogspot.com/2009/01/building-multi-tenant-applications-with.html   and this\r\n\r\nhttp://weblogs.asp.net/zowens/archive/2010/05/26/multi-tenant-asp-net-mvc-introduction.aspx\r\n\r\n\r\nRegards.\r\n\r\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1530,
+  "url": "www.dofactory.com/topic/1530/difference-between-mvc-and-mvp.aspx",
+  "title": "difference between MVC and MVP",
+  "ques": "Hello \r\n          I am new to the forum .Can some on please explain me what is the difference between MVC and MVP.\r\n\r\nExample will be highly appreciated \r\n\r\nRegards",
+  "answers": [
+    {
+      "ansID": 1719,
+      "ans": "Apart for the theoretical definition which you might easily get by googling, the following are some of the important points with respect to MVC and MVP\r\n\r\n-  Both provide abstraction of presentation and presentation logic.\r\n-  MVP is a bit more complex to implement than MVC also it has additional layer for view interfaces.  (but this can be blessing in disguise, if you are looking for sharing presentation logic across windows, web and other things..)\r\n-  In MVC the request is received by the controller which in turn gets the required data and loads up the appropriate view\r\n-  In MVP the request is always received by the View and delegated to the presenter which in turn gets the data does the processing\r\n-  In MVC the controller logic can be unit tested (also you can unit test view if you are using Razor view engine.  ASPX viewengine are not that easily unit testable)\r\n-  In MVP presentation and view logic an be unit tested as the view is loosely coupled.\r\n\r\nFor web programming I prefer MVC and for windows including WPF I prefer MVP as the flow naturally tend towards this pattern.\r\n\r\n\r\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1374,
+  "url": "www.dofactory.com/topic/1374/difference-between-strategy-and-inversion-of-control-ioc.aspx",
+  "title": "Difference between Strategy and Inversion of Control (IOC)?",
+  "ques": "Hi, \r\n\r\nWhen getting into Design Patterns I first studied the GoF patterns, which includes Strategy.  After that I started tackling ASP.NET MVC in which the Inversion of Control (IOC) pattern is frequently used (IOC is also called Dependency Injection or DI), I clearly see how this benefits loose coupling, configuration without recompile, testing, etc.\r\n\r\nMy question is this. I don\u0027t see any difference between Strategy and IOC. From what I can tell they are exactly the same. \r\nSo why did they \u0027re-invent\u0027 a different name?\r\n",
+  "answers": [
+    {
+      "ansID": 1532,
+      "ans": "The way I see it is like this...\r\n\r\nShort answer: No, they\u0027re not the same.\r\n\r\nSlightly longer answer: No, they\u0027re not the same. But the Strategy pattern works well with IoC/DI.\r\n\r\nLong answer: The strategy pattern is useful when you want classes to depend on the interface rather than the implementation. And you can easily swap out behavior depending on which concrete implementation you provide.\r\n\r\nIoC/DI comes into play when you want the concrete strategy implementation injected into a class. For example, you could use the DI Framework Ninject and configure it so that it will know which concrete strategy implementation to inject into a class in specific scenarios.\r\n\r\nHope that helps!\r\n\r\n\r\n\r\nRegarding IoC \u003d\u003d DI, I have seen several posts on the topic claiming they\u0027re the same OR that DI is a type of IoC. Where IoC is a broader principle that covers more than DI. Haven\u0027t read enough to decide what is what though. I believe more people are leaning towards the latter."
+    }
+  ]
+}

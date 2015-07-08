@@ -1,0 +1,12 @@
+{
+  "id": 1241,
+  "url": "www.dofactory.com/topic/1241/initialize-object-based-on-role.aspx",
+  "title": "Initialize Object based on Role",
+  "ques": "I have a question on how to initialize an object based on user role.\r\n\r\nFor example, say, I have an abstract class User. There exist 3 different kinds of user Admin, Member, Moderator,\r\nEvery one has it\u0027s own set of functionality\r\n\r\nHow do I initiate an object of a particular type based on user role?\r\nSuppose I have an abstract class User with a property Role which is an Enum.\r\nI would like to code it like this\r\n\r\nUser user \u003d new User();\r\nu.Role \u003d UserRole.Admin;\r\n\r\nthen Object user must be decorated with the properties of Admin.\r\n\r\nI just want\u0027s to know how do I change it?\r\nHere is what I was trying to do... is shown in Code block below\r\n\r\nPlease Reply\r\nRegards\r\n",
+  "answers": [
+    {
+      "ansID": 1346,
+      "ans": "Hi\r\n\r\n Perhaps something similiar to the State pattern would work. However, your question seems contradictory, at least to me, in term of semantics\r\n\r\n You mention each kind of user has it\u0027s own functionality and then you mention that properties must be set for each type of user. There is a difference on how you would implement this based on which statement is correct. Functionality implies 3 sets of business logic, properties are just that.\r\n\r\n p.s. you didn\u0027t appear to attach any code.\r\n\r\n Chris"
+    }
+  ]
+}

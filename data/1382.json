@@ -1,0 +1,12 @@
+{
+  "id": 1382,
+  "url": "www.dofactory.com/topic/1382/username-and-password-on-silverlight-project.aspx",
+  "title": "Username and Password on Silverlight Patterns in Action project?",
+  "ques": "Hope this is not a dumb question...\r\n\r\nWhat is the username and passord for the Silverlight Patterns in Action project?\r\nThose specified don\u0027t work...\r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1550,
+      "ans": "Lindsay,\r\n\r\nNo worries: there are no dumb questions. \r\n\r\nActually, this is the first time someone reports not being able to login. Do you see any error or other message?\r\n\r\nJust to be sure, the credentials for all applications are: username debbie and password secret123. \r\nThe databases (action and membership) used in the Silverlight app have the exact same content as the Patterns in Action solution.\r\nThey reside under the App_Data folder.\r\n\r\nAt this point my best suggestion would be to set a debugger breakpoint in the login page, then step through and see where it fails. \r\nHopefully, this gets you going.\r\n\r\nDan\r\n\r\n"
+    }
+  ]
+}

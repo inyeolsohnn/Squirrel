@@ -1,0 +1,36 @@
+{
+  "id": 1046,
+  "url": "www.dofactory.com/topic/1046/design-patterns-vs-design-principles-solid.aspx",
+  "title": "Design Patterns vs Design Principles (SOLID)",
+  "ques": "I was reading the other day a discussion on Design Patterns versus Design Principles called SOLID.\r\n\r\nFor those who are not aware of this, SOLID is an acronym for the first 5 principles of object-oriented design:\r\n\r\n\r\nSRP The Single Responsibility Principle: -- a class should have one, and only one, reason to change. \r\nOCP The Open Closed Principle: -- you should be able to extend a class\u0027s behavior, without modifying it. \r\nLSP The Liskov Substitution Principle: -- derived classes must be substitutable for their base classes. \r\nISP The Interface Segregation Principle: -- make fine grained interfaces that are client specific. \r\nDIP The Dependency Inversion Principle -- depend on abstractions not on concrete implementations. You\u0027ll find a fair amount of information on the web on these principles. \r\n\r\nIt seems to me that you need a good grasp of the SOLID principles before you\u0027re ready to tackle Design Patterns (in more of an Architect role).  At least that is how my educational \u0026 career process evolved. Does anyone have other experiences or opinions? \r\n\r\n I am curious to hear how other .NET developers learn and internalize Design Patterns.\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1075,
+      "ans": "Yes I agree. \r\n\r\nI myself, I also went through the same process to improve my professional skills. First, I studied up on the SOLID principles. After that, when I started to design using these principles, most of the time, Design Patterns got automatically implemented."
+    },
+    {
+      "ansID": 1076,
+      "ans": "On each of the SOLID design principles, I would like to see some more detailed explanations and example code. This would be of great help to beginning .NET developers. Any pointers or links would be appreciated."
+    },
+    {
+      "ansID": 1078,
+      "ans": "Here\u0027s a good link on the topic of SOLID design principles:\r\nhttp://www.davesquared.net/2009/01/introduction-to-solid-principles-of-oo.html\r\n\r\n"
+    },
+    {
+      "ansID": 1079,
+      "ans": "For all things SOLID, just do a search for \u0027Uncle Bob Martin\u0027, or \u0027SOLID Programming Principles\u0027. The best book to get started is Agile Principles, Patterns and Practices in C# by Robert and Micah Martin.\r\n\r\nLearning Design Patterns + SOLID principles changed my programming for the better (MUCH better!). There are many resources on the internet, that would be the best place to start, and the book I mention above is a must-have for C#.\r\n\r\nFind a good users group, or visit a Code Camp if there is one near you, there are usually a lot of good talks related to Design Patterns and SOLID principles. Here\u0027s one presentation on SOLID:\r\n\r\nhttp://unhandled-exceptions.com/blog/index.php/2010/03/13/nyc-codecamp-2010-refactoring-to-a-solid-foundation-session-content/"
+    },
+    {
+      "ansID": 1080,
+      "ans": "Hi,\r\n\r\nI understand SOLID is basis for the good programming, but there are few more design principles which should also be taken into consideration for good design.\r\n\r\n1. DRY\r\n2. YAGINI - Microsoft has used this principle quite extensively in the developement of windows 7.\r\n\r\nNot very sure but can get the basic information of these two principles on URL.\r\n\r\nhttp://www.codeproject.com/KB/architecture/Design_Principles.aspx"
+    },
+    {
+      "ansID": 1090,
+      "ans": "What i know is that there are not just 5 Design principles. There are almost 10 Design principles.\r\n\r\n1. Open Closed Principle \r\n2. Liskov Substitution Principle \r\n3. Dependency Inversion Principle \r\n4. Interface segregation Principle \r\n5. Release Reuse Equivalency Principle \r\n6. Common Closure Principle \r\n7. Common Reuse Principle \r\n8. Acyclic Dependencies Principle \r\n9. Stable Dependencies Principle \r\n10. Stable Abstraction Principle \r\n\r\nFor sort description please see http://geekswithblogs.net/ramkinkarpandey/archive/2009/10/03/how-to-write-a-good-code-again.aspx\r\nFor detail please see  www.objectmentor.com (Robert C. Martin)"
+    },
+    {
+      "ansID": 1100,
+      "ans": "And don\u0027t forget the Law of Demeter\r\n\r\nhttp://en.wikipedia.org/wiki/Law_of_Demeter\r\n\r\nSome apps let you chain dot all the way through the object model (as in: Customer.Orders[9].LineItem[2].Product.Name)\r\nWhile it\u0027s great for programming its terrible for performance."
+    }
+  ]
+}

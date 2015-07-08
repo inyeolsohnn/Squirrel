@@ -1,0 +1,12 @@
+{
+  "id": 1132,
+  "url": "www.dofactory.com/topic/1132/usage-of-factory-pattern.aspx",
+  "title": "Is Factory Pattern only for object creation?",
+  "ques": "I have a question on the Factory Design Pattern.\r\nAre they strickly used for creating objects or can they do something else as well?",
+  "answers": [
+    {
+      "ansID": 1193,
+      "ans": "I?m assuming that you?re referring to the Abstract Factory? The factory in your code base is sort of like a routing hub. It receives a request and then determines what code needs to be called to complete the requested task. Objects or custom types exist parallel to the concrete factory.\r\n\r\nThink of it as a car factory. The main code base should have no dependency on how each different type of car is manufactured, so the factory itself can have multiple concrete methods of building a car. Your code receives a request and the factory determines which concrete factory to execute in order to complete the requested task. This allows you to be able to add many concrete car building variations to your app without having to modify your core code base every time you have to add new features or change your construction process.\r\n\r\nObject creation is optional depending on what you?re trying to do. In the above scenario, your returned object would be a new car. In other scenarios there may be no returned object, perhaps just a database Update or Insert. Hope this helps."
+    }
+  ]
+}

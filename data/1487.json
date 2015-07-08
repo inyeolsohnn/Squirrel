@@ -1,0 +1,12 @@
+{
+  "id": 1487,
+  "url": "www.dofactory.com/topic/1487/update-method-bl.aspx",
+  "title": "Update Method in the Business Layer",
+  "ques": "It seems in the project that the BusinessLogic is only relevant in the web application. The MVC application does the dataValidation on the Entity object in the presentation and the Web application does the validation in the BL. Also, the Web application bascially has to to 2 calls to the database for an update for the BL to work? For an update it seems to do another call for a select even though you are doing an update, updates the object with the values and then does a call to the update which then the BL layer does it\u0027s validation. \r\n\r\nthanks\r\nDennis",
+  "answers": [
+    {
+      "ansID": 1670,
+      "ans": "Dennis: \r\n\r\nI think you bring up an interesting question. I myself came from the database world and initially asked the same question.\r\nHowever, to keep thing uniform and simple, there are only a hand-full of statements that usually are executed against the database. \r\nUsually these are your typical CRUD (CREATE, READ, UPDATE, DELETE) operations: i.e. INSERT record, UPDATE record, DELETE record, and SELECT record.\r\n\r\nAs you said, with the UPDATE you could only update the columns that were changed. But to keep things relatively simple, usually the entire record, that is, all columns are updated, whether they were changed or not. \r\n\r\nFor example you may have a page where a USER name is changed, a second page where USER address is changed, and a third page where USER membership options are changed.  If all fields live in the same table, ie. USER, you will see that each of these pages uses the exact same UPDATE statement.   To make this possible you need to retrieve the entire record, before updating. \r\n\r\nIndeed, this is redundant but databases are so fast nowadays that it does not really matter.  Also, updates are usually less frequent than SELECTS (or INSERTS most of the time). Now, if performance is extremely critical you could of course write a single, optimized, and lightweight UPDATE statement with only the relevant columns. This requires fine-grained SQL handcoding which is why it is typically not done that way. \r\n\r\nHope this helps.\r\n"
+    }
+  ]
+}

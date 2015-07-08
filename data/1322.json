@@ -1,0 +1,28 @@
+{
+  "id": 1322,
+  "url": "www.dofactory.com/topic/1322/wcf-large-data-send-to-client.aspx",
+  "title": "WCF - Large Data send to client",
+  "ques": "I added 1,3000 records in customer table in Patterns in Action 4.0 sample.  When I run the sample, WCF timeout error occurred.\r\nI modified the maxReceivedMessageSize\u003d\u00272147483647\u0027, maxStringContentLength\u003d\u002781920\u0027 and sentTimeOut\u003d\u002700:10:00\u0027, but did not work.\r\n\r\nSo, I would like to know how to handle the large data return from WCF to client?",
+  "answers": [
+    {
+      "ansID": 1442,
+      "ans": "There are a several timeout setting not only the sentTimeOut, always remember that just because you don\u0027t see a setting doesn\u0027t mean it doesn\u0027t exist. \r\nThere are several settings and if you don\u0027t see it, it will use its default value.\r\nNote the various Timeout settings here:\r\n\u003cbinding name\u003d \u0027WSHttpBinding_ITimeOutDemoService \u0027 closeTimeout\u003d \u002700:10:00 \u0027\r\n                    openTimeout\u003d \u002700:10:00 \u0027 receiveTimeout\u003d \u002700:10:00 \u0027 sendTimeout\u003d \u002700:10:00 \u0027 ........\r\n \u003creliableSession ordered\u003d \u0027true \u0027 inactivityTimeout\u003d \u002700:10:00 \u0027\r\nThere is also the executionTimeout in the web.config which is set under configuration - system.web - httpRuntime executionTimeout as shown below.\r\nThe default for this is 110 seconds. When you have slow service operations which could causes timeouts to occur the request will be aborted and you will find an entry in the ASP.NET EventLog that informs you that the request has timed out.\r\n\u003cconfiguration\u003e\r\n  \u003csystem.web\u003e\r\n  \u003chttpRuntime executionTimeout\u003d \u0027600 \u0027/\u003e\r\n  \u003c/system.web\u003e\r\n\u003c/configuration\u003e\r\nNote that 600 is 10 minutes.\r\nThen remember that if IIS is hosting the WCF Service there are timeout settings which need to be managed there as well.\r\nThis is certainly not all there is to know about TimeOut settings but I hope this points you in the right direction.\r\nGood luck Emily\r\n\r\nRicky"
+    },
+    {
+      "ansID": 1449,
+      "ans": "Maybe you can try to set max value for maxItemsInObjectGraph behavior both server and client side. \r\n   \u003cbehaviors\u003e       \r\n\u003cendpointBehaviors\u003e         \r\n\u003cbehavior\u003e         \r\n  \u003cdataContractSerializer maxItemsInObjectGraph\u003d \u00272147483646 \u0027 /\u003e    \r\n     \u003c/behavior\u003e   \r\n    \u003c/endpointBehaviors\u003e \r\n    \u003c/behaviors\u003e"
+    },
+    {
+      "ansID": 1472,
+      "ans": "Well, one could ideally use the MTOM encoding with the WCF to transfer large objects. The below link would be able to help you out on this.\r\n\r\nhttp://msdn.microsoft.com/en-us/library/aa395209.aspx"
+    },
+    {
+      "ansID": 1473,
+      "ans": "I have faced similar things and the following things work for me.\r\n\r\n// Change the values  in no. as required.\r\n\r\nmaxBufferPoolSize\u003d?100000?\r\nmaxBufferSize \u003d ?100000?\r\nmaxReceivedMessageSize\u003d?100000?\r\n\r\n\u003cbehaviors\u003e\r\n    \u003cbehavior name\u003d \u0027YourServiceBehavior \u0027\u003e\r\n        \u003cdataContractSerializer maxItemsInObjectGraph\u003d \u0027200000 \u0027 /\u003e \r\n    \u003c/behavior\u003e\r\n\u003c/behaviors\u003e\r\n\r\nOn more thing...\r\n\r\nSet the OperationTimeout on the IChannel proxy interface as follows... I am unable to find a config setting for the same.\r\n\r\n\r\n//  This can be done while creating the proxy \r\n ((IContextChannel)base.Channel).OperationTimeout \u003d timeout;\r\n\r\nFor e.g.\r\n\r\n  public partial class ServiceFooClient :   ClientBase\u003cIServiceFoo\u003e,IServiceFoo\r\n  {\r\n     public IServiceFoo SetOpTimeout(TimeSpan timeout) {\r\n\r\n            ((IContextChannel)base.Channel).OperationTimeout \u003d timeout;\r\n     }\r\n  }\r\n   Hope this helps....   \r\n  \r\n\r\n    \r\n\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1606,
+      "ans": "Consider reading the official MS documentation about large data and streaming in WCF.\r\nIt  highlights some general concerns and considerations for encodings, binary data, and streaming that generally apply to connected systems infrastructures.\r\n\r\n"
+    }
+  ]
+}

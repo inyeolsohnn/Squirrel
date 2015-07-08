@@ -1,0 +1,16 @@
+{
+  "id": 1075,
+  "url": "www.dofactory.com/topic/1075/who-has-taken-design-patterns-as-computer-science-course-at-university.aspx",
+  "title": "Who has taken Design Patterns as computer science course at university?",
+  "ques": "I am always surprised to see that many computer science graduates are rather unfamiliar with Design Patterns.\r\nI am curious to know how many of you have taken Advanced Object Oriented Programming or Design Patterns as a computer science course.\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1121,
+      "ans": "Here in Brazil, I\u0027ve studied at PUC-RJ, where I had a whole semester studying OOP and Design Patterns, but it was not a graduate course, it was a post-graduate course."
+    },
+    {
+      "ansID": 1130,
+      "ans": "In the USA I took a class on OOP and UML.  We covered 4 design patterns in the class and the instructor suggested additional study on GoF patterns.  If there had been a more in depth class on them I would have taken it.  The OOP class was a requirement before taking C++, C#, or Java classes.  At the time C# was still in beta, but the college was teaching it anyway.  I was not a computer science major, just took the classes to fill electives because I was interested.\r\n\r\nI wish there was more about patterns taught in college as they are an excellent way to properly apply other things learned in computer science classes."
+    }
+  ]
+}

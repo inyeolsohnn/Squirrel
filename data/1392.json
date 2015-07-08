@@ -1,0 +1,12 @@
+{
+  "id": 1392,
+  "url": "www.dofactory.com/topic/1392/navigate-to-view-from-viewmodel-and-pass-data.aspx",
+  "title": "Navigate to View from ViewModel and pass data.",
+  "ques": "Good Evening,\r\n\r\nIm wondering if someone could give me some guidance on a Silverlight problem I\u0027m having?\r\n\r\nWhat I am doing now is building a page in Silverlight using the MVVM pattern to retrieve and display my data. My page will be a standard \u0027List\u0027 type page that uses the datagrid to display and filter data. \r\n\r\nWhat I would like to do is, If the user clicks an edit button on this list page, I would like to navigate to a details page which will contain a dataform that I want to bind to the same collection of data that is bound to the datagrid of the list page. What I\u0027m thinking has to happen is the List ViewModel has to create the Details Page and set the Details Page datacontext to itself (being the instance of the List ViewModel). I\u0027m not sure how I would create the view, navigate to it and pass the reference to the view model.\r\n\r\nYou may be wondering why i would want a details page that takes a collection. This is so I can simulate behaviour that my user is familiar with in their current access application. Mostly, it comes in handy when the user filters the list view they are able to enter a page where they could navigate and edit any of the results from their filter without having to open and close the details page repeatedly. \r\n\r\nIf you have any advise or an alternate pattern to achieve this kind of functionality it would be greatly appreciated.\r\n\r\nRegards,",
+  "answers": [
+    {
+      "ansID": 1559,
+      "ans": "There are probably numerous was to accomplish this, what I usually do (in WPF, I haven\u0027t done any SL development) is the following:\r\n\r\n1. Click edit button on list page, fires an edit command in ListVM\r\n2. ListVM Edit Command gathers necessary data and creates an EditList event (and adding the data to the event)\r\n3. Trigger the event using Event Aggregator Design Pattern\r\n4. ListView (or someone else) listens to the EditList event, and display a EditView page\r\n5. Populate the EditViewModel with data fetched from the EditList event\r\n\r\nNot sure this is best solution, but I found it useful. The Event Aggregator pattern is beneficial when communication between loosly coupled Views and their ViewModels.\r\n\r\n\r\nGood Luck!\r\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 1590,
+  "url": "www.dofactory.com/topic/1590/factory-pattern-vs-abstract-factory-pattern.aspx",
+  "title": "Factory pattern Vs Abstract Factory pattern",
+  "ques": "I want to know what are the difference between them",
+  "answers": [
+    {
+      "ansID": 1772,
+      "ans": "Factory: A factory that creates objects that derive from a particular base class.\r\nAbstract factory: A factory that creates other factories, and these factories in turn create objects derived from base classes. You do this because you often don\u0027t just want to create a single object (as with Factory method) - rather, you want to create a collection of related objects. "
+    },
+    {
+      "ansID": 1786,
+      "ans": "\r\n \r\n\r\n  \r\n  \r\nFactory Pattern    \r\n  \r\nAbstract Factory Pattern   \r\n\r\n \r\n\r\n  \r\n  \r\nCreate object  through inheritance    \r\n  \r\nCreate object  through composition    \r\n  \r\n  \r\nProduce only one  product    \r\n  \r\nProduce families  of products    \r\n  \r\n  \r\nImplements code in  the abstract creator that make use of the concrete type that subclass  produces.    \r\n  \r\nConcrete factories  implements factory method to create product   "
+    },
+    {
+      "ansID": 1787,
+      "ans": "Factory Pattern:\r\n1. Createobject through inheritance\r\n2. Produceonly one product\r\n3. Implementscode in the abstract creator that make use of the concrete type that sub class produces.\r\nAbstract Factory Pattern:\r\n1. Createobject through composition\r\n2. Produce families ofproducts\r\n3. Concretefactories implements factory method to create product"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": 1429,
+  "url": "www.dofactory.com/topic/1429/good-wcf-4-0-training.aspx",
+  "title": "Good WCF 4.0 Training?",
+  "ques": "Does anyone know of a good WCF 4.0 Training class?\r\n\r\nThanks \u0026 Regards\r\nAllan F. Gagnon",
+  "answers": [
+    {
+      "ansID": 1598,
+      "ans": "I personally recommend Pluralsight\u0027s online training. They have wide variety of topics, including WCF covering 4.0. Check it out at pluralsight.com"
+    },
+    {
+      "ansID": 1600,
+      "ans": "It might sound silly, but I recommend Microsoft\u0027s official WCF 4 course:\r\nhttp://www.microsoft.com/learning/en/us/course.aspx?ID\u003d10263A\r\n\r\nUsually I don\u0027t like MS courses, but in this case I wrote the course for Microsoft, so i\u0027m familiar with its content.\r\n\r\nIf you\u0027re checking it for a group of people, you can contact me and I\u0027ll give you more information (idof at sela.co.il)."
+    },
+    {
+      "ansID": 1601,
+      "ans": "For 4.0 WCF try these:\r\n\r\nFree:\r\nhttp://blogs.msdn.com/b/drnick/archive/2010/04/14/wcf-4-samples-and-training.aspx\r\nhttp://ebookee.org/WCF-4-0-Essential-Training_638936.html\r\n\r\nPay for:\r\nhttp://www.pluralsight-training.net/microsoft/olt/course/toc.aspx?n\u003dwcf4-newfeatures\r\nhttp://www.accelebrate.com/wcf_training/wcf_csharp_4.htm\r\n\r\n\r\nBelow is not specifically 4.0 training but for those who are looking to get started or increase their knowledge the items below will do so perfectly. \r\n\r\nFor free WCF training there are brilliant webcasts done by Michelle Bustamante (this lady knows her stuff).\r\nHer series of 15 webcasts are definitely worth covering, she puts things across well with good examples.\r\nhttp://www.dasblonde.net/2007/06/24/WCFWebcastSeries.aspx\r\n\r\n\r\nThere is also an online training outfit called LearnDevNow, these guys provide training for a huge number of subjects, they really have a vast library of .Net training amongst others including WCF for next to nothing. Their homepage is located at http://www.learndevnow.com/ and what they cover for WCF is located at http://www.learndevnow.com/Topic.aspx?id\u003d96 You can get more online training from these guys than what you would have time for and it currently costs $99. Their material is more than enough to provide you with an excellent foundation to get you going. I would imagine that WCF 4.0 will be out later this year and you automatically get and new courseware from them when you purchase there library.\r\n\r\nThe above will definitely get anyone who wants to progress in WCF going.\r\n\r\nGood luck\r\nRicky\r\n"
+    },
+    {
+      "ansID": 1620,
+      "ans": "All\r\n\r\nThank you for your responses I am trying to develop a WCF Application that will allow me to have a User Interface Windows Service that is connected to a Serial Port. I need to be able to encapsulate my Radio Telemetry from a serial port network in a TCPIP transfer. Ultimately I need to transfer just a byte array which seems easy with WCF however I need to develop a trouble shooting UI. That will give me the ability to trouble shoot my serial information issues.\r\n\r\nThanks \u0026 Regards\r\nAllan F. Gagnon"
+    }
+  ]
+}

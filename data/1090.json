@@ -1,0 +1,12 @@
+{
+  "id": 1090,
+  "url": "www.dofactory.com/topic/1090/what-is-structure-map-and-spring-net.aspx",
+  "title": "What are Structure Map and Spring.Net?",
+  "ques": "What are the differences between Structure Map and Spring.Net? Why they are used? Are these new patterns?   \r\n\r\nAs far as I understand  these are IOC(Inversion of Control) and use DI (Dependency Injection) with xml-based configuration files. Enterprise Library 1.1 is using DI, Plugin, and Factory Method, based on an xml configuration file (Configuraton Context etc...).\r\n \r\nWhat is the difference between the two? Which one should I use?  I am confused and need some kind of a roadmap.\r\nThank you.",
+  "answers": [
+    {
+      "ansID": 1135,
+      "ans": "What I don\u0027t understand is, you obviously seem to know the buzzwords (StructureMap, Spring.NET, Enterprise Library, Inversion of Control, Dependency Injection, etc...). Why are you not able to put the pieces together on your own?\r\n\r\nTo sum it up a little:\r\n\r\nBoth StructureMap and Spring.Net are Frameworks as well as the Enterprise Library is\r\nStructureMap is known as the oldest IoC Container offering Dependency Injection for .NET based development\r\nSpring.Net is a framework that is supposed to make life as a developer easier (containing features like e.g. object relational mapping through NHibernate, better Databinding and Validation for ASP.NE, Remoting, UnitTesting and more. Amongst those features, you can find the Spring.Net Core which is essentially its own IoC Container.\r\nEnterprise Library is a library of modules based on best practices featured by Microsoft. It has a lot of so called Application Blocks (Validation for example) and further more uses Unity as a base for its own IoC Container.  Dependency Injection and Inversion of Control are pattern that allow you decouple your concrete implementation of some functionality from the logic of your code. By configuration through an xml file or even dynamically at runtime, you can decide which concrete implementation of an interface you are going to work with. \r\n\r\nHope that helps.\r\n-Chris"
+    }
+  ]
+}

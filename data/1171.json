@@ -1,0 +1,16 @@
+{
+  "id": 1171,
+  "url": "www.dofactory.com/topic/1171/simple-n-tier-version.aspx",
+  "title": "Need simple N-tier version",
+  "ques": "The Patterns in Action reference application that comes with Design Pattern Framework is a perfect application sample of N-tier, but we want a version without Service and Hosting layers. We need a simple version. Something without Data Transfer Objects and / or Request and Respond messages. It would be simpler for us to study and I think for other users too.\r\n\r\nCan you provide us such a version for .NET 3.5 to purchase? \r\nHas anyone modified the code to make it simpler?",
+  "answers": [
+    {
+      "ansID": 1257,
+      "ans": "Mohamed: \r\n\r\nIn the documentation for the Design Pattern Framework there is a section that describes in great detail how you can bypass the Server and Hosting Layers by directly referencing the assemblies from the Service layer project.  This is a common model to build web applications. \r\n\r\nHowever, if you are building your own application, I would suggest you start building your solution from scratch with UI, Service, Business, and Data Layers.  Then study the Design Pattern Framework and take only what you need. This way you\u0027ll be able to quickly assemble a light-weight N-Tier applications. \r\n\r\nHope this helps. "
+    },
+    {
+      "ansID": 1261,
+      "ans": "Dan is correct in that you can call the service classes directly.  But if you want some service layer that isn\u0027t so large, I might be able to help.\r\n\r\nWith the knowledge I absorbed from the DO Factory folks, I built a code generator that can generate the code for the Patterns In Action 3.5 framework as well as a simpler ServiceLayer -\u003e DataLayer framework.\r\n\r\nYou should go to http://www.kingwilder.com/Blog/tabid/55/EntryId/32/Design-Patterns-In-Action-Code-generator-screencast.aspx and watch some of the screencasts.  \r\n\r\nLet me know if you have any questions.\r\n\r\nKing Wilder"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1151,
+  "url": "www.dofactory.com/topic/1151/multi-user-version-of-your-e-book.aspx",
+  "title": "Multi-user version of the Design Pattern Framework",
+  "ques": "Let me know how the license aspect of the Design Pattern Framework works.\r\nYou have a version meant for 16 users, is this concurrent users and can this be hosted on company intranet?\r\n\r\nPlease clarify.\r\n\r\nRegards\r\nAkbar\r\n",
+  "answers": [
+    {
+      "ansID": 1224,
+      "ans": "Hello Akbar: \r\n\r\nThis actually is a repeat of another reply, but here it goes: \r\n\r\nThe Design Pattern Framework is a combination of e-books (pdf documents), .NET Solutions (lot\u0027s of source code), and diagrams.  They are installed as a package including menu shortcuts on each individual user\u0027s machine.  It requires Visual Studio 2010 (Professional or better).\r\n\r\nThe 16 user license is actually quite simple. You can have up to 16 users (named users, not concurrent users) install it on their machines. Each user is allowed to install a copy on their local machine and possibly home machine, as long as he/she is the only user.  \r\n\r\nThe Design Pattern Framework package is not designed to be shared on a on a network or intranet share, primarily because these are .NET Solutions / Projects that are viewed, explored, and run locally.\r\n\r\nI hope this helps."
+    }
+  ]
+}

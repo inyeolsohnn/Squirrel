@@ -1,0 +1,12 @@
+{
+  "id": 1463,
+  "url": "www.dofactory.com/topic/1463/abstract-factory-pattern-structural-example-with-interface.aspx",
+  "title": "Abstract Factory pattern -- Structural example with interface",
+  "ques": "Hi,\r\n\r\nCan someone show me how to do the sample example of abstract factory:  \u0027Abstract Factory Pattern - Structural Example\u0027 as outlined in this site, but with using an Interface?\r\n\r\nRegards, \r\nAmees\r\n",
+  "answers": [
+    {
+      "ansID": 1657,
+      "ans": "You could replace the AbstractFactory class with this:\r\n\r\n\r\npublic interface AbstractFactory\r\n{\r\n    AbstractProductA CreateProductA();\r\n    AbstractProductB CreateProductB();\r\n}\r\n\r\nYou could also replace the abstract Product base classes (AbstractProductA and AbstractProductB) with this:\r\n\r\n\r\npublic interface AbstractProductA\r\n{\r\n}\r\n\r\npublic interface AbstractProductB\r\n{\r\n    void Interact(AbstractProductA a);\r\n}\r\nYou\u0027ll then have to remove all  \u0027override \u0027 keywords, because now your classes implement the interface instead of overriding the base class.\r\n\r\nHope this helps.\r\n "
+    }
+  ]
+}

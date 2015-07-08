@@ -1,0 +1,12 @@
+{
+  "id": 1354,
+  "url": "www.dofactory.com/topic/1354/best-pattern-for-dao.aspx",
+  "title": "Best Pattern for DAO",
+  "ques": "What is the best pattern for the DAO?  Is it best to create an Abstract Factory that returns an abstract DB connection object for instance?  Everybody seems to have different opinions... ",
+  "answers": [
+    {
+      "ansID": 1491,
+      "ans": "I would prefer to go with Enterprise data block from P\u0026P as most of the plumbing code is done there and extend my apps further.  \r\n\r\nBut to answer your question , if you are building a DAO from scratch then you will find yourself moving towards Abstract Factory to take care of multiple providers and multiple return types.\r\n\r\nYou may also have a look at the Provider model which is a combination of multiple patterns and implement your own DAL using this....\r\n\r\nhttp://msdn.microsoft.com/en-us/library/ms972319.aspx\r\n\r\nAlso, now Entity Framework (which again is based on a combination of basic patterns) is available which is a good option as well.  So, you see, there cannot be one answer :).\r\n\r\n\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

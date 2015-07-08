@@ -1,0 +1,16 @@
+{
+  "id": 1518,
+  "url": "www.dofactory.com/topic/1518/what-pattern-to-use-for-caching.aspx",
+  "title": "What pattern to use for caching?",
+  "ques": "Let\u0027s assume there is a requirement to cache calls to get products from database for N minutes. What design / patten would you recommend? In what layer it could be placed?",
+  "answers": [
+    {
+      "ansID": 1717,
+      "ans": "If you have the repository patterns at the DB layer then you can easily implement a cache repository and plugin via some IOC container or by poor man\u0027s dependency injection..\r\n\r\nBasically its a combination of factory + strategy pattern.  Factory to create instance and strategy to select the algorithm like getting from cache or Db.\r\n\r\nYou can also use variation of the above pattern as well.\r\n\r\nIn case your DB layer is not that flexible the quickest thing would be to introduce a caching facade service which interacts with the DB layer based on cache settings...."
+    },
+    {
+      "ansID": 1720,
+      "ans": "Before delving into Design patterns, let us think architecture from resilience perspective.\r\n\r\nAt the application architecture level, I would recommend to focus on seperation of concenrs, that Data services layer should always do operations related to data.\r\n\r\nFor Design Patterns you have the answer from Rajesh, which is always within a specific layer.\r\n\r\nFrom 3-tier perspective, you should have a layer to manage Caching, between business and data services layer.\r\n\r\nThat UI -\u003e BSL-\u003e Optionally (caching Layer)-\u003e DB\r\n\r\nOnce the data is retrived by business layer, it may optionally can pass in to Caching layer, which will satisfy caching requirement.\r\nOnce Cached, then pass the data back to UI layer.\r\n\r\nHope this helps."
+    }
+  ]
+}

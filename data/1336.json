@@ -1,0 +1,28 @@
+{
+  "id": 1336,
+  "url": "www.dofactory.com/topic/1336/why-should-we-use-mvc.aspx",
+  "title": "Why should we use MVC vs normal ASP.NET?",
+  "ques": "Why should we use MVC?  Can we do rich GUI controls like we used to in regular ASP.NET applications?\r\nCan we use Session, Javascript, Validators, Ajax controls, and others in MVC?\r\n\r\nAre MVC applications faster than normal ASP.Net application? \r\nCan we do everything in MVC just like we can in normal ASP.NET application?",
+  "answers": [
+    {
+      "ansID": 1464,
+      "ans": "There are various positive points to moving towards MVC\r\n\r\n1.  TDD support out of the box as most of the design is based on interfaces.\r\n2.  SEO friendly URL by design (though now this is possible in ASP.NET 4 as well)\r\n3.  No ViewState (this may seem a bit of moving backward to some), but overall a good design decision.\r\n4.  Clean View Markup (no additional HTML emitted)\r\n5.  100% extensible.  You can add your own controller with IOC, switch view engines at will, control model binding at wish etc.\r\n6.   Rich UI support (possible through client side JS libraries like jQuery UI and others).  Telerik has released some controls for MVC which includes Grid control as well (which are merely HTMLHelpers)\r\n7.  Session, JS, Ajax works.  Validation is even more powerful with DataAnnotations and jquery.\r\n8.  Is MVC faster?  Yes by default because of lack of viewstate and clean markup.  But performance is subject and MVC by design is more performant that traditional ASP.NET webforms (though webforms can be made as fast as required.\r\n9.  Out of the box support for mitigating antiforgery attacks and XSS vulnerability (though asp.net does has this to some extent)\r\n10.  Out of the box minimal IOC support.\r\n11.  Full control over rendered HTML\r\n12.  Pluggable architecture\r\n13.   And much more....\r\n\r\nCouple of limitations (though not exactly)\r\n1.  Learning curve as most asp.net developers are used to windows form model for web development.\r\n\r\n\r\nNOTE:  Webforms is not bad.  But by design it encourages many bad practices.  A webform at the hands of careful developer is as or could be even more productive than MVC.  Just my thought.\r\n\r\nAdditional readings at http://msdn.microsoft.com/en-us/magazine/dd942833.aspx\r\n\r\nHope this helps.\r\n\r\n"
+    },
+    {
+      "ansID": 1484,
+      "ans": "I would continue to use Webforms.\r\n\r\nIn my opinion, the question is becoming blurred with a lot of the cool features of MVC making their way into Webforms. ASP.NET 4.0 added URL Routing, reduced ViewState, and greater control of the HTML mark-up produced by many ASP.NET controls, now the next version of Webforms will incorporate many more MVC features into Webforms.\r\n\r\nWhat?s coming in the next version of ASP.NET Webforms?\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1493,
+      "ans": "If I were to use/learn a .Net web framework today, I would most certainly go for ASP.Net MVC mainly due to the benefits pointed out in the excellent post by Rajesh. But, if I were to choose any web framework (not limited to .Net), I would probably use Rails or Django as they seem (to me) to be far easier to work with.\r\n\r\n\r\nGood Luck!"
+    },
+    {
+      "ansID": 1563,
+      "ans": "One main benefit of ASP.NET MVC is that you can easily and quickly write RESTful implemenations. Also, ASP.NET lends itself more towards pure browser coding of controls and usage of jQuery, true seperation of concerns. Things are more cumbersome with the old ASP.NET server controls."
+    },
+    {
+      "ansID": 1581,
+      "ans": "Your question depends whether you\u0027re contemplating a move from WebForms ASP.NET to ASP.NET MVC or making a choice between the two if you\u0027re starting with ASP.NET.\r\n\r\nIf you\u0027re starting go with MVC. If you\u0027re a seasoned WebForms developer and maintaining current WebForms apps, stay with WebForms. Converting apps is time consuming, error prone and time could be used to add/enhance app functionality.\r\nWebForms is still a very viable platform. It gets better with every .NET/Visual studio version while reducing prior limitations.\r\n\r\nIf you depend on third party GUI Frameworks like from Telelrik, Infragistics, ComponentArt, DexExpress, their controls are more mature for WebForms than MVC.  These controls offer high productivity, have good looking output and you don\u0027t have to worry about browser inconsistencies and bugs. They take of these issues for you. This also means you probably have less control of their html output. Something to think about if you want to spend your development time in the backend and business aspects of the app and less on the front end and GUI stuff."
+    }
+  ]
+}

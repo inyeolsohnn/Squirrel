@@ -1,0 +1,12 @@
+{
+  "id": 1251,
+  "url": "www.dofactory.com/topic/1251/translator.aspx",
+  "title": "Patterns for Translation Service",
+  "ques": "The company I work for will not allow third party translators as we have teams of translators that supply textual translations.  I am building an application that must be global and need to build a service that can translate web pages based on a language selection. I would like to build a WCF Translation Service that developers across the company could use in other projects.  My question is what pattern or combination of patterns is best suited for building such a Translation Service?",
+  "answers": [
+    {
+      "ansID": 1354,
+      "ans": "Derick,\r\n\r\n\r\nlooking at the abstraction.....always think some thing like this\r\n\r\n\r\n1. What type of objects returns the system you are building?, are they always similar objects, like English Language, French language,.. here language is a common attribute oke... so we sould think of Factory pattern with language as a abstract class.\r\n\r\n2. If you decide to use Factory make sure that Factory class should be singleton always.\r\n\r\n2. Does the system you are developing to use accross your company, then don\u0027t expose many interfaces to the out side world. so tink of Facad pattern. even with WCF also separate the actual system and service. because must be reuasable with any other application. so should always.\r\n\r\n3. Now... the Translation Service may follow a similar steps to carry out the action... so think of template pattern.. bcoz Translation Service is an algorithum....\r\n\r\n\r\n4. later you may decide to use any third party Translation Service, so make sure that template has adapertors in them so that it is very easy to adapt the uncompatable systems.\r\n\r\nThe thumb rule is start thinking.... all the palce with all posible patterns. by the time you implement start removing the unwanted (where we don\u0027t have extendabilyt or reusability) based on the abstraction..\r\n\r\nSo open of extension and close for modification :)\r\n\r\n\r\nHope this helps.....\r\n\r\nThanks,\r\nChinna\r\n "
+    }
+  ]
+}

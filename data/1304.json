@@ -1,0 +1,12 @@
+{
+  "id": 1304,
+  "url": "www.dofactory.com/topic/1304/wcf-ria-services.aspx",
+  "title": "WCF RIA Services organization",
+  "ques": "Hello all,\r\n\r\nI\u0027m fairly new to the world of breaking down software problems using design patterns. The composition and organization of these patterns are, for the most part, understandable. Where I am running into problems however is the breakdown of service level code when using WCF RIA Services.\r\n\r\nFrom all of the examples I have looked at so far, there seems to be only one service class in which all CRUD code placed. For example the Silverlight Patterns 4.0 solution has a the ActionDomainService.cs, which contains all the methods for Customers, Categories and Orders.\r\n\r\nIn the example above, should Customers, Categories and Orders be placed into their own service classes? And if not, why? and if so, How can we prevent duplication if when, for instance, Orders needs Customer information.\r\n\r\nLastly, I was wondering if anyone has any good examples, ideas or other references of how the service layer should be organized. \r\n\r\nMy apologies if this has been asked before. Regards,\r\n\r\nChris.",
+  "answers": [
+    {
+      "ansID": 1419,
+      "ans": "Hi!\r\n\r\nYou\u0027re in a right way. Break down the work with each entity in isolated business service.\r\nNever mix work with all entities in one service!\r\nIf you need to work with Order from Customer service call OrderService with need method."
+    }
+  ]
+}

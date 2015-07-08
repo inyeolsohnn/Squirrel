@@ -1,0 +1,12 @@
+{
+  "id": 1003,
+  "url": "www.dofactory.com/topic/1003/sorting-numeric-text.aspx",
+  "title": "Sorting Numeric Text",
+  "ques": "I have found this useful for when I need to sort names that begin with numbers.\r\n\r\n\r\nvar myList \u003d new List\u003cstring\u003e();\r\nmyList.Add(\u002710 Kings\u0027);\r\nmyList.Add(\u00271 Queens\u0027);\r\nmyList.Add(\u0027524 3rd\u0027);\r\nmyList \u003d myList.OrderBy(x\u003d\u003ex.NumAlpha()).Tolist();\r\n\r\n\r\npublic static string NumAlpha(this string s) \r\n{ \r\n   if (s.IsNull()) return string.Empty;\r\n   string s2 \u003d Regex.Replace(s.ToString(), @\u0027^[0-9]+\u0027, \u0027\u0027); \r\n   if (s2.Length !\u003d s.Length) \r\n       s \u003d s.Substring(0, s.Length - s2.Length).PadLeft(10, \u00270\u0027[0]) + s2; \r\n          \r\n   return s; \r\n}\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1019,
+      "ans": "public static readonly Regex regex \u003d new Regex(@ \u0027^(?\u003cnumbers\u003ed+)(?\u003cresidue\u003e.+)$ \u0027); \r\n\r\npublic static string NumAlpha(this string s)   \r\n{   \r\n    if (s \u003d\u003d null) return null;\r\n    var match \u003d regex.Match(s);   \r\n    if (match.Success)   \r\n        return string.Format( \u0027{0,10}{1} \u0027, match.Groups[ \u0027numbers \u0027], match.Groups[ \u0027residue \u0027]);   \r\n    return s;   \r\n}   \r\n\r\n   "
+    }
+  ]
+}

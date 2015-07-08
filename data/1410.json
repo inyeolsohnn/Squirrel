@@ -1,0 +1,12 @@
+{
+  "id": 1410,
+  "url": "www.dofactory.com/topic/1410/how-to-programmatically-create-dynamic-subdomains-on-iis.aspx",
+  "title": "Programmatically create subdomains on IIS with ASP.NET MVC",
+  "ques": "So, here are my requirements. I am building a multi-tenant site where companies after they sign up get their own subdomain. \r\nAssume that my business is called Email Jobs Inc with domain www.emailjobs.com.  This site is hosted in a shared ISP environment so I have very limited access to IIS etc.\r\n\r\nJust to clarify, here is an example of what I need: \r\n\r\ncompany1 signs up and they get this url  company1.emailjobs.com\r\ncompany2 signs up and they get this url  company2.emailjobs.com\r\ncompany3 signs up and they get this url: company3.emailjobs.com\r\n\r\nMy understanding is that there is a DNS and IIS component to this. That is, I will need to change an entry in a DSN server and then also a binding in IIS.  All this is very tricky, because of non-static IP addresses, etc. etc.\r\n\r\nHowever, another option I heard of is to ask your ISP to setup an IIS wildcard option where *.emailjobs.com goes straight to my ASP.NET MVC server. There I can parse the URL, extract the subdomain and I would be in business!  Right?   \r\n\r\nCould someone confirm that this is possible and correct?  \r\n\r\nI realize that another option I have is to build urls like this: www.emailjobs.com/company1 etc, but that would be far less elegant.\r\nAny feedback would be greatly appreciated...\r\n\r\nBest.\r\n",
+  "answers": [
+    {
+      "ansID": 1579,
+      "ans": "Ian,\r\nI guess you are on right track...see this for setting up zone at DNS server using wildcard\r\n\r\nhttp://technet.microsoft.com/en-us/library/cc288031%28office.12%29.aspx\r\n\r\nthis way you get all incoming requests for \r\n company1.emailjobs.com\r\n company2.emailjobs.com and so on to a specific website created on IIS - make sure you dont have host header with website name and only with IP address.\r\n\r\nAnd use IIS redirect or MVC or traditional web form to intercept request at code level and serve request...\r\n\r\nHappy programming\r\nSaurin"
+    }
+  ]
+}

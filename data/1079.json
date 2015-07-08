@@ -1,0 +1,12 @@
+{
+  "id": 1079,
+  "url": "www.dofactory.com/topic/1079/difference-between-proxy-and-adaptor.aspx",
+  "title": "Difference between Proxy and Adaptor",
+  "ques": "\r\nWhat is the difference between Proxy and Adaptor pattern?",
+  "answers": [
+    {
+      "ansID": 1206,
+      "ans": "Adapter is used to adapt to incompatible interfaces.  It\u0027s more directed from the client (those who consume the object) perspective.  A  client expects an interface to be of particular type and adapter plays a role in filling that gap.\r\n\r\nIt\u0027s more from making it easier for the client to adapt to other third party libraries within there own by adapting to it.\r\n\r\n\r\nProxy on the other hand represents a standin object for the real object.  This is required when the real object is complex to create, is not available, or for authentication purpose.   For e.g. web service proxy, proxy authentication server etc.\r\n\r\nProxy can be categorized into\r\n\r\nVirtual Proxy\r\nRemote Proxy\r\nProtection ProxyHope this helps..."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1234,
+  "url": "www.dofactory.com/topic/1234/silverlight-and-ria.aspx",
+  "title": "Silverlight and RIA",
+  "ques": "\r\n       I\u0027m new to Silverlight and RIA so any help would be appreciated.\r\n\r\n       I\u0027m trying to use existing WCF services in a silverlight MVVM LOB application.  I cannot change the WCF services.\r\n\r\n       Its been very easy to consume data but saving it back to the database is not as friendly.  \u003d)\r\n\r\n       The WCF services uses DTO\u0027s so I\u0027m using basic repository/mappers/model classes and my own basic DomainService that leverages the repository.\r\n\r\n       The generated code is calling the Save method on the model but the model is a dumb poco that doesn\u0027t even have the method....\r\n\r\n       I\u0027m confused because I\u0027ve been able to get data with this setup very easy.\r\n\r\n       What am i missing about RIA.\r\n\r\n       Thanks!\r\n\r\n                   \r\n\r\n\r\n//In my DomainService\r\n            public void SaveServicePackageMeters(ServicePackageMeterModel model) \r\n            { \r\n                NominationRepository.SaveNominations(model);   \r\n            } \r\n\r\n     In the code gen section\r\n   \r\n\r\npublic void SaveServicePackageMeters(ServicePackageMeterModel model) \r\n { \r\n             model.SaveServicePackageMeters(); \r\n } \r\nthen in the model code gen section\r\n\r\n\r\n  \r\n\r\npublic void SaveServicePackageMeters() \r\n        { \r\n            this.OnSaveServicePackageMetersInvoking(); \r\n            base.InvokeAction(\u0027SaveServicePackageMeters\u0027); \r\n            this.OnSaveServicePackageMetersInvoked(); \r\n        } \r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1339,
+      "ans": "\r\n  This is what i did to get it to work but it seems wrong...\r\n\r\n This in my ViewModel\r\n\r\n\r\n\r\nprivate void OnServicePackageMeterSave(object parameter) \r\n         { \r\n\r\n             Context.SubmitChanges(); \r\n         } \r\n\r\n  Then this in my domain service\r\n\r\n\r\npublic override bool Submit(ChangeSet changeSet) \r\n        { \r\n            foreach(ChangeSetEntry x in changeSet.ChangeSetEntries) \r\n            { \r\n                ServicePackageMeterModel m \u003d x.Entity as ServicePackageMeterModel; \r\n                if (m !\u003d null) \r\n                { \r\n                    SaveServicePackageMeters(m); \r\n                } \r\n            } \r\n            \r\n            return true; \r\n        } \r\n\r\n "
+    }
+  ]
+}

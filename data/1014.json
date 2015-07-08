@@ -1,0 +1,24 @@
+{
+  "id": 1014,
+  "url": "www.dofactory.com/topic/1014/abstract-factory-versus-factory-method.aspx",
+  "title": "Abstract Factory versus Factory Method",
+  "ques": "I have been trying to get my head around Factory patterns, particularly Abstract Factory.\r\nCan anyone, in a couple sentences, explain the difference between Abstract Factory and Factory Method?\r\n\r\nMuch appreciated.",
+  "answers": [
+    {
+      "ansID": 1022,
+      "ans": "It is very simple. \r\nYou have a single Factory class and you use it to create many items through it, then it is a \u0027Factory Method\u0027 pattern. e.g. Have a Factory class for Cars say \u0027CarFactory\u0027 and you use it for creating many cars. This is single level of Factory pattern and create Cars choosing its type (SUV/Wagon/etc...) at runtime.\r\nNow assume we have many factory classes for each brand (like Benz/BMW/etc...) choose the factory at runtime and introduce another level \u0027Factory Method\u0027 pattern to choose the actual Factory class, then it is Abstract Factory. (i.e. a Factory Pattern implementation for Factory classes.)\r\ne.g. I have a abstract class as CarFactory. There are may Factory patterns team implemented it, say BenzCarFactory, BmwCarFactory and they create their types (SUV/Wagon/etc...). It is Abstract Factory Pattern.\r\nIn few words....\r\nTaking Factory Pattern to 2nd level, it is Abstract Factory Pattern.\r\nAbstract Factory Pattern needs many Factory classes that implements a single \u0027Abstract Factory\u0027  class. And the \u0027Factory Method\u0027 pattern deals with a single Factory class.\r\nStill, Factory Method uses only Concrete Factory. The other uses \u0027Abstract Factory\u0027 class.\r\n"
+    },
+    {
+      "ansID": 1024,
+      "ans": "In simple words,\r\n\r\n\r\nFactory pattern ---to create a single object (U will have only one Factory class here)\r\n\r\nAbstract Pattern--- To create chain of related objects through multiple Factory Classes.\r\n\r\n"
+    },
+    {
+      "ansID": 1025,
+      "ans": "Factory Methods lets the subclasses to decide which class to instatiate.whereas the abstract factory provides and interface for creating families of related or dependent objects.  Both patterns help us in decoupling our code by creating objects but Factory Methods uses inheritence and the abstract Factory uses object composition"
+    },
+    {
+      "ansID": 1029,
+      "ans": " A very good exmple I read once on the web is as follows: \r\n\r\nSay, you want a door for your house: \r\nOne way is to call carpenter and let him take the measurements and then get you the door. --- factory method \r\nSecond way is to go to shop which sells doors and get the one which fits your requirements. --- abstract factory"
+    }
+  ]
+}

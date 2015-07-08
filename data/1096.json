@@ -1,0 +1,24 @@
+{
+  "id": 1096,
+  "url": "www.dofactory.com/topic/1096/mvp-and-mvc-when-to-use-which.aspx",
+  "title": "MVP and MVC when to use which?",
+  "ques": "When moving beyond the code-behind kind of coding style you run into two common patterns: MVP and MVC.\r\nI kind of have an idea what the differences are, but my question is twofold: \r\n\r\n 1) What specific issues does MVP address that MVC cannot?\r\n 2) When would I use MVC over MVP?\r\n\r\nBTW: I am developing Windows Forms applications, which I believe seems to favor MVP.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1144,
+      "ans": "Hey there,\r\n\r\nAwesome that you sit down and really think about different MVx approaches and when to use which!\r\n\r\nI suggest reading an article that is written some years ago and that perfectly describes what both are about and what might be the draw backs in implementing an MVC based pattern in a Windows Forms application:\r\n\r\nhttp://aviadezra.blogspot.com/2007/07/twisting-mvp-triad-say-hello-to-mvpc.html\r\n\r\nYou can also directly download a PDF paper containing the article in a more printer friendly way here:\r\nhttp://www.object-arts.com/papers/TwistingTheTriad.PDF\r\n\r\nFurther research and also using the term  \u0027twisting the triad \u0027 will result in a couple of interesting articles to read that always addresses your question.\r\n\r\nThe most often heard result is this:\r\n\r\nDo you develop a web application? Learn about MVC.\r\nDo you develop a winform application? Learn about MVP.\r\nDo you develop a WPF application? Learn about MVVM.Hope that helps you... I resisted in telling you everything I do personally know about that topic, cuz the articles mentioned above will most probably do a better job. ;-)\r\n\r\nBest regards,\r\n-Chris."
+    },
+    {
+      "ansID": 1204,
+      "ans": "Chris, has nicely summarized.  Besides on one of my previous projects which was a windows based app, we had gone with MVP.  The primary reason was we knew moving down the line, the app needs to be ported over to the web.\r\n\r\nAnd now the time has come and MVP seems to be the right decision as we now only need to swap our views.  This is a big app around 350+ forms, 250 tables and around 400 reports.\r\n\r\nSo, MVP is better for winforms based apps and also will be useful in case in future if you need to move to web.  \r\n\r\nRegards,\r\nRajesh Pillai"
+    },
+    {
+      "ansID": 1205,
+      "ans": "Chris, has nicely summarized.  Besides on one of my previous projects which was a windows based app, we had gone with MVP.  The primary reason was we knew moving down the line, the app needs to be ported over to the web.\r\n\r\nAnd now the time has come and MVP seems to be the right decision as we now only need to swap our views.  This is a big app around 350+ forms, 250 tables and around 400 reports.\r\n\r\nSo, MVP is better for winforms based apps and also will be useful in case in future if you need to move to web.  \r\n\r\nRegards,\r\nRajesh Pillai"
+    },
+    {
+      "ansID": 1239,
+      "ans": "Even when using an MVP approach for instance on WinForm projects, you need to know what suits your needs better: A passive view or a supervising controller. The flatter allows the view to communicate directly with the model. This is a scenario which is best used in cases when you implement some sort of databinding and when the  \u0027shortcut \u0027 makes your code easier to understand and more intuitive to work with.\r\n\r\nMicrosoft has a nice article on this:\r\nhttp://msdn.microsoft.com/en-us/library/ff647543.aspx\r\n\r\nWithin the context of web development, you will find a patterns \u0026 practices page on codeplex diving deep into the Model View Presenter concept here:\r\nhttp://webclientguidance.codeplex.com/wikipage?title\u003dMVP_landing_page\u0026ProjectName\u003dwebclientguidance\r\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1364,
+  "url": "www.dofactory.com/topic/1364/mvp-so-many-questions.aspx",
+  "title": "MVP - So many questions",
+  "ques": "Hello - \r\n\r\nI have purchased the Design Pattern Framework and have stepped through the sample MVP application.  I hope I\u0027m not alone in asking how this works?  I need to implement this type of framework but the associated documentation does not offer any real step-by-step how-to.  The sites I\u0027ve looked at are not well organized and I was hoping someone had documentation or tutorial that would better explain this?  Does annyone have any further suggestions?",
+  "answers": [
+    {
+      "ansID": 1509,
+      "ans": "I am not sure what your experience level is as a .NET developer, but you are right in that learning to understand the essentials of the MVP pattern is not always easy.\r\n\r\nIt may help to know that the MVC and MVP patterns are closely related. Once you understand the very commonly used MVC, you will find learning MVP much easier. First, I would read up on anything related to MVC and MVP - in the Design Pattern Framework documentation, as well as elsewhere -- you will find quite a few references on the Internet.\r\n\r\nNext, I would open Visual Studio and start exploring the Design Pattern Framework sample applications and try to understand their high level design, i.e what/where are the Views, what/where are the Models, and what/where are the Presenters. Try to understand what they do by exploring the code.  Next, I would open the debugger and step all the way through the entire application while interacting with the UI as a normal user would.  You\u0027ll be stepping throught the Model, the Presenter into the View and then back again, when saving user changes to the database.  It is important to understand how the data flows from the database to the UI and back to the database. \r\n\r\nI think that after a while you are going to get a much better feel of the different components (Model, View and Presenter) and their roles in the MVP pattern.\r\n\r\nI hope this gets you going.\r\nDan\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 1552,
+  "url": "www.dofactory.com/topic/1552/question-strategy-patterm.aspx",
+  "title": "Question - Strategy Design Pattern",
+  "ques": "Hi All,\r\n\r\nFollowing is the structure of my class\r\n\r\n\r\npublic abstract class BaseUser\r\n{\r\n        protected List\u003cPerm\u003e permissions;\r\n\r\n        public abstract void AddPerm(Perm perm);\r\n}\r\n\r\npublic class NormalUser : BaseUser\r\n{\r\n        public override void AddPerm(Perm perm)\r\n        {\r\n                throw new InvalidOperationException(\u0027A normal user cant add permissions\u0027);\r\n        }\r\n}\r\n\r\npublic class SpecialUser : BaseUser\r\n{\r\n        public override void AddPerm(Perm perm)\r\n        {\r\n                if(permissions\u003d\u003dnull) permissions\u003dnew List\u003cPerm\u003e();\r\n\r\n                this.permissions.Add(perm);\r\n        }\r\n}\r\n\r\nclass Container\r\n{\r\n        List\u003cBaseUser\u003e users;\r\n}\r\n\r\nWhat is required: \r\n1. Container will keep both types of users\r\n2. SpecialUser will have the functionality of add permissions - Done\r\n3. Normal User will not be allowed add permissions - Done\r\n\r\nI have chosen strategy pattern to achieve above\r\n \r\nThe thing I am not able to achieve is \r\n\r\n4. Both Types of users will be hydrated from the Database (The users will be initialized with list of default permissions)\r\n\r\nAm I right in choosing this pattern in this situation? If yes then how do I address requirement 4?\r\n\r\nMany Thanks,\r\nasolvent\r\n\r\n\r\n\r\n\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1731,
+      "ans": "Hi,\r\n\r\nYour selection is correct.\r\n\r\nWhen you\u0027re populating the users in Container from database, do you\u0027ve any option to segregate the user type? If you, at the time of populating the users collection, based on the user type, you can create the relevant object and then while looping thru the users collection, the relevant object\u0027s method will be called.\r\n\r\nThanks\r\nSivakumar"
+    }
+  ]
+}

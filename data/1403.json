@@ -1,0 +1,12 @@
+{
+  "id": 1403,
+  "url": "www.dofactory.com/topic/1403/attach-aspnetdb-sql-to-sql-server-2008.aspx",
+  "title": "Setup Aspnetdb.sql to run on SQL Server 2008",
+  "ques": "Hello\r\n\r\nI have the Design Pattern Framework 4.0 and can see 2 database ddl files: Action.sql and Aspnetdb.sql.\r\nI successfully ran Action.sql file and created a database, but I am unable to create a database with Aspnetdb.sql.\r\n\r\nIt fails when running the script in SQL Server 2008 (Express edition).\r\n\r\nSo I cannot run the application in full (I mean the login part). \r\nCan somebody guide me how to setup the database? \r\n\r\nThanks...\r\nAbhishek",
+  "answers": [
+    {
+      "ansID": 1565,
+      "ans": "Abhishek:\r\n\r\nCould you please provide some details on your script failure?\r\nHow far does the script run and what are the messages you see?\r\n\r\nExcept for a few lines at the bottom, this ddl is the standard Microsoft script to generate the Membership database.\r\nBy the way, have you created an ASPNETDB database?  This is used by this script (see in the beginning the USE [aspnetdb]  statement).\r\n\r\nHope this gets you going.\r\n\r\nDan.\r\n"
+    }
+  ]
+}

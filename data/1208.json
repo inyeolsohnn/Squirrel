@@ -1,0 +1,12 @@
+{
+  "id": 1208,
+  "url": "www.dofactory.com/topic/1208/questions-about-the-bool-design-pattern-framework-4-0.aspx",
+  "title": "Questions about the ?Design Pattern Framework 4.0?",
+  "ques": "I have a couple questions: \r\n\r\n1)  What\u0027s the difference between 1-user license and unlimited-user license? Could you please give me a detailed description?\r\n2)  How do I buy this book in Shanghai, China? \r\n\r\nThanks,\r\n\r\nZhang Zhao",
+  "answers": [
+    {
+      "ansID": 1314,
+      "ans": "Hello Zhang Zhao: \r\n\r\nThe 1-user license is for a single user. However, this license allows you to install the Design Pattern Framework on multiple machines (i.e. work \u0026 home), but only the single user can use the package.\r\n\r\nThe site license (you call it unlimited-user license) is for large developer teams at a single site (i.e. physical address). This license allows all developers to install their own copy on their own machines (also home \u0026 work).  The keyword is \u0027physical address\u0027, so if your company has a team in Shanghai and one in New York, you will need two site-licenses.\r\n\r\n--\r\n\r\nThe Design Pattern Framework 4 is an electronic download which is available from our website only (although we do have some resellers). It contains e-books (pdf documents), .NET solutions (100% code), and diagrams. The documentation is extensive, but the emphasis is very much on the real-world code (which is how most developers learn their skills).  We do not ship physical books and/or CDs (for $79 this would not be cost effective, I think you\u0027ll understand).\r\n\r\nFollowing purchase the package is immediately available for download. So, whether you live in Shanghai or anywhere else, it is all the same. Finally, the Design Pattern Framework 4 comes with a 1-year subscription, meaning that when new upgrades or enhancements become available, you can freely download this (within this time period). \r\n\r\nHope this helps.\r\n\r\n"
+    }
+  ]
+}

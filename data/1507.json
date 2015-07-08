@@ -1,0 +1,16 @@
+{
+  "id": 1507,
+  "url": "www.dofactory.com/topic/1507/sl-fault-contracts-vs-acknowledgetype-message.aspx",
+  "title": "Fault contracts versus AcknowledgeType+Message",
+  "ques": "I wonder why have you chosen to return errors from the service layer to the client apps via AcknowledgeType + Message rather than custom fault contracts?  How could this approach address multi-lingual support?",
+  "answers": [
+    {
+      "ansID": 1693,
+      "ans": "Michael:\r\n\r\nI guess custom fault contracts could have been used.   \r\nHowever, it is a technique that requires a fairly deep understanding of WCF and our focus is really on teaching common design patterns.  \r\n\r\nAs another example, we could have added extensive error handling (as we would in a production system), but that would also have diluted the learning experience for developers who are focused on learning pattern techniques (rather than error handling).  \r\n\r\nI hope this helps.\r\n\r\n"
+    },
+    {
+      "ansID": 1694,
+      "ans": "Understood, thanks."
+    }
+  ]
+}

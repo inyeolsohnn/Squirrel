@@ -1,0 +1,12 @@
+{
+  "id": 1150,
+  "url": "www.dofactory.com/topic/1150/difference-in-strategy-pattern-and-factory-pattern.aspx",
+  "title": "Difference between Strategy Pattern and Factory Pattern?",
+  "ques": "Is there any major difference between Strategy Pattern and Factory Pattern?  As for me its look alike and I am a bit confused which to use when. I see that the Factory Pattern gets me the object of desired type which we can also achieve using Strategy Pattern...",
+  "answers": [
+    {
+      "ansID": 1223,
+      "ans": "Yes, they seem to be same but they do have a visible difference.  Factory\u0027s sole purpose is to create objects and strategy\u0027s sole intent to is to provide a mechanism to select different algorithm.\r\n\r\nYou can use  \u0027factory \u0027 to create objects of  \u0027strategy \u0027.  For. e.g. take the following example from dofactory for strategy..\r\n\r\nSortedList studentRecords \u003d new SortedList();\r\n \r\n      studentRecords.Add( \u0027Samual \u0027);\r\n      studentRecords.Add( \u0027Jimmy \u0027);\r\n      \r\n\r\n      studentRecords.SetSortStrategy(new QuickSort());\r\n      studentRecords.Sort();\r\n \r\n      studentRecords.SetSortStrategy(new ShellSort());\r\n      studentRecords.Sort();\r\n \r\nNow note here, the type passed in the  \u0027SetSortStrategy \u0027 method is  \u0027hardcoded \u0027 and this will be a fragile design if this is some kind of production code.\r\n\r\n\r\nTo make this more resilent to change introduce factory (this is a crude example and is only for demonstration purpose)\r\n\r\n\r\nSortStrategy  algo \u003d SortFactory.GetQuickSort();  //  something like this... the actual instance creation of quicksort is controlled by the SortFactory and this is well abstracted from the client.\r\n\r\n\r\nstudentRecords.SetSortStrategy(algo);\r\n....................\r\n......................\r\n\r\n\r\nLet me know whether this is useful or you need more clarifications.\r\n\r\n\r\n\r\nRegards,\r\nRajesh Pillai\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

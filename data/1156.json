@@ -1,0 +1,12 @@
+{
+  "id": 1156,
+  "url": "www.dofactory.com/topic/1156/design-pattern-framework-4-0-c.aspx",
+  "title": "Purchasing the Design Pattern Framework 4.0 C#",
+  "ques": "Hi,\r\n\r\nI would like to purchase the Design Pattern Framework 4.0, C# edition.\r\nBut, before I do that I have couple questions.\r\n\r\n  1. Can I download the code sample for this book?\r\n  2. Will the Design Pattern Framework 4.0 C# work with Visual Studio 2005 and 2008?\r\n\r\nThanks,\r\nLeon.",
+  "answers": [
+    {
+      "ansID": 1232,
+      "ans": "Leon: \r\n\r\nActually, the Design Pattern Framework is much more than a book. It consists of an extensive set of e-books (pdf documents), .NET solutions (with 100% source code), and diagrams. \r\n\r\nSo, to answer your first question: Yes, the code is already included in the package. I would also like to mention that the documentation is extensive, but the emphasis is really on the code (we know that developers learn best from exploring well-crafted code).\r\n\r\nThe answer to the second question is also Yes. In addition to the latest version for Visual Studio 2010 /.NET 4, your purchase will also include older versions of the Design Pattern Framework (for .NET 1.1, 2.0 and 3.5).  Each version uses the features that were available in the particular .NET release.  For example, 2.0 introduced Generics, 3.5 introduced LINQ, WPF, WCF, and 4.0 introduced ASP.NET MVC, Silverlight, Entity Framework, and more.  Please be aware that Design Pattern Framework 4 only works with VS 2010/.NET 4 because it is built on features only available in .NET 4.\r\n\r\nI hope this helps.\r\nDan.\r\n"
+    }
+  ]
+}

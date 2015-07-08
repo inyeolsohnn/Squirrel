@@ -1,0 +1,12 @@
+{
+  "id": 1565,
+  "url": "www.dofactory.com/topic/1565/the-singleton-pattern-above-is-correct.aspx",
+  "title": "Is this a correct implementation of the Singleton Pattern?",
+  "ques": "Hi!\r\n\r\nI don?t programme since year 2005, I am just restarting to program, but now in C# instead of Java.\r\nI think it?s a good idea to start studying the design patterns and I was wondering if I can write my own examples and submit here for correction... May I do it?  If yes, follow my first try below: ",
+  "answers": [
+    {
+      "ansID": 1756,
+      "ans": "Follow the code now... It?s working fine, just need to check if singleton pattern is correct implemented.\r\nThankyou in advance\r\n\r\n\r\nusing System;\r\nusing System.Data.Odbc;\r\n\r\nnamespace TesteSingleton\r\n{\r\n    class Program\r\n    {\r\n        static void Main(string[] args)\r\n        {\r\n\r\n            OdbcConnection cnnn \u003d Conexao.Instancia();\r\n            string sql \u003d  \u0027SELECT * FROM dbo.loteria \u0027;\r\n            OdbcCommand oc \u003d new OdbcCommand(sql,cnnn);\r\n            \r\n            cnnn.Open();\r\n\r\n            OdbcDataReader dataReader1 \u003d oc.ExecuteReader();\r\n\r\n            while (dataReader1.Read())\r\n            {\r\n                Console.WriteLine(dataReader1[ \u0027Concurso \u0027] +  \u0027  \u0027 + dataReader1[ \u0027DataSorteio \u0027] +  \u0027n \u0027);\r\n            }\r\n            dataReader1.Close();\r\n            cnnn.Close();\r\n\r\n            Console.ReadLine();\r\n\r\n        }\r\n    }\r\n        \r\n    // The singleton class\r\n    class Conexao\r\n    {\r\n        private static OdbcConnection cn;\r\n\r\n        protected Conexao() {\r\n        }\r\n\r\n        public static OdbcConnection Instancia()\r\n        {\r\n            string dsndatabase \u003d  \u0027DSN\u003dLoteria;Database\u003dLoteria \u0027;\r\n            if (cn\u003d\u003dnull)\r\n            {\r\n                cn \u003d new OdbcConnection(dsndatabase);\r\n            }\r\n            return cn;\r\n        }\r\n    }\r\n}\r\n\r\n "
+    }
+  ]
+}

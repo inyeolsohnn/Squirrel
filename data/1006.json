@@ -1,0 +1,16 @@
+{
+  "id": 1006,
+  "url": "www.dofactory.com/topic/1006/asp-net-ajax-versus-jquery.aspx",
+  "title": "ASP.NET AJAX versus jQuery",
+  "ques": "We are looking into moving our web app to Web 2.0, i.e. lots of interactivity with Ajax.  It seems that Microsoft is supporting two separate libraries ASP.NET AJAX and jQuery.  Why would I use one over the other?  \r\n\r\nBTW: to reduce page sizes, we are looking to standardize on just one of these options.\r\n",
+  "answers": [
+    {
+      "ansID": 1007,
+      "ans": "If you want the code server side then use asp.net AJAX toolkit, if you want the code client side then use jQuery, or just write your won js.\r\n\r\njQuery does give you much more control over your js but on the other had the AJAX toolkit makes it so you dont have to know js."
+    },
+    {
+      "ansID": 1013,
+      "ans": "jQuery making dealing with HTML/DHTML (UI) easier without postback (and using browser capabilities) while it also supports connecting to web services for data retrieval. ASP.NET AJAX is to reduce visible server post-back and less of DOM-based UI manipulation. I strongly suggest to go with both because both combinely give lot of power."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": 1039,
+  "url": "www.dofactory.com/topic/1039/can-you-have-memory-leaks-in-net.aspx",
+  "title": "Can you have memory leaks in .NET?",
+  "ques": "My pair programming buddy and I got into an interesting discussion recently about .NET and memory leaks.\r\n\r\nIt is my understanding that, although rare, memory leaks do occur in .NET.  I believe that one of the places where this can happen is with non-released event handlers.\r\n\r\nHis argument was that because .NET is garbage collected, no memory leaks can occur. \r\n\r\nSo, now I am confused. Can anyone share some light on this?  Ideally with some examples. \r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1054,
+      "ans": "Many people think memory leak can happen in a .NET code only when it uses COM or P/Invoke calls. However, a pure managed application can still cause memory leaks. This is largely constituted by the internal implementation of the .NET framework classes used rather than the developer code itself. I hope you get what I mean.\r\n\r\nHere is a quick Google search on Microsoft support site talking about memory leaks in .NET; try it and see for yourself."
+    },
+    {
+      "ansID": 1058,
+      "ans": "I have personally worked on a memory leak issue in a COM Interop scenario. \r\nThe application consumed COM components from .NET and the objects were not getting released.\r\nSo, they were eating up valuable RAM."
+    },
+    {
+      "ansID": 1059,
+      "ans": "Memory leaks in .NET are mostly because not releasing/disposing of critical resources. Examples includes: Database connections, files in a memory stream, network connections, etc. Until and unless you are not releasing these objects; .NET keeps their ROOTS alive and create memory pressure. Though its not a pure memory leak.\r\n\r\nIn .NET Framework 1.1 or 1.0 there are chances of Memory Leaks specially if you are using ASCX controls in ASP.NET which was confirmed by Microsoft later on. \r\n\r\nBut, in general, the chances of running into memory leaks with .NET are minimal if you are not using COM+ and P/Invoke.\r\nIn case you are playing with VC++.NET there are chances to occur memory leak (this is called the GC Hole).\r\n\r\nKaushal\r\nhttp://kaushalp.blogspot.com"
+    },
+    {
+      "ansID": 1699,
+      "ans": "Short answer: I does LEAK.\r\n\r\n... not just for P/Invoke things but also managed classes. For example, if you have a Dataset and you do not dispose it, you\u0027ll have a leak :)\r\n\r\nAlso, handle leaks hurt a lot therefore I suggest you to use  \u0027using {...} \u0027 whereever possible.\r\n\r\nJust my 2c. "
+    }
+  ]
+}

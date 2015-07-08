@@ -1,0 +1,12 @@
+{
+  "id": 1021,
+  "url": "www.dofactory.com/topic/1021/singleton-example-usage.aspx",
+  "title": "Singleton usage examples?",
+  "ques": "Can anyone summarize when and where one would (and would not) use Singletons?\r\nI am asking because it is said that programmers are overusing Singletons....",
+  "answers": [
+    {
+      "ansID": 1032,
+      "ans": "Normally i don\u0027t use the word single instance throughout the whole application. I rather prefer saying context. For example recently in another post i gave example of Shopping basket per user. Multiple baskets but just one basket per user. The same instance will be returned against the same user. Many people may scream at this definition ;)\r\n\r\n\r\nNow why overusing ?\r\nFirst it\u0027s very easy to implement. Secondly, being a single instance, it\u0027s very easy to be synchronized in mutltithreaded application. Thirdly it solves the toughest of the problem ---- State management in stateless environments.\r\nConsider the same cart being returned for the same user, having the items stored in it, across multiple pages.\r\n\r\nThere can be many other perspectives to look at this, hopefully over time people will add theirs, this is mine."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1363,
+  "url": "www.dofactory.com/topic/1363/silverlight-application.aspx",
+  "title": "Building Silverlight app with or without WCF RIA Services?",
+  "ques": "I like the architecture described in the Pattern in Action solution that is part of the Design Pattern Framework 4.0 package. \r\n\r\nIs it possible to fit the Silverlight app into this architecture? i.e. add it to presentation layer just like the other four apps and share the same remaining layers including service layer, business layer and data layer? Compared with the architecture described in the Silverlight Pattern solution in the Design Pattern Framework, which one is the better practice to build a Silverlight app?  \r\nI am going to use Silverlight to develop a RIA for our intranet users. Can anyone provide some advice on which one is best choice based on guidance that is present in the Design Pattern Framework?\r\nThanks. \r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1517,
+      "ans": "This is an interesting question. Here is my views....\r\nIf you are having only Silverlight client in your intranet application, and also it of smaller or mid sized application, then you can go for RIA services.\r\nOtherwise, if you are having multiple clients other than silverlight, then WCF can be used in the business layer so that any of the business services can also be exposed to outside world using different bindings. Architecture would be Silverlight \u003c--\u003e WCF [Businesslogic] \u003c--\u003e Entity Framework ADO \u003c--\u003e DataBase\r\nCheers...\r\n\r\n"
+    },
+    {
+      "ansID": 1536,
+      "ans": "Hi Steven,\r\n\r\nDo checkout Microsoft LightSwitch http://www.microsoft.com/visualstudio/en-us/lightswitch\r\n\r\nThe simplicity which allows to create ntier apps is simply amazing.  It uses Silverlight as the UI, Code First Entity framework for data access and WCF RIA services as middle tier.\r\n\r\nYou can accomplish many things without writing a single line of code.  Also, the default out-of-the-box functionality doesn\u0027t suits you it provides highly customizable interface.\r\n\r\nDo watch the how to videos here  http://msdn.microsoft.com/en-us/lightswitch/gg604823   \r\n\r\nYou can utilize you exiting silverlight, wcf, RIA knowledge an accomplish much more in less time and it perfectly suits intranet kind of environment as well.  Do give it a try before writing this off :).  Thanks.\r\n\r\nRegards.\r\n"
+    }
+  ]
+}

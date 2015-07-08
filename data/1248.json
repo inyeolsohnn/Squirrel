@@ -1,0 +1,12 @@
+{
+  "id": 1248,
+  "url": "www.dofactory.com/topic/1248/wf-windows-workflow.aspx",
+  "title": "Happy with DPF 4.  Question on WF Windows WorkFlow",
+  "ques": "Hi:\r\n\r\nI am so glad I purchased the Design Pattern Framework 4.0. I cannot wait to implement it in my projects. \r\nI am curious to know where the Windows Workflow fits in and how to use it with the Design Pattern Framework.\r\n\r\nThank you\r\nFred",
+  "answers": [
+    {
+      "ansID": 1350,
+      "ans": "Hi,\r\n\r\nPlease read Chain of Responsibility Pattern.This will exactly match Windows Work Flow which you are looking for.\r\nHope this helps."
+    }
+  ]
+}

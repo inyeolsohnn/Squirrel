@@ -1,0 +1,16 @@
+{
+  "id": 1239,
+  "url": "www.dofactory.com/topic/1239/linq.aspx",
+  "title": "When to use LINQ in code?",
+  "ques": "When it is advisable to use LINQ in code?",
+  "answers": [
+    {
+      "ansID": 1345,
+      "ans": "\r\nHi\r\n\r\nSee my previous answer here: http://dofactory.com/topic/1235/linq-to-oracle-provider.aspx"
+    },
+    {
+      "ansID": 1357,
+      "ans": "Hi,\r\n\r\n\r\nQuestion is very broad....\r\n\r\n\r\nSee this is where you should thinks on LINQ\r\n\r\n1. LINQ to SQL\r\n\r\n        When the queries and sub queries are more more costlier and has expensive bussines logic in the joins. get the row data to         framwork layer and by using LINQ to SQL to the required data. This is the case mostly in Reporting or Reports development.\r\n\r\n2. LINQ to Objects\r\n\r\n        When it comes to implement custom Enumerables and Enumerators it is best to use LINQ to Objects. Because LINQ is         developed on these interfaces.\r\n\r\n3. LINQ to XML\r\n\r\n        It is bit strait forward. it is more user frendly then System.XML namspace to read XML data.\r\n\r\nHope this gives good starting point.\r\n\r\nThanks,\r\nChinna "
+    }
+  ]
+}

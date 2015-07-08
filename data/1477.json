@@ -1,0 +1,12 @@
+{
+  "id": 1477,
+  "url": "www.dofactory.com/topic/1477/need-a-reference-material.aspx",
+  "title": "Need Design Pattern reference material",
+  "ques": "Hello Team,\r\n\r\nI am a beginner with Design Patterns and Pattern Architectures. \r\nCould you please let me know from where I can get study material regarding Design Patterns and their implementation in a .NET project?\r\n\r\nThanks in Advance.\r\n\r\nYudhi ",
+  "answers": [
+    {
+      "ansID": 1650,
+      "ans": "Well...this site gives tons of good examples here.\r\n\r\nYou could also Google them with keywords  \u0027.NET design patterns examples \u0027 or something to that effect.\r\n\r\nWhen I was learning to use them I was given a book called  \u0027Head First: Design Patterns \u0027 or something close to that. Another book I was given was one by Martian Fowler called  \u0027Refactoring To Patterns \u0027.\r\n\r\nI would recommend out of all of these places to simply use this site but to actively just demo them in your own way. Create a few stupid projects that honestly mean nothing to you but are your own. create them just so you can first hand implement the pattern.\r\n\r\nKeep in mind that patterns are just a way thinking about your code. It is one thing to implement a pattern it is another to implement it knowing why. Patterns not only solve problems but they can introduce them too."
+    }
+  ]
+}

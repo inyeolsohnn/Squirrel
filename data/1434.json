@@ -1,0 +1,12 @@
+{
+  "id": 1434,
+  "url": "www.dofactory.com/topic/1434/complex-design-question.aspx",
+  "title": "Getting primary key following SQL INSERT",
+  "ques": "I have a Windows Application that I am designing an API for.  \r\n\r\nThere are several database tables involved and the primary keys are surrogate keys and not identity.  \r\nCurrently I hold all additions to these tables into a collection. Then when Save is cliced I run through the collection and execute the save operations to the database.  \r\n\r\nEach table is dependent upon a userID that I am getting when the user clicks \u0027Create New User\u0027.  Now I have an issue, should I get the surrogate key at the time I save to the collection or should I get when the user clicks Save.  \r\n\r\nI am not sure if there is a different reason to not do one versus the other.  \r\nAny help would be greatly appreciated.",
+  "answers": [
+    {
+      "ansID": 1609,
+      "ans": "Kim:\r\n\r\nCan you explain what you mean when you have primary keys that are surrogate keys but not identity?  \r\nThe question is who generates the surrogate key, that database or the code?\r\n\r\nBasically when you save a record, you want to have the code generate the key (say a GUID), or the database generate the key (using Identity or autonumber).  In the first case you have the primary key immediately and not special actions are required. In the second case you need to retrieve it immediately following INSERT by using SELECT @@IDENTITY or something similar (depending on your db and db version).\r\n\r\nHope this gets you going."
+    }
+  ]
+}

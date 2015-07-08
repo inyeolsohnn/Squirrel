@@ -1,0 +1,16 @@
+{
+  "id": 1389,
+  "url": "www.dofactory.com/topic/1389/checkout-is-not-implemented.aspx",
+  "title": "Checkout is not implemented?",
+  "ques": "Hi.\r\nI am interested in the silverlight patterns, but i see in your silverlight Action project that the Checkout use case is not implemented. I would like to see how you suggest create the order and orderitems an how and where you update the Product.UnitsInStock.\r\n\r\nI do like your product but i think that is need that the checkout would be implemented.\r\n\r\nexcuse my bad english.\r\nthanks.",
+  "answers": [
+    {
+      "ansID": 1557,
+      "ans": "Hello Ramiro:\r\n\r\nThe purpose of the Design Pattern Framework is to demonstrate Design Patterns in the real-world.\r\nA checkout process would not significantly add to Design Pattern learning which is why it is not included.\r\n\r\nHowever, with the sample code you already have (shopping cart, db access, service layer, etc) this should be relatively easy to implement, I would think.\r\n\r\nHope this helps.\r\nDan.\r\n\r\n"
+    },
+    {
+      "ansID": 1558,
+      "ans": "Yes you are right .\r\n\r\nHowever i think that the use cases already implemented has basic CRUD operations. I think that the checkout use case (not ask card info), i.e. place the order is a more complex use case that allow show a transaction script pattern or the application service pattern or domain Model pattern, i.e. i have doubts about where I should be put my complex business rules in a use case.\r\n\r\nthanks in advanced."
+    }
+  ]
+}

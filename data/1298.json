@@ -1,0 +1,16 @@
+{
+  "id": 1298,
+  "url": "www.dofactory.com/topic/1298/service-locator-pattern.aspx",
+  "title": "Service Locator Pattern",
+  "ques": "I know this is a bit outside the Design Pattern Framework, but I want to ask it anyhow:\r\nCan you explain the generic implementation for Service Locator Pattern using VB.NET?",
+  "answers": [
+    {
+      "ansID": 1455,
+      "ans": "This post may be of help to you.\r\n\r\nhttp://blogs.lessthandot.com/index.php/DesktopDev/MSTech/service-locator-pattern-why-and-why-not"
+    },
+    {
+      "ansID": 1458,
+      "ans": "Hi,\r\n\r\nI would recommend that you do not worry about writing your very own service locator (you certainly can experiment building one!) if you are going to use it for production code. Instead, try using Windsor container or Unity framework to handle service location."
+    }
+  ]
+}

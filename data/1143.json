@@ -1,0 +1,16 @@
+{
+  "id": 1143,
+  "url": "www.dofactory.com/topic/1143/design-patterns-for-parallel-logins.aspx",
+  "title": "Design Patterns for Parallel Logins",
+  "ques": "Can anyone please tell me or point me to some good examples where, what and how design patterns are best applied for blocking parallel logins?",
+  "answers": [
+    {
+      "ansID": 1214,
+      "ans": "I thinnk you can try creating a ThreadSafe Singleton Login class. Singleton class will ensure that there is only one Login object created \u0026 Threadsafe(http://www.albahari.com/threading/part2.aspx#_Synchronization_Essentials) would make sure it\u0027s used by one thread at a time to solve parallel access issue. Does it solve your issue?\r\n\r\nCan anyone else comment on this?"
+    },
+    {
+      "ansID": 1216,
+      "ans": "Hi Pankaj, thanks for your suggestion.  Surely this points me to a starting point.   "
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1195,
+  "url": "www.dofactory.com/topic/1195/nhibernate.aspx",
+  "title": "NHibernate",
+  "ques": "Hi!\r\n\r\nDo you have some material about NHibernate?\r\nI just bought the Design Patterns Framework 4 and don\u0027t find anything about this.\r\n\r\nThanks in advance!\r\n\r\nFabio Navarro",
+  "answers": [
+    {
+      "ansID": 1302,
+      "ans": "Hi Fabio: \r\n\r\nSorry, but NHibernate is not part of our Design Pattern Framework. To maximize the learning experience we\u0027ve tried to keep things as simple (and yet complete) as possible, which is why there is a minimum of external 3rd-party dependencies (Moq being the only exception). \r\n\r\nI am not an NHibernate expert, but for what it is worth, I read an article today where it was stated that with the latest release of Entity Framework 4 it is ready to take on NHibernate:\r\nhttp://visualstudiomagazine.com/Articles/2010/09/01/Get-Ready-for-the-Entity-Framework.aspx\r\n\r\nAgain sorry. If the inclusion of NHibernate was critical to you, remember that we offer a 60-day money back guarantee.\r\n\r\nDan."
+    },
+    {
+      "ansID": 1304,
+      "ans": "Hi,\r\n\r\nThere are two series (commercial) over at Tekpub aimed at NHibernate and Entity Framework 4, it might be worth checking out."
+    }
+  ]
+}

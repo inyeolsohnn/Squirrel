@@ -1,0 +1,12 @@
+{
+  "id": 1539,
+  "url": "www.dofactory.com/topic/1539/wcf-webservice-result-set-with-server-side-paging.aspx",
+  "title": "WCF Webservice Result Set with Server Side Paging",
+  "ques": "\r\nAre there any patterns or examples on how to implement server side paging for webservice calls that returns large number of records back to the client?",
+  "answers": [
+    {
+      "ansID": 1727,
+      "ans": "This is what I use:\r\n\r\npublic List\u003cBlogApp6.BusinessObjects.Blog\u003e GetAll(\r\n    string sortExpression, int startRowIndex, int maximumRows)\r\n{\r\n    using (var context \u003d DataObjectFactory.CreateContext())\r\n    {\r\n        IQueryable\u003cBlogApp6.DataObjects.EntityFramework.Blog\u003e query \u003d \r\n            context.Blogs.AsQueryable().OrderBy(sortExpression);\r\n            \r\n        query \u003d query.Skip(startRowIndex).Take(maximumRows);\r\n        \r\n        var list \u003d new List\u003cBlogApp6.BusinessObjects.Blog\u003e();\r\n        \r\n        foreach (BlogApp6.DataObjects.EntityFramework.Blog entity in query)\r\n            list.Add(BlogMapper.ToBusinessObject(entity));\r\n        \r\n        return list;\r\n    }\r\n}\r\n\r\nI hope this helps."
+    }
+  ]
+}

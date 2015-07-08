@@ -1,0 +1,20 @@
+{
+  "id": 1080,
+  "url": "www.dofactory.com/topic/1080/factory-or-something-else.aspx",
+  "title": "Factory or something else?",
+  "ques": "I\u0027m trying to think of a solution but not sure which way to go. Here\u0027s the problem:\r\n\r\nIts going to be a library for parsing multiple XML files. So I know what classes to make and how they are going to be nested. A year or two from now, the software that emits the XML file may change the syntax of the XML file. And at that point of time, my solution has to handle two different set of XML files based on the version written into the main XML file. What I would like my solution to do is,\r\na.) Check the version of the software emitting XML files and call the appropriate Parse routine, say Version1.Parse() or Version2.Parse(), that then calls the parse routine of different files, like ParseFileA() or ParseFileB().\r\n\r\nb.) There is a possibility that of the 20 XML files, syntax for only 5 of them has changed (ver 1.1) and rest remain the same. In that case, I would like to call the different file parsing routines. I guess, I should be able to call the appropriate method based on the version read in the previous step through a conditional branching (just wanted to let know).\r\n\r\nFrom the look of it, Abstract factory seems to be the pattern to go ahead with. But I also feel that I should be defining the parse methods through an Interface rather than through an abstract class.\r\n\r\nAm I right? What approach would you have taken?\r\nThanks. ",
+  "answers": [
+    {
+      "ansID": 1127,
+      "ans": "After reading the description above, I understood there are different algorithm for reading different XML files.I think you should investigate more on strategy pattern.I think this fits to your requirement. \r\n\r\n see this link \r\n http://dofactory.com/Patterns/PatternStrategy.aspx\r\n\r\nBefore coming to conclusion, I would suggest you to read some other post as well on other sites.Take careful decision."
+    },
+    {
+      "ansID": 1134,
+      "ans": "As per the problem statement and the points:\r\n\r\na.) Check the version of the software emitting XML files and call the appropriate Parse routine, say Version1.Parse() or Version2.Parse(), that then calls the parse routine of different files, like ParseFileA() or ParseFileB().\r\n\r\nb.) There is a possibility that of the 20 XML files, syntax for only 5 of them has changed (ver 1.1) and rest remain the same. In that case, I would like to call the different file parsing routines. I guess, I should be able to call the appropriate method based on the version read in the previous step through a conditional branching (just wanted to let know).\r\n\r\nI believe the solution should address the futuer versions also, cause sometime we can\u0027t even predict the extension points of a solution, so its better to keep it open.\r\n\r\nI believe using Abstract Factory will be the most appropriate solution. Regarding the decision of using interface and Abstract class I always use interface whenever I want to make a behavioral contract and when there is a need for code re usability as well as creating a behavioral contract better to use Abstract Classes. \r\n"
+    },
+    {
+      "ansID": 1136,
+      "ans": "Thank you @Bhupendra \u0026 @Amlan for your time and suggestions.\r\n\r\nThe strategy pattern suggestion was a good one that I hadn\u0027t looked into. I figured for my situation I\u0027ll need a combination of Abstract Factory (where whole semantics of the files change) and Strategy Pattern (when there are minor additions/subtractions to the file).\r\n\r\nIn this particular scenario I think Interface is preferred, as I want to just lay out the contracts."
+    }
+  ]
+}

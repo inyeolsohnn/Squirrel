@@ -1,0 +1,20 @@
+{
+  "id": 1386,
+  "url": "www.dofactory.com/topic/1386/asp-net-response-redirect-to-open-a-new-browser-window.aspx",
+  "title": "ASP.NET Response.Redirect to open a new browser window?",
+  "ques": "We are using ASP.NET Webforms (not MVC).\r\n\r\nMy question is this: \r\nIs it possible to open a new browser window using a postback and then some variety of Response.Redirect?\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1554,
+      "ans": "As far as I know, this is not possible to do using Response.Redirect since it is on the server side. Your best bet would probably be to use JavaScript... but that will not work if the user has JavaScriptdisabled.\r\n\r\n\r\nGood Luck!\r\n"
+    },
+    {
+      "ansID": 1555,
+      "ans": "Yeah, without JS this is not possible but with some clever hack you can achieve the desired result.\r\n\r\nFor detailed information refer this post.\r\n\r\nhttp://weblogs.asp.net/infinitiesloop/archive/2007/09/25/response-redirect-into-a-new-window-with-extension-methods.aspx\r\n\r\nHope this helps."
+    },
+    {
+      "ansID": 1576,
+      "ans": "As mentioned above you can\u0027t use Response.Redirect but with JavaScript its possible (as long as js its enabled).\r\n\r\nHope this helps you\r\nRicky\r\n\r\n//PostBack approch\r\nprotected void Button1_Click(object sender, EventArgs e) \r\n{ \r\n//Consume ParamX \r\n   ScriptManager.RegisterStartupScript(Page, typeof(Page),  \u0027OpenWindow \u0027,  \u0027window.open(\u0027YourPage.aspx?Param\u003d \u0027 + ParamX.ToString() +  \u0027\u0027); \u0027,true);\r\n} \r\n     \r\n//Page Load approach\r\nprotected void Page_Load(object sender, EventArgs e)\r\n{\r\n    Button1.OnClientClick\u003d \u0027javascript:window.open(\u0027YourPage.aspx?Param\u003d \u0027 + ParamX.ToString() +  \u0027\u0027); \u0027; \r\n}\r\n\r\n "
+    }
+  ]
+}

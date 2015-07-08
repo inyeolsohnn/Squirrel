@@ -1,0 +1,20 @@
+{
+  "id": 1486,
+  "url": "www.dofactory.com/topic/1486/new-installation-cannot-open-up-the-patterns-in-action-solution.aspx",
+  "title": "New installation: cannot open up the Patterns In Action solution!",
+  "ques": "\r\nMe again.\r\n\r\nSince it\u0027s explicitly allowed, I\u0027ve installed the framework on my home computer, also.\r\nI try to open up the solution, and immediately get these .vcproj errors.  I have VC 2010 Ultimate at home:\r\n\r\n\u0027\r\nDoFactory Patterns 4.0 CSPatterns In ActionASPNETWebApplicationASP.NET Web Forms Application.csproj : error  : The project file DoFactory Patterns 4.0 CSPatterns In ActionASPNETWebApplicationASP.NET Web Forms Application.csproj\u0027 cannot be opened.\r\n\r\nThe project type is not supported by this installation.\r\n\r\nDoFactory Patterns 4.0 CSPatterns In ActionHost.WCF.ActionServerWCF.ActionServer.csproj : error  : The project file \u0027DoFactory Patterns 4.0 CSPatterns In ActionHost.WCF.ActionServerWCF.ActionServer.csproj\u0027 cannot be opened.\r\n\r\nThe project type is not supported by this installation.\r\n\r\nDoFactory Patterns 4.0 CSPatterns In ActionHost.WCF.ImageServerWCF.ImageServer.csproj : error  : The project file \u0027DoFactory Patterns 4.0 CSPatterns In ActionHost.WCF.ImageServerWCF.ImageServer.csproj\u0027 cannot be opened.\r\n\r\nThe project type is not supported by this installation.\r\n\r\nDoFactory Patterns 4.0 CSPatterns In ActionASPNETMVCApplicationASP.NET MVC Application.csproj : error  : The project file \u0027DoFactory Patterns 4.0 CSPatterns In ActionASPNETMVCApplicationASP.NET MVC Application.csproj\u0027 cannot be opened.\r\n\r\nThe project type is not supported by this installation.\r\n\u0027\r\n\r\n\r\nThis is crazy, I cannot even OPEN THE SOLUTION!  I have SQL Server Express installed, in addition to the non-express edition!\r\n\r\nRegards,\r\nMark\r\n\r\n",
+  "answers": [
+    {
+      "ansID": 1663,
+      "ans": "Could it be that you are running the free Visual Studio 2010 Express version?  In your error messages I see several times:  \u0027The project type is not supported by this installation \u0027. This usually means you are running a Visual Studio version that does not support the different project types.  \r\n\r\nIf memory serves, the Design Pattern Framework requires Visual Studio 2010 Professional or better. You mentioned that you have VS Ultimate, which should be fine, but perhaps you accidentally started VS Express?\r\n\r\nHope this helps."
+    },
+    {
+      "ansID": 1664,
+      "ans": "Hi,\r\nNo, I have the ultimate version on that computer.\r\nIt is true, however, that I didn\u0027t get these problems on my computer at work, where VS 2010 professional is installed.\r\n\r\nI\u0027m not sure if I had ever installed the Express version of VS2010 on my home computer (I recently bought a new home computer); if so, I\u0027ll de-install it tonight and try again.\r\nWhat\u0027s clear is that when I start any solution, the Ultimate version is started because I see all the menus and toolbars that are only enabled with Ultimate.\r\n\r\nWhen I load the Head First solution at home, I get the same problem: one project cannot be loaded!\r\n\r\n--\u003e Do you need any other information from me to start this problem?  Do I need a specific service-pack for instance?  I\u0027m running 64-bit Windows 7 both at home and at work...\r\n\r\n--\u003e Is it a problem to have SQL Server AND SQL Server Express installed, if I want to run the Patterns In Action solution?  That is now the situation at home.  Of course, I haven\u0027t even come close to actually running the solution because of the projects not even being loaded.\r\n\r\nRegards,\r\nMark\r\n"
+    },
+    {
+      "ansID": 1667,
+      "ans": "Fixed this.  I didn\u0027t have the  \u0027Microsoft Visual Web Developer 2010 \u0027 part of VS 2010 installed.\r\nRegards,\r\nMark\r\n"
+    }
+  ]
+}

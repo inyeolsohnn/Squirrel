@@ -1,0 +1,12 @@
+{
+  "id": 1200,
+  "url": "www.dofactory.com/topic/1200/how-to-identify-appropriate-pattern.aspx",
+  "title": "How to identify appropriate Design Patterns to resolve code smells",
+  "ques": "Hi,\r\n\r\nI am involved with an application where there are a lot of coding issues (i.e code smells), such as, many if else conditions, hard coded data passing from one layer to another, etc..\r\n\r\nI want to improve the code quality for the application. Can any one please tell me how I can identify that a particular Design Pattern is appropriate to resolve (or refactor) certain pieces of code?\r\n\r\nPlease let me know if the question is not clear.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1308,
+      "ans": "HI,\r\n\r\nThere are multiple ways in which u can handle the situation.\r\n\r\n1. Refactor your code:\r\n Review code and see where there is repetetive code. Create small methods and pass paramaters for small differences in repetive code.\r\n2. Once you are finished and convinced that the code is refactored into private methods, u wud find that there needs to be refactoring across multiple classes. E.g similar code in multiple classes with small differences relvant to that specific class.\r\nFor this, create a separate class and move methods there. You would realize that either your classes containing common code need to inherit from this new class or need to have a refernce for it. Well, doing this is using design patterns.\r\n3.Now in case if else statments consit of creating mutiple objects:\r\nif(Case I)\r\n  A a \u003d new A();\r\nelse\r\n B b \u003d new B();\r\n\r\nsuch a case calls for creating common class and inherting A and B from same. use factory to create object at runtime.\r\n\r\nThere are just few small samples, this may help you.\r\n\r\nRegards,\r\nPankaj"
+    }
+  ]
+}

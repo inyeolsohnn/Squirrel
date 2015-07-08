@@ -1,0 +1,12 @@
+{
+  "id": 1393,
+  "url": "www.dofactory.com/topic/1393/what-architecture-is-best-for-utility-windows-application-like-winamp-nero-etc.aspx",
+  "title": "What architecture is best for utility (windows application) like winamp,nero etc?",
+  "ques": "I am going to develop windows operating based utility application this is not based any data based application. For example like winamp or nero. What are layer and architecture is suitable for this kind of application? ",
+  "answers": [
+    {
+      "ansID": 1562,
+      "ans": "Since this is  a Windows application, I would have gone with the MVP pattern, but ofcourse based on the nature i.e. are there changes in future, should this be extensible i..e could others could plugin features, should this be testable etc.\r\n\r\nSince yo mention this is not data based app, but data in any form would form part of your model.  So, MVP would be ideal.\r\n\r\nIf this is just a utility with short shelf life, then you could well go ahead with straight winforms development adhering to basic OOD principles (if you wish).\r\n\r\n"
+    }
+  ]
+}

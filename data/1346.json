@@ -1,0 +1,12 @@
+{
+  "id": 1346,
+  "url": "www.dofactory.com/topic/1346/install-is-failing.aspx",
+  "title": "New employer. Now the install has a problem",
+  "ques": "I\u0027ve never had a problem installing the Design Patterns 4.0 CS msi before, but at my new employer, they redirect My Documents to a network share drive, and I get the following error dialog box:\r\n\u0027Could not access network location \\appsrv01davidm$Documents\\DoFactory Patterns 4.0 CS\u0027\r\n\r\nMy employer Help Desk provided this insight, but we don\u0027t know how to get around this issue:\r\n\r\nThe double slash behind Documents is the issue as that?s not a valid path.  I have no idea why the install is doing that.  We redirect My Documents to the M: Drive, it may have something to do with that.  That?s not something I can adjust as It?s governed by group policy.  Were previous installations in Windows 7 environment?   \r\nIs there some command line install to get around this?  \r\nIs the install trying to write to my local C: drive MyDocuments (which is being (mis)directed to a shared network drive?\r\n",
+  "answers": [
+    {
+      "ansID": 1475,
+      "ans": "Hi David:\r\n\r\nI am sorry for the trouble. We\u0027ve had a few other users with the same issue. It has been discussed in this thread: \r\nhttp://www.dofactory.com/topic/1134/how-do-you-change-the-default-installation-folder-for-the-c-version-of-dp.aspx.  \r\n\r\nTo the best of our knowledge, the error is caused by a registry mis-configuration on your computer. \r\nEven Microsoft\u0027s own products (like Office) cannot be installed when this occurs. \r\n\r\nMicrosoft offers a \u0027FixIt\u0027 utility that you may want to try. \r\nYou\u0027ll find it here. http://support.microsoft.com/kb/886549\r\n\r\nHope this helps."
+    }
+  ]
+}

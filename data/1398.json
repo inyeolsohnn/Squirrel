@@ -1,0 +1,12 @@
+{
+  "id": 1398,
+  "url": "www.dofactory.com/topic/1398/how-to-retrieve-specific-name-value-pairs-from-querystring-in-javascript.aspx",
+  "title": "How to retrieve specific Name/Value pairs from Querystring in Javascript?",
+  "ques": "What is the best way to retrieve specific name/value pairs in Javascript from the Querystring?\r\nFor example if the url is \u0027http://www.mycompany.com/customer/orders.aspx?id\u003d1\u0026name\u003djohn\u0026address\u003dmain\u0027\r\nand I need the value for the id say.\r\n\r\nIdeally I am looking for either a jQuery or else non-library solution (i.e. raw Javascript).\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1572,
+      "ans": "Thought of writing this down, but here a great deal of solutions...\r\n\r\nhttp://stackoverflow.com/questions/901115/get-querystring-values-in-javascript\r\n\r\nAlso a jQuery plugin is available for the same.\r\nhttp://plugins.jquery.com/project/query-object\r\n\r\nIt\u0027s simple as using below...\r\n$.query.get(\u0027name\u0027);  // The site has the required docs..\r\n"
+    }
+  ]
+}

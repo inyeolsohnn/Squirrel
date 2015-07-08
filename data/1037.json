@@ -1,0 +1,16 @@
+{
+  "id": 1037,
+  "url": "www.dofactory.com/topic/1037/stored-procedures.aspx",
+  "title": "Stored Procedures",
+  "ques": "Where do I find information on using stored procedures with parameters instead of the inline sql statements?",
+  "answers": [
+    {
+      "ansID": 1063,
+      "ans": "SQL statement :\r\n\r\n\r\nSELECT Product, Quantity\r\n  FROM Inventory\r\n WHERE Warehouse \u003d \u0027FL\u0027\r\nStored procedure:\r\n\r\n\r\nCREATE PROCEDURE sp_GetInventory\r\n  @location varchar(10)\r\nAS\r\nSELECT Product, Quantity\r\n  FROM Inventory\r\n WHERE Warehouse \u003d @location\r\n\r\nTo call this Stored Procedure:  \r\n\r\n\r\nEXECUTE sp_GetInventory \u0027FL\u0027For more information check this link: http://databases.about.com/od/sqlserver/a/storedprocedure.htm\r\n\r\nI hope this helps.  \r\n\r\n\r\n "
+    },
+    {
+      "ansID": 1066,
+      "ans": "Good information on Stored Procedures is available in the following link\r\n\r\nhttp://support.microsoft.com/kb/306574\r\n\r\nThanks,\r\nChinna Srihari"
+    }
+  ]
+}

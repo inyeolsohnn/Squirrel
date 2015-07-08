@@ -1,0 +1,16 @@
+{
+  "id": 1301,
+  "url": "www.dofactory.com/topic/1301/combination-of-composite-and-visitor-pattern.aspx",
+  "title": "Combination of Composite Pattern and Visitor Pattern",
+  "ques": "Hi,\r\n\r\nI\u0027m new to C# design patterns and I\u0027ve read your sample code of patterns Composite and Visitor.\r\nIts very interessing but I think there is great benefit by combining Composite and Visitor Patterns.\r\n\r\nUse Composite to build a tree, for example:\r\n  \r\n\u003cpersons\u003e\r\n        \u003cperson name\u003d\u0027pers1\u0027\u003e\r\n                \u003cchildrens\u003e\r\n                        \u003cchild name\u003d\u0027child1\u0027/\u003e\r\n                         \u003cchild name\u003d\u0027child2\u0027/\u003e\r\n                 \u003c/childrens\u003e\r\n        \u003cperson name\u003d\u0027pers2\u0027/\u003e\r\n        \u003cperson name\u003d\u0027pers3\u0027/\u003e\r\n\u003c/persons\u003e\r\n\r\n\r\nAnd use Visitor to visit each of the Tree nodes.\r\n\r\nBut my question is this: How can we build such a structure?\r\n\r\nThanks",
+  "answers": [
+    {
+      "ansID": 1414,
+      "ans": "Until someone someone answers this please go through this resource as it has some useful information.\r\n\r\nhttp://codebetter.com/jeremymiller/2007/10/31/be-not-afraid-of-the-visitor-the-big-bad-composite-or-their-little-friend-double-dispatch/\r\n\r\nI hope this will be useful for further exploration of the subject."
+    },
+    {
+      "ansID": 1593,
+      "ans": "Yes, we can build this structure, see the attached code in zip file. To elucidate further read about pattern hatching by John Vlissides, which tells about patterns vs pattern languages and how we can combine 2 patterns to get maximum throughput. Please feel free to ask if you have any problem with code."
+    }
+  ]
+}

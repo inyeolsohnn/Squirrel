@@ -1,0 +1,16 @@
+{
+  "id": 1144,
+  "url": "www.dofactory.com/topic/1144/is-this-code-following-the-factory-design-pattern.aspx",
+  "title": "Does this code follow the Factory Design Pattern?",
+  "ques": "I am somewhat confused about Factory Pattern. Please review this code . When we need object of KeepItems we will instantiate KeepItemsConcrete Class. Is this pattern a Factory Pattern?\r\n\r\nThanks.\r\n\r\n\r\nInterface IKeep \r\nEnd Interface\r\n\r\nPublic Class KeepItems \r\n\r\nprivate itemNumber As Integer\r\nprivate itemName as String\r\n\r\npublic sub New() \r\n\r\nitemNumber\u003d10 \r\nitemName\u003d\u0027ABC\u0027\r\n\r\nEnd Sub\r\n\r\npublic Function GetItemDesc() As String\r\n\r\nReturn itemName \u0026 itemNumber.ToString() \r\n\r\nEnd Function\r\n\r\nEnd Class\r\n\r\n\r\nPublic Class KeepItemsConcrete \r\n Inherits KeepItems \r\n   Implements IKeep \r\n\r\nEnd Class\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1213,
+      "ans": "In your example, the interface is empty, your child class has not modified the parent class which makes it redundant. So this would be a completely wrong example for any design pattern.\r\n\r\nSimply put, Factory pattern is all about having a Factory class which has a method to create a Product class you want i.e. you create create a factory producing the desired product. Here\u0027s a link having simple example in case the one here are inadequate: http://wiki.asp.net/page.aspx/310/factory/"
+    },
+    {
+      "ansID": 1215,
+      "ans": "I created a working example that might help.  It\u0027s a simple logging object for your applications that allows you to choose where the logs are being written to, either a Text file, database or email.\r\n\r\nAlthough I\u0027m still fairly new to Design Patterns, I\u0027m a little torn between whether my example would be considered more a Strategy Pattern than a Factory Pattern.\r\n\r\nYou can read about the application here: http://www.kingwilder.com/Blog/tabid/55/EntryId/29/ASP-NET-Simple-Logger.aspx\r\n\r\nAnd download the sample application here: http://www.kingwilder.com/Downloads/tabid/56/Default.aspx\r\n\r\nI hope this helps.\r\n\r\nThanks,\r\n\r\nKing Wilder\r\nMVC Central\r\nhttp://www.mvccentral.net"
+    }
+  ]
+}

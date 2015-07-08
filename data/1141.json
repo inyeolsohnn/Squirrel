@@ -1,0 +1,24 @@
+{
+  "id": 1141,
+  "url": "www.dofactory.com/topic/1141/camelcase-pascalcase-vs-camelcase-pascalcase.aspx",
+  "title": "camelCase - PascalCase vs. CamelCase - pascalCase",
+  "ques": "The article on c# coding standards in the reference section of dofactory  states:\r\n\r\ndo use CamelCasing for class names and method names.\r\ndo use pascalCasing for method arguments and local variables.\r\n \r\nI believe it should read:\r\n\r\ndo use PascalCasing for class names and method names.\r\ndo use camelCasing for method arguments and local variables.\r\n\r\nKind regards,\r\n\r\nDirk.",
+  "answers": [
+    {
+      "ansID": 1210,
+      "ans": "Funny... I am just now reviewing code of some colleagues who regularily seem to start member variables with upper case characters, what they shouldn\u0027t. ;-) I wanted to let them know about Camel- and Pascal-Casing and researched their respective origins on Wikipedia just about 5 Minutes before I stumbled accross your question. What a coincidance. ;-)\r\n\r\nThis is, what Wikipedia says:\r\n\r\nCamelCase (camel case or camel-case)?originally known as medial capitals[1]?is the practice of writing compound words or phrases in which the elements are joined without spaces, with each element\u0027s initial letter capitalized within the compound, and the first letter is either upper or lower case?as in  \u0027LaBelle \u0027, BackColor,  \u0027McDonald\u0027s \u0027, or  \u0027iPod \u0027. The name comes from the uppercase  \u0027bumps \u0027 in the middle of the compound word, suggestive of the humps of a camel. The practice is known by many other names. In computer programming if the first letter is capitalized, it is called Pascal case; if not, then camel case.\r\n\r\n\r\n\r\nWhile the article basically says that it doesn\u0027t matter whether you start with an upper case character or not as long as you capitilize each element\u0027s initial letter, it clearly states that in programming languages you need to start lower case. Otherwise it\u0027s called pascal case. ;-)\r\n\r\n-Chris\r\n"
+    },
+    {
+      "ansID": 1211,
+      "ans": "Good catch guys!  This was a test of course and you all passed :-)\r\nAnyhow, the page has been corrected."
+    },
+    {
+      "ansID": 1258,
+      "ans": "You are right, but for \r\n\r\n1) private methods we should go for camelCasing, and\r\n2) only public methods can have PascalCasing\r\n"
+    },
+    {
+      "ansID": 1259,
+      "ans": "Sakubar: \r\n\r\nWith all due respect, this is not a convention in C#.  All methods in C# are PascalCased."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": 1311,
+  "url": "www.dofactory.com/topic/1311/why-do-we-need-to-use-abstract-class.aspx",
+  "title": "When would you use an Abstract class?",
+  "ques": "Hello everyone,\r\n\r\nThis is probably a very easy question you guys, but when would we need to use an Abstract class?\r\n\r\nThank you\r\nSatya",
+  "answers": [
+    {
+      "ansID": 1432,
+      "ans": "Hi Satya,\r\n\r\nCompared to interfaces abstract classes can have implementation. Without implementation an abstract class does the same as an interface but C# allows you to inherit from / implement multiple interfaces but inherit from one base class only.\r\n\r\nAn interface once deployed is  \u0027frozen \u0027 - you must not change a deployed interface. If you change an interface you break binary compatibility but you can extend an abstract class as long as you don\u0027t change method signatures.\r\n\r\nRegards,\r\nTorsten."
+    },
+    {
+      "ansID": 1434,
+      "ans": "Use Abstract class when there is a \u0027IS-A\u0027 relationship between classes. For example, Lion is a Animal, Cat is an Animal. So, Animal can be an abstract class with common implementation like no. of legs, tail etc."
+    },
+    {
+      "ansID": 1437,
+      "ans": "Let?s put it like this, let?s say you have a standard employee hierarchy you want to implement, you are going to have for e.g. a Chairman, Directors, Managers, Associates etc. Each of these is a type of employee so your employee class will be the abstract base class which will contain all of the common shared properties, methods etc. Now when you create your Manager class for e.g. it will inherit from the abstract Employee class and automatically have all of the various properties, methods etc that Employee has. If you think about it it doesn\u0027t make sense to create an instance of an Employee class but it does to create an instance of say the Manager class or an Associate class which makes it easy to know when to have a abstract class, just ask yourself does it make sense to instantiate X type of class and if the answer is no you are probably better off having it as an abstract class, this is not a hard and fast rule but a good guide. Another benefit of having an abstract base class is if you need to make a change you only need to make it in one place. This is only a very basic explanation and doesn?t cover all of the rules and reasons for abstract classes but I hope it sheds a little light on it for you. \r\n\r\nThis may help you a little more.\r\nhttp://www.codeproject.com/KB/cs/jmabstractclasses.aspx\r\n\r\nGood luck\r\nRicky\r\n"
+    },
+    {
+      "ansID": 1440,
+      "ans": "As Ricky says. When two classes share the same properties or method the common denominator is your abstract class. There are many benefits aside from this. but when you have to change a property type for e.g.  D.on\u0027t R.epeat Y.ourself"
+    },
+    {
+      "ansID": 1443,
+      "ans": "I think the most of the answers above are explained the need for Base/derived classes. In my knowledge the abstract class will contain a concrete method which can not be override by the derived classes. Means if you DON\u0027T want to change one basic business rule(the concrete method) defined in the base (abstract) class by the derived classes, then go for abstract class with the concrete method."
+    },
+    {
+      "ansID": 1448,
+      "ans": "\r\nAbstract classes allow you to provide default functionality for the subclasses. If you plan on updating this base class throughout the life of your program, it is best to allow that base class to be an abstract class. Why? Because you can make a change to it and all of the inheriting classes will now have this new functionality. If the base class will be changing often and an interface was used instead of an abstract class, we are going to run into problems. Once an interface is changed, any class that implements that will be broken. Now if its just you working on the project, that?s no big deal. However, once your interface is published to the client, that interface needs to be locked down. At that point, you will be breaking the clients code.\r\nSpeaking from personal experiences, frameworks is a good place to show when and where to use both an abstract class and an interface. Another general rule is if you are creating something that provides common functionality to unrelated classes, use an interface. If you are creating something for objects that are closely related in a hierarchy, use an abstract class. An example of this would be something like a business rules engine. This engine would take in multiple BusinessRules as classes perhaps? Each one of these classes will have an analyze function on it."
+    },
+    {
+      "ansID": 1462,
+      "ans": "Suppose I have to design different type of calculators, then what should I use as my base, an abstract class or an interface and why?"
+    },
+    {
+      "ansID": 1463,
+      "ans": "Basically Abstract class should be used for \u0027is-a\u0027 relationship and Interface should be used for \u0027has-a\u0027 relationship.\r\nIf we want to retrict all the subclasses must have certain functionality, then Abstract class with implementation is recomended. So, overriding already implemented member in the subclasses is not a good practice here.\r\n\r\nIn a particular class, where there are more behaviours that will get change during runtime, then implementing from multiple interfaces are recommended. \r\n"
+    }
+  ]
+}

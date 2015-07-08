@@ -1,0 +1,12 @@
+{
+  "id": 1526,
+  "url": "www.dofactory.com/topic/1526/dynamics-crm-5-0-integration-with-asp-net-4-0.aspx",
+  "title": "Dynamics CRM 5.0 - Integration with ASP.NET 4.0",
+  "ques": "One of my projects require communication with Dynamic CRM 5.0 based system from ASP.NET 4.0 based portal. What design patterns could be used to integrate ASP.NET 4.0 and DCRM 5.0\r\n\r\nAlso, will there be any mapping layer required between the two to deal with uncommon data types between the two?\r\n\r\nMoreover,will there be any need of load balancing (web farm ) for 6000 to 7000 total number of external users (ASP.NET 4.0 portal users)\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1713,
+      "ans": "Hi,\r\n\r\nIntegrating two applications required architecture patterns or strategey thinking and design patterns (GoF 4) are concerned well within an app.\r\n\r\nIntegration strategies are normally classified as below\r\n1) Data Integration - Replication (Push/Pull, Publish/Subscribe Model)\r\n2) Process Integration - expose/consume features of one app as Web services to each other.\r\n3) Portal Integration - expose the data from one app into another app via a portlet.\r\n\r\nPlease review how dynamic should your integration architecture be, if it is just static - Portal integration would do.\r\n\r\nIf it is to re-use the business logic of one app in another , it should be process integration.\r\n\r\nIf you need processed data in one app to be in sync with the other, provided process integration is causing reliability/performance or secutiry issues. , then data integration could be of use.\r\n\r\nHope this helps.\r\n\r\n- Tarriq Ferrose Khan.\r\n\r\n\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

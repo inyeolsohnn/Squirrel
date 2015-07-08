@@ -1,0 +1,12 @@
+{
+  "id": 1033,
+  "url": "www.dofactory.com/topic/1033/diference-betweeen-abstract-method-and-abstract-factory.aspx",
+  "title": "Difference between Factory Method and Abstract Factory",
+  "ques": "Hi,\r\n\r\nI am not understanding the difference between Factory Method and Abstract Factory. \r\nCan anyone please elaborate more on Abstract Factory?\r\n\r\nRegards,\r\nSandeep Bhujabal",
+  "answers": [
+    {
+      "ansID": 1049,
+      "ans": "Practically speaking; both are creational pattern. You can use either of them for creating the object. I would say Abstract Factory is gaining the points when you wants to create the multiple object from the same family.\r\n\r\n--\r\nKaushal Patel\r\nhttp://kaushalp.blogspot.com"
+    }
+  ]
+}

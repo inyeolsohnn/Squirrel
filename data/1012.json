@@ -1,0 +1,12 @@
+{
+  "id": 1012,
+  "url": "www.dofactory.com/topic/1012/mvvm-vs-mvc-and-mvp-patterns.aspx",
+  "title": "MVVM vs MVC and MVP patterns",
+  "ques": "Can anyone explain what the MVVM pattern is compared to the existing patterns as well as reasons to use one over the other? ",
+  "answers": [
+    {
+      "ansID": 1020,
+      "ans": "Hello, Darrell-\r\n\r\nAt the end of the day, these are really all variations of the same pattern.  All three contain the concept of a view, a model, and a controller/presenter.  One of the fundamental differences for me exists in how the view communicates to the model.  In MVC, a good deal of communication between the model and the view happens through the controller, but there are some cases where the view talks directly to the model, particularly in data binding scenarios.  A purist MVP implementation, on the other hand, would say (depending upon who you are talking to) that the View and Model should never communicate and that communication between the two should happen strictly through the Presenter.  In my understanding, the biggest difference between MVP and MVC is the communication between Model and View, where the former does not approve of a direct link and the latter does.  From dipping my toe into the MVVM pond recently, that variation appears to be closer to the MVC model, permitting direct communication at times between view and model.\r\n\r\nI know that is all still rather abstract, and pinning down definitions is difficult because there are variants within the variants and engineers often have different perspectives.  I\u0027m sure some of those differences will come up in this thread.  \r\n\r\nAs far as choosing which one is best, I would tend to be guided by tooling support.  For instance, if  you are using ASP.Net, there is a tremendous amount of automation through the MVC project template that helps with the boiler plate setup and use of that pattern in an application.  From what I understand about Silverlight/WPF, there is a lot of support there around MVVM.   When I was coming up to speed on MVC/MVP a few years ago, I implemented MVP in the checkout process of an eCommerce application.  It was a great experience with a satisfying outcome, but I was writing everything by hand with no tooling support and little guidance.  When I write a Silverlight app, I will certainly be moved toward MVVM because of the support that is there.\r\n\r\nI hope that is helpful.  \r\n\r\nAlbert"
+    }
+  ]
+}

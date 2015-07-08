@@ -1,0 +1,16 @@
+{
+  "id": 1538,
+  "url": "www.dofactory.com/topic/1538/uml-and-design-pattern.aspx",
+  "title": "UML and Design pattern",
+  "ques": "Dear experts,\r\n\r\nI am new bee to learn UML and Design pattern, would appreciate that if anyone could give me kick start or any good web site for me to learn. When comes to Design pattern is UML playing as a key role?\r\n\r\nThank you",
+  "answers": [
+    {
+      "ansID": 1722,
+      "ans": "hi ,, \r\ni can suggest these sites : \r\n\r\nhttp://www.uml.org/\r\n\r\nhttp://omg.org/\r\n\r\n\r\n\r\nBut current site has very sourses to learn about that ?!!! \r\n\r\ngood luck\r\n\r\nPersian Boy"
+    },
+    {
+      "ansID": 1723,
+      "ans": "As I understand, UML is a standard language to represent a number of objects, their relations, operation sequences and all of that. It\u0027s not necessarily related to design patterns although you can use it to demonstrate the objects and their relations on a given design pattern. Design patterns are basically ways of doing things following a specific route (pattern). So, for example, if you want to create an application that notifies its users when something (relevant to them) happens, you might want to use the same way to connect the application data with your users, and if you analyze your scenarios it\u0027s likely that you want to use the observer pattern, giving the app the ability to notify the users subscribing to a given event. At this point UML will become solely the way you want to represent, on your design documentation, how the application is going to handle these exchanges."
+    }
+  ]
+}

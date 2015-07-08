@@ -1,0 +1,12 @@
+{
+  "id": 1182,
+  "url": "www.dofactory.com/topic/1182/magic-number-in-the-customerimageconverter-class-in-silverlight-patterns-in.aspx",
+  "title": "Magic number in the CustomerImageConverter class in Silverlight Patterns in Action.csproj",
+  "ques": "What is the 91 in the following code?\r\n\r\n\r\npublic object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)\r\n{\r\n    string size \u003d (string)parameter;\r\n            \r\n    int id \u003d int.Parse(value.ToString());\r\n\r\n    \r\n    if (id \u003e 91) \r\n        id \u003d 0; // New customers are getting the default silhouette icon.\r\n\r\n\r\n\r\n\r\n\r\n    \r\n    var uri \u003d new Uri(HtmlPage.Document.DocumentUri, \u0027Assets/Images/Customers/\u0027 + size + \u0027/\u0027 + id + \u0027.jpg\u0027);\r\n    return new BitmapImage(uri);\r\n}\r\n\r\n ",
+  "answers": [
+    {
+      "ansID": 1273,
+      "ans": "Indeed a magic number :-).  The default database holds 91 customer records which is where the number comes from. \r\nThe Silverlight Patterns application supports adding a new customer, but not uploading images. So, this check ensures a default silhouette image for each new customer.\r\n\r\nOf course, a production type application would include the option to upload customer images and then the  \u0027if (id \u003e 91) \u0027 condition would be removed. \r\n\r\nHope this helps."
+    }
+  ]
+}

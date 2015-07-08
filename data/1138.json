@@ -1,0 +1,16 @@
+{
+  "id": 1138,
+  "url": "www.dofactory.com/topic/1138/repository-pattern-vs-dao-pattern.aspx",
+  "title": "Repository Pattern versus DAO Pattern",
+  "ques": "Hi, \r\n\r\nFirst of all, great job with DoFactory\u0027s Design Pattern Framework.  In the recent version 4.0 the Repository Pattern was included. \r\nNow I am trying to understand the difference between the Repository Pattern and the DAO (Data Access Object) Pattern.\r\n\r\nI have read the \u0027official\u0027 definition from Fowler and Googled some additional information, but I guess I need a \u0027for dummys\u0027 explanation, I hope someone can help me see the real difference between these two pattern and when is it convenient to apply one or the other.\r\n\r\nPerhaps if someone can give me an example of a Repository Pattern that is not a DAO, or a DAO implementation that is not a Repository I can have a better understanding.\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1228,
+      "ans": "Hi,\r\n\r\nJust a suggestion.\r\n\r\nSearch out Domain Driven Design (DDD).\r\n\r\nThe Repository is the kind of the foundation for DDD.\r\n\r\nYou can use this at various levels of the application.\r\n\r\n\r\nSome Suggested links from muy bookmarks...\r\nhttp://www.codeinsanity.com/2008/08/repository-pattern.html\r\n\r\nhttp://blog.fedecarg.com/2009/03/15/domain-driven-design-the-repository/\r\n\r\nhttp://devlicio.us/blogs/casey/archive/2009/02/20/ddd-the-repository-pattern.aspx\r\n\r\nhttp://en.wikipedia.org/wiki/Domain-driven_design\r\n\r\nhttp://msdn.microsoft.com/en-us/magazine/dd419654.aspx"
+    },
+    {
+      "ansID": 1233,
+      "ans": "Thank you very much for those links :)\n\nVery useful. "
+    }
+  ]
+}

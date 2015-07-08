@@ -1,0 +1,32 @@
+{
+  "id": 1165,
+  "url": "www.dofactory.com/topic/1165/wcf-vs-web-service.aspx",
+  "title": "WCF versus Web Service",
+  "ques": "When do we need Web Service and when WCF?",
+  "answers": [
+    {
+      "ansID": 1245,
+      "ans": "1.WCF supports more of WS-* standards than web services\r\n2.As I mentioned in the article WCF supports multiple bindings HTTP,TCP,MSMQ,WS-HTTP etc where as web service supports only HTTP.\r\n3.WCF can maintain transactions like COM+\r\n4.It has JSON integration\r\n5.It can be hosted on IIS,WAS, Self hosting and windows services\r\n6.Web services have no instance management ie you can not have a singleton web service or session full webservice"
+    },
+    {
+      "ansID": 1294,
+      "ans": "Hi,\r\n\r\nYou have rightly mentioned. WCF is a preferred option as compared to Web Service."
+    },
+    {
+      "ansID": 1348,
+      "ans": "HI,\r\nwe can use the limited number of instance in WCF .\r\nLike we can give the facility to client so that he can crete only 5 instnce not more than this means limited number of instance "
+    },
+    {
+      "ansID": 1353,
+      "ans": "Hi,\r\n\r\nAll of them correct\r\n\r\nAnd we can\u0027t forget the plumbing code that we worte Web Service with WSE to gain more control over the message body or message header. In WCF we have much better controller over the above said parts. Also we can forget the problem that we faced with the SOAP exceptions. Now we have much better controll over the SOAP messages with rich programming model.\r\n\r\nHope this helps\r\n\r\nThanks,\r\nChinna"
+    },
+    {
+      "ansID": 1364,
+      "ans": "To play Devil\u0027s Advocate, there are a few reasons you should use Web Services over WCF at least on a *nix platform.\r\n\r\n1) Your company is leery of using open source\r\n2) ComIntegration, RIA and WF3 not supported in Mono\r\n3) Or any project where Web Services is already implemented (i.e. migration)\r\n\r\nMatt Jones"
+    },
+    {
+      "ansID": 1368,
+      "ans": "Hi,\r\n\r\nYou can find difference between WCF and web service at\r\n\r\nhttp://www.dotnetpal.com/wcf/webservicewcf.htm\r\n\r\nthanks,\r\nAshish"
+    }
+  ]
+}

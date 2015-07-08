@@ -1,0 +1,12 @@
+{
+  "id": 1098,
+  "url": "www.dofactory.com/topic/1098/objects-that-can-be-shared-across-multiple-classes.aspx",
+  "title": "Objects that can be shared across multiple classes",
+  "ques": "Hi,\r\n\r\nI have a project that has 11 classes. Now each class refers to the tasklayer (another set of multiple classes) and instantiates them everytime. \r\n\r\nFor example:\r\n\r\n\r\nTaskLayer: contains 3 classes under same namespace. \r\nA.cs \r\n------ \r\npublic class A{} \r\n\r\nB.cs \r\n--------- \r\npublic class B{} \r\n\r\nC.cs \r\n-------- \r\npublic class C{} \r\n\r\nMyProj: my classes needs to refer to tasklayer classes \r\n\r\n_A.cs \r\n------ \r\nusing Tasklayer;  \r\nclass _A  \r\n{  \r\nA a \u003d new A();  \r\nB b \u003d new B();  \r\nC c \u003d new C();  \r\n} \r\n_B.cs \r\n----- \r\nusing Tasklayer;  \r\nclass _B \r\n{  \r\nA a \u003d new A();  \r\nB b \u003d new B();  \r\nC c \u003d new C();  \r\n} \r\n_C.cs \r\n------ \r\nusing Tasklayer;  \r\nclass _C  \r\n{  \r\nA a \u003d new A();  \r\nB b \u003d new B();  \r\nC c \u003d new C();  \r\n} \r\n \r\nNow I don\u0027t want to create a separate set of objects for each of these classes in MyProj.\r\nI want to create a single of set of objects of the tasklayer classes and reference these in my MyProj classes.\r\n\r\nCan anyone please tell me how to do that?  Can I use Singleton here?  Will the same object of the Singleton class be referred in all of MyProj classes?\r\n\r\nThanks.",
+  "answers": [
+    {
+      "ansID": 1152,
+      "ans": "In MyProj, create a separate shared class  ( Class _D )\r\n\r\nExpose properties from which return objects of A,B,C\r\n\r\nIn constructor of class _D, create objects of A,B,C..\r\n\r\nSo when class _D gets instantiated, its created objects of A,B, C. \r\n\r\nSince _D is shared class, single objects of _D,A,B,C are in scope.\r\n\r\nThanks,\r\nShailendra"
+    }
+  ]
+}

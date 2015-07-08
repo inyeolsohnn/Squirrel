@@ -1,0 +1,12 @@
+{
+  "id": 1190,
+  "url": "www.dofactory.com/topic/1190/complex-business-rule-custom-validation-sample.aspx",
+  "title": "Complex Business Rule - Custom Validation sample",
+  "ques": "Hi,\r\n\r\nI recently purchased Design Pattern Framework 4.0. \r\n\r\nIn the document it is mentioned like\r\nHere is an example of a more complex rule. There may be a rule that states that customers are ranked according to their recent order history. Customers with 10 or more orders over the last 3 months receive gold status, customers with 5 to 10 orders receive silver status, and customers with fewer than 5 orders are given bronze status. These statuses can be used to determine the relative priority treatment they receive when calling a 1-800 customer support number. When an order is placed, the rule in the business object re-evaluates the customer?s ranking. These kind of rules require (in most cases) custom validation code. \r\n\r\nAnother is \r\nIn a more complex application you may have interdependent business rules encoded outside these objects (for example, if the bank account is over $5000 and more than 3 transactions have taken place in the last month, and the account holder?s age is \u003e 35 and is on the same job for more than 2 years, then accept the application). \r\n\r\nCan someone guide me where and how to write above two validation in existing Design Pattern Framework 4.0.\r\n\r\nRegards,\r\n\r\nHemal Shastri",
+  "answers": [
+    {
+      "ansID": 1289,
+      "ans": "Hemal: \r\n\r\nThe logic for custom/complex business rules are placed in the Service Layer. \r\nIf you are using the Patterns in Action application, then you would add these in the ActionService.cs file.\r\n\r\nAs an example: if you had a complex rule that would determine whether the current user can see specific orders, you would place that logic in the GetOrders method.  Since these rules are complex it is probably best to factor these out in a special private method, such as, bool IsAllowedToSeeOrder(userId, orderId).  If this method return false, then they cannot see the order.\r\n\r\nI hope this gets you going. "
+    }
+  ]
+}

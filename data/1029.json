@@ -1,0 +1,32 @@
+{
+  "id": 1029,
+  "url": "www.dofactory.com/topic/1029/need-some-good-net-design-pattern-interview-questions.aspx",
+  "title": "Need some good .NET Design Pattern interview questions",
+  "ques": "Hello. I will be interviewing a few candidates for a senior architecture position that we have open at our company.\r\nAs an architect we expect them to be familiar with commonly used .NET Design Patterns.\r\n\r\nDoes anyone have some suggestions for some good interview questions?  I am not looking for questions like: explain the Factory Pattern, but more like scenarios in which certain patterns are typically used. \r\n\r\nLook forward to some great suggestions!.",
+  "answers": [
+    {
+      "ansID": 1037,
+      "ans": "The best way to understand the depth of knowledge a candidate might have in design pattern is by asking these questions...\r\n\r\n1. What are all design pattern you have used in your project?\r\n2. Explain a scenario where you have applied \u003cany pattern name told in previous answer\u003ePATTERN_NAME? and why did you applied this pattern?\r\n3. How long you have been using design patterns for the projects you had worked?\r\n\r\nRegards,\r\nShaffic"
+    },
+    {
+      "ansID": 1060,
+      "ans": "Some interview questions: \r\n\r\n\r\nWhat are Design Patterns. Where do they originate?\r\nDescribe a scenario and what Pattern would you use?\r\nExplain in detail any of the the original Gof Design Patterns\r\nSingleton: How do ensure a Singleton is Threadsafe?"
+    },
+    {
+      "ansID": 1089,
+      "ans": "I prefer to ask the following questions:\r\n\r\nWhat is the difference between command, strategy and template method?\r\nWhen would you prefer builder to object factory?\r\nCan you describe when you need to use vositor with your own simple words?\r\nWhat is the difference between facade and mediator?\r\n"
+    },
+    {
+      "ansID": 1106,
+      "ans": "\r\n 1.which patterns you used?\r\n 2.why that pattern you used?\r\n 3.what are the benefits of design patterns?\r\n 4.In which situation you will use say singleton pattern(any other patterns)?\r\n\r\n"
+    },
+    {
+      "ansID": 1681,
+      "ans": "Check this link for more interview questions of  \u0027Design Patern \u0027\r\nhttp://www.questions-interviews.com/basic-common/design-pattern.aspx\r\n\r\nRegards,\r\nAkaas Developer"
+    },
+    {
+      "ansID": 1682,
+      "ans": "First you need to ask them if they know the basic OO principles: SOLID and GRASP.\r\n\r\nThe Design Patterns are nothing more than concrete implementations of these principles.\r\n\r\nThen you delve into the Design Patterns specifics.\r\n\r\nIn real world very often you may not use a Design Pattern as it is in a book, what matters is to know and understand the principles and the ideas behind OO. Then you can do a good job when you architect and design an application.\r\n"
+    }
+  ]
+}

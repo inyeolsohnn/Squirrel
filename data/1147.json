@@ -1,0 +1,16 @@
+{
+  "id": 1147,
+  "url": "www.dofactory.com/topic/1147/i-will-ask-straight-forward-is-there-an-example-for-webservices-in-design.aspx",
+  "title": "Question: Is there an example for Webservices in Design Pattern Framework 4.0?",
+  "ques": "Hello,\r\n\r\nI\u0027m a C# developer but totally new and unexperienced in Webservices, WCF and Silverlight. My Task is to create a Server Application that communicates with a Silverlight Client and later a native Mac Client.\r\nNow I\u0027m loking for a good tutorial / best Practice which Webservice to use and how to use. Since I\u0027m totally intersted in all the other parts Design Pattern Framework offers my descision would be much easier if this special topic will also be answered in your Product. \r\n\r\nIs the  Design Pattern Framework 4.0 the right choice for me?\r\n\r\nThank you\r\nThomas",
+  "answers": [
+    {
+      "ansID": 1219,
+      "ans": "Hello Thomas: \r\n\r\nThe Design Pattern Framework has a strong emphasis on SOA (Service Oriented Architecture) which involves WCF Web Services. So, the answer to your question is: yes, you will find plenty of running example code (100% source code) that demonstrates Web Services.\r\n\r\nHaving said that, you can find this in any WCF book or at many places on the Web.  The value that we are adding with the Design Pattern Framework is the Design of the Web Service API (application programmers interface), that is, how to properly create and design a public API that is exposed as a Web Service (which, you will see, is not object-oriented, but rather transaction-oriented).\r\n\r\nI hope this helps.\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1226,
+      "ans": "Signing up and getting the DOFactory framework going through the documentaton and the code is a great way to understand how to use WCF if you are NEW to it and design patterns in general."
+    }
+  ]
+}

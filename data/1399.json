@@ -1,0 +1,16 @@
+{
+  "id": 1399,
+  "url": "www.dofactory.com/topic/1399/jquery-serializing-an-asp-net-form-to-json.aspx",
+  "title": "jQuery serializing an ASP.NET form to JSON?",
+  "ques": "Is there an easy way to serialize a form to JSON?   I know I can do it relatively easy with ASP.NET AJAX, but we have decided to standardize on jQuery, so we will not have to introduce another Javascript library.\r\n\r\nTo go against what I just said before (about not introducing a new library) does anyone have experiences with json2.js? This library is available from douglas crockford\r\n\r\nThanks,",
+  "answers": [
+    {
+      "ansID": 1573,
+      "ans": "A couple of good discussions here..\r\nhttp://stackoverflow.com/questions/1184624/serialize-form-to-json-with-jquery\r\n\r\n\r\nI have tried json2.js on a pet project and its great for doing this kind of thing.\r\nhttp://stackoverflow.com/questions/191881/serializing-to-json-in-jquery"
+    },
+    {
+      "ansID": 1582,
+      "ans": "There is also this solution which is widely used.\r\n\r\nhttp://jquery.malsup.com/form/"
+    }
+  ]
+}

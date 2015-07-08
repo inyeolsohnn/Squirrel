@@ -1,0 +1,24 @@
+{
+  "id": 1366,
+  "url": "www.dofactory.com/topic/1366/single-most-influential-programming-book-in-your-professional-career.aspx",
+  "title": "What\u0027s your most influential programming book in your professional career",
+  "ques": "I have this Design Pattern book that I find myself going back to over and over again.  It is very nicely written.  It is:\r\n\r\nHead First Design Patterns\r\n\r\n\r\n\r\n\r\nWhat is your most influential book in your programming career?",
+  "answers": [
+    {
+      "ansID": 1510,
+      "ans": "I do a lot of data modeling and try to adhere to common data model patterns. \r\nSo this would be my most important book:\r\n\r\nData Model Patterns,  Conventions of Thought\r\n\r\n\r\n"
+    },
+    {
+      "ansID": 1511,
+      "ans": "For me it was \r\n\r\n\r\nClean Code: A Handbook of Agile Software Craftsmanship\r\n"
+    },
+    {
+      "ansID": 1512,
+      "ans": "Patterns of Enterprise Application Architecture by Martin Fowler\r\n\r\n"
+    },
+    {
+      "ansID": 1523,
+      "ans": "Code Complete by Steve McConnell"
+    }
+  ]
+}

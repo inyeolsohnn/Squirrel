@@ -1,0 +1,12 @@
+{
+  "id": 1313,
+  "url": "www.dofactory.com/topic/1313/issue-with-direct-dependency-of-code-on-db.aspx",
+  "title": "Issue with direct dependency of code on the Database",
+  "ques": "Hi,\r\n\r\nI am working on a Web Application in which an automated email is fired when a user logs in to the web site. Currently the code that validates login, passes the ActivityId to the relevant method. The ActivityId is then used in the query to get the appropriate email from table (the table has ActivityId column and value).\r\n\r\nHere the issue is the direct dependency of the code on the Database.  In case if appropriate record is missing from DB, the relevant email will not be fired. I want to remove this dependency by introducing some sort of a Design Pattern.\r\n\r\nCan anyone please provide some guideline on this?",
+  "answers": [
+    {
+      "ansID": 1478,
+      "ans": "One of the basic design is to layer your applications into tiers (atleast minimum 3 tiers).  There may be more layers, but that depends on the nature of the app being designed.\r\n\r\n- Presentation Layer (UI)\r\n- Service Layer \r\n- Data Layer \r\n\r\n\r\nBut in any case the  \u0027Presentation Layer \u0027 never directly talks to the  \u0027DB \u0027 Layer.  It is the responsibility of the service layer to talk to the DB.\r\n\r\nAlso, to abstract further, you may have the Repository Layer between Service and Data Layer as follows..\r\n\r\n- Presentation Layer (UI)\r\n- Service Layer \r\n- Repository Layer\r\n- Data Layer \r\n\r\nHope this helps.\r\n"
+    }
+  ]
+}

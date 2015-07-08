@@ -1,0 +1,12 @@
+{
+  "id": 1585,
+  "url": "www.dofactory.com/topic/1585/mvc-mvp.aspx",
+  "title": "Where can I find MVC / MVP implementation samples",
+  "ques": "Hello dofactory,\r\n\r\nI\u0027m looking for a well documented implementation of MVC or MVP for Windows Forms. \r\nWill any of your products help me?\r\n\r\nThank you.\r\nF?bio",
+  "answers": [
+    {
+      "ansID": 1784,
+      "ans": "Hello Fabio,\r\n\r\ndeveloping a WinForms application with the MVC-pattern in mind is not that simple. Mainly because WinForms relies heavily on its CodeBehinde-files. However, there had been a project in Codeplex, where someone tried to make a sample WinForms MVC application. Unfortunatelly, the project hasn\u0027t got updated since 2009. The link to the Codeplex-project is http://winformsmvc.codeplex.com .\r\n\r\nRegards\r\nFlorian"
+    }
+  ]
+}

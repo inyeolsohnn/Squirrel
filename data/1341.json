@@ -1,0 +1,20 @@
+{
+  "id": 1341,
+  "url": "www.dofactory.com/topic/1341/custom-net-framework.aspx",
+  "title": "How to build a custom .Net Framework ?",
+  "ques": "Hi All,\r\n\r\nCould you please share your thoughts (Guidelines, best practices) to create a custom .Net Framework (preferably C#).\r\n\r\nThanks and Regards\r\nTarriq",
+  "answers": [
+    {
+      "ansID": 1469,
+      "ans": "Tarriq:  \r\n\r\nWhat exactly do you mean with a custom .NET Framework?  \r\nAre you talking about an Application Framework (in C# .NET)?"
+    },
+    {
+      "ansID": 1495,
+      "ans": "Why not use any of the existing frameworks (there are lots of them)? There are also many open source ones out there that you could learn from looking at their source code and reading their documentation.\r\n\r\nHere are some examples..\r\n* .netTiers http://nettiers.com/\r\n* CSLA.NET http://www.lhotka.net/cslanet/\r\n* Spring.NET http://www.springframework.net/\r\n\r\n\r\nGood Luck!\r\n"
+    },
+    {
+      "ansID": 1496,
+      "ans": "The thing will be to start with MS Enterprise application block 5.0.  It is available at  http://entlib.codeplex.com/\r\n Some of the reusable components that is included are\r\n - Data Access Block\r\n - Caching Application Block\r\n - Exception Handling Block\r\n - Validation Application Block\r\n - and much more...\r\n\r\n Besides you can extend this and create your own application blocks.\r\n\r\n Apart from this if you are targeting asp.net mvc try Sharp architecture... at http://sharparchitecture.codeplex.com/\r\n There are some good usage of patterns in here.\r\n\r\nSelect among MVC/MVP or MVVM for UI pattern as applicable.  The dofactory has some good reference implementation of this in the patterns library.\r\n\r\n\r\n\r\n\r\n\r\n"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1579,
+  "url": "www.dofactory.com/topic/1579/entitityframework-with-repository-layers.aspx",
+  "title": "EntitityFramework with Repository Layers",
+  "ques": " \r\n Hi,\r\n\r\n   There are lots of articles about EntityFramework with Repository Layer. We are using it like  below\r\n   \r\n   for the Account  --\u003eAccountRepository\r\n   fo the User--\u003e UserRepository  ...  like so.\r\n\r\n  But we always use one datacontext ,one entity. \r\n \r\n  Should we seperate entities   like AccountEntities for AccountRepository , UserEntities for UserRepository ?\r\n\r\n Thanks,\r\n\r\n Best Regards..",
+  "answers": [
+    {
+      "ansID": 1768,
+      "ans": "It is recommended to use a single context but separate entities for each domain object."
+    },
+    {
+      "ansID": 1792,
+      "ans": "\r\nMaintaining sepearate entities is the preferred choice over a entity will all data/ entity objects. There helps out by loading the specific set of data objects related to the respective repository. In your case, you can have Account Entities which deals with Account module only. Just incase a situation arrives where in you need to club both user and account entity objects, go for unit of work pattern (transaction over both repositories).\r\n\r\nSimple words, Yes you can seperate the entities like Account Entities for Account repository and use the same data context. Load respective repositories based on the modules (Account/ User), use unit of work for persisting data on both the repositories.\r\n\r\n\r\nHope this helps."
+    }
+  ]
+}
