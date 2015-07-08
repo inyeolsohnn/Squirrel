@@ -2,13 +2,17 @@ package squirrel.ir;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
@@ -27,6 +31,7 @@ import squirrel.ir.retrieve.models.MDL_GenericModel;
 import squirrel.ir.retrieve.models.MDL_Vector;
 import squirrel.ir.retrieve.models.MDL_XueIBMQR;
 import squirrel.ir.retrieve.models.MDL_XueQR;
+import squirrel.smt.aligner.IBM1.WordPair;
 import squirrel.util.UTIL_Collections;
 import squirrel.util.UTIL_FileOperations;
 import squirrel.util.UTIL_Patterns;
@@ -42,7 +47,7 @@ public class Main {
 	private IX_Collection col = null;
 	private MDL_Vector vm = null;
 	private MDL_XueQR xm = null;
-	private MDL_XueIBMQR xi=null;
+	private MDL_XueIBMQR xi = null;
 	private Scanner in = new Scanner(System.in);
 
 	protected void run() {
@@ -69,7 +74,7 @@ public class Main {
 					.println("To search the Collection using the Vector Model,        enter 5");
 			System.out
 					.println("To search the Collection using the Xue QR Model,        enter 6");
-		
+
 			System.out
 					.println("To execute all queries using the Xue QR Model,          enter 7");
 			System.out
@@ -79,13 +84,16 @@ public class Main {
 			System.out
 					.println("To exit the application,                                enter 0");
 			System.out
-			.println("To search the Collection using the Xue QR Model using IBM,        enter 10");
+					.println("To search the Collection using the Xue QR Model using IBM,        enter 10");
+			System.out
+					.println("To execute complete test suite,                         enter 11");
 			System.out
 					.println("===============================================================");
+
 			System.out.println("Please input your choice, then press enter: ");
 
 			// read the user's menu choice
-			choice = UTIL_UserInput.parameterInput(0, 10);
+			choice = UTIL_UserInput.parameterInput(0, 11);
 
 			switch (choice) {
 
@@ -133,8 +141,12 @@ public class Main {
 				executeTestSuite();
 				break;
 			}
-			case 10:{
+			case 10: {
 				doXueIBMSearch();
+				break;
+			}
+			case 11: {
+				executeIBMTestSuite();
 				break;
 			}
 
@@ -156,33 +168,59 @@ public class Main {
 
 	private void doXueIBMSearch() {
 		// TODO Auto-generated method stub
-		if (col != null) {
-			if ((xm == null) || (xm.getCollection() != col)) {
-				System.out.println("Enter value for delta (0..100):");
-				int delta = UTIL_UserInput.parameterInput(0, 100);
+		// loading files of probability map. This could be optimized (do not
+		// reload when collection setup doesn't change)
+		HashMap<WordPair, Double> pMap;
+		HashMap<WordPair, Double> rpMap;
+		try {
+			FileInputStream fqa = new FileInputStream(new File("qaProb.pmap"));
+			FileInputStream faq = new FileInputStream(new File("aqProb.pmap"));
+			ObjectInputStream oqa = new ObjectInputStream(fqa);
+			ObjectInputStream oaq = new ObjectInputStream(faq);
+			pMap = (HashMap<WordPair, Double>) oqa.readObject();
+			rpMap = (HashMap<WordPair, Double>) oaq.readObject();
 
-				xi = new MDL_XueIBMQR(col, (double) delta / 100);
-			}
+			System.out.println("Map file succesfully loaded");
+			if (col != null) {
+				if ((xm == null) || (xm.getCollection() != col)) {
+					System.out.println("Enter value for delta (0..100):");
+					int delta = UTIL_UserInput.parameterInput(0, 100);
 
-			// Read model parameters from keyboard
-			System.out
-					.println("Please insert the weight of the question factor (0-100):");
-			int alpha = UTIL_UserInput.parameterInput(0, 100);
+					xi = new MDL_XueIBMQR(col, (double) delta / 100, pMap,
+							rpMap);
+				}
 
-			int beta = 0;
-			if (alpha < 100) {
+				// Read model parameters from keyboard
 				System.out
-						.println("Please insert the weight of the translation factor (0-"
-								+ (100 - alpha) + "):");
-				beta = UTIL_UserInput.parameterInput(0, (100 - alpha));
-			}
+						.println("Please insert the weight of the question factor (0-100):");
+				int alpha = UTIL_UserInput.parameterInput(0, 100);
 
-			doInteractiveSearch(xi, new MDL_XueIBMQR.SearchConfig((alpha / 100.0),
-					(beta / 100.0), (100 - alpha - beta) / 100.0));
-		} else {
-			System.out
-					.println("There is no collection currently open. Please open a collection first.");
+				int beta = 0;
+				if (alpha < 100) {
+					System.out
+							.println("Please insert the weight of the translation factor (0-"
+									+ (100 - alpha) + "):");
+					beta = UTIL_UserInput.parameterInput(0, (100 - alpha));
+				}
+
+				doInteractiveSearch(xi, new MDL_XueIBMQR.SearchConfig(
+						(alpha / 100.0), (beta / 100.0),
+						(100 - alpha - beta) / 100.0));
+			} else {
+				System.out
+						.println("There is no collection currently open. Please open a collection first.");
+			}
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+
+			e.printStackTrace();
 		}
+
 	}
 
 	/**
@@ -221,6 +259,25 @@ public class Main {
 			System.err
 					.println("Error processing experiment: " + e.getMessage());
 			e.printStackTrace();
+		}
+	}
+
+	protected void executeIBMTestSuite() {
+		String folderQueries;
+		if (col == null) {
+			System.out.println("Requires an open collection ");
+
+		} else {
+			System.out
+					.print("\nEnter the directory containing test queries to be run: ");
+			folderQueries = UTIL_UserInput.directoryInput();
+			try {
+				new IBMHeadlessExperiment().run(col, folderQueries);
+			} catch (IllegalArgumentException | IOException e) {
+				System.err.println("Error processing experiment: "
+						+ e.getMessage());
+				e.printStackTrace();
+			}
 		}
 	}
 
