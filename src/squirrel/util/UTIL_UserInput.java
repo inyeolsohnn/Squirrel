@@ -21,7 +21,8 @@ public class UTIL_UserInput {
 				continue;
 			}
 			if (choice > end || choice < start) {
-				System.out.println("Wrong choice, there is no such option. Please try again.");
+				System.out
+						.println("Wrong choice, there is no such option. Please try again.");
 			} else {
 				done = true;
 			}
@@ -57,14 +58,27 @@ public class UTIL_UserInput {
 		do {
 			result = in.nextLine();
 
-			File f = new File (result);
+			File f = new File(result);
 			if (!f.isDirectory()) {
-				System.out.print ("\nPlease enter a valid directory name:");
-			}
-			else {
+				System.out.print("\nPlease enter a valid directory name:");
+			} else {
 				done = true;
 			}
 		} while (!done);
+		return result;
+	}
+
+	public static String fileNameInput() {
+		Scanner in = new Scanner(System.in);
+		String result = "";
+		boolean done = false;
+
+		result = in.nextLine();
+
+		File f = new File(result);
+
+		done = true;
+
 		return result;
 	}
 }

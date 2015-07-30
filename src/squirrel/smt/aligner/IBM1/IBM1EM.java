@@ -18,12 +18,14 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.UUID;
 
 import squirrel.data.json.JSON_Document;
 import squirrel.data.json.JSON_IO;
 import squirrel.data.json.JSON_Document.Answer;
 import squirrel.ir.index.IX_Collection;
 import squirrel.ir.index.IX_Document;
+import squirrel.util.UTIL_FileOperations;
 import squirrel.util.UTIL_Patterns;
 import squirrel.util.UTIL_TextClean;
 
@@ -33,7 +35,8 @@ public class IBM1EM {
 	// run IBM1 for all pairs
 	// save the translation probability data into a file
 
-	public static int NUM_ITERATIONS = 10;
+	private boolean doExtract = false;
+	public static int NUM_ITERATIONS = 15;
 	public static double DELTA = 5.0;
 
 	// analyze the document's contents and insert them in the index
@@ -62,7 +65,7 @@ public class IBM1EM {
 			// list
 			// example q1-a1,a2,a3 is turned into 3 pairs of bitext q1a1, q1a2,
 			// q1a3
-
+			int i = 0;
 			for (File file : files) {
 				int docID = Integer.parseInt(file.getName().replaceFirst(
 						"[.][^.]+$", ""));
@@ -93,16 +96,21 @@ public class IBM1EM {
 					 */
 
 					// currently unidirectional q->a
-					forwardBitext.add(new Bitext(qsplits, asplits));
-					reverseBitext.add(new Bitext(asplits, qsplits));
+					forwardBitext.add(new Bitext(qsplits, asplits, i));
+
+					reverseBitext.add(new Bitext(asplits, qsplits, i));
+					i++;
 				}
 
 			}
 		}
 
 		// train and store the pairs
-		return store(train(forwardBitext), "qaProb.pmap")
-				&& store(train(reverseBitext), "aqProb.pmap");
+		UTIL_FileOperations.store(forwardBitext, "forward.bitext");
+		UTIL_FileOperations.store(reverseBitext, "reverse.bitext");
+		return UTIL_FileOperations.store(train(forwardBitext), "qaProb.pmap")
+				&& UTIL_FileOperations.store(train(reverseBitext),
+						"aqProb.pmap");
 
 	}
 
@@ -141,6 +149,7 @@ public class IBM1EM {
 				total.put(a, (double) 0);
 			}
 
+			// also needs to get a data structure (bitext id
 			for (Bitext bt : bitextList) {
 				String source[] = bt.getSource();
 				String target[] = bt.getTarget();
@@ -215,26 +224,6 @@ public class IBM1EM {
 
 	}
 
-	private static boolean store(HashMap<WordPair, Double> pMap, String dn) {
-		// TODO Auto-generated method stub
-		if (pMap == null)
-			return false;
-		else {
-			try {
-				FileOutputStream fileOut = new FileOutputStream(dn);
-				ObjectOutputStream out = new ObjectOutputStream(fileOut);
-				out.writeObject(pMap);
-				out.close();
-				fileOut.close();
-				System.out.printf("map saved as " + dn);
-			} catch (IOException ioe) {
-				ioe.printStackTrace();
-				return false;
-			}
-			return true;
-		}
-	}
-
 	private static void initialiseWords(ArrayList<Bitext> bitextList,
 			HashSet<String> sourceWords, HashSet<String> targetWords) {
 
@@ -274,7 +263,6 @@ public class IBM1EM {
 	private static HashMap<WordPair, Double> newCountMap(
 			ArrayList<Bitext> bitextList) {
 
-
 		HashMap<WordPair, Double> countMap = new HashMap<WordPair, Double>();
 
 		for (Bitext bt : bitextList) {
@@ -291,4 +279,72 @@ public class IBM1EM {
 		return countMap;
 	}
 
+	public static void extractViterbi(HashMap<WordPair, Double> forwardMap,
+			HashMap<WordPair, Double> backwardMap,
+			ArrayList<Bitext> fwbitextList, ArrayList<Bitext> bwbitextList) {
+		// one to one alignment
+		for (int k = 0; k < 2; k++) {
+			System.out.println("k==" + k);
+			HashMap<WordPair, Double> currentMap = forwardMap;
+			String directoryName = "forwardAlignment.vPath";
+			ArrayList<Bitext> bitextList = fwbitextList;
+			HashMap<Bitext, AlignPair> corpusAlignment = new HashMap<Bitext, AlignPair>();
+			if (k == 1) {
+				currentMap = backwardMap;
+				directoryName = "backwardAlignment.vPath";
+				bitextList = bwbitextList;
+			}
+			int btcounter = 0;
+			for (Bitext bt : bitextList) {
+				System.out.println("bitext counter: " + btcounter++);
+
+				String[] question = bt.getSource();
+				String[] answer = bt.getTarget();
+				ArrayList<WordPair> candidates = new ArrayList<WordPair>();
+				for (int i = 0; i < question.length; i++) {
+					ArrayList<WordPair> allPairs = new ArrayList<WordPair>();
+					// all the word pairs for the current source word
+					for (int j = 0; j < answer.length; j++) {
+						allPairs.add(new WordPair(question[i], answer[j]));
+					}
+					Double highest = 0d;
+					ArrayList<WordPair> sourceAlignments = new ArrayList<WordPair>();
+					System.out.println("Current source word: " + question[i]);
+					for (WordPair wp : allPairs) {
+						System.out.println("Pair: " + wp.e + "-" + wp.f);
+						Double currentProb = currentMap.get(wp);
+						if (currentProb == null) {
+							System.out.println("Null probability Pair: " + wp.e
+									+ "-" + wp.f);
+						} else {
+							if (currentProb > highest) {
+								sourceAlignments.clear();
+								highest = currentProb;
+								sourceAlignments.add(wp);
+							} else if (currentProb == highest) {
+								if (sourceAlignments.size() == 1) {
+									WordPair cb = sourceAlignments.get(0);
+									if (cb.equals(wp)) {
+										System.out.println("same pair");
+									} else {
+										System.out
+												.println("Conflicting with pair: "
+														+ wp.e + "-" + wp.f);
+									}
+								}
+
+							}
+						}
+					}
+					if (sourceAlignments.size() != 0) {
+						System.out.println("Added " + sourceAlignments.get(0).e
+								+ "-" + sourceAlignments.get(0).f);
+						candidates.add(sourceAlignments.get(0));
+					}
+				}
+				corpusAlignment.put(bt, new AlignPair(bt, candidates));
+			}
+			UTIL_FileOperations.store(corpusAlignment, directoryName);
+		}
+	}
 }

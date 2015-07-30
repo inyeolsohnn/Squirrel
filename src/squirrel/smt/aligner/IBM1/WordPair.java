@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 
 public class WordPair implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3059485459480218421L;
 	public String e;
 	public String f;
 

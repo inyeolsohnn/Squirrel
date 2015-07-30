@@ -35,6 +35,8 @@ public class IBMHeadlessExperiment {
 		// requires collection, probability map, and query folder as the input
 
 		// START:experiment setup
+		System.out.println("running IBM headless experiment");
+		System.out.println("loading map files");
 		final IX_Collection batchCollection = col;
 		final ArrayList<RT_Query> queries = JSON_IO.retrieveQueries(qf);
 		int nExperimentNum = 4;

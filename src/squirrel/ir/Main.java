@@ -273,12 +273,14 @@ public class Main {
 			folderQueries = UTIL_UserInput.directoryInput();
 			try {
 				new IBMHeadlessExperiment().run(col, folderQueries);
+				UTIL_Collections.closeCollection(col);
 			} catch (IllegalArgumentException | IOException e) {
 				System.err.println("Error processing experiment: "
 						+ e.getMessage());
 				e.printStackTrace();
 			}
 		}
+	
 	}
 
 	protected void printVocab() {
