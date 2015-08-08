@@ -1,6 +1,7 @@
 package squirrel.smt.aligner.IBM1;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Bitext implements Serializable {
@@ -14,9 +15,33 @@ public class Bitext implements Serializable {
 
 	public Bitext(String[] qsplits, String[] asplits, int hashcode) {
 		// TODO Auto-generated constructor stub
-		question = qsplits;
-		answer = asplits;
+		question = cleanText(qsplits);
+		answer = cleanText(asplits);
 		this.hashcode = hashcode;
+	}
+
+	private String[] cleanText(String[] splits) {
+		// TODO Auto-generated method stub
+		ArrayList<String> tempResult= new ArrayList<String>();
+		String previous="";
+		boolean consecutive= false;
+		for(int i=0; i<splits.length; i++){
+			if(splits[i].equals(previous)){
+				consecutive=true;
+			}
+			
+			if(!consecutive){
+				tempResult.add(splits[i]);
+				previous=splits[i];
+			}else{
+				System.out.println("Word removed");
+			}
+			
+			consecutive=false;
+		}
+		String[] result = new String[tempResult.size()];
+		result = tempResult.toArray(result);
+		return result;
 	}
 
 	public String[] getSource() {
